@@ -1,0 +1,22 @@
+{
+  "attack": "S²-MIA",
+  "status": "S2_SPEC_UNDERDETERMINED",
+  "implementation_label": "S2_PAPER_FAITHFUL_COMPONENT_REIMPLEMENTATION",
+  "source": {
+    "paper": "https://arxiv.org/abs/2406.19234",
+    "paper_sha256": "d41e78fc61d5b5ac49f880f8ebffa2ba1434d60b69de6e81b86f0dd85bd458bc",
+    "repository": "not located",
+    "commit": null
+  },
+  "files": {
+    "query_generator.py": "da22e38a7e55ee863af9cdd5399b7f45d3467312440442ab87feb85b6b3f75dc",
+    "scorer.py": "d42709f0cc69fb5cdeff4cede61fc6f10c393d034c42e9588e1ed06729bc8523",
+    "protocol_config.json": "f01292a45c49f933c9e0dc13b6cb7903ae6b0ac0bad73457f53f546f359c38d3",
+    "PAPER_PROTOCOL_SPEC.json": "85c8bb58ae006251f67eb2c74a9706e0c9d19d96a8d46cb0119cb207bc713b83",
+    "PAPER_PROTOCOL_SPEC.md": "6ff4f19cf1a508b0af54848f2bdb78125a91b32fa9414df2da080ed43fcb1189",
+    "tests/test_protocol.py": "a18894892094a71a6635de370aefecb10bfd3f37377d3602ad885f21da60f8a0"
+  },
+  "prompt_sha256": "da22e38a7e55ee863af9cdd5399b7f45d3467312440442ab87feb85b6b3f75dc",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {}
+}

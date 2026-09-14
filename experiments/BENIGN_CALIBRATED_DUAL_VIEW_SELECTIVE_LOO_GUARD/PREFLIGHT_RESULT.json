@@ -1,0 +1,25 @@
+{
+  "campaign": "BENIGN_CALIBRATED_DUAL_VIEW_SELECTIVE_LOO_GUARD",
+  "candidate": "DV-LOO Guard",
+  "phase": "PREFLIGHT",
+  "verdict": "DV_LOO_PREFLIGHT_REJECTED",
+  "phase1_started": false,
+  "precommit_written": false,
+  "fatal_issues": [
+    "CLEAN_V1 MIRABEL-labelled performance is MIRABEL-located LOO influence, not Original Mirabel direct Gumbel risk",
+    "continuous Original Mirabel direct score M(q) is not defined or stored",
+    "Phase-2 claim segmentation, NLI support decision, contradiction handling, output assembly, and neutral response are not frozen"
+  ],
+  "reusable_parent_artifacts": {
+    "retrieval": true,
+    "qll_selected_source": true,
+    "provisional_answer_A0": true,
+    "source_level_teacher_forced_LOO": true,
+    "original_mirabel_direct_score": false
+  },
+  "request_sha256": "6d6c41bdbacd6fc33890733756e64b07da439a89d38d2e22f54582079850a645",
+  "parent_precommit_sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016",
+  "parent_query_scores_sha256": "5b843f73ab392b84f16f92f5886b81b23309533c3de909ea7b222903a60bd540",
+  "parent_retrieval_sha256": "787302b51f45b7162f7938d5e2307f6c2f7914c9bb67ef01d0531737661d3b4d",
+  "legacy_numeric_mixing": false
+}

@@ -1,0 +1,60 @@
+{
+  "bc_threshold": 0.1116663235201894,
+  "benign": {
+    "answer_change_rate": 0.008,
+    "answer_preservation_exact_match": 0.992,
+    "answer_preservation_token_f1": 0.992,
+    "condition": "BC_CGD",
+    "contradiction_proxy": 0.5156666666666666,
+    "groundedness": 0.059666666666666666,
+    "groundedness_retention": 1.0,
+    "intervention_rate": 0.008,
+    "mean_answer_chars": 142.3,
+    "new_refusal": 0.008,
+    "queries": 250,
+    "unsupported_claim_rate": 0.9403333333333332,
+    "unsupported_increase_pp": 0.0
+  },
+  "campaign": "BC_CGD_SMALL",
+  "checks": {
+    "answer_preservation_f1_ge_0_95": true,
+    "groundedness_retention_ge_0_95": true,
+    "intervention_le_0_051": true,
+    "mba_not_worse_by_0_05": true,
+    "menta_better_than_original": false,
+    "menta_eauc_le_0_75": false,
+    "menta_gain_over_bc_ge_0_05": false,
+    "new_refusal_le_0_03": true,
+    "one_direct_equal_or_better": true,
+    "s2_not_worse_by_0_05": true,
+    "unsupported_increase_le_2pp": true,
+    "worst_external_sidechannel_eauc_le_0_65": false
+  },
+  "full_core6_opened": false,
+  "gold_qa_correctness_evaluated": false,
+  "paid_api_calls": 0,
+  "privacy_effective_auc": {
+    "MBA": {
+      "BC_CGD": 0.5321637426900585,
+      "BC_MIRABEL": 0.6578947368421052,
+      "NO_DEFENSE": 0.9342105263157894,
+      "ORIGINAL_MIRABEL": 0.6271929824561403
+    },
+    "MEntA": {
+      "BC_CGD": 0.885,
+      "BC_MIRABEL": 0.8612500000000001,
+      "NO_DEFENSE": 0.97625,
+      "ORIGINAL_MIRABEL": 0.75875
+    },
+    "S²-MIA": {
+      "BC_CGD": 0.5700000000000001,
+      "BC_MIRABEL": 0.6124999999999999,
+      "NO_DEFENSE": 0.76,
+      "ORIGINAL_MIRABEL": 0.65
+    }
+  },
+  "small_pass": false,
+  "utility_interpretation": "Answer preservation relative to A0; not QA correctness.",
+  "verdict": "BC_CGD_MENTA_FAILED",
+  "worst_external_sidechannel_eauc": 0.7987500000000001
+}

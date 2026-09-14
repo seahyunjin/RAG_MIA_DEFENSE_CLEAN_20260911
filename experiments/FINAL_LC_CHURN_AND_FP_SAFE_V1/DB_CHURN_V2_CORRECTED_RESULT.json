@@ -1,0 +1,277 @@
+{
+  "attack_samples_used_for_refresh": 0,
+  "calibration_scope_note": "The frozen 1,000-query benign deployment holdout defines the outer operating threshold and reports its empirical exceedance rate, matching the inherited Final LC protocol; it is not a separate untouched FPR test.",
+  "campaign": "FINAL_LC_CHURN_AND_FP_SAFE_V1",
+  "completed_utc": "2026-09-13T10:00:52.578034+00:00",
+  "initial_result": "INVALID_S2_SCOPE_INCLUSION_PRESERVED_IN_HISTORY",
+  "phase": "DB_CHURN_V2_CORRECTED_CORE5_SCOPE",
+  "refresh_gate": {
+    "checks": {
+      "all_attack_degradation_at_most_5pp": false,
+      "all_fpr_at_most_5pct": true,
+      "mean_degradation_preferred_at_most_3pp": false
+    },
+    "fpr": {
+      "V0": 0.025,
+      "V10": 0.023,
+      "V25": 0.017,
+      "V50": 0.025
+    },
+    "mean_degradation": {
+      "V0": 0.0,
+      "V10": 0.05833564455569458,
+      "V25": 0.1852784981226533,
+      "V50": 0.3396797997496871
+    },
+    "tpr_degradation": {
+      "V0": {
+        "DCMI-Std-Q2": 0.0,
+        "MBA": 0.0,
+        "MEntA": 0.0,
+        "RAG-MIA": 0.0,
+        "S²-MIA": 0.0
+      },
+      "V10": {
+        "DCMI-Std-Q2": 0.04749999999999999,
+        "MBA": 0.061999999999999944,
+        "MEntA": 0.057599999999999985,
+        "RAG-MIA": 0.061999999999999944,
+        "S²-MIA": 0.06257822277847302
+      },
+      "V25": {
+        "DCMI-Std-Q2": 0.15900000000000003,
+        "MBA": 0.19699999999999995,
+        "MEntA": 0.1774,
+        "RAG-MIA": 0.19899999999999995,
+        "S²-MIA": 0.1939924906132665
+      },
+      "V50": {
+        "DCMI-Std-Q2": 0.29,
+        "MBA": 0.367,
+        "MEntA": 0.32920000000000005,
+        "RAG-MIA": 0.353,
+        "S²-MIA": 0.3591989987484355
+      }
+    }
+  },
+  "scope_correction": {
+    "all": 2000,
+    "evaluation": 1598,
+    "evaluation_id_sha256": "800c3dfdda2ab703b68a1d42603246bb3a98716a945e4c2257c5c8cc6d6f8875",
+    "evaluation_member": 799,
+    "evaluation_nonmember": 799,
+    "excluded_id_sha256": "7b48771ba808e271c3a8ae36a36a757404c2194198c0c35833f69a570cca525e",
+    "excluded_reference": 402
+  },
+  "scores_or_model_changed": false,
+  "strict_gate": {
+    "checks": {
+      "all_attack_degradation_at_most_5pp": false,
+      "all_fpr_at_most_5pct": true,
+      "mean_degradation_preferred_at_most_3pp": false
+    },
+    "fpr": {
+      "V0": 0.025,
+      "V10": 0.025,
+      "V25": 0.023,
+      "V50": 0.026
+    },
+    "mean_degradation": {
+      "V0": 0.0,
+      "V10": 0.05824595744680847,
+      "V25": 0.1792778723404255,
+      "V50": 0.3341694868585732
+    },
+    "tpr_degradation": {
+      "V0": {
+        "DCMI-Std-Q2": 0.0,
+        "MBA": 0.0,
+        "MEntA": 0.0,
+        "RAG-MIA": 0.0,
+        "S²-MIA": 0.0
+      },
+      "V10": {
+        "DCMI-Std-Q2": 0.04699999999999993,
+        "MBA": 0.061999999999999944,
+        "MEntA": 0.055400000000000005,
+        "RAG-MIA": 0.06299999999999994,
+        "S²-MIA": 0.06382978723404253
+      },
+      "V25": {
+        "DCMI-Std-Q2": 0.15349999999999997,
+        "MBA": 0.19599999999999995,
+        "MEntA": 0.1694,
+        "RAG-MIA": 0.18599999999999994,
+        "S²-MIA": 0.1914893617021276
+      },
+      "V50": {
+        "DCMI-Std-Q2": 0.27849999999999997,
+        "MBA": 0.366,
+        "MEntA": 0.3194,
+        "RAG-MIA": 0.349,
+        "S²-MIA": 0.357947434292866
+      }
+    }
+  },
+  "strict_transfer_verdict": "DB_CHURN_STRICT_TRANSFER_FAILED",
+  "training_steps": 0,
+  "verdict": "DB_CHURN_RECALIBRATION_FAILED",
+  "versions": {
+    "V0": {
+      "methods": {
+        "Final LC Refresh": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.7845,
+            "MBA": 0.996,
+            "MEntA": 0.884,
+            "RAG-MIA": 0.952,
+            "S²-MIA": 0.9962453066332916
+          },
+          "core5_mean_tpr": 0.9225490613266583,
+          "fpr": 0.025
+        },
+        "Final LC Strict": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.7845,
+            "MBA": 0.996,
+            "MEntA": 0.884,
+            "RAG-MIA": 0.952,
+            "S²-MIA": 0.9962453066332916
+          },
+          "core5_mean_tpr": 0.9225490613266583,
+          "fpr": 0.025
+        },
+        "Original MIRABEL": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.9415,
+            "MBA": 1.0,
+            "MEntA": 0.9916,
+            "RAG-MIA": 1.0,
+            "S²-MIA": 1.0
+          },
+          "core5_mean_tpr": 0.9866199999999999,
+          "fpr": 0.305
+        }
+      },
+      "refresh_threshold": 3.6938669956249752,
+      "strict_threshold": 3.80543877128208
+    },
+    "V10": {
+      "methods": {
+        "Final LC Refresh": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.737,
+            "MBA": 0.934,
+            "MEntA": 0.8264,
+            "RAG-MIA": 0.89,
+            "S²-MIA": 0.9336670838548186
+          },
+          "core5_mean_tpr": 0.8642134167709636,
+          "fpr": 0.023
+        },
+        "Final LC Strict": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.7375,
+            "MBA": 0.934,
+            "MEntA": 0.8286,
+            "RAG-MIA": 0.889,
+            "S²-MIA": 0.932415519399249
+          },
+          "core5_mean_tpr": 0.8643031038798498,
+          "fpr": 0.025
+        },
+        "Original MIRABEL": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.889,
+            "MBA": 0.946,
+            "MEntA": 0.9418,
+            "RAG-MIA": 0.94,
+            "S²-MIA": 0.9449311639549437
+          },
+          "core5_mean_tpr": 0.9323462327909887,
+          "fpr": 0.31
+        }
+      },
+      "refresh_threshold": 3.6938669956249752,
+      "strict_threshold": 3.80543877128208
+    },
+    "V25": {
+      "methods": {
+        "Final LC Refresh": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.6255,
+            "MBA": 0.799,
+            "MEntA": 0.7066,
+            "RAG-MIA": 0.753,
+            "S²-MIA": 0.8022528160200251
+          },
+          "core5_mean_tpr": 0.7372705632040051,
+          "fpr": 0.017
+        },
+        "Final LC Strict": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.631,
+            "MBA": 0.8,
+            "MEntA": 0.7146,
+            "RAG-MIA": 0.766,
+            "S²-MIA": 0.804755944931164
+          },
+          "core5_mean_tpr": 0.7432711889862328,
+          "fpr": 0.023
+        },
+        "Original MIRABEL": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.7785,
+            "MBA": 0.835,
+            "MEntA": 0.8342,
+            "RAG-MIA": 0.824,
+            "S²-MIA": 0.8360450563204005
+          },
+          "core5_mean_tpr": 0.8215490112640801,
+          "fpr": 0.306
+        }
+      },
+      "refresh_threshold": 3.917010546939185,
+      "strict_threshold": 3.80543877128208
+    },
+    "V50": {
+      "methods": {
+        "Final LC Refresh": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.4945,
+            "MBA": 0.629,
+            "MEntA": 0.5548,
+            "RAG-MIA": 0.599,
+            "S²-MIA": 0.6370463078848561
+          },
+          "core5_mean_tpr": 0.5828692615769712,
+          "fpr": 0.025
+        },
+        "Final LC Strict": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.506,
+            "MBA": 0.63,
+            "MEntA": 0.5646,
+            "RAG-MIA": 0.603,
+            "S²-MIA": 0.6382978723404256
+          },
+          "core5_mean_tpr": 0.5883795744680851,
+          "fpr": 0.026
+        },
+        "Original MIRABEL": {
+          "attack_tpr": {
+            "DCMI-Std-Q2": 0.642,
+            "MBA": 0.696,
+            "MEntA": 0.6976,
+            "RAG-MIA": 0.676,
+            "S²-MIA": 0.704630788485607
+          },
+          "core5_mean_tpr": 0.6832461576971214,
+          "fpr": 0.298
+        }
+      },
+      "refresh_threshold": 3.6938669956249752,
+      "strict_threshold": 3.80543877128208
+    }
+  }
+}

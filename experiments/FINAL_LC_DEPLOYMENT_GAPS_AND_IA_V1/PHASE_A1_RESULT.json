@@ -1,0 +1,19 @@
+{
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "completed_utc": "2026-09-13T10:52:08.036158+00:00",
+  "definitions": {
+    "EXPOSED": "target in actual Top-4",
+    "effective_protection_opportunity": "alarm AND target retrieved AND locator equals target"
+  },
+  "final_lc_modified": false,
+  "member_query_rows": 39196,
+  "outputs": {
+    "detail": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/tables/PHASE_A1_MEMBER_QUERY_DETAIL.csv",
+    "summary": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/tables/PHASE_A1_CHURN_RETRIEVAL_EXPOSURE.csv"
+  },
+  "performance_interpretation": "deferred until Phase A2 No-Defense/Final-LC E2E",
+  "phase": "A1_DB_CHURN_CAUSAL_SCORE_AUDIT",
+  "runtime_seconds": 194.0159316211939,
+  "summary_rows": 20,
+  "verdict": "PHASE_A1_COMPLETE"
+}

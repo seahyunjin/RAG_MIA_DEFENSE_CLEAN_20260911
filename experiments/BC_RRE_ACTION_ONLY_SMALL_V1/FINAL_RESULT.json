@@ -1,0 +1,160 @@
+{
+  "verdict": "BC_RRE_BENIGN_DAMAGE_FAILED",
+  "benign_gate": {
+    "preservation_improved": false,
+    "new_refusal_reduced": false,
+    "answer_change_not_increased": false
+  },
+  "privacy_gate": {
+    "MEntA_noninferior": true,
+    "RAG_MIA_noninferior": true,
+    "MBA_noninferior": true
+  },
+  "mba_status": "MBA_PARSER_IMPLEMENTATION_BUG_FIXED",
+  "mba_primary_included": true,
+  "reference_status": "REFERENCE_POOL_AUDIT_PASS",
+  "front_end_equality": true,
+  "privacy": [
+    {
+      "attack": "MEntA",
+      "condition": "NO_DEFENSE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.8300000000000001,
+      "nonmember_score_mean": -0.06,
+      "native_roc_auc": 0.9987499999999999,
+      "bootstrap_ci_low": 0.9925,
+      "bootstrap_ci_high": 1.0
+    },
+    {
+      "attack": "MEntA",
+      "condition": "BC_SIMPLE_HIDE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.039999999999999994,
+      "nonmember_score_mean": -0.06,
+      "native_roc_auc": 0.6025,
+      "bootstrap_ci_low": 0.44249999999999995,
+      "bootstrap_ci_high": 0.75
+    },
+    {
+      "attack": "MEntA",
+      "condition": "BC_RRE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.06000000000000001,
+      "nonmember_score_mean": -0.06,
+      "native_roc_auc": 0.63625,
+      "bootstrap_ci_low": 0.47625,
+      "bootstrap_ci_high": 0.78125
+    },
+    {
+      "attack": "MBA",
+      "condition": "NO_DEFENSE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.6000000000000001,
+      "nonmember_score_mean": 0.01,
+      "native_roc_auc": 0.89375,
+      "bootstrap_ci_low": 0.79,
+      "bootstrap_ci_high": 0.975
+    },
+    {
+      "attack": "MBA",
+      "condition": "BC_SIMPLE_HIDE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.02,
+      "nonmember_score_mean": 0.01,
+      "native_roc_auc": 0.5249999999999999,
+      "bootstrap_ci_low": 0.44999999999999996,
+      "bootstrap_ci_high": 0.6
+    },
+    {
+      "attack": "MBA",
+      "condition": "BC_RRE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.01,
+      "nonmember_score_mean": 0.01,
+      "native_roc_auc": 0.49999999999999994,
+      "bootstrap_ci_low": 0.425,
+      "bootstrap_ci_high": 0.575
+    },
+    {
+      "attack": "RAG-MIA",
+      "condition": "NO_DEFENSE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 1.0,
+      "nonmember_score_mean": 0.0,
+      "native_roc_auc": 1.0,
+      "bootstrap_ci_low": 1.0,
+      "bootstrap_ci_high": 1.0
+    },
+    {
+      "attack": "RAG-MIA",
+      "condition": "BC_SIMPLE_HIDE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.0,
+      "nonmember_score_mean": 0.0,
+      "native_roc_auc": 0.5,
+      "bootstrap_ci_low": 0.5,
+      "bootstrap_ci_high": 0.5
+    },
+    {
+      "attack": "RAG-MIA",
+      "condition": "BC_RRE",
+      "primary_metric": "native ROC-AUC",
+      "n": 40,
+      "member_n": 20,
+      "nonmember_n": 20,
+      "member_score_mean": 0.0,
+      "nonmember_score_mean": 0.0,
+      "native_roc_auc": 0.5,
+      "bootstrap_ci_low": 0.5,
+      "bootstrap_ci_high": 0.5
+    }
+  ],
+  "benign_fp_summary": [
+    {
+      "condition": "BC_SIMPLE_HIDE",
+      "false_positive_n": 19,
+      "answer_change_count": 10,
+      "new_refusal_count": 5,
+      "preservation_token_f1_mean": 0.5896438360938073,
+      "changed_only_preservation_token_f1_mean": 0.22032328857823394,
+      "answer_words_mean": 15.368421052631579,
+      "answer_words_median": 3.0
+    },
+    {
+      "condition": "BC_RRE",
+      "false_positive_n": 19,
+      "answer_change_count": 11,
+      "new_refusal_count": 6,
+      "preservation_token_f1_mean": 0.5040295529042832,
+      "changed_only_preservation_token_f1_mean": 0.14332377319830736,
+      "answer_words_mean": 17.157894736842106,
+      "answer_words_median": 3.0
+    }
+  ],
+  "precommit_sha256": "5d216ebb844679a1007cfb853ad9082560b48833b12fddc1598a8c806172187d",
+  "next_step": "STOP_RRE_FAMILY"
+}

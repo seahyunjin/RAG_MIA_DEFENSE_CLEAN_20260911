@@ -1,0 +1,26 @@
+{
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "authorization_utc": "2026-09-13T16:37:52Z",
+  "change_scope": "API_COST_CAP_ONLY",
+  "previous_cost_cap_usd": 8.0,
+  "authorized_cost_cap_usd": 12.0,
+  "original_precommit_sha256": "087fd8110b2aafe4f79919bb039fa5a97e2d88c9b998ec1b5da7aaf126018a82",
+  "passed_preflight_sha256": "5dca8902b9afd56b0e2a01c904063bcdf5a3b9a8e65ab35a0eee2a211ab40597",
+  "reuse_preflight_artifacts": true,
+  "remaining_cohort_policy": "same frozen 2000-session cohort; cached valid calls reused; ambiguous interrupted call remains fail-closed",
+  "forbidden_changes": [
+    "question model/config",
+    "GT model/config",
+    "Q15",
+    "structured schema",
+    "retry policy",
+    "lambda",
+    "cohort/labels",
+    "scorer",
+    "MIRABEL",
+    "Final LC",
+    "benign FPR",
+    "locator/Simple Hide",
+    "Qwen RAG generator"
+  ]
+}

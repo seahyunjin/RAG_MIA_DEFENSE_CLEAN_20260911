@@ -1,0 +1,14 @@
+{
+  "action": "stopped before full-scale requests as precommitted",
+  "full_performance_metrics_computed": false,
+  "hard_cap_usd": 8.0,
+  "preflight_sessions": 100,
+  "preflight_spend_usd": 0.4910891,
+  "projected_full_2000_spend_usd": 9.821782,
+  "runner_pid": 2764296,
+  "full_inflight_rows_at_stop": 1,
+  "full_request_target_id": "BeIR_nfcorpus::MED-1715",
+  "full_responses_received_after_preflight": 0,
+  "target_document_transmission_after_preflight": "POSSIBLE_ONE_REQUEST; NOT CONFIRMED BY A RESPONSE",
+  "verdict": "IA_API_COST_CAP_INSUFFICIENT_FOR_FULL_2000"
+}

@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-09-12T11:31:34.939972+00:00",
+  "criterion": "Frozen paper-faithful MBA query generator raised ProtocolInputError: adjacent masks are forbidden by the MBA protocol",
+  "detector_scores_observed": false,
+  "document_ids": [
+    "BeIR_scidocs::36a37ccd62757523796838b7df549a388f134a3e",
+    "BeIR_scidocs::c498b2dd59e7e097742f7cdcaed91e1228ec6224",
+    "BeIR_scidocs::377ce926004ff65cfdcc2c4c6a7bac11ea2f6221",
+    "BeIR_trec-covid::gjpmqnrb",
+    "BeIR_scidocs::21768c4bf34b9ba0af837bd8cda909dad4fb57d4",
+    "BeIR_trec-covid::3zxtlfpj"
+  ],
+  "original_audit_sha256": "c1da76e1d1fa22f5d1ea6b3302d8911137ba41c13b64f4753b92d16da0ab12ef",
+  "replacement_policy": "Within each original membership/domain stratum, use the next document under the already frozen selection ordering",
+  "verdict": "MBA_PROTOCOL_INPUT_EXCLUSIONS_PRECOMMITTED"
+}

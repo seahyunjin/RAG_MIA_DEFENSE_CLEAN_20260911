@@ -1,0 +1,97 @@
+{
+  "campaign": "DV_LOO_V2_PHASE1",
+  "created_utc": "2026-09-11T14:06:30+00:00",
+  "development_only": true,
+  "request_sha256": "dd85a513290f888dd3d28c047f2994c77b94d095c2304c445737518eb10f61ec",
+  "parent_campaign": "OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+  "parent_precommit_sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016",
+  "frozen_inputs": {
+    "PHASE1_QUERY_SCORES.csv.gz": "5b843f73ab392b84f16f92f5886b81b23309533c3de909ea7b222903a60bd540",
+    "PHASE1_RETRIEVAL.csv.gz": "787302b51f45b7162f7938d5e2307f6c2f7914c9bb67ef01d0531737661d3b4d",
+    "PHASE1_BENIGN_SELECTION.csv.gz": "c7524bcfe6756c619ae1f4cd245e60ac411b7a97b99e4961c68c8c4d86462310",
+    "PHASE1_ATTACK_SELECTION.csv.gz": "6533d76513b5913f864d5e720bb8b7bb035dd9424fb1fdc20f7b8adb7424985c",
+    "CORPUS_BeIR_nfcorpus.csv.gz": "cbae4b8a9d3835cc71d69492967028e1dd5e7498cd820ad0689ada24693fbccd",
+    "CORPUS_BeIR_scidocs.csv.gz": "2188bcb095cdff213d269a8dea2eea9ace544f8c3fa704dc073c270e1ee3cd5e",
+    "CORPUS_BeIR_trec-covid.csv.gz": "597dd005310ca5bc5a17402526ee2b09d9ee4ea72b9a3401123040172efd8e89",
+    "A0_GENERATIONS.sqlite3": "9e4835bc7fa6c347cc246e2e528bbd68d0c5ce61c490c5118d280cb19327c9dd",
+    "LOO_SCORES.sqlite3": "a7a2077012b9f23f33492ce00d1c1502ea1cf5b3637f0f1c20410951459b5105",
+    "QLL_SCORES.sqlite3": "04a64bba7921fdd43bd45023dfb242da051753202d433213e4ad611fb99f53bd"
+  },
+  "models": {
+    "retriever": "BAAI/bge-m3",
+    "retriever_snapshot_sha256": "77d0b2540f35b75b31d7c1390257ac8fb58264f0b39921c2ccbac0db3350e88f",
+    "qll_and_loo_generator": "Qwen/Qwen2.5-3B-Instruct",
+    "generator_snapshot_sha256": "ba3fa03be5e0bde35615328f34e49cdea40d9654f6d4e46561bd2247a3cdf18d"
+  },
+  "cohort": {
+    "queries_total": 780,
+    "benign_total": 500,
+    "benign_calibration": 250,
+    "benign_locked_holdout": 250,
+    "attack_queries": 280,
+    "attack_sessions": 120,
+    "attacks": {
+      "MEntA": {"member_sessions": 20, "nonmember_sessions": 20, "queries_per_session": 5},
+      "S2-MIA": {"member_sessions": 20, "nonmember_sessions": 20, "queries_per_session": 1},
+      "MBA": {"member_sessions": 20, "nonmember_sessions": 20, "queries_per_session": 1}
+    },
+    "session_rule": "max query score in the complete native session",
+    "primary_attack_population": "member sessions; nonmember and pooled sessions are reported separately"
+  },
+  "original_mirabel": {
+    "implementation_reference_sha256": "fe88b2fc262237259764df64d61a8c965f24c2d5cacfd0a70e051ce8bb55fd96",
+    "full_corpus_documents_per_domain": 1000,
+    "rho": 0.05,
+    "locator": "argmax over all full-corpus normalized BGE inner products",
+    "direct_score": "M(q) = s_max(q) - tau_q",
+    "binary_rule": "M(q) > 0",
+    "low_fpr_baseline": "continuous M(q), recalibrated on the same benign calibration set",
+    "identity_gate": "new full-corpus argmax ID must match stored retrieval top1 for every query and absolute s_max error must be <=5e-5"
+  },
+  "detectors": {
+    "MIRABEL_MARGIN_PERCENTILE": "continuous Original Mirabel direct margin",
+    "CLEAN_V1_RAW_LOO": "frozen CLEAN_V1 max of Mirabel-located and QLL-located answer LOO influence",
+    "DV_LOO_V2": "max(U_DIR, max(U_M, U_Q))"
+  },
+  "normalization": {
+    "branch_cdf": "U(x) = count(calibration_score <= x) / N using side=right",
+    "U_DIR": "benign empirical CDF of Original Mirabel direct margin",
+    "U_M": "benign empirical CDF of frozen Mirabel-located LOO influence",
+    "U_Q": "benign empirical CDF of frozen QLL-located LOO influence",
+    "U_LOO": "max(U_M,U_Q)",
+    "final_score": "R=max(U_DIR,U_LOO)",
+    "final_recalibration": "each detector is separately calibrated on the same 250 benign calibration queries",
+    "comparison": "strict >",
+    "target_fprs": [0.01, 0.03, 0.05],
+    "attack_samples_used_for_score_or_threshold": 0
+  },
+  "primary_gate_at_fpr_3_percent": {
+    "locked_holdout_fpr_max": 0.04,
+    "menta_member_session_tpr_min": 0.50,
+    "menta_absolute_gain_over_mirabel_margin_min": 0.10,
+    "s2_member_session_tpr_degradation_max": 0.05,
+    "mba_member_session_tpr_degradation_max": 0.05
+  },
+  "statistics": {
+    "bootstrap_seed": 20260911,
+    "rate_bootstrap_iterations": 10000,
+    "auc_bootstrap_iterations": 5000,
+    "roc_auc_positive": "pooled attack sessions",
+    "roc_auc_negative": "locked benign holdout queries"
+  },
+  "scope": {
+    "phase1_only": true,
+    "phase2_defined": false,
+    "segmenter_used": false,
+    "nli_used": false,
+    "protected_generation_count": 0,
+    "paid_api_calls": 0,
+    "automatic_candidate_search": false
+  },
+  "code_sha256": {
+    "code/common.py": "6052581d9a9b242396ef57add4b234cb1735c51f2fc180fee1bb4fbdc08f6a87",
+    "code/run_phase1.py": "de8b645357828103cfcf9ec6ebb62884b84aa8d38442f5401c2f1199cca1f4f6",
+    "tests/test_phase1.py": "2bd5251f16ce4881159911a0c48a4b5d96d76eecdb8034e12efcdecfa312ac15",
+    "run_supervisor.sh": "e806a2b728d56ff9a6a79b47a83ada40c7127dddbf7feb5c47d72a8ac3d35ac5"
+  }
+}

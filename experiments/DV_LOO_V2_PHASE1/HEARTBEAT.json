@@ -1,0 +1,11 @@
+{
+  "campaign": "DV_LOO_V2_PHASE1",
+  "final_result_sha256": "c4fa233059a22e96b45a2ce3901bf3545fb5ed85ecde791970754e39db36bdc4",
+  "paid_api_calls": 0,
+  "phase": 1,
+  "phase2_opened": false,
+  "pid": 1191600,
+  "protected_generation_count": 0,
+  "stage": "DV_LOO_V2_PHASE1_REJECTED",
+  "updated_utc": "2026-09-11T14:10:02.780629+00:00"
+}

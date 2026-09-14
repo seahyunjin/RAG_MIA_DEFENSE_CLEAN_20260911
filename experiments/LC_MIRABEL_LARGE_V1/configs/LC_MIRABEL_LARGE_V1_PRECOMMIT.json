@@ -1,0 +1,201 @@
+{
+  "attack_generation": {
+    "MBA": {
+      "mask_count": 5,
+      "proxy": "openai-community/gpt2-xl frozen",
+      "queries": 2000,
+      "queries_each": 1,
+      "targets": 2000
+    },
+    "MEntA": {
+      "joint_output": "summary + QUERY_1..QUERY_5",
+      "model": "gpt-4.1-nano",
+      "one_api_call_per_target": true,
+      "parser_policy": "Accept either LABEL: value on one line or a label-only line followed immediately by exactly one value line; then require exactly SUMMARY and QUERY_1..QUERY_5 in order",
+      "queries": 10000,
+      "queries_each": 5,
+      "targets": 2000
+    },
+    "RAG-MIA": {
+      "paper_prompt": 2,
+      "queries": 2000,
+      "queries_each": 1,
+      "targets": 2000
+    },
+    "protocol_hashes": {
+      "MBA": {
+        "query_generator": "a4636107c578717f616f1719b3782c89a5990e942a248ed167719a7e71462894",
+        "scorer": "3b5f961e3f2d62b87b1c477651e2b4289e50de8b7c5dfffae0524845a8e1695b"
+      },
+      "MEntA": {
+        "query_generator": "0b1be1157b50a3d0cc6149633854b4f016a8bff9daaec198e10c992404ab688a",
+        "scorer": "c6c6ddb5ca163cc53fa993958cc132fa045f1a4428700567cc213c5ecc3ce444"
+      },
+      "RAG-MIA": {
+        "query_generator": "c2f027a10debd8d2a8347ff969b3b368f71e50d4cf1b0321818ad9af64268b48",
+        "scorer": "a716b95fcca595dc9b18d0997a7aa3e31e149d4ff406367a2fe107d0071267ba"
+      }
+    }
+  },
+  "campaign": "LC_MIRABEL_LARGE_V1",
+  "churn": {
+    "allowed_update": "benign MIRABEL score cache only",
+    "gate": "LC FPR<=0.05 and each attack TPR degradation from V0<=0.05",
+    "operation": "replace deterministic SHA256-selected background docs; preserve all evaluation membership labels",
+    "training_steps": 0,
+    "versions": {
+      "V0": 0.0,
+      "V10": 0.1,
+      "V25": 0.25,
+      "V50": 0.5
+    }
+  },
+  "created_utc": "2026-09-12T11:39:55.884149+00:00",
+  "deployment": {
+    "global": "p_global<=0.03",
+    "holdout_retuning": false,
+    "local": "p_local<=0.03",
+    "original": "M>0 (rho=0.05 canonical rule)"
+  },
+  "detector": {
+    "M": "frozen canonical MIRABEL full-corpus margin",
+    "R_GLOBAL": "-log(p_global)",
+    "R_LC": "-log(p_local)",
+    "comparison_operator": "strict > for ROC thresholds; p<=0.03 for deployment",
+    "embedding": "BAAI/bge-m3 frozen query embedding",
+    "forbidden": [
+      "fusion",
+      "multiple-k search",
+      "domain routing",
+      "QLL",
+      "LOO",
+      "DualTail",
+      "Sparse",
+      "learned model"
+    ],
+    "p_global": "(1 + count_{b in all benign reference}[M(b)>=M(q)]) / (N_ref+1)",
+    "p_local": "(1 + count_{b in 200-NN benign reference}[M(b)>=M(q)]) / 201"
+  },
+  "development_name": "LC-MIRABEL",
+  "e2e_conditions": [
+    "NO_DEFENSE",
+    "ORIGINAL_MIRABEL_SIMPLE_HIDE",
+    "GLOBAL_BC_SIMPLE_HIDE",
+    "LC_MIRABEL_SIMPLE_HIDE"
+  ],
+  "e2e_gate": {
+    "MBA": "LC native AUC <= Global BC native AUC",
+    "MEntA": "LC native AUC < Global BC native AUC",
+    "RAG-MIA": "LC native AUC <= Global BC native AUC"
+  },
+  "evaluation": {
+    "bootstrap_iterations": 2000,
+    "bootstrap_units": {
+      "MBA": "target",
+      "MEntA": "target/session",
+      "RAG-MIA": "target"
+    },
+    "matched_fpr": [
+      0.01,
+      0.03,
+      0.05
+    ],
+    "negative": "benign deployment holdout query",
+    "nonmember_attack": "diagnostic only",
+    "positive": "member-target attack query",
+    "primary": "MEntA query-level TPR@3%"
+  },
+  "input_eligibility": {
+    "MBA": {
+      "excluded_document_count": 6,
+      "manifest": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/configs/MBA_PROTOCOL_INELIGIBLE_TARGETS.json",
+      "manifest_sha256": "02a1a8e13483a4d88225ce47268d4676e7017ad99e81f6ff91c669d613cabf00",
+      "rule": "Exclude only documents deterministically rejected by the frozen MBA generator before any detector score was computed"
+    }
+  },
+  "k": 200,
+  "lineage": {
+    "code_sha256": {
+      "common.py": "846836ad0d22dfc1a6b754e3e77c236e8d61dede7afc5d29d72771c44741e2cc",
+      "generate_queries.py": "9028fc55fe33f20cfc020408a528ce685b73c5ff4f3a5a030f1ebf08a6b7ccb0",
+      "prepare_large.py": "6354d17b01efdb367f1741e1d72be35e95db2c0972a980ee5db09c977f09b8de",
+      "run_chain.sh": "09e76a30b95a5b63497335ddfe84b939ee5b5b89aae4b21c1989e84def32c0e1",
+      "run_churn.py": "d4355f6758638fbce9444519e788f64bf2d357e65789521da62f58b973106604",
+      "run_detection.py": "ce2b23972b53077deeb2c12b6feff96f7f4f0aaff91041987217254182fc3fca",
+      "run_e2e_generation.py": "b9b1988f7dfdabd45f1227fee3b673d73b4aa1273304323942b7b6fefac6c436",
+      "run_e2e_scoring.py": "b45985a06086b2a434880c2b25a46716d3b28f6cf4d0d7bb136c37aecec1d872",
+      "watchdog.sh": "832cbe97c1029d3f2dc2b5380fde70f5503a090de5174da0d25703d2fee11f3b"
+    },
+    "frozen_sparse_result": "2402a7132ea7e13bd74502e15b32b89108ea2fddecd039cb0d1870949e0cbc77",
+    "frozen_v2_result": "659f51b3c708ad61139816bc281ab73775e0375e93a22c4b4c481a0815e15ff0"
+  },
+  "mba_input_repair": {
+    "performance_results_observed_before_reprecommit": false,
+    "preserved_failure_history": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/history/V1_LOCAL_INCOMPATIBLE_20260912T113134Z",
+    "reason": "Six targets were deterministically rejected because frozen MBA selection produced adjacent masks",
+    "scope": "exclude those six protocol-ineligible documents and refill the same membership/domain strata by the frozen ordering"
+  },
+  "model_hashes": {
+    "bge_modules": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+    "bge_snapshot": "5617a9f61b028005a4858fdac845db406aefb181"
+  },
+  "phase1_gate": {
+    "Core3_mean_delta_tpr3": ">=0.02",
+    "MBA_delta_tpr3": ">=-0.02",
+    "MEntA_bootstrap_ci_low": ">0",
+    "MEntA_delta_tpr3": ">=0.05",
+    "RAG-MIA_delta_tpr3": ">=-0.02"
+  },
+  "protection_if_pass": "alarm -> MIRABEL top1 locator -> Simple Hide -> Qwen2.5-3B one generation",
+  "protocol_repair": {
+    "performance_results_observed_before_reprecommit": false,
+    "preserved_failure_history": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/history/V1_INPUT_INCOMPATIBLE_20260912T085954Z",
+    "reason": "One successful MEntA API response used label/value line breaks, yielding 12 physical lines for six complete fields",
+    "scope": "deterministic formatting canonicalization only; no regeneration, content editing, exclusion, or label-dependent handling"
+  },
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/963c18c8-5708-457d-a8ce-f3ff0a44aaab/pasted-text.txt",
+    "sha256": "ade9c7ce8df03fdcde368179cc39afc00471bbdfa0027da53a59ebc9df7b6a6a"
+  },
+  "scientific_rationale": "Re-rank frozen MIRABEL margin only by its conditional rarity among semantically local benign queries.",
+  "status": "DEVELOPMENT_PRECOMMITTED",
+  "stop_rules": {
+    "detection_fail": "LC_MIRABEL_DETECTION_NOT_SUPPORTED; no generation",
+    "no_posthoc": [
+      "change k",
+      "fusion",
+      "new local feature",
+      "domain routing",
+      "learned calibration"
+    ]
+  },
+  "substrate": {
+    "benign_holdout": {
+      "n": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/BENIGN_DEPLOYMENT_HOLDOUT.jsonl",
+      "sha256": "de3cd0bf799111bd0d615158d529c927bf428e1395765887f1bc01427b4ffca7"
+    },
+    "benign_reference": {
+      "n": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/BENIGN_REFERENCE.jsonl",
+      "sha256": "143b66739987c8e59100c83b3a82876154b67a423bbe213d9f0363a33334017e"
+    },
+    "protected_db": {
+      "documents": 3000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+      "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+    },
+    "targets": {
+      "domain_quota_each_membership": {
+        "nfcorpus": 334,
+        "scidocs": 333,
+        "trec-covid": 333
+      },
+      "member": 1000,
+      "nonmember": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+      "selection": "within fixed domain/membership strata, ascending frozen common-pool selection_key after exact prior-target exclusion",
+      "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+    }
+  }
+}

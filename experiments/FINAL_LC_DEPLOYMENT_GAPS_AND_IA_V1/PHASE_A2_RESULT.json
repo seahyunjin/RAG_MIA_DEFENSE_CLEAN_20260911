@@ -1,0 +1,51 @@
+{
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "canary_implemented": false,
+  "classification_precommitted_operationalization": {
+    "conditional_detector_failure": ">5pp V0-to-V50 TPR|EXPOSED drop",
+    "material_exposure_drop": ">=10pp V0-to-V50",
+    "no_defense_toward_chance": ">=2pp reduction in mean absolute native-metric distance from 0.5"
+  },
+  "completed_utc": "2026-09-13T15:15:18.943566+00:00",
+  "db_update_exposure_canary_required": false,
+  "diagnostics": {
+    "conditional_tpr_drop": -0.0056010986915895344,
+    "exposure_drop": 0.354,
+    "no_defense_chance_distance_reduction": 0.16107999999999995
+  },
+  "final_lc_modified": false,
+  "macro": {
+    "V0": {
+      "final_lc_distance_from_chance": 0.023162499999999964,
+      "no_defense_distance_from_chance": 0.4117125,
+      "retrieval_at4": 0.999,
+      "tpr_given_exposed": 0.9171788944723618,
+      "tpr_overall": 0.9164
+    },
+    "V10": {
+      "final_lc_distance_from_chance": 0.02414999999999996,
+      "no_defense_distance_from_chance": 0.389405,
+      "retrieval_at4": 0.9400000000000001,
+      "tpr_given_exposed": 0.918965459386512,
+      "tpr_overall": 0.8634000000000001
+    },
+    "V25": {
+      "final_lc_distance_from_chance": 0.019372499999999994,
+      "no_defense_distance_from_chance": 0.31452,
+      "retrieval_at4": 0.783,
+      "tpr_given_exposed": 0.9155815853151056,
+      "tpr_overall": 0.7188
+    },
+    "V50": {
+      "final_lc_distance_from_chance": 0.020609999999999972,
+      "no_defense_distance_from_chance": 0.25063250000000004,
+      "retrieval_at4": 0.645,
+      "tpr_given_exposed": 0.9227799931639513,
+      "tpr_overall": 0.5974
+    }
+  },
+  "next_stage": "PHASE_B_FP_CLOSED_BOOK_PRECOMMIT",
+  "phase": "A2_CHURN_E2E_CAUSAL_SCREEN",
+  "runtime_seconds": 211.64743357896805,
+  "verdict": "CHURN_EXPOSURE_DISAPPEARS"
+}

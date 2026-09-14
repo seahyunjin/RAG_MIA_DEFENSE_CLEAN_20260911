@@ -1,0 +1,15 @@
+{
+  "campaign": "BC_RRE_ACTION_ONLY_SMALL_V1",
+  "written_before_reference_download_or_overlap_audit": true,
+  "workspace_search_result": "NO_PREDEFINED_DISJOINT_REFERENCE_POOL_FOUND",
+  "reference_rule": "Use the complete public BEIR SciFact corpus exactly as distributed; prefix source IDs with BeIR_scifact::. No document may be removed after seeing protected/target overlap.",
+  "dataset": "BEIR scifact",
+  "archive_url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/scifact.zip",
+  "selection_uses_target_id": false,
+  "selection_uses_membership_label": false,
+  "selection_uses_attack_score": false,
+  "post_hoc_exclusion_allowed": false,
+  "contamination_policy": "Any ID or normalized-text overlap with protected DB/member/nonmember targets yields REFERENCE_SPLIT_CONTAMINATED and stops RRE; no alternative dataset or salt is tried.",
+  "retrieval_rule_if_valid": "Frozen BGE-M3 query-to-reference Top-20; choose the first eligible document.",
+  "created_utc": "2026-09-11T21:55:00Z"
+}

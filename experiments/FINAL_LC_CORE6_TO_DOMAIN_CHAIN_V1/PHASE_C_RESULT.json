@@ -1,0 +1,59 @@
+{
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "checks": {
+    "f1_drop_at_most_2pp": false,
+    "new_refusal_at_most_1pp": false,
+    "utility_retention_better_than_original": true
+  },
+  "completed_utc": "2026-09-13T04:15:06.794389+00:00",
+  "factuality_claim_boundary": "sentence-level frozen-NLI proxy; not hallucination-free claim",
+  "next_stage": "STOP_NO_DOMAIN",
+  "phase": "C_GOLD_QA",
+  "summary": [
+    {
+      "condition": "NO_DEFENSE",
+      "contradiction_proxy_rate": 0.0456140350877193,
+      "gold_em": 0.03,
+      "gold_f1": 0.20894493709122594,
+      "intervention_rate": 0.0,
+      "n": 1000,
+      "new_refusal": 0.0,
+      "source_support_rate": 0.8514619883040936,
+      "unsupported_sentence_rate": 0.14853801169590644
+    },
+    {
+      "condition": "ORIGINAL_MIRABEL_FIXED",
+      "contradiction_proxy_rate": 0.08261405672009864,
+      "gold_em": 0.023,
+      "gold_f1": 0.1706102000849141,
+      "intervention_rate": 0.984,
+      "n": 1000,
+      "new_refusal": 0.082,
+      "source_support_rate": 0.7768187422934648,
+      "unsupported_sentence_rate": 0.22318125770653513
+    },
+    {
+      "condition": "GLOBAL_BC_FIXED",
+      "contradiction_proxy_rate": 0.058465286236297195,
+      "gold_em": 0.023,
+      "gold_f1": 0.178459541556764,
+      "intervention_rate": 0.704,
+      "n": 1000,
+      "new_refusal": 0.054,
+      "source_support_rate": 0.8002436053593179,
+      "unsupported_sentence_rate": 0.1997563946406821
+    },
+    {
+      "condition": "FINAL_LC_FIXED",
+      "contradiction_proxy_rate": 0.059186189889025895,
+      "gold_em": 0.023,
+      "gold_f1": 0.1779442924752994,
+      "intervention_rate": 0.692,
+      "n": 1000,
+      "new_refusal": 0.058,
+      "source_support_rate": 0.8101109741060419,
+      "unsupported_sentence_rate": 0.18988902589395806
+    }
+  ],
+  "verdict": "GOLD_QA_UTILITY_FAILED"
+}

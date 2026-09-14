@@ -1,0 +1,8 @@
+{
+  "campaign": "FINAL_LC_CHURN_AND_FP_SAFE_V1",
+  "runtime_seconds": 8.03,
+  "stage": "DB_CHURN_RECALIBRATION_FAILED",
+  "strict_transfer": "DB_CHURN_STRICT_TRANSFER_FAILED",
+  "training_steps": 0,
+  "updated_utc": "2026-09-13T09:57:20.587593+00:00"
+}

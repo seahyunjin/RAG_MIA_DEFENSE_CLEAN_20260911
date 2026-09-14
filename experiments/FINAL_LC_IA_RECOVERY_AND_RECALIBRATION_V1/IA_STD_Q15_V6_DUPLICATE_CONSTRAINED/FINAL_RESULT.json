@@ -1,0 +1,29 @@
+{
+  "additional_recovery_allowed": false,
+  "campaign": "IA_STD_Q15_V6_DUPLICATE_CONSTRAINED",
+  "completed_utc": "2026-09-13T09:44:58.730204+00:00",
+  "detection_run": false,
+  "e2e_run": false,
+  "final_lc_modified": false,
+  "mathematically_possible": false,
+  "partial_artifact": {
+    "complete_question_sessions": 0,
+    "database": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V6_DUPLICATE_CONSTRAINED/runtime/ia_v6.sqlite3",
+    "database_sha256": "5b7239cff0c80a9109198a3d9d6474a625199efb9492d7df0c04937fa90b068f",
+    "failure_reasons": {
+      "QUESTION_TERMINATOR": 35
+    },
+    "judgment_rows": 0,
+    "known_invalid_sessions": 35,
+    "question_rows": 1013,
+    "sqlite_integrity": "ok",
+    "targets_started": 100
+  },
+  "performance_metrics_computed": false,
+  "preflight_max_invalid": 2,
+  "preflight_required_valid": 98,
+  "scientific_status": "STANDARDIZED_ATTACK_UNAVAILABLE",
+  "termination": "AUTHORIZED_GRACEFUL_CLOSE_AFTER_MATHEMATICAL_FORMAT_GATE_FAILURE",
+  "v7_created": false,
+  "verdict": "IA_STD_Q15_V6_FAILED_FINAL"
+}

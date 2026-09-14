@@ -1,0 +1,150 @@
+{
+  "benign_alarm_rows": [
+    {
+      "actual_benign_fpr": 0.01,
+      "benign_alarms": 10,
+      "benign_n": 1000,
+      "method": "MIRABEL",
+      "nominal_budget": 0.01,
+      "strict_operator": ">",
+      "threshold": 0.12669329412287356
+    },
+    {
+      "actual_benign_fpr": 0.006,
+      "benign_alarms": 6,
+      "benign_n": 1000,
+      "method": "Final LC",
+      "nominal_budget": 0.01,
+      "strict_operator": ">",
+      "threshold": 4.61015772749913
+    },
+    {
+      "actual_benign_fpr": 0.025,
+      "benign_alarms": 25,
+      "benign_n": 1000,
+      "method": "MIRABEL",
+      "nominal_budget": 0.025,
+      "strict_operator": ">",
+      "threshold": 0.09579957418751517
+    },
+    {
+      "actual_benign_fpr": 0.025,
+      "benign_alarms": 25,
+      "benign_n": 1000,
+      "method": "Final LC",
+      "nominal_budget": 0.025,
+      "strict_operator": ">",
+      "threshold": 3.6938669956249752
+    },
+    {
+      "actual_benign_fpr": 0.03,
+      "benign_alarms": 30,
+      "benign_n": 1000,
+      "method": "MIRABEL",
+      "nominal_budget": 0.03,
+      "strict_operator": ">",
+      "threshold": 0.09052679192180124
+    },
+    {
+      "actual_benign_fpr": 0.025,
+      "benign_alarms": 25,
+      "benign_n": 1000,
+      "method": "Final LC",
+      "nominal_budget": 0.03,
+      "strict_operator": ">",
+      "threshold": 3.6938669956249752
+    },
+    {
+      "actual_benign_fpr": 0.05,
+      "benign_alarms": 50,
+      "benign_n": 1000,
+      "method": "MIRABEL",
+      "nominal_budget": 0.05,
+      "strict_operator": ">",
+      "threshold": 0.0676129063368297
+    },
+    {
+      "actual_benign_fpr": 0.05,
+      "benign_alarms": 50,
+      "benign_n": 1000,
+      "method": "Final LC",
+      "nominal_budget": 0.05,
+      "strict_operator": ">",
+      "threshold": 3.00071981506503
+    }
+  ],
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "checks": {
+    "core5_mean_delta_positive": true,
+    "dcmi_no_catastrophic_failure": true,
+    "no_family_drop_below_minus_3pp": true,
+    "nondegrading_at_least_4_of_5": true
+  },
+  "completed_utc": "2026-09-13T02:58:34.548113+00:00",
+  "ia_status": "EXCLUDED_AFTER_PARSER_V2_GATE_FAILURE_NO_REGENERATION",
+  "macro": {
+    "final_lc_tpr": 0.9225490613266583,
+    "mean_delta": 0.03593406758448057,
+    "mirabel_tpr": 0.8866149937421778,
+    "nondegrading_families": 5,
+    "worst_delta": 0.008000000000000007
+  },
+  "next_stage": "CORE5_MATCHED_BUDGET_E2E_CHARACTERIZATION",
+  "phase": "A_CORE5_DETECTION",
+  "primary": {
+    "DCMI-Std-Q2": {
+      "Final LC": 0.7845,
+      "MIRABEL": 0.7285,
+      "ci95": [
+        0.0455,
+        0.067
+      ],
+      "delta": 0.05599999999999994
+    },
+    "MBA": {
+      "Final LC": 0.996,
+      "MIRABEL": 0.988,
+      "ci95": [
+        0.003,
+        0.014
+      ],
+      "delta": 0.008000000000000007
+    },
+    "MEntA": {
+      "Final LC": 0.884,
+      "MIRABEL": 0.8486,
+      "ci95": [
+        0.0288,
+        0.042
+      ],
+      "delta": 0.03539999999999999
+    },
+    "RAG-MIA": {
+      "Final LC": 0.952,
+      "MIRABEL": 0.888,
+      "ci95": [
+        0.048,
+        0.08
+      ],
+      "delta": 0.06399999999999995
+    },
+    "S²-MIA": {
+      "Final LC": 0.9962453066332916,
+      "MIRABEL": 0.9799749687108886,
+      "ci95": [
+        0.008760951188986232,
+        0.025031289111389236
+      ],
+      "delta": 0.016270337922402955
+    }
+  },
+  "primary_budget": 0.025,
+  "runtime": {
+    "detection_cache_sha256": "3f7679410d0857763ee040e5066d4a357e50f2a8d189cd5e2eaf4ccd7cb84a1b",
+    "embedding_sha256": "4ba49a330b06a3011b559d8d850a0765e37dad83885d93af936ced13525c1a96",
+    "encoding_and_scoring_seconds": 142.90537383407354,
+    "new_queries": 4000,
+    "retrieval_seconds": 7.867342323064804
+  },
+  "verdict": "CORE5_DETECTION_PASS"
+}

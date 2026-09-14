@@ -1,0 +1,43 @@
+{
+  "display_name": "MEntA",
+  "paper": "Five Queries Are Enough: Query-Efficient and Surrogate-Free Membership Inference Attacks on RAG via Entailment",
+  "venue_year": "USENIX Security 2026",
+  "paper_url": "https://arxiv.org/abs/2605.24312",
+  "local_paper": "/home/traffic_3/workspace/workspace/SH/LLM_pdf/MentA.pdf",
+  "paper_sha256": "047d52b3abb9dbc5b224305bce316f194b6ad0e933fd9122108c50601ef39728",
+  "attack_goal": "infer target-document membership from entailment-supported facts in five natural RAG answers",
+  "member_definition": "target document is in the retrieval corpus",
+  "nonmember_definition": "target document is absent from the retrieval corpus",
+  "target_requirements": "enough distinct facts for five document-specific natural questions",
+  "query_count": 5,
+  "query_generation": "GPT-4.1-nano creates five highly specific questions plus a topic-focused summary; the paper query is summary || question",
+  "query_generation_model": "gpt-4.1-nano (hosted revision not content-addressable)",
+  "prompt": "implemented in query_generator.py and preserved MEntA/generate_queries.py",
+  "decoding": {
+    "question_temperature": 0.7,
+    "summary_temperature": 0.3,
+    "max_question_tokens": 1500,
+    "provenance": "preserved reproduction defaults; the paper does not fully report hosted decoding parameters"
+  },
+  "session": "ordered q1..q5, mean document-level aggregation",
+  "retrieval_assumptions": "black-box RAG; paper evaluation uses top-k=3",
+  "score_formula": "mean_q(I_entail(q) - I_idk(q))",
+  "aggregation": "mean over exactly five queries",
+  "threshold": "chosen on evaluation/reference scores when classification is required",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "TPR@low-FPR"
+  ],
+  "official_repository": "preserved MEntA reproduction package (local copy; Git commit metadata absent)",
+  "official_commit": null,
+  "official_repo_alignment": "PARTIAL: the paper defines summary||question; preserved code augments retrieval encoding but passes the unaugmented question to answer generation",
+  "model_revisions": {
+    "nli": "tasksource/deberta-base-long-nli@04dcf11f844b07bc57015169fca2b7d6df8299d5",
+    "claim_extractor": "Babelscape/t5-base-summarization-claim-extractor@94775fb1c8dc2c3ef1bfec413f9f961e6ba5a1c8"
+  },
+  "paper_repo_difference": "The scorer formula agrees. The paper defines summary||question, while preserved retrieve.py uses the summary for retrieval encoding and generate_rag_output.py sends query['text']; the recovered adapter follows the paper and records both components. Hosted query-model revision must be frozen by output manifest.",
+  "implementation_label": "PRESERVED_REPRODUCTION_ADAPTER",
+  "status": "MENTA_PROTOCOL_READY",
+  "review": "PROTOCOL_ACCEPTED"
+}

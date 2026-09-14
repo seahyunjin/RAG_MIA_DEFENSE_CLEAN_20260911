@@ -1,0 +1,85 @@
+{
+  "campaign": "FINAL_LC_IA_AUDIT_AND_DB_CHURN_CPU_V1",
+  "created_utc": "2026-09-13T09:31:20.901030+00:00",
+  "resource_policy": {
+    "gpu": false,
+    "model_loading": false,
+    "answer_generation": false,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "workers_max": 4,
+    "blas_threads": 1,
+    "stream_interval_seconds": 120
+  },
+  "ia_policy": {
+    "database": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V6_DUPLICATE_CONSTRAINED/runtime/ia_v6.sqlite3",
+    "access": "SQLite URI mode=ro; never write, signal, stop, or modify IA-v6",
+    "performance_metrics_forbidden": [
+      "MIRABEL TPR",
+      "Final LC TPR",
+      "AUC",
+      "E-AUC",
+      "privacy"
+    ],
+    "normalization": "Unicode NFKC, strip, collapse whitespace",
+    "tokenization_for_diagnostic": "Unicode alphanumeric word tokens, casefolded",
+    "near_duplicate_diagnostic": "pair is suspicious when (token Jaccard>=0.85 AND character SequenceMatcher>=0.90) OR common-prefix ratio>=0.90",
+    "near_duplicate_is_validity_gate": false
+  },
+  "churn_policy": {
+    "versions": [
+      "V0",
+      "V10",
+      "V25",
+      "V50"
+    ],
+    "mode_a": "V0 frozen Final LC calibration/reference; no refresh",
+    "mode_b": "benign-only score/reference/outer-threshold refresh; attack samples=0",
+    "primary_budget": 0.025,
+    "promising_fpr_max": 0.05,
+    "promising_tpr_degradation_max_pp": 5.0,
+    "missing_document_embedding": "DB_CHURN_GPU_EMBEDDING_REQUIRED; do not encode or build affected index"
+  },
+  "calibration_sensitivity": {
+    "sizes": [
+      100,
+      200,
+      300,
+      500
+    ],
+    "subset": "ascending SHA256(query_id) prefix",
+    "seed_search": false,
+    "selection_use": false,
+    "locked_test_n": 1000
+  },
+  "input_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V6_DUPLICATE_CONSTRAINED/configs/IA_STD_Q15_V6_PRECOMMIT.json": "ea4a14553079b7dec26596b94fb8946b918fce1dd49c6a5a72dbcf740c40c24e",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V6_DUPLICATE_CONSTRAINED/../IA_STD_Q15_V5_SLOTTED_CONSTRAINED/FINAL_RESULT.json": "989a59bef6759143088ac7ef7b5e8181a796198953c27d0d66c8a89476aa0fea",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/tables/CORE5_DETECTION_STATISTICS.csv": "839d4a54e0fe6bb8e7abff7393d42027d75895c2a9a61bb5b6f22a48cb8f93a9",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/tables/BENIGN_DOMAIN_FPR_WILSON.csv": "b5fbb27322e89e94b5d7a7023cd5d5453ad0cb55f248cead4aeedc9b4807c590",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/GOLD_RECALIBRATION_RESULT.json": "c85341c2a2f9778f01ba87342c6baa552c77c9fda16357f1e41e1364db8a934b",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/cache/GOLD_REFRESHED_SCORES.jsonl": "aab0ab42ccab2af840d76113c4b48f960c30b588efd0344b9f0e479503c9286c",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/cache/GOLD_RECALIBRATION_QUERY_EMBEDDINGS.float16.npy": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/inputs/TOPIOCQA_BENIGN_RECALIBRATION_500.jsonl": "eb10d63f9d5b3c7d5498ab8ab77e0ae6aeab0330df83d82bf31d44506d9853ae",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V0.json": "7053a12fad418757cd4226c001633a7c558ad5b1e26e2bd76a57cbb8fed2f463",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V10.json": "4008381323a40829fa43b47cd874836011608c7f622e58736549e7ec509921db",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V25.json": "c2077f540a652d34e79da7bfad7b9d1035051bce12f715e98cac2a85cb8b3ae8",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V50.json": "922efe10dbf648359cdfd7cf9fbad43d42cc67bc1958ea6d50ce9c57d0de4e38"
+  },
+  "code_sha256": {
+    "experiments/FINAL_LC_IA_AUDIT_AND_DB_CHURN_CPU_V1/code/prepare_sidecar.py": "ff0b07c6e134cbe739cf303dc95a957b657b59b31739d9b01e95e8c68b469381",
+    "experiments/FINAL_LC_IA_AUDIT_AND_DB_CHURN_CPU_V1/code/run_sidecar.py": "d398d85b70b12d0ee681b9343e31ab24fdc332a6600a481a7ce111c0ebd13667"
+  },
+  "frozen": {
+    "Final LC": true,
+    "threshold_retuning": false,
+    "new_detector": false,
+    "retrieval_training": false,
+    "trainable_updates": 0
+  }
+}

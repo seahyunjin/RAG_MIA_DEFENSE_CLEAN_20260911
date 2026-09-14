@@ -1,0 +1,22 @@
+{
+  "attack": "RAG-MIA",
+  "status": "RAGMIA_PROTOCOL_READY",
+  "implementation_label": "RAGMIA_PAPER_FAITHFUL_REIMPLEMENTATION",
+  "source": {
+    "paper": "https://arxiv.org/abs/2405.20446",
+    "paper_sha256": "5d26441772d6bb1b757e6a1213b63adf6900f165668cf3a6fa5c34989c68d54d",
+    "repository": "not located",
+    "commit": null
+  },
+  "files": {
+    "query_generator.py": "c2f027a10debd8d2a8347ff969b3b368f71e50d4cf1b0321818ad9af64268b48",
+    "scorer.py": "a716b95fcca595dc9b18d0997a7aa3e31e149d4ff406367a2fe107d0071267ba",
+    "protocol_config.json": "1f697dcfc76c4e0770ee21d204e5d586505fb1e86c06ac6fe5f405d64b545335",
+    "PAPER_PROTOCOL_SPEC.json": "8e0950badb91e588fbabc17c8284fa459be237059e34cd51ed7ed642e645e28c",
+    "PAPER_PROTOCOL_SPEC.md": "e56f1f1da5d947c63deb05e1c158ea260d0b96cfcc7613060c39b83cf55c8dc2",
+    "tests/test_protocol.py": "cc9fb518c3d91c8c8002d2748afb258d4ebd3b0e7a78a5b42cad2ae7705d21c4"
+  },
+  "prompt_sha256": "c2f027a10debd8d2a8347ff969b3b368f71e50d4cf1b0321818ad9af64268b48",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {}
+}

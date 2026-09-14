@@ -1,0 +1,101 @@
+{
+  "attack": "IA-Std-Q15-API1; standardized stress test, not Original/paper-exact IA",
+  "bootstrap": {
+    "iterations": 2000,
+    "seed": 20260913,
+    "unit": "target/session"
+  },
+  "branches": {
+    "A0": "unaltered Top-4 context",
+    "A_HIDE": "remove frozen MIRABEL top-1 source and deterministic waterfill"
+  },
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "code": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/code/run_phase_c_e2e_generation.py": "52b8af8e385ed40946d119e4448f79d648203fce226f324f323f7641fc317743",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/code/run_phase_c_e2e_scoring.py": "3ede08b924a83b9563fa95436c06084d9c1c84a688a6ec2056891426f0c462ad",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/IA_STEALTH_CONFIRMATION_V1/post_ready/run_e2e_generation.py": "49475fd8379d3a9404deab539893c255440237145d8ee608039eaae2b1227f6c",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/IA_STEALTH_CONFIRMATION_V1/post_ready/run_e2e_scoring.py": "9a8340c11ff9ab3c2704d873c3de58cf1029bc690002edf4dfbc36495b013d05"
+  },
+  "conditions": [
+    "NO_DEFENSE",
+    "MIRABEL_MATCHED_2_5",
+    "FINAL_LC_MATCHED_2_5"
+  ],
+  "corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "created_utc": "2026-09-14T00:42:00.028011+00:00",
+  "detection_cache": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/post_ready/cache/IA_ST1_RETRIEVAL_AND_DETECTION.jsonl",
+    "sha256": "c13e3f0ef6f4a4359614c6c1933733d6acfaa873fe17a3a7929bd48a26c62090"
+  },
+  "detection_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/post_ready/IA_API1_DETECTION_RESULT.json",
+    "sha256": "ec06389c1885eaccc7be94c483e25979e8573d8082424503b0a06b9b94ebbf8d"
+  },
+  "final_lc_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "forbidden": [
+    "condition-specific branch regeneration",
+    "threshold tuning",
+    "scorer changes",
+    "invalid imputation"
+  ],
+  "generator": {
+    "do_sample": false,
+    "generation_count": 1,
+    "max_new_tokens": 12,
+    "max_prompt_tokens": 3072,
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "num_beams": 1,
+    "snapshot": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_token_budget": 2048
+  },
+  "generator_config": {
+    "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+    "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+  },
+  "gt": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_GT.jsonl",
+    "sha256": "55b89ea2d23ec1ecb26400c52d483118baae38bfec27e35018e462a4cca7f319"
+  },
+  "hard_gate": {
+    "mirabel_comparison": "Final LC < MIRABEL, or statistically non-inferior with point estimate <= MIRABEL",
+    "privacy_reduction": "Final LC native AUC <= No Defense native AUC -0.03"
+  },
+  "phase": "IA_API1_MATCHED_BUDGET_E2E",
+  "queries": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_QUERIES.jsonl",
+    "sha256": "bdfb808ffd6fff53399f7c6b99444dca46bde7e16bafde930aa0be80d53f83a1"
+  },
+  "scorer": {
+    "labels": [
+      "Yes",
+      "No",
+      "UNK"
+    ],
+    "native_metric": "fixed-polarity session ROC-AUC",
+    "secondary": "E-AUC=max(AUC,1-AUC)",
+    "session_score": "sum(1[response==GT] if response!=UNK else -5)/15",
+    "unknown_penalty_lambda": 5
+  },
+  "targets": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  },
+  "thresholds": {
+    "Final LC": {
+      "actual_benign_fpr": 0.025,
+      "operator": ">",
+      "threshold": 3.6938669956249752
+    },
+    "MIRABEL": {
+      "actual_benign_fpr": 0.025,
+      "operator": ">",
+      "threshold": 0.09579957418751517
+    }
+  }
+}

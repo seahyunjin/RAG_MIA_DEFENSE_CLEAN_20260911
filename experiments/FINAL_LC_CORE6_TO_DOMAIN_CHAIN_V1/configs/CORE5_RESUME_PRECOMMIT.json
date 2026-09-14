@@ -1,0 +1,85 @@
+{
+  "branch": "CORE5_AFTER_IA_PARSER_FAILURE",
+  "budgets": [
+    0.01,
+    0.025,
+    0.03,
+    0.05
+  ],
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "code_sha256": {
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/common.py": "d1209b3dcfd6db16ff3855f1de0c045ac560b57f86e7e0f0cd5059060e9a8000",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/prepare_core5_phase_b.py": "ae788dc755b7a8c649d150d3692694a387a0e301ae73be6b6b18458c0cb9715e",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/prepare_core5_resume.py": "171c086e666bfb31d9bb7ce32a7620d02738bf838b8a21aab9276f1667507747",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/prepare_phase_c.py": "caa40f9f7720ac72276aa0f01eab28ad3870219cc6cf6698e9f1fc0d96df9b80",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_core5_detection.py": "719af7c4bed9b66a3dc6cc0b12ec836bdde6f3dc76f79ead645abc1eb39d166b",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_core5_generation.py": "9e7bdac6ad4c3172eda61d7758ce32824aff2cd66632589f225c29d4a1d01d98",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_core5_scoring.py": "473bacb46d4839dcc9977d9f77d39bf8a410ffc679c938d2818e7988f76881ac",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_a_detection.py": "62803ff827445d14c8a2596cc8fe44f3638eeb77684646c30c6be6b1187da8fe",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_b_generation.py": "b4af004ae8f605c574c926fea995b95db41888b5b9b8b0adddb0f6c4372a93d9",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_b_scoring.py": "18dac747626886eb3564f4e47b3c6b9f7620ed5daef2dcf35bc0616bc8c73ec5",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_c_gold.py": "c0022fd543043ac56b117f6b94d68010577acb7e7a33d171d7201f638be7868a"
+  },
+  "continuation_policy": "Core5 detection, matched-budget E2E, then Gold QA even though IA parser recovery failed",
+  "core5": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA",
+    "DCMI-Std-Q2"
+  ],
+  "created_utc": "2026-09-13T02:55:30.709960+00:00",
+  "dcmi_provenance": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/runtime/DCMI_STD_Q2_FROZEN_PROVENANCE.jsonl",
+    "sha256": "990559962b267a4855ec6280a63d5ab79615b4b306266bc81b9a0919d42ddd9f"
+  },
+  "dcmi_queries": {
+    "member_sessions": 1000,
+    "nonmember_sessions": 1000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/DCMI_STD_Q2_QUERIES.jsonl",
+    "queries": 4000,
+    "sessions": 2000,
+    "sha256": "aec516e63359486d676fe747d34de0b513513a2e1f6bb7f56282e6cacfeb6ea7"
+  },
+  "frozen_model": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "ia_policy": "excluded; no regeneration; no valid-only mixing",
+  "negative": "same frozen benign holdout 1,000",
+  "old_answers": {
+    "n": 68000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/runtime/FINAL_GENERATED_ANSWERS.jsonl",
+    "sha256": "e15a84dd03c16eb5bea19c310071c25667f798d7cc8ffc16427628a9f685b7fe"
+  },
+  "old_detection": {
+    "n": 17000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl",
+    "sha256": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209"
+  },
+  "old_menta_evidence": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/tables/MENTA_QUERY_EVIDENCE.csv",
+    "sha256": "88d88f0154cc80d708c43e574b17560e558f9061838aa24eab4ce46f0611cce2"
+  },
+  "old_query_manifest": {
+    "n": 17000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/FINAL_SUPPORTED_QUERY_MANIFEST.jsonl",
+    "sha256": "73755782a8506b7415a7ab6611688cfa89f5f4426275b0e7906338e8d1692aa6"
+  },
+  "parser_failure": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/IA_PARSER_V2_RESULT.json",
+    "sha256": "d48b8e33d101f8f164dd0acf6f7d2ace4eb8c6cca194fd7ae5c6daefc81c2b50"
+  },
+  "parser_spec": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/IA_STD_Q15_PARSER_V2_SPEC.json",
+    "sha256": "5b12ed07b16310bfbcb5d2369b534e24e1236c451fa7a25ba7cb538e1d43cf90"
+  },
+  "performance_results_opened": false,
+  "primary_budget": 0.025,
+  "strict_operator": ">",
+  "targets": {
+    "n": 2000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "allowed_change": "metric aggregation IDs only; exclude S2_REFERENCE",
+  "campaign": "DB_CHURN_V2_CORRECTED_CORE5_SCOPE",
+  "classification_of_initial_result": "INVALID_S2_SCOPE_INCLUSION",
+  "code_sha256": {
+    "prepare": "83fe2aef0ebb1fc0ec0355441acec6eefb03d81a226822209e29a83a3b76a240",
+    "run": "a5a8e3418594ed51bf17dbd227df5de9d9100aabfbed140de1428b50df987ee6"
+  },
+  "created_utc": "2026-09-13T10:00:50.265996+00:00",
+  "forbidden_changes": [
+    "scores",
+    "embeddings",
+    "retrieval",
+    "detector",
+    "threshold",
+    "formula",
+    "other attack IDs"
+  ],
+  "original_artifact_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/DB_CHURN_V2_RESULT.json": "255679c6dc4a67474d993432de0315f09d13b0fcc0ca418d52eabc695c4b38cc",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/FINAL_RESULT.json": "bf016e5a8c332a78e205d751353d3ead4c47b277e18f742c2b3dd7abbf702bd3",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/configs/DB_CHURN_V2_PRECOMMIT.json": "369d5f30cc75b7beadc5ce3a2944f6ea4ddb5ecf8f428ec221866e68fc612368",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/tables/DB_CHURN_CORE5_CLUSTER_BOOTSTRAP.csv": "67286244bf1ee9cc29dd5159adf9cd0f80b62a802e0d417c2e3a04df4a76a697",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/tables/DB_CHURN_V2_SUMMARY.csv": "39d49d4e5cd5acf8830d7a3e6e9f2c966cea4055637273f503977773d68a50b1"
+  },
+  "reason": "Initial aggregation included 402 S2_REFERENCE rows. Frozen Core5 evaluation contains only 1,598 S2_EVALUATION rows.",
+  "s2": {
+    "all": 2000,
+    "evaluation": 1598,
+    "evaluation_id_sha256": "800c3dfdda2ab703b68a1d42603246bb3a98716a945e4c2257c5c8cc6d6f8875",
+    "evaluation_member": 799,
+    "evaluation_nonmember": 799,
+    "excluded_id_sha256": "7b48771ba808e271c3a8ae36a36a757404c2194198c0c35833f69a570cca525e",
+    "excluded_reference": 402
+  },
+  "score_cache_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V0_QUERY_SCORES.npz": "70c559eafa3139eefa7bd0e55cee8e65c3cf822a2d209e646910f93a08ecebd3",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V10_QUERY_SCORES.npz": "392eaec1498b9df1d84ac14e19a5e40e9543953eb5a74f451ce4439bcbbc6a6e",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V25_QUERY_SCORES.npz": "59703c43b2fcf12ee5e79c0421596ae924dc231d157092e368ecf6a2c458eaf8",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V50_QUERY_SCORES.npz": "504efb0d2027366306f974d73ea5f1120f275e6ff6cecfcc366e42aa6e2ebafc"
+  }
+}

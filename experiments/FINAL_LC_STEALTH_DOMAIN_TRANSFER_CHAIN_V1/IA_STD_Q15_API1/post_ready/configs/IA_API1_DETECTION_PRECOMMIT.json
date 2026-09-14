@@ -1,0 +1,84 @@
+{
+  "attack": "IA-Std-Q15-API1; standardized stealth stress test, not Original/paper-exact IA",
+  "bootstrap": {
+    "iterations": 2000,
+    "seed": 20260913,
+    "unit": "target/session"
+  },
+  "budgets": [
+    0.01,
+    0.025,
+    0.03,
+    0.05
+  ],
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "code": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/code/run_phase_c_detection.py",
+    "sha256": "200dbb94cd9a7470624f8c1bc43688b2c8b87edcc74d7ee27f3a464033fbcd55"
+  },
+  "created_utc": "2026-09-13T19:18:48.044998+00:00",
+  "detectors": {
+    "Final LC": "frozen semantic-local calibration, k=200",
+    "MIRABEL": "canonical full-corpus Gumbel margin"
+  },
+  "final_lc_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "forbidden": [
+    "threshold tuning",
+    "formula changes",
+    "attack training",
+    "invalid imputation"
+  ],
+  "frozen_benign_detection": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl",
+    "sha256": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209"
+  },
+  "frozen_corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "frozen_corpus_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy",
+    "sha256": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e"
+  },
+  "frozen_reference_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "54cb1a2c0e2123f10c356b20891201860e40f65a7d38b1282592dd9a8bdfcc31"
+  },
+  "frozen_reference_scores": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/LARGE_DETECTION_SCORES.jsonl",
+    "sha256": "af2f0028c5083bcd9d127d0ba08d0f41635a022af8651da6928181b81e42738a"
+  },
+  "full_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/FINAL_RESULT.json",
+    "sha256": "3bed838bcd20342961767e7c43e1e235e98cc3e4bc8a02cf2b97e79f22335ecc"
+  },
+  "gt": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_GT.jsonl",
+    "sha256": "55b89ea2d23ec1ecb26400c52d483118baae38bfec27e35018e462a4cca7f319"
+  },
+  "hard_gate": {
+    "cluster_bootstrap": "95% CI lower bound > 0",
+    "preferred": "Delta TPR >= +0.03",
+    "strict_improvement": "Delta TPR > 0"
+  },
+  "legacy_computation_module": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/IA_STEALTH_CONFIRMATION_V1/post_ready/run_detection.py",
+    "sha256": "1c388e6e3767d6323e3d03b023c14ce8aa4c254a771d0d42b450050fd552cda8"
+  },
+  "negative_definition": "same frozen 1,000-query benign deployment holdout",
+  "phase": "IA_API1_SAME_FPR_DETECTION",
+  "positive_definition": "valid member-target IA-Std-Q15-API1 query",
+  "primary_budget": 0.025,
+  "queries": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_QUERIES.jsonl",
+    "sha256": "bdfb808ffd6fff53399f7c6b99444dca46bde7e16bafde930aa0be80d53f83a1"
+  },
+  "sessions": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/outputs/IA_API1_FULL_FROZEN.jsonl",
+    "sha256": "f3cac1fa2aee3a962166cb6dbb08df443e687bced3c74e0e564cc5ca60bc7836"
+  },
+  "threshold_rule": "strict >, at most floor(alpha*N) alarms on the identical benign cohort"
+}

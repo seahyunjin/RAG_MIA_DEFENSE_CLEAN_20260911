@@ -1,0 +1,12 @@
+{
+  "campaign": "BC_RRE_ACTION_ONLY_SMALL_V1",
+  "stage": "RRE_GENERATION_COMPLETE",
+  "updated_utc": "2026-09-11T19:39:39.308474+00:00",
+  "pid": 1377635,
+  "verdict": "RRE_GENERATION_COMPLETE",
+  "new_generation_count": 146,
+  "safe_query_new_generation_count": 0,
+  "output_sha256": "bc41bf3c0159f9961ad75fd8e2a332acedda4396414eb128bb141292da49610d",
+  "precommit_sha256": "5d216ebb844679a1007cfb853ad9082560b48833b12fddc1598a8c806172187d",
+  "runtime_seconds": 486.5304693877697
+}

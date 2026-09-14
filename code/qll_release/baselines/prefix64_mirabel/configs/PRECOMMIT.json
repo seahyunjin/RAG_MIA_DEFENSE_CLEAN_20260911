@@ -1,0 +1,24 @@
+{
+  "experiment": "Exp176",
+  "written_before_candidate_generation_and_metrics": true,
+  "candidate": "PREFIX64_MIRABEL_TO_HIDE",
+  "required_predecessors": {
+    "Exp174R": "DCMI_REPAIR_MECHANISM_SUPPORTED",
+    "Exp174S": "PREFIX64_MIRABEL_CLEAN3K_PASS",
+    "Exp174T": "PREFIX64_MIRABEL_MENTA5_PASS"
+  },
+  "cohort": {"member": 900, "nonmember": 900, "source": "Exp160-E frozen external cohort"},
+  "attacks": {
+    "RAGLeak": {"output_budget": 128, "implementation": "paper-description-based black-box adaptation"},
+    "BudgetLeak-Z": {"output_budgets": [10,30,50,70,90,110,130,150,170,190,210,230,250,270],
+      "implementation": "disclosed-query adaptation; not official author-code reproduction"}
+  },
+  "policy": "Mirabel alarm => frozen Original-Mirabel hidden response; otherwise all-source stable-prefix64 response",
+  "packing": {"top_k": 4, "canonical_source": "exact document ID", "duplicate_collapse": true,
+    "stable_prefix_tokens_per_unique_source": 64},
+  "gates": {"each_effective_auc_max": 0.60, "original_mirabel_noninferiority_margin": 0.03},
+  "bootstrap": {"resamples": 5000, "seed": 20260828, "unit": "target document"},
+  "paid_api_calls": 0,
+  "fresh_blind": false,
+  "claim_boundary": "RAGLeak/BudgetLeak-Z are external attack adaptations, not official reproduction or fresh blind."
+}

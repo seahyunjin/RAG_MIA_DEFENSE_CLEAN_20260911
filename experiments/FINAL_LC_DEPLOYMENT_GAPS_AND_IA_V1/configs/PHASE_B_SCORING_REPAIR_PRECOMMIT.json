@@ -1,0 +1,52 @@
+{
+  "allowed_change": "exact-query-id read-time join only",
+  "audits": {
+    "DCMI-Std-Q2": {
+      "conflicts": 0,
+      "joined_field": "variant",
+      "missing": 0,
+      "retrieval_rows": 3200,
+      "unique_query_ids": 800
+    },
+    "MBA": {
+      "conflicts": 0,
+      "joined_field": "mask_answers",
+      "missing": 0,
+      "retrieval_rows": 1600,
+      "unique_query_ids": 400
+    },
+    "S²-MIA": {
+      "conflicts": 0,
+      "joined_field": "s2_full_target",
+      "missing": 0,
+      "retrieval_rows": 3208,
+      "unique_query_ids": 802
+    }
+  },
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "cause": "the frozen Phase-A2 retrieval substrate omitted native-scorer-only MBA/S2/DCMI fields",
+  "code_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/prepare_phase_b_scoring_repair.py": "e03a0541c88b8d53d7646aaaba389fb1fec700e5b62293197efacc1167c28493",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_b_scoring.py": "34461fa6b262bb8e52d5d210760fd5ce5e08c90253d4b8223ce66e53f638004f",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_b_scoring_repair.py": "560deee1cd4ca511dfa38e67af561c6c504c2bbda923db80d215d0a1fcc0e91e"
+  },
+  "created_utc": "2026-09-13T15:46:15.935259+00:00",
+  "forbidden_changes": [
+    "generation rerun",
+    "answer/retrieval change",
+    "fuzzy matching",
+    "imputation",
+    "native metric change",
+    "detector/model/threshold change"
+  ],
+  "inputs_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/S2_ATTACK_QUERIES.jsonl": "4df57748c712de5ba8c5ef8929bac27eacde69a2e679f0d9ddcf20f9da0705cb",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/DCMI_STD_Q2_QUERIES.jsonl": "aec516e63359486d676fe747d34de0b513513a2e1f6bb7f56282e6cacfeb6ea7",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/cache/PHASE_A2_RETRIEVAL_AND_DETECTION.jsonl": "e1de43d307a79d8627927884e0212347ae6b158c0c295914d0ae3303039ccf29",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_B_CLOSED_BOOK_ANSWERS.jsonl": "7048ca04ac3be261e8017cb3b7fef6805e338c3fb3dc56e839312087258c7607",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_B_GENERATION_MANIFEST.json": "1e524f2c9d9248326c2d7c2863a329ddf9e8c7418dfd3df5312bdfc6768b7fab",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_MBA_ATTACK_QUERIES.jsonl": "653905217430b826bf889c9aad6fc69a7fde29410bc98b739d6baedacc9023dc"
+  },
+  "repair": "PHASE_B_NATIVE_SCORER_METADATA_JOIN_V1",
+  "status": "PRECOMMITTED_BEFORE_REPAIRED_PHASE_B_SCORING"
+}

@@ -1,0 +1,30 @@
+{
+  "attack": "IA-Std-Q15-API1",
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "checks": {
+    "duplicate_zero": true,
+    "exact_q15_gt15": true,
+    "inferred_fields_zero": true,
+    "valid_at_least_98": true,
+    "validity_gap_at_most_2pp": true
+  },
+  "completed_utc": "2026-09-13T16:39:25.222422+00:00",
+  "coverage": 0.99,
+  "duplicate_zero": true,
+  "estimated_campaign_spend_usd": 0.4910891,
+  "exact_q15_gt15": true,
+  "failure_reasons": {
+    "META_REFERENCE_QUESTION": 1,
+    "MISSING_GT": 1
+  },
+  "inferred_fields": 0,
+  "member_valid": 50,
+  "member_valid_rate": 1.0,
+  "nonmember_valid": 49,
+  "nonmember_valid_rate": 0.98,
+  "performance_metrics_computed": false,
+  "sessions": 100,
+  "valid": 99,
+  "validity_gap": 0.020000000000000018,
+  "verdict": "IA_API1_PROTOCOL_READY"
+}

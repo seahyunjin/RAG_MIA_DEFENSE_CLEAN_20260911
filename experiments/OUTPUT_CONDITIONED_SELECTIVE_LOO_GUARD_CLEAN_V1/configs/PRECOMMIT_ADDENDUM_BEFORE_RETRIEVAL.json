@@ -1,0 +1,29 @@
+{
+  "a0_rows_at_freeze": 0,
+  "campaign": "OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+  "code_sha256": {
+    "code/analyze_phase1.py": "6e38490dc48bf5c01d19587424c3b0bbfecefaa64c8fee942f2591b3d07ac1f1",
+    "code/common.py": "cb097c27bfe85c892aa88daec673eed9ca91bf5a0e88bc4361de8f42b0e877c9",
+    "code/prepare.py": "164abded61d15c9d176b50555c1cbd019aeee0ea852b23b670004cfca81a8b26",
+    "code/run_phase1.py": "999fcb9a92783c47c416c2851460ae0633dd7ffd02f3ec71b97ea226ddc33198",
+    "code/verify_frozen.py": "3ef447c369999b09a97bca85a60f77c96646561d1da4dde03261ba6135b1c657",
+    "run_phase1_supervisor.sh": "93f0cd71e4312fb192d960ed54b42b083ff1be678b387ad4cb02f22fdfe9534b",
+    "tests/test_contract.py": "2ea01aeda8f8798f2094d1157fd1a2faa890d296bfe2ae9b24688b1a24f91e56"
+  },
+  "combined_code_sha256": "a6d8077e837d2dd7b5f1db8ceac83338bfafeb08cdeee132ed152c36b0e29333",
+  "created_utc": "2026-09-11T10:18:17.158894+00:00",
+  "legacy_numeric_inputs_used": [],
+  "loo_rows_at_freeze": 0,
+  "parent_precommit_sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016",
+  "phase2_opened": false,
+  "pre_retrieval_corrections": [
+    "Benign gold documents overlapping any selected attack target are excluded to preserve member/nonmember semantics.",
+    "Benign calibration/holdout is domain-stratified: NFCorpus 112/113, SciDocs 113/112, TREC-COVID 25/25.",
+    "Python 3.11 prompt-render f-string syntax and supervisor exit-status reporting were repaired before any retrieval/model score/generation.",
+    "Earlier precommit/addendum drafts remain in audits and were never used to produce retrieval or model scores."
+  ],
+  "qll_rows_at_freeze": 0,
+  "retrieval_rows_at_freeze": 0,
+  "supersedes_addendum": "audits/PRECOMMIT_ADDENDUM_ATTEMPT1_SYNTAX_BLOCK.json",
+  "written_before_retrieval": true
+}

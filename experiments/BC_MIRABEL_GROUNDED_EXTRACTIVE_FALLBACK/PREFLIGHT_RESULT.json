@@ -1,0 +1,10 @@
+{
+  "alarm_count": 73,
+  "alarm_query_ids_sha256": "6b4a72d7fbd7afdc53a6c874e0c2f6a0708bdd4b609c8255bf53dcd0163d7552",
+  "bc_threshold": 0.1116663235201894,
+  "checks_passed": 23,
+  "checks_total": 23,
+  "selected_source_rows_sha256": "e99a838308412bd08f3427ffda6442f32358b8624dfc75e86072eca1b2722375",
+  "updated_utc": "2026-09-11T15:53:16.695436+00:00",
+  "verdict": "BC_GEF_PREFLIGHT_PASS"
+}

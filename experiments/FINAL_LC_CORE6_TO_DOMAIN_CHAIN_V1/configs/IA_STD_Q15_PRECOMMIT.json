@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-13T02:41:29.481892+00:00",
+  "generator": {
+    "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+    "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+  },
+  "performance_results_opened": false,
+  "protocol_sha256": "64f8fd0d5e75564fc0d316530e2328e8e6e9394bb17d3ad2ee56dc4c89dca4d4",
+  "targets": {
+    "n": 2000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  }
+}

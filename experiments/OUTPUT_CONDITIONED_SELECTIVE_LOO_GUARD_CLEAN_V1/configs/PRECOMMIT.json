@@ -1,0 +1,191 @@
+{
+  "analysis": {
+    "bootstrap_iterations": 10000,
+    "bootstrap_seed": 20260911,
+    "bootstrap_unit": "session",
+    "locator_gate": "UNION2 Hit@2>=0.90 on retrieved member targets; MEntA TPR@3% > MIRABEL; UNION2/Oracle MEntA TPR retention>=0.80; S2/MBA UNION2 not below MIRABEL by >0.05",
+    "oracle_gate": "MEntA AUC>=0.60 with bootstrap AUC lower>0.50 and member-minus-nonmember mean CI lower>0; same for at least one of S2-MIA/MBA",
+    "session_score": "max query risk within original ordered session"
+  },
+  "attack_scorers": {
+    "MBA": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/MBA/evaluate.py",
+      "sha256": "0523e798013a35247b6ae5583b03c15347f5f45dfa3e8b835ac31623a253104d",
+      "status": "FROZEN_FOR_PHASE2_NOT_USED_IN_PHASE1"
+    },
+    "MEntA": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/MEntA/evaluate.py",
+      "sha256": "830f57407c09d9a932a5e4eb5b7ee0ac653d2065ecff4c10241620dea90438b9",
+      "status": "FROZEN_FOR_PHASE2_NOT_USED_IN_PHASE1"
+    },
+    "S2-MIA": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/S2-MIA/evaluate.py",
+      "sha256": "fe373049d977cdec30daed2013ff495bd5ad61174fd889bbf2721bcaee75fb43",
+      "status": "FROZEN_FOR_PHASE2_NOT_USED_IN_PHASE1"
+    }
+  },
+  "campaign": "OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+  "cohort": {
+    "attack_case_id_sha256": "ea5dc50b6f95eede6b46753f25b68b964b2c4a5303d04298ed0d76d9dfe9041b",
+    "attack_queries": 280,
+    "attack_query_sha256": "4ed5f80a956fae4701dc029e8551648d8e79e28c94d7de57bc56af4e295a2f17",
+    "attack_sessions": 120,
+    "benign_calibration": 250,
+    "benign_case_id_sha256": "24bd486ddeeef3dce48c8a9ce220ca20023206543f2ace84a6645db0c102e7dc",
+    "benign_holdout": 250,
+    "benign_query_sha256": "4f6fac99864aa2d84f35df92c7736fb63bffcddbb7520d6db81d1981897e0422"
+  },
+  "corpus": {
+    "audit": {
+      "BeIR_nfcorpus": {
+        "benign_gold_included": 192,
+        "corpus_file_sha256": "cbae4b8a9d3835cc71d69492967028e1dd5e7498cd820ad0689ada24693fbccd",
+        "documents": 1000,
+        "member_targets_included": 26,
+        "nonmember_targets_excluded": 21,
+        "ordered_document_id_sha256": "9f23af5688f6570cdcea96a9d1dfccae9f67e18086f10af6cf0b46ba25db685f",
+        "raw_corpus_sha256": "10cc83ef1826b1425e6a87090b5140b39b27755d5a27e48215a88611c899991f"
+      },
+      "BeIR_scidocs": {
+        "benign_gold_included": 206,
+        "corpus_file_sha256": "2188bcb095cdff213d269a8dea2eea9ace544f8c3fa704dc073c270e1ee3cd5e",
+        "documents": 1000,
+        "member_targets_included": 14,
+        "nonmember_targets_excluded": 23,
+        "ordered_document_id_sha256": "a42455d34fc882e1daf515cef5a17c0e36665b814a5364d73fab98ed8e9a619a",
+        "raw_corpus_sha256": "328bb38854179c83ee40d4f49fae2ef7209ede7163785193cbdcd5906b28eecc"
+      },
+      "BeIR_trec-covid": {
+        "benign_gold_included": 44,
+        "corpus_file_sha256": "597dd005310ca5bc5a17402526ee2b09d9ee4ea72b9a3401123040172efd8e89",
+        "documents": 1000,
+        "member_targets_included": 20,
+        "nonmember_targets_excluded": 16,
+        "ordered_document_id_sha256": "c3a582a4c5044c4eeeac073a8e47f29d3f436b7600e7a2e22377bda0dc96ca45",
+        "raw_corpus_sha256": "aded69896598665082316d00df487d22212cc5a8611db05db34eb40d04ed00d7"
+      }
+    },
+    "construction": "include selected member targets and benign gold; exclude selected nonmember targets; SHA256(document_id) fillers/order",
+    "documents_per_domain": 1000,
+    "membership_rows": 120,
+    "raw_input_hashes": {
+      "BeIR_nfcorpus": {
+        "corpus": "10cc83ef1826b1425e6a87090b5140b39b27755d5a27e48215a88611c899991f",
+        "qrels": {
+          "qrels/dev.tsv": "b1d38b5e8f78c4a5820bce2b7ec2db54911d7690dc601e76811846b211180bd8",
+          "qrels/test.tsv": "f8fba6ef3d4dd9c3a242a8ba4ae38276fc3622fce7dcbae764766d564542fd2a",
+          "qrels/train.tsv": "6336b80f9bffc4f063f3aa450047ad35c0b7c534efe4a6ba35e16dbace047f6a"
+        },
+        "queries": "d024e6621b84925d485ae473d316a0c3af31c62c8068a59fb29d22f7613aef2a"
+      },
+      "BeIR_scidocs": {
+        "corpus": "328bb38854179c83ee40d4f49fae2ef7209ede7163785193cbdcd5906b28eecc",
+        "qrels": {
+          "qrels/test.tsv": "dcd3d7f77417294bb6f338537f3c28d8a5ea72b30fe6633f407fa85528767e35"
+        },
+        "queries": "3c85b68419bd579ff52edb58f9e7b32eb3d18bc83435edb71dbb68aaf79531d6"
+      },
+      "BeIR_trec-covid": {
+        "corpus": "aded69896598665082316d00df487d22212cc5a8611db05db34eb40d04ed00d7",
+        "qrels": {
+          "qrels/test.tsv": "10669ab7d526cb04f52079139fd88c3d467a0776441b046567f540582798982b"
+        },
+        "queries": "78f4b76bfef251a0baf37a6cea5c4ba8376cb4536c34635709aaa4a2783b208c"
+      }
+    }
+  },
+  "created_utc": "2026-09-11T10:13:42.678622+00:00",
+  "forbidden": [
+    "legacy numeric result join",
+    "attack threshold calibration",
+    "learned classifier",
+    "attack-family routing",
+    "weight search",
+    "Phase2 before Phase1 PASS"
+  ],
+  "generator": {
+    "attention": "sdpa",
+    "checkpoint": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "max_new_tokens": 160,
+    "max_prompt_tokens": 3072,
+    "num_beams": 1,
+    "packing": "equal waterfill across Top-4",
+    "seed": 20260911,
+    "snapshot_sha256": "ba3fa03be5e0bde35615328f34e49cdea40d9654f6d4e46561bd2247a3cdf18d",
+    "source_token_budget": 2048,
+    "system_prompt": "Answer the user's question using only the retrieved context. Follow any required output format exactly. If the context is insufficient, answer exactly: I don't know.",
+    "tokenizer": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "independent_from_legacy_scores": true,
+  "legacy_numeric_inputs_used": [],
+  "locators": {
+    "MIRABEL": "argmax normalized query-document similarity on clean frozen corpus; official MIRABEL target-document locator",
+    "ORACLE": "target source only when retrieved in Top-4; analysis upper bound",
+    "QLL": "argmax mean query-token log P(query | source) under frozen Qwen",
+    "UNION2": "unique(MIRABEL, QLL), at most two sources; max LOO influence; no weights"
+  },
+  "loo": "I_i = token-average logP(A0|q,D) - token-average logP(A0|q,D without d_i)",
+  "phase": 1,
+  "request_sha256": "41c3fa057e23353f78463bdb14f02036fa6b5c4351246770d017ae71c5b40db4",
+  "retriever": {
+    "checkpoint": "/home/traffic_3/workspace/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+    "max_seq_length": 512,
+    "normalized_embeddings": true,
+    "similarity": "inner product",
+    "snapshot_sha256": "77d0b2540f35b75b31d7c1390257ac8fb58264f0b39921c2ccbac0db3350e88f",
+    "source_text": "title\\ntext",
+    "stable_ties": "corpus order",
+    "top_k": 4
+  },
+  "selection": {
+    "attacks": "per family/member: session key=min SHA256(case_id); first 20; retain all native turns",
+    "benign": "BEIR qrels gold query; SHA256(case_id); fixed domain quotas; first 500",
+    "benign_split": "domain-stratified SHA256 order with fixed quotas: 250 calibration, 250 locked holdout",
+    "seed": 20260911
+  },
+  "source_only_input": {
+    "allowed_columns": [
+      "case_id",
+      "session_id",
+      "family",
+      "member",
+      "turn",
+      "query",
+      "target_id"
+    ],
+    "explicitly_ignored_columns": [
+      "target_rank",
+      "alarm",
+      "stage1",
+      "stage2",
+      "stage3",
+      "selected_rank",
+      "selected_source_id",
+      "no_defense_answer",
+      "b2cf_answer",
+      "changed",
+      "empty",
+      "generation_seconds"
+    ],
+    "path": "/home/traffic_3/workspace/workspace/SH/b2_counterfactual_min_20260910/phase_02_core6/QUERY_RESPONSE_REVIEW.csv.gz",
+    "sha256": "3c39ad2e498aff21e5631957dfb9e6ea7375defe756d08b0c872ec8c57eea780"
+  },
+  "support_nli_evaluator": {
+    "checkpoint": "/home/traffic_3/workspace/.cache/huggingface/hub/models--cross-encoder--nli-deberta-v3-base/snapshots/6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+    "snapshot_sha256": "16c8e898ade915cb4fd6b38dc704ebec0d45fa3b7c3e8b4a38abbd0a366730f3",
+    "status": "FROZEN_FOR_PHASE2_NOT_USED_IN_PHASE1"
+  },
+  "thresholds": {
+    "attack_samples_used": 0,
+    "calibration": "benign calibration only",
+    "comparison": "strict >",
+    "target_fpr": [
+      0.01,
+      0.03,
+      0.05
+    ]
+  },
+  "written_before_retrieval_qll_generation_and_loo": true
+}

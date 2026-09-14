@@ -1,0 +1,38 @@
+{
+  "attack_selection_sha256": "6533d76513b5913f864d5e720bb8b7bb035dd9424fb1fdc20f7b8adb7424985c",
+  "available_families": [
+    "MBA",
+    "MEntA",
+    "S²-MIA"
+  ],
+  "clean_existing_ids_exact": true,
+  "corpus_manifest": [
+    {
+      "file": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1/private/CORPUS_BeIR_nfcorpus.csv.gz",
+      "rows": 1000,
+      "sha256": "cbae4b8a9d3835cc71d69492967028e1dd5e7498cd820ad0689ada24693fbccd"
+    },
+    {
+      "file": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1/private/CORPUS_BeIR_scidocs.csv.gz",
+      "rows": 1000,
+      "sha256": "2188bcb095cdff213d269a8dea2eea9ace544f8c3fa704dc073c270e1ee3cd5e"
+    },
+    {
+      "file": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1/private/CORPUS_BeIR_trec-covid.csv.gz",
+      "rows": 1000,
+      "sha256": "597dd005310ca5bc5a17402526ee2b09d9ee4ea72b9a3401123040172efd8e89"
+    }
+  ],
+  "ia_ground_truth_present": false,
+  "request_sha256": "37e5eb24265bc3d083c9575bb57e77ffda32ea54be66f148dab060e1c80cb4a8",
+  "selected_queries": 1000,
+  "selected_sessions": 240,
+  "source_sha256": "3c39ad2e498aff21e5631957dfb9e6ea7375defe756d08b0c872ec8c57eea780",
+  "unavailable_families": [
+    "DCMI",
+    "IA",
+    "RAG-MIA"
+  ],
+  "updated_utc": "2026-09-11T16:27:06.669276+00:00",
+  "verdict": "BC_MIRABEL_CORE6_PREFLIGHT_PARTIAL_PASS"
+}

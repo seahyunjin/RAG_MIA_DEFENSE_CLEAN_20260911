@@ -1,0 +1,62 @@
+{
+  "campaign": "FINAL_CORE6_MATCHED_BUDGET_E2E_V1",
+  "created_utc": "2026-09-12T20:10:29Z",
+  "authoritative_request": {
+    "path": "/home/cau_lab/.codex/attachments/7a4c75b6-fa17-4fba-a7e2-4afe2736ba6a/pasted-text.txt",
+    "sha256": "208d161010467c3d3c963db54116cab5cc400902d120415922d35c991ecb660e"
+  },
+  "provenance_note": "The user-supplied request is the authoritative pre-existing specification. This JSON materializes that specification before any DCMI/IA defense generation or performance evaluation; initial read-only paper/repository inspection had already begun and is disclosed.",
+  "frozen_final_lc": {
+    "path": "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/configs/FINAL_DEFENSE_MANIFEST.json",
+    "sha256": "ccdb92db49364a9a9f390864272f97f55456f5949a9af01f9c527990043d57b9",
+    "modification_allowed": false
+  },
+  "paper_sources": {
+    "DCMI": {
+      "path": "papers/DCMI.pdf",
+      "sha256": "ee83fcb9ec83a0a7e8d8aedbf0a87f50e351a49a896a1a144b75ec7b12d3f4ef",
+      "official_repository": "https://github.com/Xinyu140203/RAG_MIA",
+      "expected_head_at_audit": "ef961a1f23d09c62c5fbf69d798e325fb0362e55"
+    },
+    "IA": {
+      "path": "papers/IA.pdf",
+      "sha256": "3454915b3651d2e90d23f1a27d28bf9807bdbc0a5701079861b91506da9f0791",
+      "official_repository": "https://github.com/ali7naseh/RAG_MIA",
+      "expected_head_at_audit": "a53e8fda4f1492f204d968d7afb53ce8287c193c"
+    }
+  },
+  "decision_rules": {
+    "dcmi_allowed_statuses": [
+      "DCMI_PAPER_PROTOCOL_READY",
+      "DCMI_PAPER_FAITHFUL_REIMPLEMENTATION",
+      "DCMI_SPEC_UNDERDETERMINED"
+    ],
+    "ia_allowed_statuses": [
+      "IA_PAPER_PROTOCOL_READY",
+      "IA_PAPER_EXACT_UNAVAILABLE",
+      "IA_REPOSITORY_VARIANT"
+    ],
+    "core6_ready": "DCMI and IA must both be paper-faithful/main-table eligible",
+    "both_unavailable": "preserve Core4, invent no proxy protocol, and stop before Core6 E2E",
+    "one_ready": "CORE5_PLUS_ONE_PENDING; execute only paper-faithful supported attacks",
+    "repository_variant": "STRESS_TEST_ONLY; never label paper-exact"
+  },
+  "downstream_gates": {
+    "core6_e2e_precommit_required": true,
+    "gold_qa_precommit_required": true,
+    "gold_qa_allowed_only_after_core6_privacy_pass": true,
+    "no_threshold_or_model_changes": true
+  },
+  "mba_missingness_rule": {
+    "missing_or_malformed_mask": "incorrect",
+    "sample_exclusion": false,
+    "fuzzy_parsing": false
+  },
+  "code_sha256": {
+    "code/run_protocol_recovery.py": "dda822d5c591f53015ad9e1d3ad09f7e485e20120bd89ff781e3c26483084c08",
+    "code/test_protocol_recovery.py": "3b06bee7901bdc4b62cfe921a4ee9fce6b1b6ef8b1d6230981ec49231602e916",
+    "code/run.sh": "414f91431855088a8dc7d03ad1a706521e04165a59cebd319ee0fb31184c8507"
+  },
+  "new_generation_before_protocol_gate": false,
+  "status": "PROTOCOL_RECOVERY_PRECOMMITTED"
+}

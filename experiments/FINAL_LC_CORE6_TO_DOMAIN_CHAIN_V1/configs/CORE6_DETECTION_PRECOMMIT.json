@@ -1,0 +1,77 @@
+{
+  "bootstrap": {
+    "cluster": "target/session",
+    "iterations": 2000,
+    "seed": 20260912
+  },
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "catastrophic_failure_predefinition": "Final LC TPR < 0.05 at primary 2.5% benign-FPR budget",
+  "code_sha256": {
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/common.py": "d1209b3dcfd6db16ff3855f1de0c045ac560b57f86e7e0f0cd5059060e9a8000",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/generate_standardized_queries.py": "9046de6af492bf610baefb04fe3fae8fcc05b9fefe13d159fc9ef0bac893cd2d",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/prepare_phase_a.py": "866fe1436057288c9d3f3e84d616fd72e5358159b0fe8cb15792592d3ea03b24",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_a_detection.py": "62803ff827445d14c8a2596cc8fe44f3638eeb77684646c30c6be6b1187da8fe"
+  },
+  "comparison": {
+    "actual_alarm_count_reported": true,
+    "budgets": [
+      0.01,
+      0.025,
+      0.03,
+      0.05
+    ],
+    "methods": {
+      "Final LC": "R_LC",
+      "MIRABEL": "M"
+    },
+    "negative": "same benign holdout 1000",
+    "positive": "member-target attack query",
+    "primary_budget": 0.025,
+    "threshold": "most permissive benign-derived threshold satisfying strict > and integer alarm budget"
+  },
+  "created_utc": "2026-09-13T02:41:29.483921+00:00",
+  "dcmi_protocol_sha256": "44c6e5121e98a7bfffc66cd086111f8b44e676bc082a82133d6cd338af1da361",
+  "final_lc_frozen_manifest_sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9",
+  "gate": {
+    "dcmi_and_ia_tpr": ">=0.05",
+    "mean_delta_tpr": ">0",
+    "nondegrading_families": ">=5/6",
+    "worst_family_delta": ">=-0.03"
+  },
+  "ia_protocol_sha256": "64f8fd0d5e75564fc0d316530e2328e8e6e9394bb17d3ad2ee56dc4c89dca4d4",
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/88b55c83-f01c-4d00-991e-20191b794863/pasted-text.txt",
+    "sha256": "71501a1c891a58f2de365b4e6a8ec62b47b7dade4c532c964487569e13698ab9"
+  },
+  "s2_scope": "S2_EVALUATION only; the frozen 402-row scorer reference split is excluded",
+  "status": "PHASE_A_PRECOMMITTED",
+  "substrate": {
+    "benign_holdout": {
+      "n": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/BENIGN_DEPLOYMENT_HOLDOUT.jsonl",
+      "sha256": "de3cd0bf799111bd0d615158d529c927bf428e1395765887f1bc01427b4ffca7"
+    },
+    "benign_reference": {
+      "n": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/BENIGN_REFERENCE.jsonl",
+      "sha256": "143b66739987c8e59100c83b3a82876154b67a423bbe213d9f0363a33334017e"
+    },
+    "core4_scores": {
+      "n": 17000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl",
+      "sha256": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209"
+    },
+    "protected_db": {
+      "n": 3000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+      "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+    },
+    "targets": {
+      "member": 1000,
+      "n": 2000,
+      "nonmember": 1000,
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+      "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+    }
+  }
+}

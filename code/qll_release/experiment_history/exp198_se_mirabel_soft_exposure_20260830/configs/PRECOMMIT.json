@@ -1,0 +1,46 @@
+{
+  "experiment": "Exp198",
+  "candidate": "SE_MIRABEL",
+  "created_utc": "2026-08-30T03:00:00Z",
+  "development_status": "POST_EXP197_DEVELOPMENT_REPAIR_NOT_FRESH_BLIND",
+  "rule": {
+    "retrieval_top_k": 10,
+    "document_budget_tokens": 2048,
+    "minimum_source_tokens": 64,
+    "maximum_source_tokens_theoretical": 221,
+    "source_view": "stable_qwen_token_prefix",
+    "mirabel_formula": "canonical_official_v2_full_corpus_background",
+    "risk_probability": "softmax((source_similarity - mirabel_threshold) / mirabel_background_std) over frozen top10",
+    "allocation": "64 + (2048 - 10*64) * (1-p_i)/(10-1), deterministic largest-remainder integerization",
+    "binary_alarm": false,
+    "request_rejection": false,
+    "source_hide": false,
+    "rank_feature": false,
+    "attack_feature": false,
+    "membership_label_feature": false,
+    "normal_calibration": false,
+    "learned_parameters": 0,
+    "rank11plus_backfill": false,
+    "generation_per_query": 1,
+    "session_state": 0
+  },
+  "cohort": {
+    "attack_cases": 35680,
+    "normal_gold": 1000,
+    "source": "frozen Exp193 attack cases + Exp195 TopiOCQA normal cases",
+    "baselines": ["NO_DEFENSE", "GLOBAL_CAP64", "ORIGINAL_MIRABEL", "EXP197_RA_CAP64_BF"]
+  },
+  "primary_gates": {
+    "ragleak_vs_mirabel_margin": 0.02,
+    "budgetleak_vs_mirabel_margin": 0.02,
+    "budgetleak_each_rank_absolute_max": 0.75,
+    "native_each_vs_mirabel_margin": 0.02,
+    "native_worst_absolute_max": 0.70,
+    "normal_token_f1_above_mirabel": true,
+    "normal_response_preservation_above_mirabel": true,
+    "normal_new_refusal_below_mirabel": true,
+    "normal_exact_match_not_below_mirabel": true,
+    "automatic_nli_unsupported_not_above_globalcap": true
+  },
+  "claim_boundary": "This is a development repair on reused frozen cohorts, not fresh-blind confirmation. Automatic NLI is not a human hallucination label."
+}

@@ -1,0 +1,33 @@
+{
+  "campaign": "IA_STD_Q15_V5_SLOTTED_CONSTRAINED",
+  "verdict": "IA_STD_Q15_V5_FORMAT_PREFLIGHT_FAILED",
+  "completed_utc": "2026-09-13T08:54:57.666548+00:00",
+  "preflight": {
+    "sessions": 100,
+    "valid": 1,
+    "coverage": 0.01,
+    "member_valid_rate": 0.02,
+    "nonmember_valid_rate": 0.0,
+    "validity_gap": 0.02,
+    "duplicate_questions": 98,
+    "failure_reasons": {
+      "QUESTION:EXACT_DUPLICATE": 98,
+      "QUESTION:WRAPPER_OR_QUOTE": 1
+    },
+    "inferred_fields": 0,
+    "fuzzy_parsing": 0,
+    "checks": {
+      "valid_at_least_98": false,
+      "validity_gap_at_most_2pp": true,
+      "exact_q15_and_judgments": true,
+      "duplicate_questions_zero": false,
+      "inferred_fields_zero": true
+    },
+    "verdict": "IA_STD_Q15_V5_FORMAT_PREFLIGHT_FAILED"
+  },
+  "full": null,
+  "detection_run": false,
+  "e2e_run": false,
+  "final_lc_modified": false,
+  "training_steps": 0
+}

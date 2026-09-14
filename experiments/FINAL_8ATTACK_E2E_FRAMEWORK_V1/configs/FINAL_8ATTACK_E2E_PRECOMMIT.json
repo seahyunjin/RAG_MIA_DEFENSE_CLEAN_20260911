@@ -1,0 +1,102 @@
+{
+  "attack_protocol_status": {
+    "BudgetLeak": "PROTOCOL_UNAVAILABLE",
+    "DCMI": "PROTOCOL_UNAVAILABLE",
+    "IA": "PROTOCOL_UNAVAILABLE",
+    "MBA": "PAPER_PROTOCOL_READY",
+    "MEntA": "PAPER_PROTOCOL_READY",
+    "RAG-MIA": "PAPER_FAITHFUL_REIMPLEMENTATION",
+    "RAGLeak": "PROTOCOL_UNAVAILABLE",
+    "S²-MIA": "PAPER_FAITHFUL_REIMPLEMENTATION"
+  },
+  "budgetleak_budgets": [
+    10,
+    30,
+    50,
+    70,
+    90,
+    110,
+    130,
+    150,
+    170,
+    190,
+    210,
+    230,
+    250,
+    270
+  ],
+  "budgetleak_execution": "PROHIBITED_UNTIL_VALID_QA_REFERENCE_AND_AUTHOR_SCORER_RECOVERED",
+  "campaign": "FINAL_8ATTACK_E2E_FRAMEWORK_V1",
+  "code_sha256": {
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/common.py": "5b1bf326339754aaa38904c8d24fbec4515a720a2c48ea9988d4fdf3ac30ec30",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/phase_a_protocol_audit.py": "887a81311edb0705ea2c04d0d75a6be73ea6b642e3dc0dfc2852fb889c6aa3eb",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/prepare_freeze.py": "c3bf56d2dd62c8353037e272770642930d80bdf965b5d74e0050c9f85ee1774e",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/run_chain.sh": "c6d063445e9eaeacabac8b77447ca95c27fce9781d3f10c5fe00a2f7777821cb",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/run_generation.py": "7c1cc37b5176d04ca73c67605e4ce79467da7c9380ae8892807d753bf8f54aa9",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/run_retrieval.py": "3c0a1ab4b55bab70c371a48bf8cc5a2b962c591eada076b290ded6da3b2de522",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/run_scoring.py": "562565c6d1aa0b7087ae6ccbd4a0b5a27bc0336d0af8ec9224e878feb68b3351",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/test_campaign.py": "d1fb0ff2d6afa649a775da47f77a27163cb234367b03dd79b932be9b9a8f9d8e",
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/code/watchdog.sh": "0ed9c9b48342aa2de8a9fb4b95209514b91181e57303f46a89a94cf88510e741"
+  },
+  "conditions": [
+    "NO_DEFENSE",
+    "ORIGINAL_MIRABEL_SIMPLE_HIDE",
+    "GLOBAL_BC_SIMPLE_HIDE",
+    "FINAL_LC_OUTER_SIMPLE_HIDE"
+  ],
+  "created_utc": "2026-09-12T12:36:44.020486+00:00",
+  "final_defense": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/configs/FINAL_DEFENSE_MANIFEST.json",
+    "sha256": "ccdb92db49364a9a9f390864272f97f55456f5949a9af01f9c527990043d57b9"
+  },
+  "membership_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/manifests/FINAL_MEMBERSHIP_AND_QUERY_MANIFEST.json",
+    "sha256": "e17f4b0af1471e84d546f83c18d8b51642a9e329355b61a8641fb069fc264639"
+  },
+  "native_metrics": {
+    "BudgetLeak": "Accuracy, ROC-AUC, TPR at 0.1% FPR",
+    "DCMI": "Accuracy and ROC-AUC",
+    "IA": "ROC-AUC, accuracy, low-FPR TPR",
+    "MBA": "ROC-AUC, accuracy, low-FPR TPR",
+    "MEntA": "ROC-AUC, accuracy, low-FPR TPR",
+    "RAG-MIA": "TPR/FPR and ROC-AUC",
+    "RAGLeak": "paper reports accuracy; threshold protocol required",
+    "S²-MIA": "balanced accuracy/TPR/FPR; ROC-AUC secondary"
+  },
+  "queries": {
+    "n": 17000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/FINAL_SUPPORTED_QUERY_MANIFEST.jsonl",
+    "sha256": "73755782a8506b7415a7ab6611688cfa89f5f4426275b0e7906338e8d1692aa6"
+  },
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/f1537eb5-14f3-45de-923b-c0787690af26/pasted-text.txt",
+    "sha256": "143a47f52c0720506f842be95d656baa25d13f4c036d5420d931f2709c25f53c"
+  },
+  "s2_reference_rule": "within each domain/membership stratum, sorted target_id index modulo 5 == 0",
+  "status": "FINAL_PRECOMMITTED",
+  "stop_claim_rules": [
+    "unsupported protocol remains blank",
+    "native paper score is primary",
+    "E-AUC is secondary only",
+    "no universal claim",
+    "no method changes after this hash"
+  ],
+  "supported_for_generation": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA"
+  ],
+  "targets": {
+    "n": 2000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  },
+  "unavailable_no_proxy_numeric_result": [
+    "DCMI",
+    "IA",
+    "RAGLeak",
+    "BudgetLeak"
+  ],
+  "utility": "1000 benign answer-preservation only; no gold answer strings, so Gold-F1/EM unavailable"
+}

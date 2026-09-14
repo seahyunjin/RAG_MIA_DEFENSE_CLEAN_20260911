@@ -1,0 +1,7 @@
+# ORTHOGONAL_EXPOSURE_SEARCH_V1
+
+- 현재 단계: `SPARSE_EXPOSURE_SCREEN_FAILED`
+- 갱신: `2026-09-12T08:11:32.821248+00:00`
+- final_verdict: `TRAINING_FREE_HANDCRAFTED_DETECTOR_SEARCH_CLOSED`
+- confirmation_required: `False`
+- e2e_allowed: `False`

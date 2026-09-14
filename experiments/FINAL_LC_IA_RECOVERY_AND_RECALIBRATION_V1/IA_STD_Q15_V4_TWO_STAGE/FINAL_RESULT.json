@@ -1,0 +1,41 @@
+{
+  "campaign": "IA_STD_Q15_V4_TWO_STAGE",
+  "verdict": "IA_STD_Q15_V4_FORMAT_PREFLIGHT_FAILED",
+  "scientific_status": "STANDARDIZED_ATTACK_UNAVAILABLE",
+  "completed_utc": "2026-09-13T08:26:36.477726+00:00",
+  "preflight": {
+    "checks": {
+      "exact_q15_among_valid": true,
+      "inferred_fields_zero": true,
+      "valid_at_least_98": false,
+      "validity_gap_at_most_2pp": false
+    },
+    "coverage": 0.58,
+    "exact_q15_among_valid": true,
+    "failure_reasons": {
+      "STAGE1:DUPLICATE_QUESTION": 9,
+      "STAGE1:INVALID_JSON": 2,
+      "STAGE2:ID_SEQUENCE_MISMATCH": 1,
+      "STAGE2:INVALID_JSON": 1,
+      "STAGE2:INVALID_JUDGMENT": 29
+    },
+    "fuzzy_parsing": 0,
+    "inferred_fields": 0,
+    "member_valid": 30,
+    "member_valid_rate": 0.6,
+    "nonmember_valid": 28,
+    "nonmember_valid_rate": 0.56,
+    "sessions": 100,
+    "valid": 58,
+    "validity_gap": 0.039999999999999925,
+    "verdict": "IA_STD_Q15_V4_FORMAT_PREFLIGHT_FAILED"
+  },
+  "full_generation_started": false,
+  "full_generation_sessions": 0,
+  "detection_run": false,
+  "e2e_run": false,
+  "reporting_repair_only": true,
+  "original_terminal_heartbeat_sha256": "d30896f3b68fe5f01666aa77763978540c34cedb9927fdbe3d1bf8c2337e5abe",
+  "preflight_result_sha256": "276b9f89c1ded6a75c6c12ddffd7815d67a557f5121edd3e3e59666050ab1f51",
+  "report_sha256": "768a7065e1485f63b5b6f97be6d833f22b7e19ec8dfefc86b193c39060281451"
+}

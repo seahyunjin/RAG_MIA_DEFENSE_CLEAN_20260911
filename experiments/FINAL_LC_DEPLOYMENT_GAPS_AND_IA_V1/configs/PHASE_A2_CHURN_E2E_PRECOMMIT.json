@@ -1,0 +1,195 @@
+{
+  "added_corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/MISSING_EMBEDDING_UNION.jsonl",
+    "sha256": "65d6d5738978b1b22d5ec9606a004f1240f68eab4f7e719c9ced75a60dd5e972"
+  },
+  "added_corpus_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/CHURN_ADDED_DOCUMENT_EMBEDDINGS.float16.npy",
+    "sha256": "09b590d1424e21c828cfd4217da14c163ae859d3c0cf98dfd4a4ae498f306768"
+  },
+  "attacks": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA",
+    "DCMI-Std-Q2"
+  ],
+  "base_corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "base_corpus_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy",
+    "sha256": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e"
+  },
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "churn_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/DB_CHURN_V2_CORRECTED_RESULT.json",
+    "sha256": "4b4c3618577188abae1b936eef5b3aa91adf31131386230db653cf97e5e4f6f2"
+  },
+  "classification": {
+    "canary": "record DB_UPDATE_EXPOSURE_CANARY_REQUIRED only for Case B/mixed; do not implement",
+    "case_a": "Retrieval@4 materially decreases; No-Defense moves toward chance; TPR|EXPOSED drop <=5pp",
+    "case_b": "Retrieval@4 remains; No-Defense remains strong; TPR|EXPOSED materially decreases",
+    "case_c": "both exposure loss and conditional detector loss",
+    "conditional_detector_failure": ">0.05 V0-to-V50 macro TPR|EXPOSED drop",
+    "material_exposure_drop": ">=0.10 V0-to-V50 macro Retrieval@4",
+    "no_defense_toward_chance": ">=0.02 V0-to-V50 reduction in macro mean abs(native metric-0.5)"
+  },
+  "code_sha256": {
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/build_phase_a2_substrate.py": "a544763c1fdb98795f424db2683944558a49453161018e049967ef762041faad",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/common.py": "8625086033fa16f19f809a3f2b049690f239f70b52cbd654e766f53f64d862ba",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/prepare_phase_a2.py": "e40399728aa4078afdf0a797db8d52b5b7c369ebe0f4f6709e372695a605cde9",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_a2_generation.py": "94f28ea8481ba7e5931e2ae6f80af674293498343f62b64a6b110bbc0a256072",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_a2_scoring.py": "3bbaa5b565bcabdbc82e2a1d067ebb28b7bdfc7e4bcddb95477d35a4f85ad7fa"
+  },
+  "conditions": [
+    "NO_DEFENSE",
+    "FINAL_LC_REFRESH"
+  ],
+  "created_utc": "2026-09-13T11:02:37.364674+00:00",
+  "dcmi_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/STANDARDIZED_QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "4ba49a330b06a3011b559d8d850a0765e37dad83885d93af936ced13525c1a96"
+  },
+  "final_lc_modified": false,
+  "frozen_final_lc": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "generator": {
+    "config": {
+      "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+    },
+    "do_sample": false,
+    "max_new_tokens": {
+      "DCMI-Std-Q2": 12,
+      "MBA": 160,
+      "MEntA": 160,
+      "RAG-MIA": 12,
+      "S²-MIA": 160
+    },
+    "max_prompt_tokens": 3072,
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "num_beams": 1,
+    "snapshot": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_token_budget": 2048
+  },
+  "large_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "54cb1a2c0e2123f10c356b20891201860e40f65a7d38b1282592dd9a8bdfcc31"
+  },
+  "native_scoring": {
+    "DCMI-Std-Q2": "original-minus-perturbed Yes score session ROC-AUC",
+    "MBA": "mask reconstruction accuracy; malformed/incomplete=0",
+    "MEntA": "paper-faithful frozen claim extraction + document NLI, Q5 session ROC-AUC",
+    "RAG-MIA": "Yes/No membership score",
+    "S²-MIA": "reference-fitted BLEU/perplexity balanced accuracy"
+  },
+  "old_answers": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/runtime/FINAL_GENERATED_ANSWERS.jsonl",
+    "sha256": "e15a84dd03c16eb5bea19c310071c25667f798d7cc8ffc16427628a9f685b7fe"
+  },
+  "old_dcmi_answers": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/runtime/STANDARDIZED_BRANCH_ANSWERS.jsonl",
+    "sha256": "3e1f2cd14f25032974429f9d8802efd3a086ec45358a7cca9e2e412f1440b307"
+  },
+  "old_menta_evidence": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/tables/MENTA_QUERY_EVIDENCE.csv",
+    "sha256": "88d88f0154cc80d708c43e574b17560e558f9061838aa24eab4ce46f0611cce2"
+  },
+  "phase": "A2_CHURN_E2E_CAUSAL_SCREEN",
+  "phase_a1": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/PHASE_A1_RESULT.json",
+    "sha256": "5c0c3709c9b1c506770e4cd5c6082c1b43caeec220602090a24835d031f414f7"
+  },
+  "phase_a1_detail": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/tables/PHASE_A1_MEMBER_QUERY_DETAIL.csv",
+    "sha256": "471c247d9e00f9a7afa86d960492750b17b8c73a0fd38bcee277030f741a831b"
+  },
+  "primary_selection": {
+    "key": "SHA256('20260913|A2|<attack>|<membership>|<session_id>'), ascending; session_id tie-break",
+    "member_per_attack": 200,
+    "nonmember_per_attack": 200,
+    "s2_scope": "S2_EVALUATION only",
+    "unit": "session/target"
+  },
+  "prohibitions": [
+    "detector change",
+    "new LC feature",
+    "new protection",
+    "threshold search",
+    "attack-specific calibration"
+  ],
+  "query_manifest": {
+    "n": 22000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/CHURN_QUERY_MANIFEST.jsonl",
+    "sha256": "0e854b1e55688268462f77a4900cdfc17faedd6f90490e5afcc28d8ffb2f9215"
+  },
+  "s2_provenance": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/FINAL_SUPPORTED_QUERY_MANIFEST.jsonl",
+    "sha256": "73755782a8506b7415a7ab6611688cfa89f5f4426275b0e7906338e8d1692aa6"
+  },
+  "s2_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/S2_QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "578f53dc9c26ab768153f080096c0aee6f6c6832fb6f47482e7a278d7cbae2b7"
+  },
+  "s2_reference": {
+    "role": "attacker-side frozen native-scorer fitting only; excluded from primary 200/200 metrics",
+    "scope": "all 402 pre-existing S2_REFERENCE sessions per DB/condition"
+  },
+  "status": "PRECOMMITTED_BEFORE_A2_SUBSTRATE_OR_GENERATION",
+  "targets": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  },
+  "versions": {
+    "V0": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V0.json",
+        "sha256": "7053a12fad418757cd4226c001633a7c558ad5b1e26e2bd76a57cbb8fed2f463"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V0_QUERY_SCORES.npz",
+        "sha256": "70c559eafa3139eefa7bd0e55cee8e65c3cf822a2d209e646910f93a08ecebd3"
+      }
+    },
+    "V10": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V10.json",
+        "sha256": "4008381323a40829fa43b47cd874836011608c7f622e58736549e7ec509921db"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V10_QUERY_SCORES.npz",
+        "sha256": "392eaec1498b9df1d84ac14e19a5e40e9543953eb5a74f451ce4439bcbbc6a6e"
+      }
+    },
+    "V25": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V25.json",
+        "sha256": "c2077f540a652d34e79da7bfad7b9d1035051bce12f715e98cac2a85cb8b3ae8"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V25_QUERY_SCORES.npz",
+        "sha256": "59703c43b2fcf12ee5e79c0421596ae924dc231d157092e368ecf6a2c458eaf8"
+      }
+    },
+    "V50": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V50.json",
+        "sha256": "922efe10dbf648359cdfd7cf9fbad43d42cc67bc1958ea6d50ce9c57d0de4e38"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V50_QUERY_SCORES.npz",
+        "sha256": "504efb0d2027366306f974d73ea5f1120f275e6ff6cecfcc366e42aa6e2ebafc"
+      }
+    }
+  },
+  "versions_order": [
+    "V0",
+    "V10",
+    "V25",
+    "V50"
+  ]
+}

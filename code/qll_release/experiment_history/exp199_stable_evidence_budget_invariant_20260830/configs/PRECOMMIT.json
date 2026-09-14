@@ -1,0 +1,57 @@
+{
+  "experiment": "Exp199",
+  "candidate": "BIC_SEV64_MIRABEL",
+  "title": "Budget-Invariant Coreset Stable Evidence View with non-blocking Mirabel",
+  "development_only": true,
+  "fresh_blind": false,
+  "generator": "Qwen2.5-3B-Instruct",
+  "retriever": "all-mpnet-base-v2",
+  "retrieval_top_k": 10,
+  "canonical_source_view": {
+    "query_independent": true,
+    "rank_independent": true,
+    "token_budget_per_source": 64,
+    "unit": "sentence_or_32-token_window",
+    "selection": "deterministic greedy monotone facility-location coverage",
+    "selection_embeddings": "all-mpnet-base-v2",
+    "selected_units_returned_in_original_document_order": true
+  },
+  "mirabel_action": {
+    "official_full_corpus_threshold": true,
+    "request_rejection": false,
+    "located_source_hide_only_when_alarm": true,
+    "raw_document_backfill": false
+  },
+  "budget_invariant_release": {
+    "caller_budget_used_by_policy": false,
+    "server_max_new_tokens": 64,
+    "deterministic_decoding": true,
+    "same_query_context_must_have_identical_response_across_requested_budgets": true
+  },
+  "trainable_parameters": 0,
+  "normal_calibration": false,
+  "attack_specific_tuning": false,
+  "rank_specific_tuning": false,
+  "phase_a_no_generation_gates": {
+    "normal_gold_target_mean_token_recall_delta_vs_prefix64_mirabel_min": 0.02,
+    "normal_gold_target_exact_containment_delta_vs_prefix64_mirabel_min": 0.0,
+    "budget_member_target_mean_reference_recall_delta_vs_prefix64_mirabel_max": 0.02,
+    "source_view_hash_invariance_required": 1.0
+  },
+  "primary_budgetleak_gates": {
+    "aggregate_effective_auc_max": 0.6007592592592592,
+    "each_target_rank_effective_auc_max": 0.65,
+    "budget_variant_response_invariance_min": 1.0
+  },
+  "expansion_gates": {
+    "each_native_attack_effective_auc_max": 0.65,
+    "each_native_attack_vs_original_mirabel_margin_max": 0.02,
+    "normal_new_refusal_rate_max": 0.10,
+    "normal_gold_token_f1_improvement_vs_prefix64_mirabel_min": 0.05
+  },
+  "stop_rules": [
+    "If phase A fails, do not generate answers.",
+    "If BudgetLeak aggregate or any rank gate fails, do not run Llama or fresh blind.",
+    "Do not change the source budget, output budget, threshold, or scoring after observing attack outcomes."
+  ]
+}

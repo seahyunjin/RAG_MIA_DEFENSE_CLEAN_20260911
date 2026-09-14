@@ -1,0 +1,64 @@
+{
+  "campaign": "FINAL_LC_IA_AUDIT_AND_DB_CHURN_CPU_V1",
+  "verdict": "COMPLETE",
+  "updated_utc": "2026-09-13T09:45:48.731204+00:00",
+  "ia": {
+    "phase": "PREFLIGHT",
+    "scope_sessions": 100,
+    "question_rows": 1013,
+    "judgment_rows": 0,
+    "complete_sessions": 0,
+    "valid_complete_sessions": 0,
+    "valid_percent_among_complete": null,
+    "member_valid_percent_among_complete": null,
+    "nonmember_valid_percent_among_complete": null,
+    "validity_gap": null,
+    "known_invalid_sessions": 35,
+    "mathematically_possible": false,
+    "mathematical_invalid_limit": 2,
+    "suspicious_near_duplicate_sessions": 100,
+    "sessions_with_at_least_two_questions": 100,
+    "runner_heartbeat": {
+      "campaign": "IA_STD_Q15_V6_DUPLICATE_CONSTRAINED",
+      "stage": "IA_V6_PREFLIGHT_QUESTION_PROGRESS",
+      "updated_utc": "2026-09-13T09:41:16.756220+00:00",
+      "slot": 12,
+      "completed_slots": 1013,
+      "total_slots": 1500,
+      "valid_slots": 978,
+      "eta_seconds": 660
+    },
+    "performance_metrics_computed": false
+  },
+  "db_churn": {
+    "frozen_embedding_file": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy",
+    "embedding_shape": [
+      3000,
+      1024
+    ],
+    "faiss_available": false,
+    "verdict": "DB_CHURN_GPU_EMBEDDING_REQUIRED",
+    "gpu_embedding_run": false,
+    "indices_built": 0,
+    "reason": "Churn-added document embeddings are absent from the frozen 3,000-document embedding cache; affected indices and score-only metrics are not constructed."
+  },
+  "calibration_sensitivity": {
+    "verdict": "CALIBRATION_SIZE_SENSITIVITY_INPUT_INSUFFICIENT",
+    "available": [
+      500
+    ],
+    "unavailable": [
+      100,
+      200,
+      300
+    ],
+    "missing": "per-query raw MIRABEL margins for the 500 calibration queries (and frozen Gold corpus document embeddings)",
+    "new_bge_forward_run": false,
+    "gpu_used": false,
+    "note": "N=500 reports the frozen result only; Core5 scores were calibrated against a different benign reference and are not mixed."
+  },
+  "gpu_used": false,
+  "answer_generations": 0,
+  "final_lc_modified": false,
+  "runtime_seconds": 855.647050768137
+}

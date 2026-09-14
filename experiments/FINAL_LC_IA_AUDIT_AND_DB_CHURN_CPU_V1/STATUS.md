@@ -1,0 +1,10 @@
+# FINAL_LC_IA_AUDIT_AND_DB_CHURN_CPU_V1
+
+- Stage: `COMPLETE`
+- Updated UTC: `2026-09-13T09:45:48.731432+00:00`
+- GPU used: `False`
+- ia_phase: `PREFLIGHT`
+- ia_complete: `0`
+- ia_valid: `0`
+- churn: `DB_CHURN_GPU_EMBEDDING_REQUIRED`
+- calibration: `CALIBRATION_SIZE_SENSITIVITY_INPUT_INSUFFICIENT`

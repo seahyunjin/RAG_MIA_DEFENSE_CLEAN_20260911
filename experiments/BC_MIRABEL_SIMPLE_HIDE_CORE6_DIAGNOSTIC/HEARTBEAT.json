@@ -1,0 +1,11 @@
+{
+  "available": 3,
+  "campaign": "BC_MIRABEL_SIMPLE_HIDE_CORE6_DIAGNOSTIC",
+  "new_generation": 0,
+  "new_model_forward": 0,
+  "pid": 1272195,
+  "stage": "PARTIAL_DIAGNOSTIC_COMPLETE",
+  "unavailable": 3,
+  "updated_utc": "2026-09-11T16:27:06.872335+00:00",
+  "verdict": "PARTIAL_DIAGNOSTIC_ONLY_NEW_CORE6_SUBSTRATE_REQUIRED"
+}

@@ -1,0 +1,6 @@
+{
+  "verdict": "CLEAN_CORE3_HARD_PREFLIGHT_PASS",
+  "precommit_sha256": "379f9f073b16c6f624a593420ce7bdc894a2898d337129a269c3164e9fec5373",
+  "checks": 17,
+  "failures": 0
+}

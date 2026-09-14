@@ -1,0 +1,33 @@
+{
+  "campaign": "OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+  "files": {
+    "precommit_sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016",
+    "scores_sha256": "5b843f73ab392b84f16f92f5886b81b23309533c3de909ea7b222903a60bd540"
+  },
+  "interpretation": "Phase 1 measures LOO mechanism feasibility only. It is not post-generation privacy evidence. Oracle overall scores assign zero when the target is absent; target-retrieved-only membership AUC is generally undefined because nonmember targets are intentionally outside the corpus.",
+  "locator_gate": {
+    "checks": {
+      "mba_union2_not_worse_than_mirabel_by_0_05": true,
+      "menta_union2_oracle_tpr3_retention_ge_0_80": false,
+      "menta_union2_tpr3_gt_mirabel": true,
+      "s2_union2_not_worse_than_mirabel_by_0_05": true,
+      "union2_retrieved_member_target_hit2_ge_0_90": true
+    },
+    "evaluated": true,
+    "menta_mirabel_tpr3": 0.25,
+    "menta_oracle_retention": 0.37499999999999994,
+    "menta_oracle_tpr3": 0.8,
+    "menta_union2_hit2": 1.0,
+    "menta_union2_tpr3": 0.3,
+    "pass": false
+  },
+  "oracle_gate": {
+    "menta_pass": true,
+    "pass": true,
+    "s2_or_mba_pass": true
+  },
+  "phase": 1,
+  "phase2_opened": false,
+  "protected_generation_count": 0,
+  "verdict": "LOO_LOCATOR_LIMITED"
+}

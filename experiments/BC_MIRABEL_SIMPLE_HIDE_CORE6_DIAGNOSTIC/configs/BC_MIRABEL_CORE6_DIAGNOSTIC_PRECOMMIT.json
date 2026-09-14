@@ -1,0 +1,57 @@
+{
+  "bc_parent_precommit": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/BC_MIRABEL_COUNTERFACTUAL_GROUNDED_DISCLOSURE/configs/BC_CGD_PRECOMMIT.json",
+    "sha256": "80a69b1ff1e5721d815305e54d87a55809c3a6503dcbae70ec3c8f67555220bb"
+  },
+  "campaign": "BC_MIRABEL_SIMPLE_HIDE_CORE6_DIAGNOSTIC",
+  "clean_precommit": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1/configs/PRECOMMIT.json",
+    "sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016"
+  },
+  "code_sha256": "7558a5f474267f9d096921a252f08d96a0e8111be400d56df72b28e7569139e2",
+  "conditions": [
+    "NO_DEFENSE",
+    "ORIGINAL_MIRABEL",
+    "BC_MIRABEL"
+  ],
+  "detector": {
+    "bc_primary": "strict M(q)>tau_BC",
+    "original_alarm": "strict M(q)>0",
+    "score": "Original full-corpus MIRABEL Gumbel margin M(q)=s_max-tau_q",
+    "sensitivity_nominal_fpr": [
+      0.01,
+      0.05
+    ],
+    "tau_BC": 0.1116663235201894,
+    "tau_derivation": "strict empirical upper-tail cutoff on 250 benign calibration rows; nominal FPR 3%; 7 scores exceed"
+  },
+  "fail_closed_families": [
+    "DCMI",
+    "IA",
+    "RAG-MIA"
+  ],
+  "forbidden": [
+    "new detector",
+    "threshold tuning",
+    "new generation for invalid family",
+    "legacy result join"
+  ],
+  "fpr_points": [
+    0.01,
+    0.03,
+    0.05
+  ],
+  "hide_action": "alarm -> MIRABEL retrieval rank1 removed -> one frozen ordinary Qwen generation",
+  "new_generation": 0,
+  "new_model_forward": 0,
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/649cde99-9bc4-46f7-8bcc-a292d130d726/pasted-text.txt",
+    "sha256": "37e5eb24265bc3d083c9575bb57e77ffda32ea54be66f148dab060e1c80cb4a8"
+  },
+  "status": "PRECOMMITTED_READ_ONLY_PARTIAL_DIAGNOSTIC",
+  "valid_families": [
+    "MBA",
+    "MEntA",
+    "S²-MIA"
+  ]
+}

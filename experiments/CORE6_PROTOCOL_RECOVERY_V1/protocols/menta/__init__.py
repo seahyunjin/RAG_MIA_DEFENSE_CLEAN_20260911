@@ -1,0 +1,2 @@
+"""MEntA protocol adapter."""
+

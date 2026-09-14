@@ -1,0 +1,40 @@
+{
+  "claim_boundary": "frozen public-repository Q15 variant; not paper-exact IA Q30",
+  "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+  "core_principle": "cumulative indirect natural Yes/No probing without directly exposing the target text",
+  "decoding": {
+    "do_sample": false,
+    "input_truncation_tokens": 4096,
+    "max_new_tokens": 1000,
+    "num_beams": 1,
+    "temperature": null
+  },
+  "fixed_retry_prompt": "The previous output failed the exact 15-question parser. Using the same corpus, return exactly 15 unique, specific Yes/No questions. Return exactly 15 numbered lines and no other text. Each line must be: <number>. <question>? <Yes|No>\n\nCorpus:\n{target_text}\n\nInvalid previous output:\n{previous_output}",
+  "generation_attempts_per_target": "maximum 2; second fixed repair prompt only if exactly 15 questions were not parsed",
+  "generator_snapshot": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "ground_truth": {
+    "UNK_generation": "fail-close GT construction",
+    "allowed": [
+      "Yes",
+      "No"
+    ],
+    "construction": "separate frozen local-Qwen shadow pass over target context and the frozen Q15 bundle",
+    "prompt": "Based solely on the provided context, answer each of the 15 questions. Return exactly 15 numbered lines using only Yes, No, or I don't know.\n\nContext:\n{target_text}\n\nQuestions:\n{questions}"
+  },
+  "lambda_UNK": 5.0,
+  "name": "IA-Std-Q15",
+  "phase_b_native_metric": "ROC-AUC over target/session IA score",
+  "queries_per_target": 15,
+  "query_generator": "local Qwen/Qwen2.5-3B-Instruct",
+  "query_primary_detection": "member target queries; all 15 queries",
+  "question_parser": "public-repository-compatible line parser; exactly 15 unique question-mark-terminated questions required",
+  "question_prompt": "Based on the following text corpus, generate exactly 15 specific, diverse yes/no questions as queries, along with their Yes or No answer. Preserve abbreviations exactly. Questions must contain concrete keywords from the text, cover different facts, avoid mentioning 'the study' or 'the passage', and must not be generic.\n\nCorpus:\n{target_text}\n\nReturn exactly 15 numbered lines and no other text. Each line must have the form: <number>. <question>? <Yes|No>",
+  "response_normalization": "unambiguous Yes/No else UNK",
+  "seed": 20260912,
+  "session_detection": {
+    "all_alarm": "all Q15",
+    "any_alarm": "any of Q15"
+  },
+  "session_score": "sum(correct)-5*sum(UNK), divided by 15",
+  "targets": 2000
+}

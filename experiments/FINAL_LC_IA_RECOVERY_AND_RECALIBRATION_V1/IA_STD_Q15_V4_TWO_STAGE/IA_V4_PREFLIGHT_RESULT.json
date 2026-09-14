@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "exact_q15_among_valid": true,
+    "inferred_fields_zero": true,
+    "valid_at_least_98": false,
+    "validity_gap_at_most_2pp": false
+  },
+  "coverage": 0.58,
+  "exact_q15_among_valid": true,
+  "failure_reasons": {
+    "STAGE1:DUPLICATE_QUESTION": 9,
+    "STAGE1:INVALID_JSON": 2,
+    "STAGE2:ID_SEQUENCE_MISMATCH": 1,
+    "STAGE2:INVALID_JSON": 1,
+    "STAGE2:INVALID_JUDGMENT": 29
+  },
+  "fuzzy_parsing": 0,
+  "inferred_fields": 0,
+  "member_valid": 30,
+  "member_valid_rate": 0.6,
+  "nonmember_valid": 28,
+  "nonmember_valid_rate": 0.56,
+  "sessions": 100,
+  "valid": 58,
+  "validity_gap": 0.039999999999999925,
+  "verdict": "IA_STD_Q15_V4_FORMAT_PREFLIGHT_FAILED"
+}

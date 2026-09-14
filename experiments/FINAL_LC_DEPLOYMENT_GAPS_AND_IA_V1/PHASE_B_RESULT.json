@@ -1,0 +1,70 @@
+{
+  "automatic_full_scale_promotion": false,
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "completed_utc": "2026-09-13T15:47:15.543053+00:00",
+  "fallback_fp_f1": 0.21478286034700766,
+  "fallback_refusal": 0.2222222222222222,
+  "final_lc_modified": false,
+  "gold_fp_n": 27,
+  "next_stage": "PHASE_C_IA_API_AVAILABILITY",
+  "no_defense_fp_f1": 0.25723860957443784,
+  "phase": "B_FP_SAFE_CLOSED_BOOK_FALLBACK",
+  "privacy": [
+    {
+      "attack": "MEntA",
+      "delta": 0.18522499999999997,
+      "e_auc_secondary": 0.7431875,
+      "fallback_native_metric": 0.7431875,
+      "gate_at_most_simple_plus_0_02": false,
+      "n": 400,
+      "raw_auc": 0.7431875,
+      "simple_hide_native_metric": 0.5579625
+    },
+    {
+      "attack": "MBA",
+      "delta": 0.0427499999999999,
+      "e_auc_secondary": 0.5324,
+      "fallback_native_metric": 0.5324,
+      "gate_at_most_simple_plus_0_02": false,
+      "n": 400,
+      "raw_auc": 0.5324,
+      "simple_hide_native_metric": 0.4896500000000001
+    },
+    {
+      "attack": "RAG-MIA",
+      "delta": 0.0,
+      "e_auc_secondary": 0.5275,
+      "fallback_native_metric": 0.5275,
+      "gate_at_most_simple_plus_0_02": true,
+      "n": 400,
+      "raw_auc": 0.5275,
+      "simple_hide_native_metric": 0.5275
+    },
+    {
+      "attack": "S²-MIA",
+      "delta": 0.14749999999999996,
+      "e_auc_secondary": 0.6425,
+      "fallback_native_metric": 0.6425,
+      "gate_at_most_simple_plus_0_02": false,
+      "n": 400,
+      "raw_auc": 0.6425,
+      "simple_hide_native_metric": 0.495
+    },
+    {
+      "attack": "DCMI-Std-Q2",
+      "delta": 0.007500000000000062,
+      "e_auc_secondary": 0.5225,
+      "fallback_native_metric": 0.5225,
+      "gate_at_most_simple_plus_0_02": true,
+      "n": 400,
+      "raw_auc": 0.5225,
+      "simple_hide_native_metric": 0.5149999999999999
+    }
+  ],
+  "privacy_pass": false,
+  "simple_hide_fp_f1": 0.2184014214368331,
+  "simple_hide_refusal": 0.2222222222222222,
+  "triggered_gold_n": 6,
+  "utility_pass": false,
+  "verdict": "FP_FALLBACK_UTILITY_FAILED"
+}

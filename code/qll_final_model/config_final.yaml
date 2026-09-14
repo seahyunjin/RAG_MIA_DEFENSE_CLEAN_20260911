@@ -1,0 +1,10 @@
+top_k: 4
+percentile: 0.95
+qwen_reference_threshold: 0.5300846414247485
+context_budget: 2048
+per_source_base_budget: 512
+context_policy: EQUAL_REDISTRIBUTION
+comparison: strict_greater_than
+generation_count: 1
+session_state: false
+trainable_parameters: 0

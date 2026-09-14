@@ -1,0 +1,140 @@
+{
+  "campaign": "BC_RRE_ACTION_ONLY_SMALL_V1",
+  "created_utc": "2026-09-11T19:31:11.988849+00:00",
+  "primary_purpose": "At identical BC-q97 detection/privacy coverage, test whether one-for-one disjoint reference retrieval equalization reduces false-positive answer damage relative to simple source hide.",
+  "development_only": true,
+  "frozen_front_end": {
+    "detector": "BC-MIRABEL q97",
+    "strict_operator": ">",
+    "numeric_threshold": 0.09480853240373188,
+    "risk_query_count": 146,
+    "safe_query_count": 634,
+    "alarm_ids_sha256": "0575c72cba406d6ea674516c582ca08f126eca5b51577f5e1dca90a6ce2b960d",
+    "locator_mapping_sha256": "e9020ce8a97b150c1a008585708640f73bee2a85fd16131e4f832efdbcf20722",
+    "selected_source": "frozen MIRABEL top-1 locator"
+  },
+  "single_change": {
+    "baseline": "Remove selected source and generate with the remaining three sources.",
+    "candidate": "Remove the same selected source, insert frozen-BGE Top-1 SciFact reference document into the same slot, and generate with four sources.",
+    "reference_top_k": 20,
+    "replacement_selection": "first eligible document; every precommitted SciFact row is eligible after global disjointness PASS"
+  },
+  "frozen_generation": {
+    "generator": "Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_token_budget": 2048,
+    "max_prompt_tokens": 3072,
+    "max_new_tokens": 160,
+    "do_sample": false,
+    "num_beams": 1,
+    "seed": 20260911
+  },
+  "hard_gates": {
+    "benign": {
+      "simple_fp_preservation_reference": 0.59,
+      "rre_improvement_absolute_or_level": "+0.15 OR >=0.75",
+      "new_refusal": "<5/19",
+      "answer_change_count": "<= Simple Hide"
+    },
+    "MEntA_native_auc": "RRE <= Simple Hide + 0.05",
+    "RAG_MIA_native_auc": "RRE <= 0.55",
+    "MBA_native_auc_if_valid": "RRE <= Simple Hide + 0.05"
+  },
+  "reference": {
+    "verdict": "REFERENCE_POOL_AUDIT_PASS",
+    "construction_rule": "Use the complete public BEIR SciFact corpus exactly as distributed; prefix source IDs with BeIR_scifact::. No document may be removed after seeing protected/target overlap.",
+    "target_independent": true,
+    "post_hoc_exclusions": 0,
+    "archive_sha256": "536e14446a0ba56ed1398ab1055f39fe852686ecad24a6306c80c490fa8e0165",
+    "raw_corpus_sha256": "dec31c8182f3d744c7d2c09423756fd1d17cbef75808db13ba01cc0aab4d1ac6",
+    "reference_pool_sha256": "5fca4f3b6339c0f8fd83a50fb919e0a8c223817d1cc3befdd9214778527e88ad",
+    "reference_size": 5183,
+    "reference_domain": "scifact",
+    "protected_size": 3000,
+    "member_targets": 20,
+    "nonmember_targets": 20,
+    "overlap": {
+      "reference_intersection_protected_id": {
+        "count": 0,
+        "values": []
+      },
+      "reference_intersection_member_id": {
+        "count": 0,
+        "values": []
+      },
+      "reference_intersection_nonmember_id": {
+        "count": 0,
+        "values": []
+      },
+      "reference_intersection_protected_normalized_text": {
+        "count": 0,
+        "values": []
+      },
+      "reference_intersection_member_normalized_text": {
+        "count": 0,
+        "values": []
+      },
+      "reference_intersection_nonmember_normalized_text": {
+        "count": 0,
+        "values": []
+      }
+    }
+  },
+  "replacement_availability": {
+    "verdict": "REFERENCE_RETRIEVAL_PASS",
+    "risk_queries": 146,
+    "replacement_available": 146,
+    "availability_rate": 1.0,
+    "by_cohort": {
+      "ATTACK": 127,
+      "BENIGN": 19
+    },
+    "by_attack": {
+      "MEntA": 87,
+      "MBA": 20,
+      "RAG-MIA": 20
+    },
+    "alarm_ids_sha256": "0575c72cba406d6ea674516c582ca08f126eca5b51577f5e1dca90a6ce2b960d",
+    "locator_mapping_sha256": "e9020ce8a97b150c1a008585708640f73bee2a85fd16131e4f832efdbcf20722",
+    "parent_query_embeddings_sha256": "0f3345c0073cd46bbee50e4cdd5968ab0c8b2b4e79f1ba17228331a8c400df26",
+    "reference_embeddings_sha256": "8dadaf4f51a9e57dfe2c9f52db31832ebec2f76ef0b37148f78075480ccf9a79",
+    "reference_retrieval_sha256": "a9f10b2ffd4fd78d84fdc12ad619b7364950a03e7f685b92be0f934fdf30cd98",
+    "runtime_seconds": 177.96840696781874
+  },
+  "mba_audit": {
+    "verdict": "MBA_PARSER_IMPLEMENTATION_BUG_FIXED",
+    "final_valid_n_each_condition": 40,
+    "scorer_sha256": "c98a41ae495968d04da81135d8c377c8271d2a73b11376f3b0b8824d83ebf316"
+  },
+  "parent_artifact_hashes": {
+    "configs/CLEAN_CORE3_DEV_V1_PRECOMMIT.json": "379f9f073b16c6f624a593420ce7bdc894a2898d337129a269c3164e9fec5373",
+    "cache/CLEAN_CORE3_RETRIEVAL_CACHE.jsonl": "56f20d4105ea9c4c9ef22dc6767d336687522ff70c7a43ac7bb73294f8c92ff6",
+    "runtime/CLEAN_CORE3_GENERATED_ANSWERS.jsonl": "90a06d14a6f00c643ab9c949b96907fee91ad7b0447f2a710ccfdf615b89e0ac",
+    "tables/MENTA_SESSION_SCORES.csv": "8c792becd8a0ba954bab95ff04839c9245067fd3f6d6b121100db0bf110b5b90",
+    "inputs/CLEAN_CORE3_PROTECTED_DB.jsonl": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "code_sha256": {
+    "build_and_audit_reference_pool.py": "3bf94c1dfcb54419223bd414904bf9b9648236e8327bc2ab0b60b038dd554797",
+    "finalize_precommit.py": "44e7a76a47cc51f1f885784770a5acef6aaec3f7d5f2ba2e5ab5d8fe2bfe8079",
+    "mba_scorer_paper_aligned.py": "c98a41ae495968d04da81135d8c377c8271d2a73b11376f3b0b8824d83ebf316",
+    "run_final_evaluation.py": "8fdd5a6c727de5f997603e129b49fc9d2f7757d107435e8f4b1f90cd1af5b6d2",
+    "run_mba_parser_audit.py": "1fb4f324bc3f1eed9cb0c4f46a8b61d20e4655b3110bd8645e3b84a401d1371c",
+    "run_reference_retrieval.py": "7b7765b55c0ccfee27c367877a4f2ae507ef4cff5295053f117d0096708a4f38",
+    "run_rre_generation.py": "766562a2a81a1cec992bb5bf13e37ec8314cd53d2ef94500bbe744b8d299e701",
+    "test_mba_scorer_paper_aligned.py": "17f1a8ac065f31cb777cb1a72891882c2ab5657d8ceb70088c556011224c3ab6"
+  },
+  "prohibited": [
+    "threshold recalibration",
+    "alarm-mask change",
+    "locator change",
+    "reference retry",
+    "learned reranker",
+    "QLL",
+    "LOO",
+    "privacy prompt",
+    "fixed refusal",
+    "NLI filtering",
+    "extractive fallback",
+    "token clipping"
+  ]
+}

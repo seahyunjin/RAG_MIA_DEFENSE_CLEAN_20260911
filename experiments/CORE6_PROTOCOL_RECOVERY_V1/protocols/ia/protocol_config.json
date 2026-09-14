@@ -1,0 +1,17 @@
+{
+  "attack": "IA",
+  "query_count": 30,
+  "query_generation_model": "gpt-4o; exact historical revision/output unavailable",
+  "decoding": "paper/repository lineage is not sufficient for bit-exact recovery",
+  "score_formula": "(1/n) sum(I(response=GT)-5*I(response=UNK))",
+  "score_polarity": "see scorer.py",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "TPR@1% FPR"
+  ],
+  "model_revisions": {
+    "shadow_gt": "gpt-4o-mini; exact historical output unavailable"
+  },
+  "status": "IA_PAPER_EXACT_UNAVAILABLE"
+}

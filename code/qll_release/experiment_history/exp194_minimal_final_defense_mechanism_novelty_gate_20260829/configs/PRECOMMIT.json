@@ -1,0 +1,108 @@
+{
+  "answer_metrics": {
+    "exact_match": "identity diagnostic",
+    "rouge1_f1": "Exp188 lexical overlap",
+    "semantic_cosine": "Exp188 all-mpnet-base-v2 response preservation"
+  },
+  "created_utc": "2026-08-29T18:17:20.997688+00:00",
+  "decision_policy": "No post-hoc quantitative boundary. If frozen paired evidence cannot identify source non-use versus C1 miss, return EXP194_MECHANISM_UNRESOLVED.",
+  "experiment": "Exp194",
+  "forbidden": [
+    "new generation",
+    "new defense",
+    "attack/rank/family rule",
+    "learned classifier",
+    "learned fusion",
+    "manual weight",
+    "threshold search",
+    "test tuning",
+    "new U signal"
+  ],
+  "frozen_signals": {
+    "C1": "generation-grounded cumulative exposure",
+    "I4": "qll_margin"
+  },
+  "inputs": {
+    "exp189_cases_top3": {
+      "access": "READ_ONLY",
+      "bytes": 24948314,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CASES.private.pkl.gz",
+      "sha256": "9fb69adee11cd6bf8337effc76bf3d632c1ebf126463b00b80dd33bbb97e979d"
+    },
+    "exp189_costs_top3": {
+      "access": "READ_ONLY",
+      "bytes": 4351293,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CLAIM_COSTS.private.pkl.gz",
+      "sha256": "58166d710424d9ac51d8275b34e0aadfd58862055ed7c4fc878172c16de5c94f"
+    },
+    "exp189_responses": {
+      "access": "READ_ONLY",
+      "bytes": 3276631,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/EXP189_ATTACK_RESPONSES.private.csv.gz",
+      "sha256": "a67e4a258e34030808248d0ef678f2f2fc41b8d60570b0469a91fe2da3db2c46"
+    },
+    "exp191_final": {
+      "access": "READ_ONLY",
+      "bytes": 924,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/FINAL_RESULT.json",
+      "sha256": "c48be9544a79e433fbb4511e7ebc10bc9c3daa282d995d90c317919be9247d95"
+    },
+    "exp192_final": {
+      "access": "READ_ONLY",
+      "bytes": 506,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp192_qll_anchored_cumulative_20260829/FINAL_RESULT.json",
+      "sha256": "1b0d580dfd23bfe4984cce5ed4cc8c02c9c62e6ce042b99e3c405f0c07eb25fb"
+    },
+    "exp193_cases_top4": {
+      "access": "READ_ONLY",
+      "bytes": 10962323,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/private/EXP193_CASES.private.pkl.gz",
+      "sha256": "61b46780d32774f8f5a5470e7b8bd10861175c2479b5382758b6f5ad8c3b1a91"
+    },
+    "exp193_costs_top4": {
+      "access": "READ_ONLY",
+      "bytes": 5219980,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/private/EXP193_EXACT_C1.private.pkl.gz",
+      "sha256": "2267db16d19e678af8dba27b0e62f42555f5bc8dbf89f5f83b7bb5711d44a24a"
+    },
+    "exp193_features": {
+      "access": "READ_ONLY",
+      "bytes": 521279,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/private/EXP193_SESSION_FEATURES.private.csv.gz",
+      "sha256": "aff2e2491495d7bea962ff8a27c86606d14518a5faa7936f1b74cf2908ef7d94"
+    },
+    "exp193_final": {
+      "access": "READ_ONLY",
+      "bytes": 707,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/FINAL_RESULT.json",
+      "sha256": "5e9fb8596418d0f8bec0711526667a0d0d721f66df994325fa8049087a5d2d95"
+    },
+    "exp193_qll": {
+      "access": "READ_ONLY",
+      "bytes": 1047970,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/private/EXP193_QLL_DOMINANT_SOURCE.private.csv.gz",
+      "sha256": "bb3a9097e59073a34ae65b2b3f9f1a49eea2f9d6d98cff9655cda74869280b5d"
+    },
+    "exp193_responses": {
+      "access": "READ_ONLY",
+      "bytes": 3605602,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp193_top4_context_rebase_20260829/private/EXP193_TOP4_RESPONSES.private.csv.gz",
+      "sha256": "be7582e17c944a61eacddfe9520aea0e980d8d241dd228b0036be2006ac40e1c"
+    },
+    "literature": {
+      "access": "READ_ONLY",
+      "bytes": 9724,
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp194_minimal_final_defense_mechanism_novelty_gate_20260829/configs/LITERATURE_AUDIT.json",
+      "sha256": "64c10c9df03befd9eed17e0d8c76217d65c5f8c801fe3e87f32a90a18476c8ea"
+    },
+    "mpnet": {
+      "access": "READ_ONLY",
+      "bytes": 571,
+      "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--sentence-transformers--all-mpnet-base-v2/snapshots/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json",
+      "sha256": "d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0"
+    }
+  },
+  "purpose": "PAIRED_MECHANISM_AND_NOVELTY_GATE",
+  "replicates": 5000,
+  "seed": 19420260829
+}

@@ -1,0 +1,111 @@
+{
+  "bootstrap_replicates": 20000,
+  "cohort_cases": 35680,
+  "cohort_sessions": 5600,
+  "created_utc": "2026-08-29T08:56:57.146049+00:00",
+  "decoding": {
+    "do_sample": false,
+    "dtype": "bfloat16",
+    "max_input_tokens": 3072,
+    "num_beams": 1,
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "experiment": "Exp193",
+  "forbidden": [
+    "new defense",
+    "threshold search",
+    "alpha search",
+    "QLL refinement optimization",
+    "Llama",
+    "fresh blind",
+    "E-MIA",
+    "selective-session analysis",
+    "official downstream claim"
+  ],
+  "frozen_signals": {
+    "C": "C1=final_cumulative_l1",
+    "I": "I4=qll_margin"
+  },
+  "generator": "Qwen2.5-3B-Instruct",
+  "generator_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "inputs": {
+    "exp179_qll": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp179_cross_family_qwen_source_influence_20260828/private/EXP179_QUERY_SOURCE_QLL.private.csv.gz",
+      "sha256": "fc5ea11ecdefaab406a957b90d4f0b7ce7275d144683fb69fb1c07ab40406f21"
+    },
+    "exp181_qll": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp181_native_session_continuous_qll_20260828/private/EXP181_SOURCE_QLL.private.csv.gz",
+      "sha256": "c2a64de230aa96d9a84e43c05699b3a16258cfc95d49b2f843de01912948df6f"
+    },
+    "exp188_cases": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp188_globalcap_selective_dcmcel_20260829/private/EXP188_CASES.private.pkl.gz",
+      "sha256": "af8ddac29ad72e2749abd3c211be6832e290c911e8778f6c01d645944379ec04"
+    },
+    "exp188_code": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp188_globalcap_selective_dcmcel_20260829/code/run_exp188.py",
+      "sha256": "f39d2ca10adb4d33f7edf9c9da8a844f5e8d40812ca261275601ff9af5fc8ad0"
+    },
+    "exp189_beta": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/configs/BETA_FROZEN.json",
+      "sha256": "2e750e8f27d9bc2f78dc0ea55d91fbfe328f248042e0d5c471b29ad47e252e86"
+    },
+    "exp189_cases": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CASES.private.pkl.gz",
+      "sha256": "9fb69adee11cd6bf8337effc76bf3d632c1ebf126463b00b80dd33bbb97e979d"
+    },
+    "exp189_costs": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CLAIM_COSTS.private.pkl.gz",
+      "sha256": "58166d710424d9ac51d8275b34e0aadfd58862055ed7c4fc878172c16de5c94f"
+    },
+    "exp189_generation_code": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/code/run_attack_scoring.py",
+      "sha256": "670188a0d5b9791d67ab81a046dce03531839e6701976c2cf1582858fcdedde9"
+    },
+    "exp189_ledger": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_LEDGER.private.csv.gz",
+      "sha256": "57def2922c26d540befe5528a4a54d767ac7202b0079a2e6ca9a1f9923bbb495"
+    },
+    "exp190_features": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/private/EXP190_SESSION_FEATURES.private.csv.gz",
+      "sha256": "1a3b0db194e724d69a558af17b82d21c5c42dffbfe2a884bfbea581265494e94"
+    },
+    "exp191_final": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/FINAL_RESULT.json",
+      "sha256": "c48be9544a79e433fbb4511e7ebc10bc9c3daa282d995d90c317919be9247d95"
+    },
+    "exp191_precommit": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/configs/PRECOMMIT.json",
+      "sha256": "000f43a0fe3c2646c1da4ee13a670ca8870525d28229b24cadc8ee6eab3311e3"
+    },
+    "exp191_rank": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/tables/TABLE_191_11_BUDGETLEAK_BY_RANK.csv",
+      "sha256": "c0eff86338f371217ed9f7a797310ab85927fc227d2116147a01aa019aee1e00"
+    },
+    "exp192_alignment": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp192_qll_anchored_cumulative_20260829/tables/TABLE_192_01_INPUT_ALIGNMENT.csv",
+      "sha256": "e75dd39f651e55a22d97bc23bd5333da16cc446a48188fbe3675d77d31cbdcd8"
+    },
+    "exp192_final": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp192_qll_anchored_cumulative_20260829/FINAL_RESULT.json",
+      "sha256": "1b0d580dfd23bfe4984cce5ed4cc8c02c9c62e6ce042b99e3c405f0c07eb25fb"
+    },
+    "ledger_core": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/code/gdcel_core.py",
+      "sha256": "4d09b1ec14fc21e36d6ed05f2f2b83488c72a4eda9ebcd256256bac6d0b41e42"
+    },
+    "qwen_config": {
+      "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+    },
+    "qwen_generation_code": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp87_native_scorer_stable_generation_20260821/code/exp87_models.py",
+      "sha256": "b756143b639bcdef87700233f14fc020797d6a80e03175aa0b638f28317e0dea"
+    }
+  },
+  "membership_permutations": 20000,
+  "only_experimental_change": "actual generation context includes retrieved source ranks 1-4 instead of 1-3",
+  "ordered_case_id_sha256": "94ae361bcbe2756b195891ca930f3b3030d1722c4eb7e3dbe33d7c65389c0967",
+  "purpose": "TOP4_CONTEXT_REBASE_ONLY",
+  "required_exact_c1_alignment": 1.0
+}

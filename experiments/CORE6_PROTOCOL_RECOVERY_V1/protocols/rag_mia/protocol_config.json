@@ -1,0 +1,15 @@
+{
+  "attack": "RAG-MIA",
+  "query_count": 1,
+  "query_generation_model": null,
+  "decoding": "target RAG configuration",
+  "score_formula": "Yes=member; No=nonmember; outputs with neither token=nonmember",
+  "score_polarity": "see scorer.py",
+  "metrics": [
+    "black-box TPR",
+    "black-box FPR",
+    "ROC-AUC"
+  ],
+  "model_revisions": {},
+  "status": "RAGMIA_PROTOCOL_READY"
+}

@@ -1,0 +1,42 @@
+{
+  "experiment": "Exp210 Stateless QLL Source Hide Recovery",
+  "created_utc": "2026-08-31T12:00:00Z",
+  "status": "FROZEN_MECHANISM_RECOVERY_DIAGNOSTIC_NOT_BLIND",
+  "single_change": "remove Session Sticky and make every turn use only its current retrieval and QLL",
+  "frozen_core": {
+    "top_k": 4,
+    "qll_definition": "mean teacher-forced query-token log probability under P(query|source)",
+    "dominance": "maximum softmax probability over four source QLL values",
+    "threshold": 0.5300846414247485,
+    "threshold_rule": "strict greater than",
+    "source_action": "fully exclude current-turn QLL top-1 source once",
+    "source_token_budget": 2048,
+    "backfill": "deterministic equal water-fill",
+    "generator": "Qwen2.5-3B-Instruct",
+    "attack_scorers": "unchanged frozen family scorers"
+  },
+  "new_parameter_count": 0,
+  "attack_specific_tuning_count": 0,
+  "rank_specific_tuning_count": 0,
+  "stage_order": [
+    "A stateless action replay",
+    "B1 DCMI diagnostic regeneration and hard gate",
+    "B2 remaining attacks and utility only if DCMI passes",
+    "final gate"
+  ],
+  "gates": {
+    "dcmi_effective_auc_max": 0.65,
+    "ragleak_effective_auc_max": 0.65,
+    "budgetleak_overall_effective_auc_max": 0.60,
+    "budgetleak_each_rank_effective_auc_max": 0.65,
+    "budgetleak_each_output_budget_effective_auc_max": 0.65,
+    "other_attack_effective_auc_max": 0.65,
+    "intervention_attributable_token_f1_min": 0.95,
+    "benign_hide_rate_max": 0.10,
+    "benign_new_refusal_rate_max": 0.05
+  },
+  "ia_primary_gate": false,
+  "claim_boundary": "Stage205A is mechanism-diagnostic data after Exp205D. Exp210 cannot support a fresh-blind claim.",
+  "next_on_pass": "Exp211 new untouched blind with no further candidate change",
+  "next_on_fail": "stop without another sticky variant"
+}

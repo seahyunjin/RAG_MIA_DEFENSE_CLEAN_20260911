@@ -1,0 +1,23 @@
+{
+  "attack": "MEntA",
+  "query_count": 5,
+  "query_generation_model": "gpt-4.1-nano (hosted revision not content-addressable)",
+  "decoding": {
+    "question_temperature": 0.7,
+    "summary_temperature": 0.3,
+    "max_question_tokens": 1500,
+    "provenance": "preserved reproduction defaults; the paper does not fully report hosted decoding parameters"
+  },
+  "score_formula": "mean_q(I_entail(q) - I_idk(q))",
+  "score_polarity": "see scorer.py",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "TPR@low-FPR"
+  ],
+  "model_revisions": {
+    "nli": "tasksource/deberta-base-long-nli@04dcf11f844b07bc57015169fca2b7d6df8299d5",
+    "claim_extractor": "Babelscape/t5-base-summarization-claim-extractor@94775fb1c8dc2c3ef1bfec413f9f961e6ba5a1c8"
+  },
+  "status": "MENTA_PROTOCOL_READY"
+}

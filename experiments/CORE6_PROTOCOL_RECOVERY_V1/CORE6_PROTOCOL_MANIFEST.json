@@ -1,0 +1,42 @@
+{
+  "campaign": "CORE6_PROTOCOL_RECOVERY_V1",
+  "defense_experiments_run": false,
+  "protected_answer_generation_run": false,
+  "shared_target_selection_run": false,
+  "final_verdict": "CORE_N_PROTOCOL_PARTIAL",
+  "ready_count": 3,
+  "ready": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA"
+  ],
+  "revise": [
+    "S²-MIA",
+    "DCMI"
+  ],
+  "unavailable": [
+    "IA"
+  ],
+  "development_attacks_ready": [
+    "MEntA",
+    "MBA"
+  ],
+  "development_attacks_blocked": [
+    "S²-MIA"
+  ],
+  "confirmation_attacks_ready": [
+    "RAG-MIA"
+  ],
+  "confirmation_attacks_blocked": [
+    "DCMI",
+    "IA"
+  ],
+  "protocol_manifests": {
+    "menta": "70465fab3de6347c539afe6f0e0e930e7656baa8cb07280bf12d3577bfaf0a6d",
+    "s2_mia": "ecb135eb88abb66aa6550ee67a40a245c2ccbe1d0e4df1c4502e55a3f0cb5dc2",
+    "mba": "91a88d4347cb15a450f4ecbfb51646837b636a8d256e5c4ab3f4ae96acfdab15",
+    "dcmi": "2476b4765ed0ee80cb9751f18b0862a417feb89117d043785641ef0b8aea5a15",
+    "ia": "98b5d47d00e8015d1e9475c91e85262614c80edaa53236b645982c5fe3add650",
+    "rag_mia": "70c5bbccb9cc1d7ca2d3963a1fb9c3344ecd25e37febb6eb51000369885ca908"
+  }
+}

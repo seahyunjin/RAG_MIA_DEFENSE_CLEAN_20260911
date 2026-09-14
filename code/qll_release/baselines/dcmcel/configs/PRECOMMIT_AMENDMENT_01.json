@@ -1,0 +1,16 @@
+{
+  "experiment": "Exp187",
+  "amendment": 1,
+  "written_before_generation_or_metrics": true,
+  "reason": "The immutable Exp179-B attack-family samples are each 100 targets but were not class-balanced. The original precommit incorrectly assumed 50 member and 50 nonmember per family.",
+  "correction": {
+    "RAGLeak": {"targets": 100, "member": 52, "nonmember": 48},
+    "BudgetLeak-Z": {"targets": 100, "member": 64, "nonmember": 36}
+  },
+  "selection_change": false,
+  "sample_ids_changed": false,
+  "policy_change": false,
+  "gate_change": false,
+  "metric_change": false,
+  "status_at_amendment": "FAILED_DURING_COHORT_COUNT_AUDIT_BEFORE_GENERATION"
+}

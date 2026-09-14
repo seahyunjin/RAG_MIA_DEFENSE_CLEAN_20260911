@@ -1,0 +1,40 @@
+{
+  "by_membership": {
+    "member": {
+      "generated": 606,
+      "valid": 505,
+      "valid_rate": 0.8333333333333334
+    },
+    "nonmember": {
+      "generated": 0,
+      "valid": 0,
+      "valid_rate": null
+    }
+  },
+  "campaign": "FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1",
+  "completed_utc": "2026-09-13T07:32:20.292886+00:00",
+  "generated": 606,
+  "gpu_time_note": "CUDA kernel time was not instrumented; recorded_generation_wall_seconds is the preserved generation-time proxy.",
+  "invalid": 101,
+  "invalid_category_histogram": {
+    "INVALID_JSON": 9,
+    "ROOT_SCHEMA_MISMATCH": 92
+  },
+  "live_database_preserved": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/runtime/ia_v3.sqlite3",
+    "sha256_after_checkpoint": "54a0273f3253681063874112b19d3afaad48aec555cdee826ce3967f31bcab96"
+  },
+  "maximum_invalid_allowed": 100,
+  "member_nonmember_validity_gap": null,
+  "next_stage": "IA_STD_Q15_V4_TWO_STAGE_PRECOMMIT",
+  "raw_cache": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/history/IA_V3_MATHEMATICAL_EARLY_STOP/ia_v3_early_stop.sqlite3",
+    "sha256": "7aa27a9ce96bab0454c2ab61937a262c82bbd9e2106feefceb9c99feaee523a3"
+  },
+  "recorded_generation_wall_seconds": 4124.567197891567,
+  "transition_monitor_elapsed_seconds": 69.61801915615797,
+  "v3_precommit_sha256": "230138e510f33776246c5ab9a50dff941de3b3b79e02cf4826d571a0138918f9",
+  "valid": 505,
+  "variant": "IA-Std-Q15-v3",
+  "verdict": "IA_STD_Q15_V3_VALIDITY_GATE_MATHEMATICALLY_IMPOSSIBLE"
+}

@@ -1,0 +1,9 @@
+{
+  "amends_only": "created_utc metadata typo",
+  "substantive_reference_rule_changed": false,
+  "original_precommit_sha256": "a9b971d5cd5d9a919e7a17e62ed98b9475678a2366d19ce2ae452c447a61dd31",
+  "original_created_utc_value": "2026-09-11T21:55:00Z",
+  "observed_true_precommit_time_utc": "2026-09-11T19:23:15Z",
+  "written_before_overlap_audit": true,
+  "note": "The original JSON was not modified. Dataset, URL, selection rule, and fail-close policy remain exactly frozen."
+}

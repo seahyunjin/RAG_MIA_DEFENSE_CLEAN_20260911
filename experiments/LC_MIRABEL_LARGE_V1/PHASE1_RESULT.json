@@ -1,0 +1,113 @@
+{
+  "binary_thresholds": {
+    "M": {
+      "benign_alarms": 30,
+      "threshold": 0.09216984616752316
+    },
+    "R_GLOBAL": {
+      "benign_alarms": 30,
+      "threshold": 3.428580914764567
+    },
+    "R_LC": {
+      "benign_alarms": 25,
+      "threshold": 3.80543877128208
+    }
+  },
+  "bootstrap": [
+    {
+      "attack": "MEntA",
+      "bootstrap_mean_delta": 0.02913354444444444,
+      "ci95_high": 0.03533611111111109,
+      "ci95_low": 0.023088888888888937,
+      "iterations": 2000,
+      "point_delta": 0.029088888888888942,
+      "unit": "target/session"
+    },
+    {
+      "attack": "MBA",
+      "bootstrap_mean_delta": 0.0036407222222222097,
+      "ci95_high": 0.007555555555555538,
+      "ci95_low": 0.0005555555555555314,
+      "iterations": 2000,
+      "point_delta": 0.003555555555555534,
+      "unit": "target/session"
+    },
+    {
+      "attack": "RAG-MIA",
+      "bootstrap_mean_delta": 0.04330783333333326,
+      "ci95_high": 0.05599999999999994,
+      "ci95_low": 0.030441666666666607,
+      "iterations": 2000,
+      "point_delta": 0.043333333333333224,
+      "unit": "target/session"
+    }
+  ],
+  "campaign": "LC_MIRABEL_LARGE_V1",
+  "checks": {
+    "core3_macro_delta_at_least_2pp": true,
+    "mba_noninferior_within_2pp": true,
+    "menta_bootstrap_ci_low_above_zero": true,
+    "menta_delta_at_least_5pp": false,
+    "rag_mia_noninferior_within_2pp": true
+  },
+  "completed_utc": "2026-09-12T12:05:58.868486+00:00",
+  "cost": {
+    "document_cache_mode": "VERIFIED_PARENT_CACHE_REUSE",
+    "knn_per_query_ms": 0.4049518262346586,
+    "knn_seconds": 6.074277393519878,
+    "query_embedding_bytes": 32768128,
+    "query_encoding_per_query_ms": 12.11688415426761,
+    "query_encoding_seconds": 193.87014646828175,
+    "reference_embedding_bytes": 4096000,
+    "retrieval_mirabel_per_query_ms": 2.3383328365162015,
+    "retrieval_mirabel_seconds": 37.413325384259224,
+    "total_seconds": 236.03242883086205
+  },
+  "deployment_fpr": {
+    "Global BC-MIRABEL": 0.029,
+    "LC-MIRABEL": 0.04,
+    "Original MIRABEL": 0.305
+  },
+  "development_notice": "THIS_LARGE_COHORT_IS_DEVELOPMENT_DATA",
+  "e2e_allowed": false,
+  "macro": {
+    "LC_MIRABEL": 0.9502592592592592,
+    "MIRABEL": 0.9249333333333333,
+    "delta": 0.025325925925925974
+  },
+  "matched_tpr_at_3pct": {
+    "MBA": {
+      "GLOBAL": 0.992,
+      "LC": 0.9965555555555555,
+      "M": 0.993,
+      "delta": 0.003555555555555534
+    },
+    "MEntA": {
+      "GLOBAL": 0.8632,
+      "LC": 0.893888888888889,
+      "M": 0.8648,
+      "delta": 0.029088888888888942
+    },
+    "RAG-MIA": {
+      "GLOBAL": 0.916,
+      "LC": 0.9603333333333333,
+      "M": 0.917,
+      "delta": 0.043333333333333224
+    }
+  },
+  "next_step": "STOP_NO_GENERATION",
+  "phase": "SCORE_ONLY_DETECTION",
+  "query_counts": {
+    "attack": 14000,
+    "benign_holdout": 1000,
+    "benign_reference": 1000
+  },
+  "trainable_parameters_updated": 0,
+  "training_steps": 0,
+  "verdict": "LC_MIRABEL_DETECTION_NOT_SUPPORTED",
+  "worst_domain_fpr": {
+    "Global BC-MIRABEL": 0.037894736842105266,
+    "LC-MIRABEL": 0.05473684210526316,
+    "Original MIRABEL": 0.44
+  }
+}

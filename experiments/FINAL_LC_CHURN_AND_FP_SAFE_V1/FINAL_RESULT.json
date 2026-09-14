@@ -1,0 +1,21 @@
+{
+  "campaign": "FINAL_LC_CHURN_AND_FP_SAFE_V1",
+  "completed_utc": "2026-09-13T10:00:52.582258+00:00",
+  "db_churn": {
+    "strict_transfer_verdict": "DB_CHURN_STRICT_TRANSFER_FAILED",
+    "verdict": "DB_CHURN_RECALIBRATION_FAILED"
+  },
+  "final_lc_modified": false,
+  "fp_safe": {
+    "candidate_generation_run": false,
+    "verdict": "FP_SAFE_REDISTRIBUTION_NOT_APPLICABLE"
+  },
+  "ia": {
+    "scientific_status": "STANDARDIZED_ATTACK_UNAVAILABLE",
+    "verdict": "IA_STD_Q15_V6_FAILED_FINAL"
+  },
+  "new_qwen_answer_generations": 0,
+  "primary_result": "CORRECTED_CORE5_SCOPE",
+  "supersedes": "INITIAL_INVALID_S2_SCOPE_INCLUSION",
+  "training_steps": 0
+}

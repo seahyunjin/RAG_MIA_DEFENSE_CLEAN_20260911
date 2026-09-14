@@ -1,0 +1,16 @@
+required_item,status,evidence,blocking
+corpus construction rule,PARTIAL,"seed=42; 1000/1000; TF-IDF near-duplicate rule found",YES
+random seed/hash rule,PARTIAL,"split seed found; exact dataset/input hash absent",YES
+member/nonmember definition,PARTIAL,"official procedure found; exact old ordered output absent",YES
+target inclusion/exclusion rule,PARTIAL,"legacy labels/ranks remain; full build manifest absent",YES
+retriever checkpoint,RECOVERED,"BGE-M3 revision 5617a9f61b028005a4858fdac845db406aefb181",NO
+embedding normalization,RECOVERED_IN_CODE,"benchmark/retrieval implementation retained",NO
+Top-k settings,RECOVERED_IN_CODE,"Top-10 retrieval and Top-4 generation",NO
+attack query IDs/protocol,RECOVERED,"2000 rows and original query text",NO
+benign Phase-1 queries,INCOMPLETE,"1000 hashes/scores remain; exact text/construction unavailable",YES
+generator checkpoint,RECOVERED,"Qwen2.5-3B-Instruct aa8e72537993ba99e69dfaafa59ed015b17504d1",NO
+generator prompt/tokenizer,RECOVERED_IN_CODE_AND_PRECOMMIT,"code and model revision retained",NO
+LOO definition,RECOVERED_IN_CODE_AND_SCORES,"L_full/L_minus_1..4 available",NO
+exact frozen corpus IDs/order,MISSING,"AD-test-LLM3 corpus deleted",YES
+complete exact Top-4 IDs/order,MISSING,"only MEntA 200-query subset recovered",YES
+exact QLL selected source IDs,MISSING,"only dominance scalar retained",YES

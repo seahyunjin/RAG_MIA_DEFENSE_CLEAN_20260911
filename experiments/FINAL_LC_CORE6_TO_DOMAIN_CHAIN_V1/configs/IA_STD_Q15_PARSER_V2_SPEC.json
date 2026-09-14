@@ -1,0 +1,48 @@
+{
+  "allowed_format_normalization": [
+    "question/answer line break",
+    "whitespace",
+    "explicit Question/Answer field placement",
+    "exact repeated current record index"
+  ],
+  "attempt_selection": "parse frozen attempt 1 first; use already-frozen attempt 2 only if attempt 1 is not exact; never combine attempts",
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "created_utc": "2026-09-13T02:49:57.804853+00:00",
+  "forbidden": [
+    "fuzzy matching",
+    "semantic inference",
+    "missing answer interpolation",
+    "Yes/No estimation",
+    "cross-attempt field combination",
+    "query regeneration"
+  ],
+  "gate": {
+    "binary_judgments_per_valid_session": "exactly 15",
+    "inferred_fields": 0,
+    "member_nonmember_validity_gap": "<=0.02 absolute",
+    "questions_per_valid_session": "exactly 15",
+    "valid_sessions": ">=0.95"
+  },
+  "invalid_categories": {
+    "CONTENT_MISSING": "fewer than 15 records, missing question, or missing explicit binary judgment",
+    "FORMAT_ONLY": "previously invalid under v1 and exactly valid under v2",
+    "OTHER": "ambiguous numbering, multiple judgments, duplicate question, unsupported extra content/layout"
+  },
+  "name": "IA-Std-Q15 deterministic parser v2",
+  "parser": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/ia_parser_v2.py",
+    "sha256": "11f1efa4f1a6d84709b3410872f250286803b79b47716f068b026fab15fa7d60"
+  },
+  "performance_results_opened": false,
+  "raw_database": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/runtime/standardized_query_generation.sqlite3",
+    "sha256": "94b65b7b48af63640450ee50c42b48fcc341f0f2acdaaf27e5a59abd84635690"
+  },
+  "record_rule": "exactly numbered records 1..15, each with a nonempty question ending '?' and exactly one explicit binary Yes or No judgment",
+  "scope": "one parser-only repair over all 2,000 frozen session records; no regeneration",
+  "unit_tests": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/tests/test_ia_parser_v2.py",
+    "sha256": "9a3fc2e360804e418e39c086703dc7fae7c24d23236ea752f8e2d9247ff53d61",
+    "status": "PASS"
+  }
+}

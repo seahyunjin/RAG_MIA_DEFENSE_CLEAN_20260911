@@ -1,0 +1,96 @@
+{
+  "attack_claim": "standardized IA stealth stress test, not Original or paper-exact IA",
+  "bootstrap": {
+    "ci95": [
+      0.012498292349726776,
+      0.020218579234972677
+    ],
+    "cluster": "target/session",
+    "delta_mean": 0.01633760245901639,
+    "iterations": 2000
+  },
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "checks": {
+    "cluster_bootstrap_ci_lower_above_zero": true,
+    "final_lc_tpr_strictly_greater": true
+  },
+  "completed_utc": "2026-09-14T00:41:57.877545+00:00",
+  "final_lc_modified": false,
+  "low_fpr": [
+    {
+      "Final LC_actual_benign_fpr": 0.006,
+      "Final LC_tpr": 0.07711748633879781,
+      "MIRABEL_actual_benign_fpr": 0.01,
+      "MIRABEL_tpr": 0.08367486338797814,
+      "attack": "IA-Std-Q15-API1",
+      "delta_tpr": -0.00655737704918033,
+      "member_queries": 14640,
+      "member_sessions": 976,
+      "nominal_fpr": 0.01
+    },
+    {
+      "Final LC_actual_benign_fpr": 0.025,
+      "Final LC_tpr": 0.16673497267759563,
+      "MIRABEL_actual_benign_fpr": 0.025,
+      "MIRABEL_tpr": 0.15040983606557376,
+      "attack": "IA-Std-Q15-API1",
+      "cluster_bootstrap_mean_delta": 0.01633760245901639,
+      "delta_ci95_high": 0.020218579234972677,
+      "delta_ci95_low": 0.012498292349726776,
+      "delta_tpr": 0.016325136612021868,
+      "member_queries": 14640,
+      "member_sessions": 976,
+      "nominal_fpr": 0.025
+    },
+    {
+      "Final LC_actual_benign_fpr": 0.025,
+      "Final LC_tpr": 0.16673497267759563,
+      "MIRABEL_actual_benign_fpr": 0.03,
+      "MIRABEL_tpr": 0.16612021857923498,
+      "attack": "IA-Std-Q15-API1",
+      "delta_tpr": 0.0006147540983606481,
+      "member_queries": 14640,
+      "member_sessions": 976,
+      "nominal_fpr": 0.03
+    },
+    {
+      "Final LC_actual_benign_fpr": 0.05,
+      "Final LC_tpr": 0.2547814207650273,
+      "MIRABEL_actual_benign_fpr": 0.05,
+      "MIRABEL_tpr": 0.23476775956284154,
+      "attack": "IA-Std-Q15-API1",
+      "delta_tpr": 0.020013661202185756,
+      "member_queries": 14640,
+      "member_sessions": 976,
+      "nominal_fpr": 0.05
+    }
+  ],
+  "next": "IA_MATCHED_BUDGET_E2E",
+  "phase": "IA_SAME_FPR_DETECTION",
+  "preferred_delta_at_least_3pp": false,
+  "preferred_final_lc_beats_mirabel": true,
+  "primary": {
+    "Final LC_actual_benign_fpr": 0.025,
+    "Final LC_tpr": 0.16673497267759563,
+    "MIRABEL_actual_benign_fpr": 0.025,
+    "MIRABEL_tpr": 0.15040983606557376,
+    "attack": "IA-Std-Q15-API1",
+    "cluster_bootstrap_mean_delta": 0.01633760245901639,
+    "delta_ci95_high": 0.020218579234972677,
+    "delta_ci95_low": 0.012498292349726776,
+    "delta_tpr": 0.016325136612021868,
+    "member_queries": 14640,
+    "member_sessions": 976,
+    "nominal_fpr": 0.025
+  },
+  "runtime": {
+    "cache_sha256": "c13e3f0ef6f4a4359614c6c1933733d6acfaa873fe17a3a7929bd48a26c62090",
+    "embedding_sha256": "30ddfe0bf8d8ea529a387fcad63866576bad10684d9821e46cc8c822a55228f3",
+    "rows": 29115,
+    "seconds": 135.5218682140112
+  },
+  "valid_member_queries": 14640,
+  "valid_nonmember_queries": 14475,
+  "valid_sessions": 1941,
+  "verdict": "IA_STEALTH_DETECTION_PASS"
+}

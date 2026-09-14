@@ -1,0 +1,20 @@
+{
+  "campaign": "FINAL_CORE6_MATCHED_BUDGET_E2E_V1",
+  "completed_utc": "2026-09-12T20:13:32.206014+00:00",
+  "core4_preserved": true,
+  "core6_matched_budget_e2e": "NOT_RUN_PROTOCOL_GATE_CLOSED",
+  "core6_matched_fpr_detection": "NOT_RUN_PROTOCOL_GATE_CLOSED",
+  "core6_ready": false,
+  "dcmi_status": "DCMI_SPEC_UNDERDETERMINED",
+  "frozen_final_lc_unchanged": true,
+  "gold_qa": "NOT_RUN_CORE6_GATE_CLOSED",
+  "ia_status": "IA_PAPER_EXACT_UNAVAILABLE",
+  "mba_missingness_recomputed": true,
+  "new_attack_queries_generated": 0,
+  "new_rag_answers_generated": 0,
+  "next_required_assets": [
+    "DCMI immutable 6%-perturbation bundle with perturbation model revision and decoding",
+    "IA immutable Q30 + GPT-4o-mini ground-truth bundle matching an audited member/nonmember cohort"
+  ],
+  "verdict": "CORE6_PROTOCOL_INCOMPLETE"
+}

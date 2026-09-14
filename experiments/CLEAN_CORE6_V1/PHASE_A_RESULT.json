@@ -1,0 +1,24 @@
+{
+  "campaign": "CLEAN_CORE6_V1",
+  "phase": "A_CORE6_PROTOCOL_AUDIT",
+  "verdict": "IA_PROTOCOL_UNAVAILABLE",
+  "campaign_state": "CORE6_PHASE_A_FAIL_CLOSED",
+  "phase_b_started": false,
+  "retrieval_run": false,
+  "generation_run": false,
+  "model_loaded": false,
+  "old_scores_or_answers_reused": false,
+  "reason": "The immutable IA ground-truth artifact cannot be recovered, and the paper's exact 30-query GPT-4o/GPT-4o-mini lineage cannot be reproduced from the preserved repository without changing the protocol or fabricating provenance. Additional scorer mismatches also remain for S2-MIA and MBA.",
+  "required_to_resume": [
+    "IA: immutable per-query GT for the frozen shared targets, or an author-provided/version-pinned exact reproduction bundle",
+    "IA: exact 30-query pool generation/selection lineage and lambda=5 UNK policy",
+    "S2-MIA: freeze the original BLEU/perplexity T or M scorer; do not substitute cosine",
+    "MBA: freeze the paper's difficult-word mask construction and M-selection protocol",
+    "RAG-MIA: freeze exact black-box prompt, parser, and missing-output policy",
+    "DCMI: freeze an executable 6%-perturbation paired scorer implementation"
+  ],
+  "official_repository_commits_audited": {
+    "IA": "a53e8fda4f1492f204d968d7afb53ce8287c193c",
+    "DCMI": "ef961a1f23d09c62c5fbf69d798e325fb0362e55"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "campaign": "BC_MIRABEL_COUNTERFACTUAL_GROUNDED_DISCLOSURE",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "failed_requirements": [],
+  "paid_api_calls": 0,
+  "precommit_sha256": "80a69b1ff1e5721d815305e54d87a55809c3a6503dcbae70ec3c8f67555220bb",
+  "precommit_written": true,
+  "protected_generation_count": 0,
+  "small_e2e_started": false,
+  "verdict": "BC_CGD_PREFLIGHT_PASS"
+}

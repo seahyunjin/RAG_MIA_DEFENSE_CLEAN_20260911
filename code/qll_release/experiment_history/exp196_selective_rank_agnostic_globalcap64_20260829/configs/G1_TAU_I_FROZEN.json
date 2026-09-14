@@ -1,0 +1,14 @@
+{
+  "attack_examples_used": 0,
+  "calibration": "TopiOCQA benign-only",
+  "calibration_queries": 1000,
+  "calibration_sessions": 1000,
+  "empirical_benign_intervention_rate": 0.01,
+  "experiment": "Exp196",
+  "frozen_before_attack_generation": true,
+  "frozen_utc": "2026-08-29T19:47:00.770309+00:00",
+  "signal": "max frozen pre-generation source QLL",
+  "strict_operator": ">",
+  "target_benign_intervention_rate": 0.01,
+  "tau_I": -1.253333568572998
+}

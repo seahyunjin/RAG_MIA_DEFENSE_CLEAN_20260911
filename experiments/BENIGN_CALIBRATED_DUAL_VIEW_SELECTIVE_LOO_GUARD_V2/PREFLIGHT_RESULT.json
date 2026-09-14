@@ -1,0 +1,31 @@
+{
+  "campaign": "BENIGN_CALIBRATED_DUAL_VIEW_SELECTIVE_LOO_GUARD_V2",
+  "candidate": "DV-LOO V2",
+  "verdict": "DV_LOO_V2_PREFLIGHT_REJECTED",
+  "failure_class": "REPRODUCIBILITY_FAIL_CLOSE_NOT_PERFORMANCE_FAILURE",
+  "precommit_written": false,
+  "mirabel_reconstruction_started": false,
+  "phase1_started": false,
+  "protected_generation_count": 0,
+  "checks": {
+    "mirabel_definition_complete": true,
+    "clean_v1_name_mapping_complete": true,
+    "clean_v1_loo_reuse_possible": true,
+    "domain_stratified_split_exact": true,
+    "full_corpus_mirabel_reconstruction_possible": true,
+    "frozen_segmenter_exact_code_present": false,
+    "frozen_nli_checkpoint_present": true,
+    "frozen_support_pipeline_self_contained": false,
+    "original_attack_scorers_present": true
+  },
+  "missing_exact_files": [
+    "exp183r_claim_level_source_attribution_20260828/code/run_exp183r.py",
+    "exp188_globalcap_selective_dcmcel_20260829/code/exp188_core.py"
+  ],
+  "request_sha256": "8f5a47e9c6cabd363873d473119ccef63efacd4dea0447355357eac9e33b38a4",
+  "parent_precommit_sha256": "479fa2db024ca869ed883e0ee791647340c550fbc67147db671ef9c891d7a016",
+  "parent_query_scores_sha256": "5b843f73ab392b84f16f92f5886b81b23309533c3de909ea7b222903a60bd540",
+  "nli_checkpoint_config_sha256": "897e756eb59d3183adb505952e7910e7cbc7750a43f3b3747a96b688d2b02a47",
+  "legacy_numeric_mixing": false,
+  "parent_clean_v1_modified": false
+}

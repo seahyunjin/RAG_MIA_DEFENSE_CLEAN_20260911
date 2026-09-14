@@ -1,0 +1,56 @@
+{
+  "abstention": "I can't provide additional source-specific detail for this request.",
+  "candidate": "QLL_ANCHORED_LEAVE_ONE_SOURCE_EXPOSURE_GUARD",
+  "created_utc": "2026-08-29T19:05:26.052122+00:00",
+  "decision_gate": {
+    "candidate": "QLL_GUARD_1PCT",
+    "mirabel_noninferiority_margin": 0.0,
+    "privacy_direction": "lower standard ROC-AUC is better"
+  },
+  "experiment": "Exp195",
+  "exposure": "max(0, mean_token_NLL_minus_selected_source - mean_token_NLL_full)",
+  "forbidden": [
+    "attack classifier",
+    "family threshold",
+    "rank threshold",
+    "dataset threshold",
+    "manual fusion",
+    "I4+C1 fusion",
+    "source-use U",
+    "attack-tuned budget",
+    "alternative regeneration",
+    "paraphrase defense",
+    "token noise",
+    "new hiding rule"
+  ],
+  "input_hashes": {
+    "exp179_qll": "fc5ea11ecdefaab406a957b90d4f0b7ce7275d144683fb69fb1c07ab40406f21",
+    "exp188_cases": "af8ddac29ad72e2749abd3c211be6832e290c911e8778f6c01d645944379ec04",
+    "exp191_final": "c48be9544a79e433fbb4511e7ebc10bc9c3daa282d995d90c317919be9247d95",
+    "exp193_cases": "61b46780d32774f8f5a5470e7b8bd10861175c2479b5382758b6f5ad8c3b1a91",
+    "exp193_claims": "05146d25e9ad768eb4db4fa34297c8151d2ff3e94ec2806c44b6f9009bab3da6",
+    "exp193_final": "5e9fb8596418d0f8bec0711526667a0d0d721f66df994325fa8049087a5d2d95",
+    "exp193_qll": "bb3a9097e59073a34ae65b2b3f9f1a49eea2f9d6d98cff9655cda74869280b5d",
+    "exp193_responses": "be7582e17c944a61eacddfe9520aea0e980d8d241dd228b0036be2006ac40e1c",
+    "exp193_scores": "fa6aed90eb994690373931e00fa285910fd1c4f278b2b33b652efd20d07d96a7",
+    "exp193_tasks": "116b1065a1b41922ff472a01f04adc0c5b0c008271b72c037230ec03c07562be",
+    "exp194_final": "247682e8a921e3709c08682035393ba5a211ebc1aeee64c2e3645cc6ab02f903",
+    "normal_corpus": "3a36ba2f0fa1be7a0c7919cf622f8bada367a1daf9ad9d171e6d9ef5f440ce48",
+    "normal_factuality": "4015b1f83f4c9f452911147578719c7ec072ed559c43356096984fc08c9fd2a6",
+    "normal_gold": "c5199053c51b72a297b090fd6ae53c96e325099bb267a1377503d01557309123",
+    "orientation": "9750e8293bed87c3cd07a66db6ea4de186e380a2b27804832f4b977c1a55ee95",
+    "qwen_config": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+  },
+  "ledger": "one nonnegative scalar per active session/source pair",
+  "primary_benign_intervention_rate": 0.01,
+  "reporting_rates": [
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "source_rule": "argmax frozen QLL; tie lower retrieval rank then source ID",
+  "strict_policy": "intervene iff cumulative exposure > B",
+  "trainable_parameters": 0,
+  "written_before_candidate_attack_results": true
+}

@@ -1,0 +1,32 @@
+{
+  "campaign": "DV_LOO_V2_PHASE1",
+  "checks": {
+    "mba_degradation_le_0_05": true,
+    "menta_improvement_over_mirabel_ge_0_10": false,
+    "menta_tpr3_ge_0_50": true,
+    "overall_holdout_fpr3_le_0_04": true,
+    "s2_degradation_le_0_05": true
+  },
+  "development_only": true,
+  "metrics": {
+    "MBA": {
+      "DV_LOO_V2": 0.75,
+      "MIRABEL_MARGIN_PERCENTILE": 0.75
+    },
+    "MEntA": {
+      "CLEAN_V1_RAW_LOO": 0.3,
+      "DV_LOO_V2": 0.7,
+      "MIRABEL_MARGIN_PERCENTILE": 0.7
+    },
+    "S²-MIA": {
+      "DV_LOO_V2": 0.75,
+      "MIRABEL_MARGIN_PERCENTILE": 0.8
+    },
+    "holdout_fpr3": 0.008
+  },
+  "phase2_opened": false,
+  "primary_fpr": 0.03,
+  "primary_population": "MEMBER_ATTACK_SESSIONS",
+  "protected_generation_count": 0,
+  "verdict": "DV_LOO_V2_PHASE1_REJECTED"
+}

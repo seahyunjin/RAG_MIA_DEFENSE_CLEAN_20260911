@@ -1,0 +1,24 @@
+{
+  "attack": "IA",
+  "status": "IA_PAPER_EXACT_UNAVAILABLE",
+  "implementation_label": "FAIL_CLOSED_SPEC_AND_SCORER_FORMULA_ONLY",
+  "source": {
+    "paper": "https://arxiv.org/abs/2502.00306",
+    "paper_sha256": "3454915b3651d2e90d23f1a27d28bf9807bdbc0a5701079861b91506da9f0791",
+    "repository": "https://github.com/ali7naseh/RAG_MIA",
+    "commit": "a53e8fda4f1492f204d968d7afb53ce8287c193c"
+  },
+  "files": {
+    "query_generator.py": "7a246ec09245a73f37c54b1449e0b67531983c954e9f4911229559e32078394c",
+    "scorer.py": "6b350a3d7e632b5ba8d22243bfa062c5aa48402754f3db29080e2e6111fc92ea",
+    "protocol_config.json": "c9826340910cc1e000cf4b2d6bd14b02cd6efdc3963f05aec81e5536da4908e0",
+    "PAPER_PROTOCOL_SPEC.json": "d46656ff3ee44facb798ae29dec3abacf5158fc3bb3be50d2b0d1f81341a7b12",
+    "PAPER_PROTOCOL_SPEC.md": "84f80ba9d280990a1501861865c88fe031ee251e4aa8c29dba6fdf523926900a",
+    "tests/test_protocol.py": "ecf6260e478f605536bf2a5bdba197291bb682fa47d30432375ba8fb9b9d661b"
+  },
+  "prompt_sha256": "7a246ec09245a73f37c54b1449e0b67531983c954e9f4911229559e32078394c",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {
+    "shadow_gt": "gpt-4o-mini; exact historical output unavailable"
+  }
+}

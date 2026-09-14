@@ -1,0 +1,15 @@
+{
+  "attack_examples_used": 0,
+  "budgets": {
+    "0.005": 8.155319213867188,
+    "0.01": 5.358430862426758,
+    "0.02": 4.001762866973877,
+    "0.05": 2.880909919738769
+  },
+  "calibration": "TopiOCQA normal Top-4 only",
+  "experiment": "Exp195",
+  "frozen_utc": "2026-08-29T19:05:42.715785+00:00",
+  "normal_queries": 1000,
+  "normal_sessions": 1000,
+  "single_turn_sessions": true
+}

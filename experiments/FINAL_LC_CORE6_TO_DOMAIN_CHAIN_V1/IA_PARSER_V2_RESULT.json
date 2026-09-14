@@ -1,0 +1,33 @@
+{
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "checks": {
+    "exact_15_binary_judgments": true,
+    "exact_q15": true,
+    "inferred_fields_zero": true,
+    "member_nonmember_validity_gap_at_most_2pp": false,
+    "valid_sessions_at_least_95pct": false
+  },
+  "completed_utc": "2026-09-13T02:50:04.003040+00:00",
+  "inferred_fields": 0,
+  "member_valid": 763,
+  "member_valid_rate": 0.763,
+  "next_stage": "CORE5_DETECTION_E2E_GOLD_NO_IA_REGENERATION",
+  "nonmember_valid": 790,
+  "nonmember_valid_rate": 0.79,
+  "parser_spec_sha256": "5b12ed07b16310bfbcb5d2369b534e24e1236c451fa7a25ba7cb538e1d43cf90",
+  "query_artifact": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/IA_STD_Q15_QUERIES_V2.jsonl",
+    "sha256": "f63728ad81343f504c8b2c72b6737730337c314a58c16e4be54748ddde9a8371"
+  },
+  "sessions": 2000,
+  "v1_invalid_audit_categories": {
+    "CONTENT_MISSING": 245,
+    "FORMAT_ONLY": 343,
+    "OTHER": 109
+  },
+  "valid_queries": 23295,
+  "valid_rate": 0.7765,
+  "valid_sessions": 1553,
+  "validity_gap": 0.027000000000000024,
+  "verdict": "IA_STD_Q15_FORMAT_RECOVERY_FAILED"
+}

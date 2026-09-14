@@ -1,0 +1,188 @@
+{
+  "attack_scorers": {
+    "MBA": {
+      "code": {
+        "bytes": 16840,
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/MBA/evaluate.py",
+        "sha256": "0523e798013a35247b6ae5583b03c15347f5f45dfa3e8b835ac31623a253104d"
+      },
+      "score": "case-insensitive exact reconstruction accuracy at original mask indices"
+    },
+    "MEntA": {
+      "claim_splitter": "released heuristic split_text(min_length=10)",
+      "code": {
+        "bytes": 32168,
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/MEntA/evaluate.py",
+        "sha256": "830f57407c09d9a932a5e4eb5b7ee0ac653d2065ecff4c10241620dea90438b9"
+      },
+      "document_pair_batch_size": 2,
+      "idk_pair_batch_size": 32,
+      "labels": {
+        "0": "entailment",
+        "1": "neutral",
+        "2": "contradiction"
+      },
+      "max_length": 2048,
+      "nli_config": {
+        "bytes": 19091,
+        "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--tasksource--deberta-base-long-nli/snapshots/04dcf11f844b07bc57015169fca2b7d6df8299d5/config.json",
+        "sha256": "708314bd039034a16c42e998eddf9ec63c8bf9c16b8e849760c7ddf2375c8b6f"
+      },
+      "nli_revision": "04dcf11f844b07bc57015169fca2b7d6df8299d5",
+      "nli_weights": {
+        "bytes": 737722356,
+        "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--tasksource--deberta-base-long-nli/snapshots/04dcf11f844b07bc57015169fca2b7d6df8299d5/model.safetensors",
+        "sha256": "71cace06873870322ffa93e4005999961cef6d6b08263b01aad832ded23d94ae"
+      },
+      "session_score": "mean over Q1-Q5 of (-1 if IDK else 1 if any target-document claim entailed else 0)"
+    },
+    "S2-MIA": {
+      "code": {
+        "bytes": 20244,
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/code/menta_official/S2-MIA/evaluate.py",
+        "sha256": "fe373049d977cdec30daed2013ff495bd5ad61174fd889bbf2721bcaee75fb43"
+      },
+      "embedding_config": {
+        "bytes": 571,
+        "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--sentence-transformers--all-mpnet-base-v2/snapshots/e8c3b32edf5434bc2275fc9bab85f82640a19130/config.json",
+        "sha256": "d46a3e04ded82bba22528424480697d394eeda6a27484e08c5bb2bdf5906cfa0"
+      },
+      "embedding_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+      "embedding_weights": {
+        "bytes": 437971872,
+        "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--sentence-transformers--all-mpnet-base-v2/snapshots/e8c3b32edf5434bc2275fc9bab85f82640a19130/model.safetensors",
+        "sha256": "78c0197b6159d92658e319bc1d72e4c73a9a03dd03815e70e555c5ef05615658"
+      },
+      "score": "normalized cosine between released second-half target knowledge and final answer"
+    }
+  },
+  "benign": {
+    "gold_answers": false,
+    "metric_name": "ANSWER_PRESERVATION_DIAGNOSTIC",
+    "qa_correctness_claim": false
+  },
+  "bge": {
+    "checkpoint": "/home/traffic_3/workspace/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+    "max_seq_length": 512,
+    "normalized_embeddings": true,
+    "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+    "similarity": "cosine/inner product",
+    "snapshot_sha256_from_frozen_clean_lineage": "77d0b2540f35b75b31d7c1390257ac8fb58264f0b39921c2ccbac0db3350e88f"
+  },
+  "campaign": "BC-MIRABEL + Output-LOO Locator + Grounded Extractive Fallback (BC-GEF)",
+  "code_sha256": {
+    "code/run_bc_gef.py": "ce2b459b1b5c2d7e61114708d8873aa1a71aeac1cb4d478df4ec7608c8b6b13b",
+    "tests/test_extractive.py": "8babae475d132406cee34fe33016af0f44cce5f1e66794d74a8348a0d18da797"
+  },
+  "cohort": {
+    "MBA": {
+      "member_sessions": 20,
+      "nonmember_sessions": 20,
+      "queries_per_session": 1
+    },
+    "MEntA": {
+      "member_sessions": 20,
+      "nonmember_sessions": 20,
+      "queries_per_session": 5
+    },
+    "S2-MIA": {
+      "member_sessions": 20,
+      "nonmember_sessions": 20,
+      "queries_per_session": 1
+    },
+    "benign_calibration": 250,
+    "benign_holdout_small": 250,
+    "parent": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+    "rows_total_parent": 780,
+    "small_attack_queries": 280,
+    "small_evaluation_rows": 530
+  },
+  "decision": {
+    "failure": "BC_GEF_SMALL_REJECTED then STOP; no automatic alternatives",
+    "pass": "BC_GEF_SMALL_PASS then freeze/open Full Core6"
+  },
+  "extractive_segmenter_hash": "455aa97b844bb46cdc5712b8edf678ce5607b6163d3960681405f3376fa40af2",
+  "frontend": {
+    "alarm_count": 73,
+    "alarm_query_ids_sha256": "6b4a72d7fbd7afdc53a6c874e0c2f6a0708bdd4b609c8255bf53dcd0163d7552",
+    "detector": {
+      "bc_primary": "strict M(q)>tau_BC",
+      "original_alarm": "strict M(q)>0",
+      "score": "Original full-corpus MIRABEL Gumbel margin M(q)=s_max-tau_q",
+      "sensitivity_nominal_fpr": [
+        0.01,
+        0.05
+      ],
+      "tau_BC": 0.1116663235201894,
+      "tau_derivation": "strict empirical upper-tail cutoff on 250 benign calibration rows; nominal FPR 3%; 7 scores exceed"
+    },
+    "locator": {
+      "candidates": "unique MIRABEL top1 and QLL-selected source; at most 2",
+      "influence": "I_s=L_full-L_minus_s on the same teacher-forced A0",
+      "role": "source locator only, not attack detector",
+      "selection": "maximum I_s; exact tie favors MIRABEL source"
+    },
+    "required_equality": "query-by-query alarm and selected s* exact equality with BC-CGD",
+    "selected_source_rows_sha256": "e99a838308412bd08f3427ffda6442f32358b8624dfc75e86072eca1b2722375"
+  },
+  "paid_api_calls": 0,
+  "parent_bc_cgd": {
+    "final_result_sha256": "cfcf3a312419eab5ba1d5e68a1b5709a7d98b5e0b7191def10e2f591226e0378",
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/BC_MIRABEL_COUNTERFACTUAL_GROUNDED_DISCLOSURE/configs/BC_CGD_PRECOMMIT.json",
+    "sha256": "80a69b1ff1e5721d815305e54d87a55809c3a6503dcbae70ec3c8f67555220bb"
+  },
+  "precommit_revision": 1,
+  "preflight": {
+    "alarm_count": 73,
+    "alarm_query_ids_sha256": "6b4a72d7fbd7afdc53a6c874e0c2f6a0708bdd4b609c8255bf53dcd0163d7552",
+    "bc_threshold": 0.1116663235201894,
+    "checks_passed": 23,
+    "checks_total": 23,
+    "selected_source_rows_sha256": "e99a838308412bd08f3427ffda6442f32358b8624dfc75e86072eca1b2722375",
+    "updated_utc": "2026-09-11T15:53:16.695436+00:00",
+    "verdict": "BC_GEF_PREFLIGHT_PASS"
+  },
+  "primary_metrics": {
+    "MBA": "original frozen mask reconstruction score and Native ROC-AUC",
+    "MEntA": "original frozen Native ROC-AUC and paper protocol",
+    "S2-MIA": "original frozen Native ROC-AUC and paper protocol",
+    "effective_auc": "internal adaptive diagnostic only"
+  },
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/037afe0c-3868-4a98-9658-389c5df4c61b/pasted-text.txt",
+    "sha256": "f26b9f267665dd33ed906311cbab930f077328db89f70b0f202e91b72893d20f"
+  },
+  "revision_history": [
+    {
+      "attack_scorers_completed_before_repair": true,
+      "final_metrics_inspected_before_repair": false,
+      "previous_precommit_sha256": "0261069e5235ca7191ac4012070d6ece3242e095af357c847ed24748e23e3f0c",
+      "reason": "execution-only pandas column access repair: cell.empty attribute changed to cell['empty']; no scientific definition, input, threshold, score, or gate changed",
+      "revision": 1
+    }
+  ],
+  "risk_path": {
+    "answer": "top-2 exact candidate sentences joined by one ASCII space",
+    "duplicate": "exact normalized string after trim + internal whitespace collapse; canonical occurrence by retrieval rank then sentence index",
+    "empty": "empty string and EXTRACTIVE_EMPTY_CASE; no refusal fallback",
+    "generation": 0,
+    "remaining": "Top-3 packed source texts",
+    "remove": "same BC-CGD selected risky source s* from frozen Top-4",
+    "segment": "newline first; list/table line kept whole; otherwise split after .?! plus whitespace; discard empty; preserve candidate substring",
+    "semantic_filter": null,
+    "sort": "BGE cosine descending; tie by retrieval rank ascending then sentence index ascending"
+  },
+  "safe_path": "A_final=A0 byte-for-byte; no segmentation/extraction/regeneration/filtering",
+  "small_go_gates": {
+    "MEntA": [
+      "native_auc <= BC_MIRABEL native_auc - 0.05",
+      "native_auc < Original MIRABEL native_auc",
+      "native_auc <= 0.75"
+    ],
+    "S2_MBA": [
+      "each native_auc <= Original MIRABEL native_auc + 0.05",
+      "at least one native_auc <= Original MIRABEL native_auc"
+    ]
+  },
+  "status": "REV1_EXECUTION_ONLY_REPAIR_AFTER_SCORING_BEFORE_FINAL_METRIC_INSPECTION"
+}

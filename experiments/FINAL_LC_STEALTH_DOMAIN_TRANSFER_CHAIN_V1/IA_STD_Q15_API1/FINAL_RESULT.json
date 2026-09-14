@@ -1,0 +1,53 @@
+{
+  "additional_recovery_allowed": false,
+  "artifacts": {
+    "gt": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_GT.jsonl",
+      "sha256": "55b89ea2d23ec1ecb26400c52d483118baae38bfec27e35018e462a4cca7f319"
+    },
+    "queries": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/inputs/IA_API1_FULL_QUERIES.jsonl",
+      "sha256": "bdfb808ffd6fff53399f7c6b99444dca46bde7e16bafde930aa0be80d53f83a1"
+    },
+    "sessions": {
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/outputs/IA_API1_FULL_FROZEN.jsonl",
+      "sha256": "f3cac1fa2aee3a962166cb6dbb08df443e687bced3c74e0e564cc5ca60bc7836"
+    }
+  },
+  "attack": "IA-Std-Q15-API1",
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "checks": {
+    "duplicate_zero": true,
+    "exact_q15_gt15": true,
+    "inferred_fields_zero": true,
+    "valid_at_least_1900": true,
+    "validity_gap_at_most_2pp": true
+  },
+  "completed_utc": "2026-09-13T19:18:47.790066+00:00",
+  "coverage": 0.9705,
+  "duplicate_zero": true,
+  "estimated_campaign_spend_usd": 9.46196495,
+  "exact_q15_gt15": true,
+  "failure_reasons": {
+    "DIRECT_MEMBERSHIP_QUESTION": 8,
+    "META_REFERENCE_QUESTION": 50,
+    "MISSING_GT": 59,
+    "ORPHANED_INFLIGHT": 1
+  },
+  "final_lc_modified": false,
+  "inferred_fields": 0,
+  "member_valid": 976,
+  "member_valid_rate": 0.976,
+  "nonmember_valid": 965,
+  "nonmember_valid_rate": 0.965,
+  "performance_metrics_computed": false,
+  "queries": 29115,
+  "sessions": 2000,
+  "sqlite": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1/IA_STD_Q15_API1/runtime/ia_api1.sqlite3",
+    "sha256": "790978035362b54aaf89aca256c74af277c98258eb5e01fbc9c50d107e9c0654"
+  },
+  "valid": 1941,
+  "validity_gap": 0.01100000000000001,
+  "verdict": "IA_STD_Q15_API1_READY"
+}

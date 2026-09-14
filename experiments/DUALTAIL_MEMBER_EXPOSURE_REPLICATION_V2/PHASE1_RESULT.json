@@ -1,0 +1,179 @@
+{
+  "verdict": "DUALTAIL_MEMBER_EXPOSURE_NOT_REPLICATED",
+  "completed_utc": "2026-09-12T07:32:56.672233+00:00",
+  "runtime_seconds": 127.71302778273821,
+  "precommit_sha256": "253908b320007beef52fd1559e99840a9f6c91ad0a89f71549fefe6202e1ac14",
+  "old_v1_verdict_preserved": "BC_DUALTAIL_V1_NO_TPR_GAIN",
+  "fresh_cohort": {
+    "member_targets": 100,
+    "nonmember_targets": 100,
+    "benign_queries": 1000,
+    "attack_queries": 1400
+  },
+  "attack_input_audit": {
+    "verdict": "FRESH_ATTACK_INPUT_AUDIT_PASS",
+    "details": {
+      "MEntA": {
+        "queries": 1000,
+        "expected_queries": 1000,
+        "targets": 200,
+        "expected_targets": 200,
+        "labels_exact": true,
+        "old_exact_query_text_overlap": 0,
+        "q5_structure_valid": true,
+        "sha256": "1aeed3616d3ef9a24692a5945d80bfddf77a75d95389b661503e19ac1a54f592"
+      },
+      "MBA": {
+        "queries": 200,
+        "expected_queries": 200,
+        "targets": 200,
+        "expected_targets": 200,
+        "labels_exact": true,
+        "old_exact_query_text_overlap": 0,
+        "q5_structure_valid": true,
+        "sha256": "55e7f65cf7926f2a3ab9bbdce48d89df21da6bd305cb27232f530be051b1afb7"
+      },
+      "RAG-MIA": {
+        "queries": 200,
+        "expected_queries": 200,
+        "targets": 200,
+        "expected_targets": 200,
+        "labels_exact": true,
+        "old_exact_query_text_overlap": 0,
+        "q5_structure_valid": true,
+        "sha256": "5962d7555e34da343e5d9f41edddbf55a92300f82f44f31a5ffe6bc8e00b91e0"
+      }
+    },
+    "queries": 1400,
+    "unique_query_ids": 1400
+  },
+  "matched_member_tpr_at_3pct": {
+    "MEntA": {
+      "M": 0.908,
+      "S": 0.9329999999999999,
+      "delta": 0.02499999999999991
+    },
+    "MBA": {
+      "M": 0.99,
+      "S": 1.0,
+      "delta": 0.010000000000000009
+    },
+    "RAG-MIA": {
+      "M": 0.94,
+      "S": 0.990625,
+      "delta": 0.05062500000000003
+    }
+  },
+  "macro": {
+    "MIRABEL": 0.9460000000000001,
+    "DUALTAIL": 0.9745416666666666,
+    "delta": 0.028541666666666576
+  },
+  "bootstrap": [
+    {
+      "attack": "MEntA",
+      "unit": "target/session",
+      "iterations": 2000,
+      "point_delta": 0.02499999999999991,
+      "bootstrap_mean_delta": 0.02528349999999997,
+      "ci95_low": 0.005874999999999964,
+      "ci95_high": 0.04737812499999993
+    },
+    {
+      "attack": "MBA",
+      "unit": "target/session",
+      "iterations": 2000,
+      "point_delta": 0.010000000000000009,
+      "bootstrap_mean_delta": 0.01057000000000001,
+      "ci95_low": 0.0,
+      "ci95_high": 0.040000000000000036
+    },
+    {
+      "attack": "RAG-MIA",
+      "unit": "target/session",
+      "iterations": 2000,
+      "point_delta": 0.05062500000000003,
+      "bootstrap_mean_delta": 0.05051874999999999,
+      "ci95_low": 0.010624999999999996,
+      "ci95_high": 0.09687499999999993
+    }
+  ],
+  "checks": {
+    "menta_delta_at_least_5pp": false,
+    "menta_cluster_bootstrap_ci_low_above_zero": true,
+    "mba_noninferior_within_5pp": true,
+    "rag_mia_noninferior_within_5pp": true,
+    "core3_macro_member_tpr_improved": true
+  },
+  "binary_matched_thresholds": {
+    "M": {
+      "threshold": 0.09021577842786499,
+      "benign_alarms": 30,
+      "benign_fpr": 0.03
+    },
+    "S": {
+      "threshold": 3.8248542483007064,
+      "benign_alarms": 17,
+      "benign_fpr": 0.017
+    }
+  },
+  "recovery": {
+    "categories": {
+      "BOTH_HIT": 436,
+      "BOTH_MISS": 36,
+      "MIRABEL_HIT_DUALTAIL_MISS": 17,
+      "MIRABEL_MISS_DUALTAIL_HIT": 11
+    },
+    "recovered_queries": 11,
+    "recovered_targets": 9,
+    "lost_queries": 17,
+    "lost_targets": 13,
+    "largest_single_target_gain": 2,
+    "largest_target_gain_fraction": 0.18181818181818182,
+    "warning": null
+  },
+  "nonmember_alarm": [
+    {
+      "attack": "MEntA",
+      "queries": 500,
+      "mirabel_alarm_rate_matched_3pct": 0.02,
+      "dualtail_alarm_rate_matched_3pct": 0.012
+    },
+    {
+      "attack": "MBA",
+      "queries": 100,
+      "mirabel_alarm_rate_matched_3pct": 0.02,
+      "dualtail_alarm_rate_matched_3pct": 0.02
+    },
+    {
+      "attack": "RAG-MIA",
+      "queries": 100,
+      "mirabel_alarm_rate_matched_3pct": 0.01,
+      "dualtail_alarm_rate_matched_3pct": 0.01
+    }
+  ],
+  "correlations": [
+    {
+      "group": "FRESH_BENIGN",
+      "n": 1000,
+      "spearman_rho_M_C": 0.6621874221874222
+    },
+    {
+      "group": "MEntA",
+      "n": 1000,
+      "spearman_rho_M_C": 0.9268303228303229
+    },
+    {
+      "group": "MBA",
+      "n": 200,
+      "spearman_rho_M_C": 0.9232055801395035
+    },
+    {
+      "group": "RAG-MIA",
+      "n": 200,
+      "spearman_rho_M_C": 0.9339323483087077
+    }
+  ],
+  "phase2_allowed": false,
+  "next_step": "ORTHOGONAL_DETECTOR_SIGNAL_DESIGN"
+}

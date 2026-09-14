@@ -1,0 +1,86 @@
+{
+  "attacks": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA"
+  ],
+  "campaign": "ORTHOGONAL_EXPOSURE_SEARCH_V1",
+  "code_sha256": {
+    "common.py": "f123af59c5934f10e8e57ac671939f74f22c6b49047d8f9fed66a2298ef57d31",
+    "prepare.py": "2386976b27ad1f29cfd617c6d7c25d5f7c64a983bb40d23dac1d06f37ad7d25e",
+    "run_phase_a.py": "27dc6529395f9ca97454ea388298e02d986e62fd60680886a9185d52b506fe66",
+    "run_phase_b.py": "bafbded4177eb1c777295c8f07b3c26c018f187082273a1a13518848ac53cd14"
+  },
+  "combined_score": "max(-ln p_M,-ln p_L)",
+  "comparison_operator": "strict >",
+  "created_utc": "2026-09-12T07:52:17.409133+00:00",
+  "development_notice": "THIS_COHORT_IS_NOW_DEVELOPMENT_DATA",
+  "fresh_retrieval": {
+    "bytes": 3604184,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/DUALTAIL_MEMBER_EXPOSURE_REPLICATION_V2/cache/FRESH_REPLICATION_RETRIEVAL_SCORES.jsonl",
+    "sha256": "23dc387e02c1ac1f93cf3d19ec973bb7db8a06a905d593946ecf5873c71590d2"
+  },
+  "frozen_v2_result": {
+    "bytes": 4743,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/DUALTAIL_MEMBER_EXPOSURE_REPLICATION_V2/PHASE1_RESULT.json",
+    "sha256": "659f51b3c708ad61139816bc281ab73775e0375e93a22c4b4c481a0815e15ff0"
+  },
+  "frozen_v2_verdict": "DUALTAIL_MEMBER_EXPOSURE_NOT_REPLICATED",
+  "gate": {
+    "MBA_delta": ">=-0.05",
+    "MEntA_cluster_bootstrap_ci_low": ">0",
+    "MEntA_delta_tpr3": ">=0.05",
+    "RAG-MIA_delta": ">=-0.05",
+    "core3_macro_delta": ">0"
+  },
+  "idf": "log((3000+1)/(df(t)+1))+1",
+  "if_fail": [
+    "SPARSE_EXPOSURE_SCREEN_FAILED",
+    "TRAINING_FREE_HANDCRAFTED_DETECTOR_SEARCH_CLOSED"
+  ],
+  "if_pass": "write separate frozen confirmation precommit; select fresh 100/100 targets with zero overlap",
+  "legacy_retrieval": {
+    "bytes": 1601854,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/cache/CLEAN_CORE3_RETRIEVAL_CACHE.jsonl",
+    "sha256": "56f20d4105ea9c4c9ef22dc6767d336687522ff70c7a43ac7bb73294f8c92ff6"
+  },
+  "legacy_score_rows": {
+    "bytes": 410762,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/BC_DUALTAIL_DETECTOR_V1_STRICT/tables/SCORE_ROWS.csv",
+    "sha256": "d5cdce53a751889c376a75d7226388859cc37f0bd191bb9239efe8465088eadc"
+  },
+  "lexical_score": "sum_idf(U(q) intersection U(d1))/sum_idf(U(q)); d1=BGE top1; zero denominator => 0",
+  "normalization": [
+    "Unicode NFKC",
+    "lowercase",
+    "Unicode alphanumeric tokens",
+    "punctuation separator",
+    "numbers retained",
+    "no stopwords/stemming/lemmatization/entity/fuzzy matching",
+    "unique query tokens"
+  ],
+  "phase": "B_TRAINING_FREE_SPARSE_EXPOSURE",
+  "primary": {
+    "comparison": "empirical ROC linear interpolation",
+    "fpr": 0.03,
+    "negative": "fresh benign query",
+    "nonmember_attack": "diagnostic only",
+    "positive": "member-target attack query",
+    "secondary_fpr": [
+      0.01,
+      0.05
+    ],
+    "unit": "query"
+  },
+  "protected_db": {
+    "bytes": 8578726,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "request": {
+    "bytes": 18845,
+    "path": "/home/cau_lab/.codex/attachments/2c2cddc6-e05b-4ac3-8fc8-be88baf2fdd7/pasted-text.txt",
+    "sha256": "416859c59b1577b278a73591d82832a44fbd69c07d32a3c825b438c8f91bda34"
+  },
+  "tail_calibration": "legacy benign 500 deterministically frozen by V1 as 250 TAIL_REFERENCE/250 THRESHOLD_CALIBRATION"
+}

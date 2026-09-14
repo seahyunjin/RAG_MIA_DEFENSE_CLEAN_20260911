@@ -1,0 +1,84 @@
+{
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "checks": {
+    "all5_improve_vs_no_defense": true,
+    "all5_noninferior_to_matched_mirabel": true,
+    "dcmi_no_catastrophe": true,
+    "same_or_better_at_least4": true
+  },
+  "completed_utc": "2026-09-13T03:36:05.299675+00:00",
+  "ia_status": "EXCLUDED_PARSER_FAILURE_NO_REGENERATION",
+  "mba_n_excluded": 0,
+  "next_stage": "PHASE_C_GOLD_QA_CHARACTERIZATION_REGARDLESS_OF_CORE5_GATE",
+  "phase": "B_CORE5_MATCHED_BUDGET_E2E",
+  "preferred_at_or_below_0_65": 5,
+  "primary": [
+    {
+      "attack": "MEntA",
+      "delta_lc_vs_mirabel": -0.016502000000000128,
+      "final_lc_matched_2_5": 0.5854035,
+      "lc_ci95_high": 0.6061222625,
+      "lc_ci95_low": 0.56496705,
+      "lc_e_auc_secondary": 0.5854035,
+      "mirabel_matched_2_5": 0.6019055000000001,
+      "native_metric": "paper-faithful MEntA native ROC-AUC",
+      "no_defense": 0.9782609999999999,
+      "original_mirabel_fixed_reference": 0.5178315000000001,
+      "valid_n": 2000
+    },
+    {
+      "attack": "MBA",
+      "delta_lc_vs_mirabel": -0.0017704999999999527,
+      "final_lc_matched_2_5": 0.4979675,
+      "lc_ci95_high": 0.5093534625,
+      "lc_ci95_low": 0.486915875,
+      "lc_e_auc_secondary": 0.5020325,
+      "mirabel_matched_2_5": 0.49973799999999996,
+      "native_metric": "paper-faithful reconstruction ROC-AUC; missing=incorrect",
+      "no_defense": 0.909827,
+      "original_mirabel_fixed_reference": 0.499879,
+      "valid_n": 2000
+    },
+    {
+      "attack": "RAG-MIA",
+      "delta_lc_vs_mirabel": -0.031000000000000028,
+      "final_lc_matched_2_5": 0.5229999999999999,
+      "lc_ci95_high": 0.5305,
+      "lc_ci95_low": 0.5165,
+      "lc_e_auc_secondary": 0.5229999999999999,
+      "mirabel_matched_2_5": 0.5539999999999999,
+      "native_metric": "paper-faithful Yes/No ROC-AUC",
+      "no_defense": 0.981,
+      "original_mirabel_fixed_reference": 0.5015,
+      "valid_n": 2000
+    },
+    {
+      "attack": "S²-MIA",
+      "delta_lc_vs_mirabel": 0.0006257822277847547,
+      "final_lc_matched_2_5": 0.5062578222778473,
+      "lc_ci95_high": 0.5250312891113892,
+      "lc_ci95_low": 0.48936170212765956,
+      "lc_e_auc_secondary": 0.5062578222778473,
+      "mirabel_matched_2_5": 0.5056320400500626,
+      "native_metric": "S2-MIA-T balanced accuracy",
+      "no_defense": 0.6858573216520651,
+      "original_mirabel_fixed_reference": 0.5006257822277846,
+      "valid_n": 1598
+    },
+    {
+      "attack": "DCMI-Std-Q2",
+      "delta_lc_vs_mirabel": -0.012494000000000005,
+      "final_lc_matched_2_5": 0.50602,
+      "lc_ci95_high": 0.5125095125,
+      "lc_ci95_low": 0.49951570000000006,
+      "lc_e_auc_secondary": 0.50602,
+      "mirabel_matched_2_5": 0.518514,
+      "native_metric": "standardized DCMI differential ROC-AUC",
+      "no_defense": 0.9795125,
+      "original_mirabel_fixed_reference": 0.5010034999999999,
+      "valid_n": 2000
+    }
+  ],
+  "primary_budget": 0.025,
+  "verdict": "CORE5_MATCHED_BUDGET_E2E_PASS"
+}

@@ -1,0 +1,10 @@
+{
+  "campaign": "IA_STD_Q15_V6_DUPLICATE_CONSTRAINED",
+  "stage": "IA_V6_PREFLIGHT_QUESTION_PROGRESS",
+  "updated_utc": "2026-09-13T09:41:16.756220+00:00",
+  "slot": 12,
+  "completed_slots": 1013,
+  "total_slots": 1500,
+  "valid_slots": 978,
+  "eta_seconds": 660
+}

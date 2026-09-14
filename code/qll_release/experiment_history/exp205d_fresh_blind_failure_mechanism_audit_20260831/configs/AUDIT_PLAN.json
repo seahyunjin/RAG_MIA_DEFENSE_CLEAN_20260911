@@ -1,0 +1,24 @@
+{
+  "experiment": "Exp205D Fresh-Blind Failure Mechanism Audit",
+  "created_utc": "2026-08-31T01:05:00Z",
+  "mode": "READ_ONLY_POST_FAILURE_DIAGNOSTIC",
+  "frozen_candidate_revision_allowed": false,
+  "new_generation_allowed": false,
+  "threshold_search_allowed": false,
+  "score_fusion_allowed": false,
+  "attack_specific_rule_allowed": false,
+  "rank_specific_rule_allowed": false,
+  "new_defense_candidate_allowed": false,
+  "frozen_threshold": 0.5300846414247485,
+  "threshold_rule": "strict greater than",
+  "required_diagnostics": [
+    "IA completeness provenance",
+    "DCMI trigger and target alignment",
+    "sticky failure modes",
+    "DCMI output/scorer decomposition",
+    "benign utility decomposition",
+    "cross-attack contrast"
+  ],
+  "verdict_rule": "Assign only mechanism verdicts supported by immutable Stage205A evidence; never alter the Stage205A FAIL verdict.",
+  "blind_warning": "Any later architecture, threshold, or session-rule revision makes Stage205A a development diagnostic set and requires a new untouched blind cohort."
+}

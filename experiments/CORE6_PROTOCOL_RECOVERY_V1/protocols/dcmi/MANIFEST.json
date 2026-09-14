@@ -1,0 +1,22 @@
+{
+  "attack": "DCMI",
+  "status": "DCMI_SPEC_UNDERDETERMINED",
+  "implementation_label": "DCMI_PAPER_FAITHFUL_COMPONENT_REIMPLEMENTATION",
+  "source": {
+    "paper": "https://arxiv.org/abs/2509.06026",
+    "paper_sha256": "ee83fcb9ec83a0a7e8d8aedbf0a87f50e351a49a896a1a144b75ec7b12d3f4ef",
+    "repository": "https://github.com/Xinyu140203/RAG_MIA",
+    "commit": "ef961a1f23d09c62c5fbf69d798e325fb0362e55"
+  },
+  "files": {
+    "query_generator.py": "f4da0aa5376baf0077a864dc6081aedd5aa81d051d752e7af8efa579f66b1a67",
+    "scorer.py": "87706f177217829ba29fec7c3bf1353faf2f6e66f3c47245018dfda25fa738f4",
+    "protocol_config.json": "8ccbf36d612784861fa20231d2d61f684500cd493a834751f3fcaa9243c57458",
+    "PAPER_PROTOCOL_SPEC.json": "114cf74150795700d2be3063abcf2b29066c29eea477a356ec8ee78e0b0a9818",
+    "PAPER_PROTOCOL_SPEC.md": "5c013f36e62137ff4e06ef69f70c3c644f7ca96ddc099f051abcc7c006a5de52",
+    "tests/test_protocol.py": "d633cb5b31e61226205c4c8812682e22cfb29ef1308f4ca3309788413dbf1d20"
+  },
+  "prompt_sha256": "f4da0aa5376baf0077a864dc6081aedd5aa81d051d752e7af8efa579f66b1a67",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {}
+}

@@ -1,0 +1,31 @@
+{
+  "member_nonmember_symmetric": true,
+  "primary_queries": 4000,
+  "primary_query_counts": {
+    "DCMI-Std-Q2": 800,
+    "MBA": 400,
+    "MEntA": 2000,
+    "RAG-MIA": 400,
+    "S²-MIA": 400
+  },
+  "primary_sessions": 2000,
+  "retrieval_rows": 17608,
+  "retrieval_sha256": "e1de43d307a79d8627927884e0212347ae6b158c0c295914d0ae3303039ccf29",
+  "s2_reference_excluded_from_primary": true,
+  "s2_reference_queries": 402,
+  "selected_queries_sha256": "0db88797a8beb538f025468cb4ff451e3a6458188fc27e990032a1adcbbbffff",
+  "selection_id_sha256": "379e5385cb3d329185cce5b166474a57e41b2d852cc282bab403e704d2b9ef90",
+  "session_counts": {
+    "DCMI-Std-Q2/member": 200,
+    "DCMI-Std-Q2/nonmember": 200,
+    "MBA/member": 200,
+    "MBA/nonmember": 200,
+    "MEntA/member": 200,
+    "MEntA/nonmember": 200,
+    "RAG-MIA/member": 200,
+    "RAG-MIA/nonmember": 200,
+    "S²-MIA/member": 200,
+    "S²-MIA/nonmember": 200
+  },
+  "verdict": "PHASE_A2_SUBSTRATE_READY"
+}

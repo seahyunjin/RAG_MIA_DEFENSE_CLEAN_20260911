@@ -1,0 +1,215 @@
+{
+  "candidate_cumulative_signals": {
+    "C1": [
+      "final_cumulative_l1",
+      "Final cumulative L1",
+      "EXPENSIVE",
+      true,
+      1
+    ],
+    "C2": [
+      "final_cumulative_linf",
+      "Final cumulative Linf",
+      "EXPENSIVE",
+      true,
+      2
+    ],
+    "C3": [
+      "l1_growth",
+      "L1 growth from first to final query",
+      "EXPENSIVE",
+      true,
+      3
+    ],
+    "C4": [
+      "linf_growth",
+      "Linf growth from first to final query",
+      "EXPENSIVE",
+      true,
+      4
+    ],
+    "C5": [
+      "newly_charged_claims",
+      "Newly charged claim count",
+      "EXPENSIVE",
+      true,
+      5
+    ],
+    "C6": [
+      "cumulative_source_dependent_claims",
+      "Cumulative source-dependent disclosed-claim count",
+      "EXPENSIVE",
+      true,
+      6
+    ],
+    "C7": [
+      "distinct_retrieved_sources",
+      "Number of distinct retrieved sources",
+      "FREE",
+      true,
+      1
+    ],
+    "C8": [
+      "max_exposed_prefix_union",
+      "Maximum exposed-prefix union",
+      "FREE",
+      true,
+      2
+    ]
+  },
+  "candidate_instantaneous_signals": {
+    "I1": [
+      "retriever_top1",
+      "Retriever top1 concentration",
+      "FREE",
+      true,
+      1
+    ],
+    "I10": [
+      "first_source_dependent_disclosed_claims",
+      "First-response source-dependent claim count",
+      "EXPENSIVE",
+      true,
+      5
+    ],
+    "I2": [
+      "retriever_margin",
+      "Retriever top1-top2 margin",
+      "FREE",
+      true,
+      2
+    ],
+    "I3": [
+      "qll_dominance",
+      "QLL top-source dominance",
+      "EXPENSIVE",
+      false,
+      7
+    ],
+    "I4": [
+      "qll_margin",
+      "QLL top1-top2 margin",
+      "EXPENSIVE",
+      false,
+      8
+    ],
+    "I5": [
+      "first_max_c1",
+      "First-response max C1",
+      "EXPENSIVE",
+      true,
+      1
+    ],
+    "I6": [
+      "first_disclosed_sum_c1",
+      "First-response sum disclosed C1",
+      "EXPENSIVE",
+      true,
+      3
+    ],
+    "I7": [
+      "first_max_cinf",
+      "First-response max Cinf",
+      "EXPENSIVE",
+      true,
+      2
+    ],
+    "I8": [
+      "first_disclosed_sum_cinf",
+      "First-response sum disclosed Cinf",
+      "EXPENSIVE",
+      true,
+      4
+    ],
+    "I9": [
+      "first_target_dominant_disclosed_claims",
+      "First-response target-dominant disclosed-claim count",
+      "EXPENSIVE",
+      true,
+      6
+    ]
+  },
+  "created_utc": "2026-08-29T08:06:01.243296+00:00",
+  "cumulative_go": "SUPPORTED>=2/3 primary; remainder>=PARTIAL; consistent sign",
+  "experiment": "Exp191",
+  "forbidden": [
+    "new defense",
+    "generation",
+    "threshold tuning",
+    "weighted fusion",
+    "classifier",
+    "family-specific sign or threshold",
+    "E-AUC",
+    "fresh blind",
+    "E-MIA"
+  ],
+  "ia_role": "EXPLORATORY_NOT_FOR_SELECTION",
+  "inputs": {
+    "exp179_qll_summary": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp179_cross_family_qwen_source_influence_20260828/tables/TABLE_179_02_QUERY_SUMMARY.csv",
+      "sha256": "eec6b3c7b0ee3ff9625244efa5a76deed4ec5b35475404e13c58bb7fcbdb11d2"
+    },
+    "exp189_benign_factuality": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/BENIGN_FACTUALITY_ROWS.private.csv.gz",
+      "sha256": "4015b1f83f4c9f452911147578719c7ec072ed559c43356096984fc08c9fd2a6"
+    },
+    "exp189_benign_ledger": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/BENIGN_HELDOUT_LEDGER.private.csv.gz",
+      "sha256": "44ec518b7b9a2641c6216e3cc02c54e1e08aa51edca6b5d34657073e2ac7442b"
+    },
+    "exp189_benign_manifest": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/audits/BENIGN_SPLIT_MANIFEST.csv",
+      "sha256": "cf543b655a4776f6a283c82a865c11a68fd44d286f79aa3354a97de71cdfcd68"
+    },
+    "exp190_features": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/private/EXP190_SESSION_FEATURES.private.csv.gz",
+      "sha256": "1a3b0db194e724d69a558af17b82d21c5c42dffbfe2a884bfbea581265494e94"
+    },
+    "exp190_final": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/FINAL_RESULT.json",
+      "sha256": "0e51ed56635de29a7a7193aa8996bd59a11c6cb82a553dfc38ee24fc991fb6b7"
+    },
+    "exp190_inventory": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/tables/TABLE_190_01_SIGNAL_INVENTORY.csv",
+      "sha256": "197207c13fb9514745afb205f06f1bbf400a93a7d50c70ea9717909cbe0f329c"
+    },
+    "exp190_zero": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/tables/TABLE_190_06_ZERO_INTERVENTION.csv",
+      "sha256": "e4a6d850646aca16a0e3cd109bd75546bb6805a92aa02a313f13abfb7bd10ade"
+    }
+  },
+  "instantaneous_go": "SUPPORTED>=3/4 primary; remainder>=PARTIAL; consistent sign",
+  "primary_cumulative_families": [
+    "DCMI",
+    "MEntA",
+    "BudgetLeak-Z"
+  ],
+  "primary_instantaneous_families": [
+    "RAG-MIA",
+    "S²-MIA",
+    "MBA",
+    "RAGLeak"
+  ],
+  "purpose": "TWO_CHANNEL_SIGNAL_COMPRESSION_AUDIT",
+  "rank_instability": "effect sign reversal or min(abs rank effect)<0.25*max(abs rank effect)",
+  "secondary_instantaneous_families": [
+    "DCMI",
+    "MEntA",
+    "BudgetLeak-Z"
+  ],
+  "selection_tiebreak": [
+    "family coverage",
+    "runtime cost",
+    "naturally produced",
+    "mathematical simplicity",
+    "median within-family absolute effect"
+  ],
+  "support_rule": {
+    "association_minimum_abs_spearman_rho": 0.1,
+    "association_permutations": 20000,
+    "bootstrap_replicates": 20000,
+    "membership_permutations": 20000,
+    "minimum_per_class": 20,
+    "required_direction_stability": 0.95
+  }
+}

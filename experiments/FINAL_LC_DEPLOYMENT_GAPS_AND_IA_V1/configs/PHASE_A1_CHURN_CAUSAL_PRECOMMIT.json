@@ -1,0 +1,114 @@
+{
+  "added_corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/MISSING_EMBEDDING_UNION.jsonl",
+    "sha256": "65d6d5738978b1b22d5ec9606a004f1240f68eab4f7e719c9ced75a60dd5e972"
+  },
+  "added_corpus_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/CHURN_ADDED_DOCUMENT_EMBEDDINGS.float16.npy",
+    "sha256": "09b590d1424e21c828cfd4217da14c163ae859d3c0cf98dfd4a4ae498f306768"
+  },
+  "attacks": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA",
+    "DCMI-Std-Q2"
+  ],
+  "base_corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl",
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  },
+  "base_corpus_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy",
+    "sha256": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e"
+  },
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "code": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_a1.py",
+    "sha256": "3da2100e95320cc44e4ebb6c946d418f902013f7501aa7317236f811b89b113b"
+  },
+  "created_utc": "2026-09-13T10:48:53.370029+00:00",
+  "dcmi_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/STANDARDIZED_QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "4ba49a330b06a3011b559d8d850a0765e37dad83885d93af936ced13525c1a96"
+  },
+  "effective_protection_opportunity": "Final LC Refresh alarm AND target in Top-4 AND locator Top-1 equals target",
+  "exposed": "target document ID is in the exact generation Top-4 retrieval list",
+  "frozen_final_lc": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "large_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "54cb1a2c0e2123f10c356b20891201860e40f65a7d38b1282592dd9a8bdfcc31"
+  },
+  "membership_scope": "member queries only for retrieval/exposure and TPR; S2_EVALUATION only",
+  "phase": "A1_DB_CHURN_CAUSAL_SCORE_AUDIT",
+  "prior_churn_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/DB_CHURN_V2_CORRECTED_RESULT.json",
+    "sha256": "4b4c3618577188abae1b936eef5b3aa91adf31131386230db653cf97e5e4f6f2"
+  },
+  "prohibitions": [
+    "new detector",
+    "new LC feature",
+    "new action",
+    "threshold search",
+    "attack-specific calibration"
+  ],
+  "query_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/CHURN_QUERY_MANIFEST.jsonl",
+    "sha256": "0e854b1e55688268462f77a4900cdfc17faedd6f90490e5afcc28d8ffb2f9215"
+  },
+  "runtime_feature": false,
+  "s2_provenance": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/FINAL_SUPPORTED_QUERY_MANIFEST.jsonl",
+    "sha256": "73755782a8506b7415a7ab6611688cfa89f5f4426275b0e7906338e8d1692aa6"
+  },
+  "s2_query_embeddings": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/S2_QUERY_EMBEDDINGS.float16.npy",
+    "sha256": "578f53dc9c26ab768153f080096c0aee6f6c6832fb6f47482e7a278d7cbae2b7"
+  },
+  "training_steps": 0,
+  "versions": {
+    "V0": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V0.json",
+        "sha256": "7053a12fad418757cd4226c001633a7c558ad5b1e26e2bd76a57cbb8fed2f463"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V0_QUERY_SCORES.npz",
+        "sha256": "70c559eafa3139eefa7bd0e55cee8e65c3cf822a2d209e646910f93a08ecebd3"
+      }
+    },
+    "V10": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V10.json",
+        "sha256": "4008381323a40829fa43b47cd874836011608c7f622e58736549e7ec509921db"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V10_QUERY_SCORES.npz",
+        "sha256": "392eaec1498b9df1d84ac14e19a5e40e9543953eb5a74f451ce4439bcbbc6a6e"
+      }
+    },
+    "V25": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V25.json",
+        "sha256": "c2077f540a652d34e79da7bfad7b9d1035051bce12f715e98cac2a85cb8b3ae8"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V25_QUERY_SCORES.npz",
+        "sha256": "59703c43b2fcf12ee5e79c0421596ae924dc231d157092e368ecf6a2c458eaf8"
+      }
+    },
+    "V50": {
+      "manifest": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V50.json",
+        "sha256": "922efe10dbf648359cdfd7cf9fbad43d42cc67bc1958ea6d50ce9c57d0de4e38"
+      },
+      "scores": {
+        "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/cache/V50_QUERY_SCORES.npz",
+        "sha256": "504efb0d2027366306f974d73ea5f1120f275e6ff6cecfcc366e42aa6e2ebafc"
+      }
+    }
+  }
+}

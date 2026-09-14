@@ -1,0 +1,157 @@
+{
+  "a2_answers": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_A2_GENERATED_ANSWERS.jsonl",
+    "sha256": "c9a1419eb90b13e4df2a746395ea3931e4507cd85e2e8e5580a1d107357ff2fe"
+  },
+  "a2_generation_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_A2_GENERATION_MANIFEST.json",
+    "sha256": "08c769cc4d79633548e53defcb7c2de4345cdb7c06ab3fdbb48fd3c0ed6be791"
+  },
+  "a2_menta_evidence": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_A2_MENTA_EVIDENCE.jsonl",
+    "sha256": "c5fcc51f13c2eb69042c62b0b11ec160e5fecc7bf57b6f54df6978cb03cf6811"
+  },
+  "a2_native_privacy": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/tables/PHASE_A2_NATIVE_PRIVACY.csv",
+    "sha256": "b235156df5447a1e5135f61bf76a419229eeed772bf74cc0c2acd00edfd36837"
+  },
+  "a2_retrieval": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/cache/PHASE_A2_RETRIEVAL_AND_DETECTION.jsonl",
+    "sha256": "e1de43d307a79d8627927884e0212347ae6b158c0c295914d0ae3303039ccf29"
+  },
+  "attacks": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA",
+    "DCMI-Std-Q2"
+  ],
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "candidate": "GRACEFUL_CLOSED_BOOK_FALLBACK_V1",
+  "closed_book_prompt": {
+    "gold_at_runtime": false,
+    "nli_selection": false,
+    "protected_documents": 0,
+    "rank5_or_external_reference": 0,
+    "remaining_documents": 0,
+    "system": "Answer the user's question. Follow any required output format exactly. If you do not know the answer, answer exactly: I don't know.",
+    "user": "User query:\n<exact frozen query>"
+  },
+  "code_sha256": {
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/common.py": "8625086033fa16f19f809a3f2b049690f239f70b52cbd654e766f53f64d862ba",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/prepare_phase_b.py": "4540e4a568e370a4d05816f5a04b5b45f52bb8ea597a1f5766acab8db857555f",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_b_generation.py": "6a1bb05f5298b4703e06b3131fc5b8ad44f4bca3a50f6190a4f30d397faae3b6",
+    "experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_b_scoring.py": "34461fa6b262bb8e52d5d210760fd5ce5e08c90253d4b8223ce66e53f638004f"
+  },
+  "created_utc": "2026-09-13T15:15:40.015039+00:00",
+  "frozen_final_lc": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "generator": {
+    "config": {
+      "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+    },
+    "do_sample": false,
+    "max_new_tokens": {
+      "DCMI-Std-Q2": 12,
+      "GOLD": 160,
+      "MBA": 160,
+      "MEntA": 160,
+      "RAG-MIA": 12,
+      "S²-MIA": 160
+    },
+    "max_prompt_tokens": 3072,
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "num_beams": 1,
+    "snapshot": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "gold_fp": {
+    "n": 27,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/tables/GOLD_REFRESH_FP_SUBSET_AUDIT.csv",
+    "query_ids": [
+      "topi-valid::106::2",
+      "topi-valid::115::2",
+      "topi-valid::116::8",
+      "topi-valid::142::4",
+      "topi-valid::142::6",
+      "topi-valid::152::3",
+      "topi-valid::158::10",
+      "topi-valid::158::3",
+      "topi-valid::158::4",
+      "topi-valid::158::7",
+      "topi-valid::158::9",
+      "topi-valid::164::3",
+      "topi-valid::174::10",
+      "topi-valid::174::7",
+      "topi-valid::174::9",
+      "topi-valid::22::2",
+      "topi-valid::22::3",
+      "topi-valid::24::4",
+      "topi-valid::35::3",
+      "topi-valid::35::4",
+      "topi-valid::35::5",
+      "topi-valid::35::6",
+      "topi-valid::35::7",
+      "topi-valid::35::8",
+      "topi-valid::3::5",
+      "topi-valid::45::3",
+      "topi-valid::51::5"
+    ],
+    "sha256": "329a0bbc060166fdfb4e00595c02ee5faecd2ac09487f05db0536ebc2aca4e93"
+  },
+  "gold_queries": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_EVAL_1000.jsonl",
+    "sha256": "3074be3e2cebae22fced3af26df1b126e02c163199dbfc71a60c606d92aa637a"
+  },
+  "gold_recalibration_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/GOLD_RECALIBRATION_RESULT.json",
+    "sha256": "c85341c2a2f9778f01ba87342c6baa552c77c9fda16357f1e41e1364db8a934b"
+  },
+  "gold_refreshed_answers": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/runtime/GOLD_REFRESHED_ANSWERS.jsonl",
+    "sha256": "17b6b6dd01f72b3d414ffa50c911f861052e834383d32ca830a93e22abcb67b8"
+  },
+  "old_menta_evidence": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/tables/MENTA_QUERY_EVIDENCE.csv",
+    "sha256": "88d88f0154cc80d708c43e574b17560e558f9061838aa24eab4ce46f0611cce2"
+  },
+  "phase": "B_FP_SAFE_CLOSED_BOOK_FALLBACK",
+  "phase_a2": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/PHASE_A2_RESULT.json",
+    "sha256": "6c9a4cdc6d78b1636e96ecfeb1e8dbf48a5acf855161ceae30a966d70da0cad4"
+  },
+  "privacy_gate": "each frozen native attack metric <= V0 Simple Hide +0.02",
+  "privacy_subset": "the exact Phase-A2 V0 primary 200-member/200-nonmember sessions per attack; all S2 reference retained only for scorer fitting",
+  "prohibitions": [
+    "retrieved document",
+    "removed source restoration",
+    "remaining source",
+    "rank5",
+    "external reference",
+    "attack classifier",
+    "gold runtime",
+    "NLI selection",
+    "keyword tuning"
+  ],
+  "promotion": "small PASS is not automatic full-scale deployment promotion; report first",
+  "refusal_terms": [
+    "i don't know",
+    "i do not know",
+    "cannot determine",
+    "insufficient information",
+    "not enough information"
+  ],
+  "status": "PRECOMMITTED_BEFORE_CLOSED_BOOK_GENERATION",
+  "targets": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  },
+  "trigger": "the frozen refusal parser OR exact empty answer on A_hide; only when Final LC alarmed",
+  "utility_gate": {
+    "fp_f1_min": 0.238,
+    "or_recover_fraction_of_0_039_loss": 0.5,
+    "refusal": "strictly less than Simple Hide"
+  }
+}

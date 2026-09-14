@@ -1,0 +1,35 @@
+{
+  "chat_roles": [
+    "user"
+  ],
+  "claim_boundary": "frozen standardized variant; not Original DCMI",
+  "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+  "core_principle": "response sensitivity to an original/perturbed target-document query pair",
+  "decoding": {
+    "do_sample": false,
+    "dynamic_max_new_tokens": "min(4096,target_tokens+256)",
+    "input_truncation_tokens": 4096,
+    "num_beams": 1,
+    "temperature": null
+  },
+  "fixed_retry_prompt_template": "The previous output did not create a valid perturbation. Rewrite the original text below and MUST change exactly {replace_count} meaning-bearing words or short phrases to semantic opposites. Prefer adjectives and adverbs, then polarity-bearing verbs. Preserve all other content. Return only the complete modified text.\n\nOriginal text:\n{target_text}\n\nInvalid previous output:\n{previous_output}",
+  "generation_attempts_per_target": "maximum 2; second fixed repair prompt only if first output is empty or identical",
+  "generator_snapshot": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "name": "DCMI-Std-Q2",
+  "parser": "strip output; require nonempty and not exact-equal to original; no semantic rewrite repair",
+  "perturbation_generator": "local Qwen/Qwen2.5-3B-Instruct",
+  "perturbation_rate": 0.06,
+  "phase_b_native_metric": "ROC-AUC over target/session differential score",
+  "phase_b_score": "mean(I[original response=Yes]-I[perturbed response=Yes]) over Q2 pair; ambiguous/IDK deterministically maps to 0",
+  "prompt_template": "Rewrite the text below by changing exactly {replace_count} meaning-bearing words or short phrases to clear semantic opposites. Prefer adjectives and adverbs; if there are not enough, use polarity-bearing verbs. You MUST change the text. Keep every other word unchanged. Return only the complete modified text.\n\nText:\n{target_text}",
+  "queries_per_target": 2,
+  "query_primary_detection": "member target queries; both original and perturbed queries",
+  "query_template": "Is this: \"{sample}\" right? Answer with Yes or No.",
+  "replace_count": "max(1, floor(0.06 * whitespace_word_count))",
+  "seed": 20260912,
+  "session_detection": {
+    "all_alarm": "both Q2",
+    "any_alarm": "any of Q2"
+  },
+  "targets": 2000
+}

@@ -1,0 +1,80 @@
+{
+  "benign_bc_gef": {
+    "answer_preservation_exact_match": 0.992,
+    "answer_preservation_token_f1": 0.992901597981497,
+    "condition": "BC_GEF",
+    "empty_answer_rate": 0.0,
+    "intervention_rate": 0.008,
+    "mean_answer_chars": 144.264,
+    "new_refusal": 0.0,
+    "queries": 250,
+    "refusal_rate": 0.68,
+    "safe_path_exact_preservation": 1.0
+  },
+  "campaign": "BC_GEF_SMALL",
+  "checks": {
+    "mba_not_worse_than_original_plus_0_05": true,
+    "menta_better_than_original": false,
+    "menta_gain_over_bc_ge_0_05": false,
+    "menta_native_auc_le_0_75": false,
+    "one_direct_equal_or_better": true,
+    "s2_not_worse_than_original_plus_0_05": false
+  },
+  "empty_cases": 0,
+  "extractive_sentences": 146,
+  "extractive_source_coverage": 1.0,
+  "full_core6_opened": false,
+  "gold_qa_correctness_evaluated": false,
+  "interpretation": "Native attack metrics are primary; E-AUC and A0 preservation are diagnostics.",
+  "paid_api_calls": 0,
+  "precommit_sha256": "3448e32fe64816cff1cfded9c09f0b5712778e05887218eb75f85f3d9dece5bd",
+  "privacy_effective_auc_diagnostic": {
+    "MBA": {
+      "BC_CGD": 0.5321637426900585,
+      "BC_GEF": 0.5321637426900585,
+      "BC_MIRABEL": 0.6578947368421052,
+      "NO_DEFENSE": 0.9342105263157894,
+      "ORIGINAL_MIRABEL": 0.6271929824561403
+    },
+    "MEntA": {
+      "BC_CGD": 0.885,
+      "BC_GEF": 0.885,
+      "BC_MIRABEL": 0.8612500000000001,
+      "NO_DEFENSE": 0.97625,
+      "ORIGINAL_MIRABEL": 0.75875
+    },
+    "S²-MIA": {
+      "BC_CGD": 0.5700000000000001,
+      "BC_GEF": 0.8075,
+      "BC_MIRABEL": 0.6124999999999999,
+      "NO_DEFENSE": 0.76,
+      "ORIGINAL_MIRABEL": 0.65
+    }
+  },
+  "privacy_native_auc": {
+    "MBA": {
+      "BC_CGD": 0.5321637426900585,
+      "BC_GEF": 0.5321637426900585,
+      "BC_MIRABEL": 0.6578947368421052,
+      "NO_DEFENSE": 0.9342105263157894,
+      "ORIGINAL_MIRABEL": 0.6271929824561403
+    },
+    "MEntA": {
+      "BC_CGD": 0.885,
+      "BC_GEF": 0.885,
+      "BC_MIRABEL": 0.8612500000000001,
+      "NO_DEFENSE": 0.97625,
+      "ORIGINAL_MIRABEL": 0.75875
+    },
+    "S²-MIA": {
+      "BC_CGD": 0.43,
+      "BC_GEF": 0.8075,
+      "BC_MIRABEL": 0.6124999999999999,
+      "NO_DEFENSE": 0.76,
+      "ORIGINAL_MIRABEL": 0.65
+    }
+  },
+  "risk_queries": 73,
+  "verdict": "BC_GEF_SMALL_REJECTED",
+  "worst_external_sidechannel_effective_auc_diagnostic": 0.9725
+}

@@ -1,0 +1,203 @@
+{
+  "campaign": "FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1",
+  "claim_boundary": "standardized structured Q15; not paper-exact IA Q30",
+  "code_sha256": {
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/common.py": "9026d0ced6717cb660e257effd254d3b9ba4bfd076be4dca1975232fac481a0c",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/ia_schema.py": "28e13944246841d6e7a352cb26dcfbb2b40b92a4b63fe577caed93032d0de2cc",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/prepare_ia_v3.py": "125702e31e162d597d4e6a838ca25ba72fa7f2c6f58f86877b9ca7af8ee4d960",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/run_ia_v3.py": "7aa393694f57b4fe9df06070c8efac2d7e0f85f049727decd479c196b86f047b"
+  },
+  "created_utc": "2026-09-13T06:03:35.898922+00:00",
+  "decoding": {
+    "answer_max_new_tokens": 12,
+    "do_sample": false,
+    "gt_max_new_tokens": 1000,
+    "input_truncation": 4096,
+    "num_beams": 1,
+    "query_max_new_tokens": 1500,
+    "seed": 20260912,
+    "temperature": null,
+    "top_p": null
+  },
+  "detection": {
+    "bootstrap": {
+      "iterations": 2000,
+      "unit": "target/session"
+    },
+    "budgets": [
+      0.01,
+      0.025,
+      0.03,
+      0.05
+    ],
+    "methods": [
+      "MIRABEL",
+      "Final LC"
+    ],
+    "negative": "same frozen 1,000 benign holdout",
+    "operator": ">",
+    "primary": 0.025
+  },
+  "e2e": {
+    "conditions": [
+      "NO_DEFENSE",
+      "MIRABEL_MATCHED_2_5",
+      "FINAL_LC_MATCHED_2_5"
+    ],
+    "gt_unknown_policy": "a GT session containing Unknown is invalid for E2E; no inferred label and no selective mixing",
+    "native": "fixed-polarity ROC-AUC",
+    "score": "(sum correct - 5*sum response-UNK)/15; target/session ROC-AUC",
+    "secondary": "E-AUC=max(AUC,1-AUC)"
+  },
+  "final_lc_frozen_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "final_lc_frozen_sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9",
+  "frozen_components": [
+    "BGE-M3",
+    "MIRABEL raw margin",
+    "LC formula",
+    "k=200",
+    "semantic-neighbor procedure",
+    "locator",
+    "Simple Hide",
+    "Qwen",
+    "context builder",
+    "prompt",
+    "decoding",
+    "protection action"
+  ],
+  "generation_model": {
+    "config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "name": "Qwen2.5-3B-Instruct",
+    "snapshot": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "gradient_steps": 0,
+  "gt_prompt": "Based solely on the provided context, assign an explicit judgment to each of the 15 supplied questions. Preserve every supplied question exactly; do not rewrite it.\n\nContext:\n{target_text}\n\nQuestions:\n{questions_json}\n\nReturn one JSON object and no prose. It must contain only the key \"queries\". The value must be an array of exactly 15 objects. Each object must contain exactly: \"id\" (integer 1 through 15 in order), \"question\" (the exact supplied question), and \"judgment\" (exactly \"Yes\", \"No\", or \"Unknown\").",
+  "gt_retry_prompt": "Your previous response failed only the exact JSON schema or exact-question validator. Repeat the same judgment task. Preserve all supplied questions byte-for-byte and return only the required JSON object with exactly 15 entries.\n\nContext:\n{target_text}\n\nQuestions:\n{questions_json}",
+  "gt_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "queries": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "maximum": 15,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "judgment": {
+              "enum": [
+                "Yes",
+                "No",
+                "Unknown"
+              ]
+            },
+            "question": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "question",
+            "judgment"
+          ],
+          "type": "object"
+        },
+        "maxItems": 15,
+        "minItems": 15,
+        "type": "array"
+      }
+    },
+    "required": [
+      "queries"
+    ],
+    "type": "object"
+  },
+  "name": "IA-Std-Q15-v3",
+  "old_v2_failure": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/IA_PARSER_V2_RESULT.json",
+    "sha256": "d48b8e33d101f8f164dd0acf6f7d2ace4eb8c6cca194fd7ae5c6daefc81c2b50"
+  },
+  "old_v2_verdict_preserved": "IA_STD_Q15_FORMAT_RECOVERY_FAILED",
+  "parser": "json.loads whole output + exact keys/types/id sequence; no fuzzy parsing, inference, extraction, or imputation",
+  "performance_results_opened": false,
+  "phase": "A_IA_STD_Q15_V3",
+  "query_prompt": "Based on the following text corpus, generate exactly 15 specific, diverse yes/no questions as indirect natural queries, together with each question's explicit judgment. Preserve abbreviations exactly. Questions must contain concrete keywords from the text, cover different facts, avoid mentioning 'the study' or 'the passage', and must not be generic.\n\nCorpus:\n{target_text}\n\nReturn one JSON object and no prose. It must contain only the key \"queries\". The value must be an array of exactly 15 objects. Each object must contain exactly: \"id\" (integer 1 through 15 in order), \"question\" (non-empty string), and \"judgment\" (exactly \"Yes\", \"No\", or \"Unknown\").",
+  "query_retry_prompt": "Your previous response failed only the exact JSON schema validator. Repeat the same task and semantics for the same corpus. Return one JSON object and no prose, with exactly 15 ordered entries and only id, question, judgment fields. Do not explain.\n\nCorpus:\n{target_text}",
+  "query_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "queries": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "maximum": 15,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "judgment": {
+              "enum": [
+                "Yes",
+                "No",
+                "Unknown"
+              ]
+            },
+            "question": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "question",
+            "judgment"
+          ],
+          "type": "object"
+        },
+        "maxItems": 15,
+        "minItems": 15,
+        "type": "array"
+      }
+    },
+    "required": [
+      "queries"
+    ],
+    "type": "object"
+  },
+  "query_semantics": "same target-level indirect natural Yes/No probing intent and Q15 budget as the frozen standardized protocol",
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/2e9f1731-d8ad-4e92-af46-5e28b3af042f/pasted-text.txt",
+    "sha256": "4157a65a2071388b4a27036c1ddab9c8e31d72a63804fc56e6a104a605868a9a"
+  },
+  "retry": "one retry only after exact schema validation failure; same corpus/task; no result/content-based retry",
+  "source_of_truth": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/configs/FINAL_DEFENSE_MANIFEST.json",
+    "sha256": "ccdb92db49364a9a9f390864272f97f55456f5949a9af01f9c527990043d57b9"
+  },
+  "targets": {
+    "member": 1000,
+    "nonmember": 1000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_SHARED_TARGETS.csv",
+    "sessions": 2000,
+    "sha256": "3035d6af409ee99ce92a8891342b63f55dd9ac22feeb265342146a27634c624c"
+  },
+  "training_steps": 0,
+  "unit_tests": {
+    "count": 8,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/tests/test_ia_schema.py",
+    "sha256": "4461604be5f61af4cb4ddf9fca77752c89d635afbfe433d3019c5815d0d6ef0a",
+    "status": "PASS"
+  },
+  "validity_gate": {
+    "coverage": ">=0.95",
+    "exact_q15_among_valid": true,
+    "fuzzy_parsing": 0,
+    "inferred_missing_fields": 0,
+    "member_nonmember_gap": "<=0.02 absolute"
+  }
+}

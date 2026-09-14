@@ -1,0 +1,41 @@
+{
+  "display_name": "MBA",
+  "paper": "Mask-based Membership Inference Attacks for Retrieval-Augmented Generation",
+  "venue_year": "The Web Conference 2025",
+  "paper_url": "https://arxiv.org/abs/2410.20142",
+  "local_paper": "/home/traffic_3/workspace/workspace/SH/LLM_pdf/MBA.pdf",
+  "paper_sha256": "11f415cbb80cf617e0a417368f411aee07e8f0ecb89ae44d819ead9a772acc87",
+  "attack_goal": "infer membership from recovery accuracy of difficult words masked from the target",
+  "member_definition": "target document is in the retrieval database",
+  "nonmember_definition": "target document is outside the retrieval database",
+  "target_requirements": "enough valid, non-adjacent, non-stopword targets across M equal subtexts",
+  "query_count": 1,
+  "query_generation": "rank word difficulty with GPT2-XL, select one maximum-rank eligible word per equal subtext, integrate indexed masks",
+  "query_generation_model": "openai-community/gpt2-xl@15ea56dee5df4983c59b2538573817e1667135e2",
+  "prompt": "indexed [Mask_i] reconstruction prompt",
+  "decoding": "target RAG generation; exact mask parser fails closed",
+  "session": "one masked query",
+  "retrieval_assumptions": "paper evaluates top-k=10",
+  "score_formula": "number of correctly reconstructed masks / M",
+  "aggregation": "single-query reconstruction accuracy",
+  "threshold": "gamma in (0,1], selected for best F1 on reference/training split",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "precision",
+    "recall",
+    "F1",
+    "retrieval recall"
+  ],
+  "official_repository": "not located as a standalone author attack repository",
+  "official_commit": null,
+  "official_repo_alignment": "NO_STANDALONE_OFFICIAL_REPO_LOCATED",
+  "model_revisions": {
+    "proxy_lm": "openai-community/gpt2-xl@15ea56dee5df4983c59b2538573817e1667135e2",
+    "spelling_correction": "oliverguhr/spelling-correction-english-base@0e3958355a09d2816ed2701fdc2f4471d46c320e"
+  },
+  "paper_repo_difference": "preserved local pipeline defaults to 5 masks and important-word masking; final adapter forbids that fallback",
+  "implementation_label": "MBA_PAPER_FAITHFUL_REIMPLEMENTATION",
+  "status": "MBA_PROTOCOL_READY",
+  "review": "PROTOCOL_ACCEPTED"
+}

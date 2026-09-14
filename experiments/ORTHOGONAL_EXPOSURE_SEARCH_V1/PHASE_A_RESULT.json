@@ -1,0 +1,34 @@
+{
+  "answers": {
+    "Q1_existing_5pp_complement": false,
+    "Q2_strict_blackbox_runtime_eligible": false,
+    "Q3_generator_side_evidence_required_for_headroom": false
+  },
+  "completed_utc": "2026-09-12T08:11:19.123168+00:00",
+  "conclusions": {
+    "DualTail": {
+      "eligibility": "STRICT_BLACKBOX",
+      "meaningful_5pp_net_recovery": false,
+      "menta_net_recovery_rate": -0.012,
+      "menta_unique_recovery_rate": 0.022
+    },
+    "QLL": {
+      "eligibility": "ANALYSIS_ONLY_NON_BLACKBOX",
+      "meaningful_5pp_net_recovery": false,
+      "menta_net_recovery_rate": -0.884,
+      "menta_unique_recovery_rate": 0.0
+    }
+  },
+  "development_notice": "THIS_COHORT_IS_NOW_DEVELOPMENT_DATA",
+  "frozen_v2_verdict_preserved": "DUALTAIL_MEMBER_EXPOSURE_NOT_REPLICATED",
+  "phase_b_required": true,
+  "precommit_sha256": "9ea31a1a6f07bcd9893d46443adc047ac35a8983ddcbf0b860a18785350d015d",
+  "runtime_seconds": 1141.6239049062133,
+  "signal_availability": {
+    "Answer-LOO": "SIGNAL_UNAVAILABLE",
+    "DualTail": "STRICT_BLACKBOX",
+    "MIRABEL": "STRICT_BLACKBOX",
+    "QLL": "ANALYSIS_ONLY_NON_BLACKBOX"
+  },
+  "verdict": "A_NO_MEANINGFUL_COMPLEMENT"
+}

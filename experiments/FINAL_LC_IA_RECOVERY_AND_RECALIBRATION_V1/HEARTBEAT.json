@@ -1,0 +1,9 @@
+{
+  "campaign": "FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1",
+  "child": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V4_TWO_STAGE",
+  "next_stage": "STOP_IA_RECOVERY",
+  "stage": "IA_STD_Q15_V4_FORMAT_PREFLIGHT_FAILED",
+  "updated_utc": "2026-09-13T08:22:43.596668+00:00",
+  "valid": 58,
+  "validity_gap": 0.039999999999999925
+}

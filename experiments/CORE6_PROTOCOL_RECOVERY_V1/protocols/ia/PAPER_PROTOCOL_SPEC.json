@@ -1,0 +1,37 @@
+{
+  "display_name": "IA",
+  "paper": "Riddle Me This! Stealthy Membership Inference for Retrieval-Augmented Generation",
+  "venue_year": "ACM CCS 2025",
+  "paper_url": "https://arxiv.org/abs/2502.00306",
+  "local_paper": "/home/traffic_3/workspace/workspace/SH/LLM_pdf/IA.pdf",
+  "paper_sha256": "3454915b3651d2e90d23f1a27d28bf9807bdbc0a5701079861b91506da9f0791",
+  "attack_goal": "infer membership from accuracy on many natural, document-specific yes/no questions",
+  "member_definition": "target document is in the RAG datastore",
+  "nonmember_definition": "target and TF-IDF>=0.95 near duplicates are absent",
+  "target_requirements": "supports 30 diverse yes/no questions and a short target description",
+  "query_count": 30,
+  "query_generation": "paper: GPT-4o generates 30 questions and a document description; questions may be ranked/selected",
+  "query_generation_model": "gpt-4o; exact historical revision/output unavailable",
+  "prompt": "paper appendix prompt exists, but immutable generated bundle for shared targets does not",
+  "decoding": "paper/repository lineage is not sufficient for bit-exact recovery",
+  "session": "30-query document session in the paper",
+  "retrieval_assumptions": "black-box RAG; paper main setup k=3",
+  "score_formula": "(1/n) sum(I(response=GT)-5*I(response=UNK))",
+  "aggregation": "mean across 30 queries",
+  "threshold": "evaluated by ROC/low-FPR operating points",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "TPR@1% FPR"
+  ],
+  "official_repository": "https://github.com/ali7naseh/RAG_MIA",
+  "official_commit": "a53e8fda4f1492f204d968d7afb53ce8287c193c",
+  "official_repo_alignment": "NO: paper default is 30 questions and lambda=5; repository bundle contains 15 questions per document and scorer computes plain accuracy",
+  "model_revisions": {
+    "shadow_gt": "gpt-4o-mini; exact historical output unavailable"
+  },
+  "paper_repo_difference": "paper default is 30 queries and lambda=5; repository bundles 15/query doc data and its scorer calculates plain accuracy",
+  "implementation_label": "FAIL_CLOSED_SPEC_AND_SCORER_FORMULA_ONLY",
+  "status": "IA_PAPER_EXACT_UNAVAILABLE",
+  "review": "PROTOCOL_UNAVAILABLE"
+}

@@ -1,0 +1,62 @@
+{
+  "allowed_change": "exact-query-id join of mask_answers, s2_full_target, and variant from immutable original attack artifacts at scoring read time",
+  "campaign": "FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1",
+  "cause": "A2 substrate retained common fields but omitted MBA, S2-MIA, and DCMI native-scorer-only metadata",
+  "code_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/prepare_phase_a2_scoring_repair_v2.py": "1a0bbb8e06e37a141b189f243cb1c2ff81b7ac7e48cfaa67434e6b0e770c2492",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_a2_scoring.py": "3bbaa5b565bcabdbc82e2a1d067ebb28b7bdfc7e4bcddb95477d35a4f85ad7fa",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/code/run_phase_a2_scoring_repair_v2.py": "275b68a81d4b9a68582fbda7719bd5cad7eb342cbdc82993fe58f5078e16a847"
+  },
+  "created_utc": "2026-09-13T15:11:23.882012+00:00",
+  "expected_retrieval_rows": {
+    "DCMI-Std-Q2": 3200,
+    "MBA": 1600,
+    "S²-MIA": 3208
+  },
+  "forbidden_changes": [
+    "generation rerun",
+    "answer/retrieval modification",
+    "fuzzy matching",
+    "field inference or imputation",
+    "scorer semantic change",
+    "detector/model/threshold change"
+  ],
+  "inputs_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/inputs/S2_ATTACK_QUERIES.jsonl": "4df57748c712de5ba8c5ef8929bac27eacde69a2e679f0d9ddcf20f9da0705cb",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/DCMI_STD_Q2_QUERIES.jsonl": "aec516e63359486d676fe747d34de0b513513a2e1f6bb7f56282e6cacfeb6ea7",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/cache/PHASE_A2_RETRIEVAL_AND_DETECTION.jsonl": "e1de43d307a79d8627927884e0212347ae6b158c0c295914d0ae3303039ccf29",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/inputs/PHASE_A2_SELECTED_QUERIES.jsonl": "0db88797a8beb538f025468cb4ff451e3a6458188fc27e990032a1adcbbbffff",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_A2_GENERATED_ANSWERS.jsonl": "c9a1419eb90b13e4df2a746395ea3931e4507cd85e2e8e5580a1d107357ff2fe",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_DEPLOYMENT_GAPS_AND_IA_V1/runtime/PHASE_A2_GENERATION_MANIFEST.json": "08c769cc4d79633548e53defcb7c2de4345cdb7c06ab3fdbb48fd3c0ed6be791",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/inputs/LARGE_MBA_ATTACK_QUERIES.jsonl": "653905217430b826bf889c9aad6fc69a7fde29410bc98b739d6baedacc9023dc"
+  },
+  "repair": "PHASE_A2_NATIVE_SCORER_METADATA_JOIN_V2",
+  "source_audits": {
+    "DCMI-Std-Q2": {
+      "exact_id_matches": 800,
+      "field": "variant",
+      "field_missing": 0,
+      "missing": 0,
+      "provenance_conflicts": 0,
+      "selected": 800
+    },
+    "MBA": {
+      "exact_id_matches": 400,
+      "field": "mask_answers",
+      "field_missing": 0,
+      "missing": 0,
+      "provenance_conflicts": 0,
+      "selected": 400
+    },
+    "S²-MIA": {
+      "exact_id_matches": 802,
+      "field": "s2_full_target",
+      "field_missing": 0,
+      "missing": 0,
+      "provenance_conflicts": 0,
+      "selected": 802
+    }
+  },
+  "status": "PRECOMMITTED_BEFORE_V2_REPAIRED_SCORING",
+  "supersedes_without_deleting": "PHASE_A2_MBA_SCORING_METADATA_JOIN_V1"
+}

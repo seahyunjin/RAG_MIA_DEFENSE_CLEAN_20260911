@@ -1,0 +1,14 @@
+{
+  "attack": "S²-MIA",
+  "query_count": 1,
+  "query_generation_model": null,
+  "decoding": "target RAG configuration; token log probabilities required for perplexity",
+  "score_formula": "features=(BLEU, generation perplexity); T variant applies learned thresholds; M variant trains a classifier",
+  "score_polarity": "see scorer.py",
+  "metrics": [
+    "ROC-AUC",
+    "PR-AUC"
+  ],
+  "model_revisions": {},
+  "status": "S2_SPEC_UNDERDETERMINED"
+}

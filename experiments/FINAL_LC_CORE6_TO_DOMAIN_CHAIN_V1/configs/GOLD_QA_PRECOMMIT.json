@@ -1,0 +1,46 @@
+{
+  "campaign": "FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1",
+  "code_sha256": {
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/common.py": "d1209b3dcfd6db16ff3855f1de0c045ac560b57f86e7e0f0cd5059060e9a8000",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/prepare_phase_c.py": "caa40f9f7720ac72276aa0f01eab28ad3870219cc6cf6698e9f1fc0d96df9b80",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/code/run_phase_c_gold.py": "c0022fd543043ac56b117f6b94d68010577acb7e7a33d171d7201f638be7868a"
+  },
+  "conditions": [
+    "NO_DEFENSE",
+    "ORIGINAL_MIRABEL_FIXED",
+    "GLOBAL_BC_FIXED",
+    "FINAL_LC_FIXED"
+  ],
+  "corpus": {
+    "n": 31217,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_CORPUS.jsonl",
+    "sha256": "4fa9fc359d953064c9fd58d631cf3ebec6e8b988f397943fa3ec3394b83be2a9"
+  },
+  "created_utc": "2026-09-13T03:36:08.982846+00:00",
+  "dataset_audit": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/audits/GOLD_QA_DATASET_AUDIT.json",
+    "sha256": "46d246d9ed9e8368f47550e37295fceda2c21b5887f7c466b42cb6033f03e722"
+  },
+  "evaluation": {
+    "n": 1000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_EVAL_1000.jsonl",
+    "sha256": "3074be3e2cebae22fced3af26df1b126e02c163199dbfc71a60c606d92aa637a"
+  },
+  "factuality": "sentence-level frozen long-NLI source-support and contradiction proxy; not hallucination rate",
+  "gate": {
+    "final_lc_better_than_original": "Final LC F1 loss < Original MIRABEL F1 loss",
+    "final_lc_f1_drop": "<=0.02 absolute",
+    "final_lc_new_refusal": "<=0.01"
+  },
+  "official_metrics": [
+    "SQuAD-normalized token F1",
+    "SQuAD-normalized exact match"
+  ],
+  "phase": "C_GOLD_QA",
+  "phase_b_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/PHASE_B_RESULT.json",
+    "sha256": "70995aab58d6adb4c6fcb2b8a0d035b2e69f1d4b3f8ae8bfdfc48596ea554da2"
+  },
+  "primary": "token F1",
+  "status": "GOLD_QA_PRECOMMITTED"
+}

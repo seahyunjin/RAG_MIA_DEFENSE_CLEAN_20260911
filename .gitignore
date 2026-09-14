@@ -1,0 +1,44 @@
+# Local credentials and environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# Python and editor caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Model, embedding, and database artifacts
+*.npy
+*.npz
+*.pt
+*.pth
+*.pkl
+*.ckpt
+*.safetensors
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+
+# Generated experiment material; source/config/test/report folders remain tracked
+experiments/**/cache/
+experiments/**/runtime/
+experiments/**/inputs/
+experiments/**/tables/
+experiments/**/logs/
+experiments/**/audits/
+experiments/**/private/
+experiments/**/history/
+experiments/**/manifests/
+experiments/**/outputs/
+experiments/**/checkpoints/
+
+# Runtime logs
+*.log
+nohup.out

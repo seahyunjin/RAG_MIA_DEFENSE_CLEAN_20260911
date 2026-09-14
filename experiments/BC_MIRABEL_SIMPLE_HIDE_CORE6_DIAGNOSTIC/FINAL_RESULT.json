@@ -1,0 +1,19 @@
+{
+  "available_families": [
+    "MEntA",
+    "S²-MIA",
+    "MBA"
+  ],
+  "full_core6_completed": false,
+  "new_generations": 0,
+  "new_model_forwards": 0,
+  "next_direction": "Build one new precommitted CLEAN Core6 protected corpus before retrieval/generation; do not mix legacy answers.",
+  "precommit_sha256": "7c67fbf75718479dffb1345618c552431cbc2487acd4911fb2011572759ecf50",
+  "reason": "Frozen CLEAN DB realizes membership labels only for MEntA/S²-MIA/MBA.",
+  "unavailable_families": [
+    "DCMI",
+    "IA",
+    "RAG-MIA"
+  ],
+  "verdict": "PARTIAL_DIAGNOSTIC_ONLY_NEW_CORE6_SUBSTRATE_REQUIRED"
+}

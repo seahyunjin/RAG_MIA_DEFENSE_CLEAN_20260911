@@ -1,0 +1,45 @@
+{
+  "experiment": "Exp202",
+  "candidate": "SELECTIVE_QLL_STABLE64_BACKFILL_FIXED64",
+  "created_utc": "2026-08-30T13:00:00Z",
+  "status": "DEVELOPMENT_NOT_FRESH_BLIND",
+  "motivation": "Replace Exp201 random source deletion with a low-benign-intervention, rank-agnostic source locator while making the BudgetLeak response budget invariant.",
+  "policy": {
+    "retrieval_top_k": 4,
+    "source_locator": "frozen Qwen query likelihood over each retrieved source",
+    "locator_probability": "softmax of four mean query-token log probabilities",
+    "intervention_score": "maximum locator probability",
+    "threshold_rule": "strict greater than empirical 95th percentile on frozen TopiOCQA development-normal queries",
+    "target_benign_intervention_rate": 0.05,
+    "selected_source_cap_tokens": 64,
+    "total_source_budget_tokens": 2048,
+    "backfill": "deterministic equal water-filling over the other three retrieved sources",
+    "nontrigger_behavior": "balanced top-4 context with the same 2048-token budget",
+    "server_max_new_tokens": 64,
+    "caller_output_budget_used": false,
+    "request_rejection": false,
+    "throttling": false,
+    "extra_answer_generation": false,
+    "trainable_parameters": 0,
+    "attack_family_feature": false,
+    "membership_label_feature": false,
+    "target_rank_feature": false,
+    "mirabel_runtime_dependency": false
+  },
+  "phase_a_no_generation_gates": {
+    "actual_normal_intervention_rate_max": 0.05,
+    "budgetleak_target_joint_hit_each_rank_min": 0.60,
+    "qll_target_hit_each_rank_min": 0.95
+  },
+  "phase_b_primary_gates": {
+    "budgetleak_aggregate_effective_auc_max": 0.6009,
+    "budgetleak_each_rank_effective_auc_max": 0.65,
+    "response_invariance_min": 1.0,
+    "normal_token_f1_retention_vs_matched_fixed64_min": 0.95,
+    "normal_new_refusal_rate_max": 0.05,
+    "normal_intervention_rate_max": 0.05,
+    "request_block_rate_max": 0.0
+  },
+  "expansion_rule": "Only if every Phase-B gate passes, open native attack and RAGLeak generation in a separate frozen stage.",
+  "claim_boundary": "This reuses a development-normal cohort for threshold construction. It is neither domain-general confirmation nor fresh blind evidence. QLL adds a batched teacher-forced scoring pass before one answer generation."
+}

@@ -1,0 +1,21 @@
+{
+  "experiment": "Exp200",
+  "purpose": "No-generation causal diagnostic of fixed response-budget invariance",
+  "source_responses": "Exp176 frozen BudgetLeak B70 responses",
+  "transformation": "truncate B70 response to 64 Qwen tokens and repeat it for requested budgets 10..270",
+  "new_answer_generation": 0,
+  "conditions": [
+    "ALL_SOURCE_STABLE_PREFIX64_FIXED_OUTPUT64",
+    "PREFIX64_MIRABEL_TO_HIDE_FIXED_OUTPUT64"
+  ],
+  "gates": {
+    "aggregate_effective_auc_max": 0.6007592592592592,
+    "each_rank_effective_auc_max": 0.65,
+    "response_invariance_required": 1.0
+  },
+  "restrictions": [
+    "No threshold or model tuning",
+    "No new generation",
+    "Diagnostic result cannot be called fresh blind or final defense"
+  ]
+}

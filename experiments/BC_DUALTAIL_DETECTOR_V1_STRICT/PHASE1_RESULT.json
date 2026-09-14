@@ -1,0 +1,289 @@
+{
+  "verdict": "BC_DUALTAIL_V1_NO_TPR_GAIN",
+  "completed_utc": "2026-09-11T20:09:41.263765+00:00",
+  "precommit_sha256": "a9fe49e945128efb196e6e5bb337bc836db812dec3337b0b4144fad8a294b2ff",
+  "input_audit": {
+    "rows": 1280,
+    "unique_query_ids": 1280,
+    "cohort_split": {
+      "BENIGN::CALIBRATION": 500,
+      "BENIGN::HOLDOUT": 500,
+      "ATTACK::DEVELOPMENT": 280
+    },
+    "attack_counts": {
+      "MEntA": {
+        "queries": 200,
+        "sessions": 40,
+        "member_queries": 100,
+        "nonmember_queries": 100
+      },
+      "MBA": {
+        "queries": 40,
+        "sessions": 40,
+        "member_queries": 20,
+        "nonmember_queries": 20
+      },
+      "RAG-MIA": {
+        "queries": 40,
+        "sessions": 40,
+        "member_queries": 20,
+        "nonmember_queries": 20
+      }
+    },
+    "missing_required_fields": [],
+    "bad_top4": [],
+    "bad_score_order": [],
+    "valid": true
+  },
+  "session_level_benign_fpr": "SESSION_LEVEL_BENIGN_FPR_NOT_SUPPORTED",
+  "deployment_thresholds": {
+    "M": {
+      "0.01": 0.14684630010458177,
+      "0.03": 0.10356564677559998,
+      "0.05": 0.08284535548984795
+    },
+    "S": {
+      "0.01": 4.426840650463674,
+      "0.03": 3.733693469903729,
+      "0.05": 3.5795427900764705
+    }
+  },
+  "deployment_primary_rows": [
+    {
+      "detector": "MIRABEL",
+      "score": "M",
+      "nominal_fpr": 0.03,
+      "threshold": 0.10356564677559998,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 7,
+      "threshold_calibration_rate": 0.028,
+      "domain": "ALL",
+      "holdout_n": 500,
+      "holdout_false_positives": 14,
+      "measured_holdout_fpr": 0.028,
+      "wilson95_low": 0.01675097472075645,
+      "wilson95_high": 0.04644640267494888
+    },
+    {
+      "detector": "MIRABEL",
+      "score": "M",
+      "nominal_fpr": 0.03,
+      "threshold": 0.10356564677559998,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 7,
+      "threshold_calibration_rate": 0.028,
+      "domain": "nfcorpus",
+      "holdout_n": 250,
+      "holdout_false_positives": 6,
+      "measured_holdout_fpr": 0.024,
+      "wilson95_low": 0.01104477730613677,
+      "wilson95_high": 0.051362123813526464
+    },
+    {
+      "detector": "MIRABEL",
+      "score": "M",
+      "nominal_fpr": 0.03,
+      "threshold": 0.10356564677559998,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 7,
+      "threshold_calibration_rate": 0.028,
+      "domain": "scidocs",
+      "holdout_n": 225,
+      "holdout_false_positives": 8,
+      "measured_holdout_fpr": 0.035555555555555556,
+      "wilson95_low": 0.0181246534039472,
+      "wilson95_high": 0.06857929841905115
+    },
+    {
+      "detector": "MIRABEL",
+      "score": "M",
+      "nominal_fpr": 0.03,
+      "threshold": 0.10356564677559998,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 7,
+      "threshold_calibration_rate": 0.028,
+      "domain": "trec-covid",
+      "holdout_n": 25,
+      "holdout_false_positives": 0,
+      "measured_holdout_fpr": 0.0,
+      "wilson95_low": 1.3877787807814457e-17,
+      "wilson95_high": 0.13319225093904846
+    },
+    {
+      "detector": "DUALTAIL",
+      "score": "S",
+      "nominal_fpr": 0.03,
+      "threshold": 3.733693469903729,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 6,
+      "threshold_calibration_rate": 0.024,
+      "domain": "ALL",
+      "holdout_n": 500,
+      "holdout_false_positives": 13,
+      "measured_holdout_fpr": 0.026,
+      "wilson95_low": 0.015256383923327248,
+      "wilson95_high": 0.04397149083422428
+    },
+    {
+      "detector": "DUALTAIL",
+      "score": "S",
+      "nominal_fpr": 0.03,
+      "threshold": 3.733693469903729,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 6,
+      "threshold_calibration_rate": 0.024,
+      "domain": "nfcorpus",
+      "holdout_n": 250,
+      "holdout_false_positives": 4,
+      "measured_holdout_fpr": 0.016,
+      "wilson95_low": 0.006239224570471175,
+      "wilson95_high": 0.04040980934111918
+    },
+    {
+      "detector": "DUALTAIL",
+      "score": "S",
+      "nominal_fpr": 0.03,
+      "threshold": 3.733693469903729,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 6,
+      "threshold_calibration_rate": 0.024,
+      "domain": "scidocs",
+      "holdout_n": 225,
+      "holdout_false_positives": 9,
+      "measured_holdout_fpr": 0.04,
+      "wilson95_low": 0.02118448198847547,
+      "wilson95_high": 0.07425914493669515
+    },
+    {
+      "detector": "DUALTAIL",
+      "score": "S",
+      "nominal_fpr": 0.03,
+      "threshold": 3.733693469903729,
+      "operator": ">",
+      "threshold_calibration_n": 250,
+      "threshold_calibration_alarms": 6,
+      "threshold_calibration_rate": 0.024,
+      "domain": "trec-covid",
+      "holdout_n": 25,
+      "holdout_false_positives": 0,
+      "measured_holdout_fpr": 0.0,
+      "wilson95_low": 1.3877787807814457e-17,
+      "wilson95_high": 0.13319225093904846
+    }
+  ],
+  "matched_tpr_at_query_fpr_3pct": {
+    "MEntA": {
+      "M": 0.43,
+      "S": 0.478,
+      "delta": 0.04799999999999999
+    },
+    "MBA": {
+      "M": 0.5,
+      "S": 0.5,
+      "delta": 0.0
+    },
+    "RAG-MIA": {
+      "M": 0.475,
+      "S": 0.5,
+      "delta": 0.025000000000000022
+    }
+  },
+  "macro_tpr_at_query_fpr_3pct": {
+    "MIRABEL": 0.4683333333333333,
+    "DUALTAIL": 0.49266666666666664,
+    "delta": 0.024333333333333318
+  },
+  "screening_checks": {
+    "menta_gain_at_least_5pp": false,
+    "mba_noninferior_within_5pp": true,
+    "rag_mia_noninferior_within_5pp": true,
+    "core3_macro_tpr_improved": true
+  },
+  "menta_recovery": {
+    "binary_case_thresholds": {
+      "M": {
+        "threshold": 0.09813173720078763,
+        "holdout_alarms": 15,
+        "holdout_fpr": 0.03
+      },
+      "S": {
+        "threshold": 3.8248542483007064,
+        "holdout_alarms": 13,
+        "holdout_fpr": 0.026
+      }
+    },
+    "counts": {
+      "D_BOTH_MISS": 105,
+      "A_BOTH_HIT": 86,
+      "B_MIRABEL_MISS_DUALTAIL_HIT": 9
+    },
+    "mirabel_miss_queries": 114,
+    "newly_recovered_queries": 9,
+    "newly_recovered_sessions": 3,
+    "lost_mirabel_true_positive_queries": 0,
+    "sessions_with_lost_tp": 0,
+    "largest_recovery_queries_in_one_session": 4
+  },
+  "bootstrap": [
+    {
+      "attack": "MEntA",
+      "resampling_unit": "session/target",
+      "iterations": 10000,
+      "delta_tpr_at_query_fpr_3pct_mean": 0.048039000000000005,
+      "bootstrap95_low": 0.0020000000000000018,
+      "bootstrap95_high": 0.10900000000000004
+    },
+    {
+      "attack": "MBA",
+      "resampling_unit": "session/target",
+      "iterations": 10000,
+      "delta_tpr_at_query_fpr_3pct_mean": 0.0,
+      "bootstrap95_low": 0.0,
+      "bootstrap95_high": 0.0
+    },
+    {
+      "attack": "RAG-MIA",
+      "resampling_unit": "session/target",
+      "iterations": 10000,
+      "delta_tpr_at_query_fpr_3pct_mean": 0.024985,
+      "bootstrap95_low": 0.0,
+      "bootstrap95_high": 0.07500000000000007
+    }
+  ],
+  "correlations": [
+    {
+      "group": "BENIGN_CALIBRATION",
+      "n": 500,
+      "spearman_rho_M_C": 0.7496403105612423
+    },
+    {
+      "group": "BENIGN_HOLDOUT",
+      "n": 500,
+      "spearman_rho_M_C": 0.7024201216804867
+    },
+    {
+      "group": "MEntA",
+      "n": 200,
+      "spearman_rho_M_C": 0.9459986499662492
+    },
+    {
+      "group": "MBA",
+      "n": 40,
+      "spearman_rho_M_C": 0.9200750469043152
+    },
+    {
+      "group": "RAG-MIA",
+      "n": 40,
+      "spearman_rho_M_C": 0.9643527204502814
+    }
+  ],
+  "phase2_allowed": false,
+  "next_step": "STOP_RETRIEVER_SCORE_HANDCRAFTED_FUSION"
+}

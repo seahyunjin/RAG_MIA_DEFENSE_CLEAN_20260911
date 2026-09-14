@@ -1,0 +1,56 @@
+{
+  "experiment": "Exp204",
+  "created_utc": "2026-08-30T14:50:00Z",
+  "status": "FROZEN_MULTIFAMILY_EXTENSION_NOT_FRESH_BLIND",
+  "objective": "Extend the passed Exp203 QLL-located source-hide policy to the six native attacks and RAGLeak without tuning the detector or action.",
+  "frozen_parent": "Exp203",
+  "policy": {
+    "retrieval_top_k": 4,
+    "total_source_budget_tokens": 2048,
+    "source_locator": "Qwen teacher-forced mean query-token log likelihood per retrieved source",
+    "dominance": "maximum softmax probability over the four source QLL values",
+    "dominance_threshold": 0.5300846414247485,
+    "threshold_rule": "strict greater than",
+    "action": "fully exclude one QLL-selected source and deterministically water-fill the remaining source budget",
+    "request_rejection": false,
+    "trainable_parameters": 0,
+    "membership_label_used_by_policy": false,
+    "attack_family_used_by_policy": false,
+    "target_rank_used_by_policy": false,
+    "mirabel_runtime_dependency": false
+  },
+  "conditions": {
+    "QLL_SOURCE_HIDE_PER_QUERY": "Each query independently hides its QLL top-1 source only when dominance is strictly above the frozen threshold.",
+    "QLL_SOURCE_HIDE_SESSION_STICKY": "The first source that crosses the frozen threshold is fixed as the session source; it is hidden on every later turn in which it is retrieved. A session never accumulates multiple hidden sources."
+  },
+  "evaluation": {
+    "native_families": ["RAG-MIA", "S²-MIA", "MBA", "DCMI", "MEntA", "IA"],
+    "native_query_budgets": {"RAG-MIA": 1, "S²-MIA": 1, "MBA": 1, "DCMI": 2, "MEntA": 5, "IA": 15},
+    "external_family": "RAGLeak",
+    "budgetleak_anchor": "Exp203 frozen result",
+    "normal_utility_anchor": "Exp203 frozen TopiOCQA result",
+    "generator": "Qwen2.5-3B-Instruct",
+    "generation": "one deterministic answer per condition and query; original family output budget retained",
+    "attack_scoring": "original frozen attack-family scorers"
+  },
+  "primary_condition": "QLL_SOURCE_HIDE_SESSION_STICKY",
+  "gates": {
+    "each_native_family_effective_auc_max": 0.65,
+    "ragleak_effective_auc_max": 0.65,
+    "budgetleak_aggregate_effective_auc_max": 0.6009,
+    "budgetleak_worst_rank_effective_auc_max": 0.65,
+    "normal_token_f1_retention_min": 0.95,
+    "normal_new_refusal_rate_max": 0.05,
+    "normal_intervention_rate_max": 0.05,
+    "request_block_rate_max": 0.0
+  },
+  "prohibitions": [
+    "threshold search",
+    "family-specific threshold",
+    "rank-specific rule",
+    "membership-label routing",
+    "classifier or LoRA fitting",
+    "post-result model repair",
+    "fresh-blind or universal claim"
+  ]
+}

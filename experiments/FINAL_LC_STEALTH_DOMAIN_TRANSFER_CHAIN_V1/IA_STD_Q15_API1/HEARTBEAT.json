@@ -1,0 +1,17 @@
+{
+  "attack": "IA-Std-Q15-API1",
+  "call_status_counts": {
+    "INVALID": 58,
+    "ORPHANED_INFLIGHT": 1,
+    "VALID": 3882
+  },
+  "campaign": "FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1",
+  "estimated_campaign_spend_usd": 9.46196495,
+  "performance_metrics_computed": false,
+  "pid": 2775397,
+  "scope": "FULL_2000",
+  "stage": "gt",
+  "target_total": 2000,
+  "terminal_targets": 1941,
+  "updated_utc": "2026-09-13T19:18:46.685528+00:00"
+}

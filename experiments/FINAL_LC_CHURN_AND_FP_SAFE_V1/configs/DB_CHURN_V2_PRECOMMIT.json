@@ -1,0 +1,128 @@
+{
+  "campaign": "FINAL_LC_CHURN_AND_FP_SAFE_V1",
+  "churn": {
+    "duplicate_exception": "exactly the two V0 inherited duplicate excess rows; no new groups",
+    "missing_embedding_union": 1847,
+    "mode_a": "V0 reference margins and frozen outer threshold",
+    "mode_b": "version-specific benign reference margins and benign-only outer refresh",
+    "success": {
+      "per_attack_tpr_drop_max": 0.05,
+      "preferred_fpr": [
+        0.02,
+        0.04
+      ],
+      "preferred_mean_drop_max": 0.03,
+      "refresh_fpr_max": 0.05
+    },
+    "versions": {
+      "V0": {
+        "added": 0,
+        "documents": 3000,
+        "manifest": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V0.json"
+      },
+      "V10": {
+        "added": 223,
+        "documents": 3000,
+        "manifest": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V10.json"
+      },
+      "V25": {
+        "added": 556,
+        "documents": 3000,
+        "manifest": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V25.json"
+      },
+      "V50": {
+        "added": 1113,
+        "documents": 3000,
+        "manifest": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V50.json"
+      }
+    }
+  },
+  "code_sha256": {
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/audit_hide_packing.py": "a1f875278b148c49a1c5d23bb926163f0d3dd585224e2875f435f77f28a4dfc2",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/common.py": "636f70f5479ca7936b4ca0f520209ddd854d2275ca30dff35026429833cf6835",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/embed_missing_union.py": "4fc11da4fb0e359a750ffbedcfe2e4e4fb97c53ed62ab4b47f5989481c137e44",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/finalize_campaign.py": "3ea1e4cd9d7213c39862762000c8d1decf0fbeea6ecfaa0e384d34c11ff48bee",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/finalize_ia_v6.py": "bdb6ee69875d3f41e4cf6475cd09145ce9548b7589fd1684956f214b4045aece",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/prepare_campaign.py": "220c1434c986e6efb6fd68826390cf297c4c3fb77a5560dee26e77c7418d6fe4",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/run_chain.sh": "900dde48dd1260893c126c7162b75fc2556acf382adabef4c6de37ff9a613280",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/run_churn_scoring.py": "6eac3ad7db705aae368ec3ef20befe7f96f8a5d27e97e879f880b78f077b7dd6",
+    "experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/code/watch_chain.sh": "59971acb3d489a8c5e36cc5eb584b00c38207abf64452d4b26e8fb01a9777b9a"
+  },
+  "created_utc": "2026-09-13T09:54:34.925411+00:00",
+  "derived_input_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/audits/INHERITED_BASELINE_DUPLICATES.json": "0340dee630c0ded46ae60b5ac74f545f58911d4d52a21ee1ef16ad8411b2da38",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/CHURN_QUERY_MANIFEST.jsonl": "0e854b1e55688268462f77a4900cdfc17faedd6f90490e5afcc28d8ffb2f9215",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CHURN_AND_FP_SAFE_V1/inputs/MISSING_EMBEDDING_UNION.jsonl": "65d6d5738978b1b22d5ec9606a004f1240f68eab4f7e719c9ced75a60dd5e972"
+  },
+  "evaluation": {
+    "attacks": {
+      "DCMI-Std-Q2": 4000,
+      "MBA": 2000,
+      "MEntA": 10000,
+      "RAG-MIA": 2000,
+      "S²-MIA": 2000
+    },
+    "frozen_dcmi_embeddings": 4000,
+    "frozen_lc_embeddings": 16000,
+    "holdout": 1000,
+    "manifest_sha256": "0e854b1e55688268462f77a4900cdfc17faedd6f90490e5afcc28d8ffb2f9215",
+    "new_query_embeddings": 2000,
+    "ordered_query_id_sha256": "5b1e75022b58421b9b3de4e7fdc2714e53a9bbb54a127084b32fb27629246917",
+    "reference": 1000,
+    "rows": 22000
+  },
+  "fp_safe": {
+    "candidate": "SAFE_CONTEXT_REDISTRIBUTION_V1",
+    "candidate_generation_allowed_before_packing_audit": false,
+    "conditional_open": "only if current Simple Hide discards freed evidence budget",
+    "fp_ids": 27
+  },
+  "frozen_detector": {
+    "action": "Simple Hide",
+    "generator": "Qwen/Qwen2.5-3B-Instruct@aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "k": 200,
+    "local_calibration": "200-NN benign empirical upper tail",
+    "locator": "MIRABEL retrieval top-1",
+    "mirabel": "canonical full-corpus Gumbel margin, confidence=0.95",
+    "outer_budget": 0.025,
+    "retriever": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181",
+    "risk": "R_LC=-log(p_local)",
+    "source_token_budget": 2048,
+    "strict_operator": ">",
+    "strict_threshold": 3.80543877128208
+  },
+  "ia_final_status": [
+    "IA_STD_Q15_V6_FAILED_FINAL",
+    "STANDARDIZED_ATTACK_UNAVAILABLE"
+  ],
+  "input_sha256": {
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/configs/FINAL_DEFENSE_MANIFEST.json": "ccdb92db49364a9a9f390864272f97f55456f5949a9af01f9c527990043d57b9",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/CORE5_DCMI_RETRIEVAL_AND_DETECTION.jsonl": "3f7679410d0857763ee040e5066d4a357e50f2a8d189cd5e2eaf4ccd7cb84a1b",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/STANDARDIZED_QUERY_EMBEDDINGS.float16.npy": "4ba49a330b06a3011b559d8d850a0765e37dad83885d93af936ced13525c1a96",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V0.json": "7053a12fad418757cd4226c001633a7c558ad5b1e26e2bd76a57cbb8fed2f463",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V10.json": "4008381323a40829fa43b47cd874836011608c7f622e58736549e7ec509921db",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V25.json": "c2077f540a652d34e79da7bfad7b9d1035051bce12f715e98cac2a85cb8b3ae8",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CPU_ANALYSIS_SIDECAR_V1/manifests/DB_CHURN_V50.json": "922efe10dbf648359cdfd7cf9fbad43d42cc67bc1958ea6d50ce9c57d0de4e38",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/GOLD_RECALIBRATION_RESULT.json": "c85341c2a2f9778f01ba87342c6baa552c77c9fda16357f1e41e1364db8a934b",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/IA_STD_Q15_V6_DUPLICATE_CONSTRAINED/FINAL_RESULT.json": "42d19d835bfd35c914f931bd1713b45bf9e7c60a80c8504ecc944df488da90dc",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/tables/GOLD_REFRESH_FP_SUBSET_AUDIT.csv": "329a0bbc060166fdfb4e00595c02ee5faecd2ac09487f05db0536ebc2aca4e93",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/CORPUS_EMBEDDINGS.float16.npy": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/LARGE_DETECTION_SCORES.jsonl": "af2f0028c5083bcd9d127d0ba08d0f41635a022af8651da6928181b81e42738a",
+    "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/LC_MIRABEL_LARGE_V1/cache/QUERY_EMBEDDINGS.float16.npy": "54cb1a2c0e2123f10c356b20891201860e40f65a7d38b1282592dd9a8bdfcc31"
+  },
+  "model_paths": {
+    "bge": "/home/traffic_3/workspace/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181",
+    "qwen": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "prohibitions": [
+    "detector modification",
+    "training",
+    "attack-specific calibration",
+    "k search",
+    "LC formula changes",
+    "IA v7",
+    "automatic full Core5 candidate generation"
+  ]
+}

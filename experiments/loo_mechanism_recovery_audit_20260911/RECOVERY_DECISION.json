@@ -1,0 +1,34 @@
+{
+  "audit_date": "2026-09-11",
+  "audit_status": "RECOVERY_AUDIT_DONE",
+  "legacy_decision": "LEGACY_PHASE1_LINEAGE_INCOMPLETE",
+  "clean_rebuild_decision": "CLEAN_REBUILD_SPEC_INSUFFICIENT",
+  "lineage_recovered": false,
+  "clean_rebuild_started": false,
+  "phase1_started": false,
+  "legacy_new_artifacts_mixed": false,
+  "new_retrieval_count": 0,
+  "new_generation_count": 0,
+  "recovered": {
+    "attack_score_rows": 2000,
+    "benign_score_rows": 1000,
+    "attack_query_text_rows": 2000,
+    "menta_exact_top4_query_rows": 200,
+    "menta_exact_top4_sessions": 40,
+    "menta_member_sessions": 20,
+    "menta_nonmember_sessions": 20,
+    "menta_argmax_source_consistent": "200/200",
+    "menta_argmax_rank_consistent": "200/200",
+    "menta_target_rank_consistent_when_retrieved": "96/96",
+    "menta_target_not_retrieved_consistent": "104/104",
+    "menta_top4_ordered_map_sha256": "f4785165d4548dc52d8d28d7824c80a5460bf6f7f798cb7e68198c4abb6cacc7"
+  },
+  "missing_required": [
+    "exact AD-test-LLM3 frozen 1000-document corpus IDs and order",
+    "complete per-query Top-4 source IDs and order",
+    "exact QLL selected source IDs",
+    "version-pinned dataset input hash/order",
+    "complete deterministic benign Phase-1 query construction"
+  ],
+  "historical_gpu_inputs_sha256_reference": "1b63d166c2b091893d59649d65ea175227c2df4e9b8896f2eeb9c0a8092cde24"
+}

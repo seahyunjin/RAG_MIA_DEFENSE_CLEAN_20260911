@@ -1,0 +1,12 @@
+{
+  "experiment": "OUTPUT_CONDITIONED_SELECTIVE_LOO_GUARD_CLEAN_V1",
+  "final_result_sha256": "b6344f22b5730d0a60568d8fc6914774a724f4af0ae0b4e40aa9e3cd946e3907",
+  "locator_pass": false,
+  "oracle_pass": true,
+  "paid_api_calls": 0,
+  "phase": 1,
+  "phase2_opened": false,
+  "pid": 1133290,
+  "stage": "LOO_LOCATOR_LIMITED",
+  "updated_utc": "2026-09-11T11:11:12.967542+00:00"
+}

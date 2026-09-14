@@ -1,0 +1,25 @@
+{
+  "attack": "MBA",
+  "status": "MBA_PROTOCOL_READY",
+  "implementation_label": "MBA_PAPER_FAITHFUL_REIMPLEMENTATION",
+  "source": {
+    "paper": "https://arxiv.org/abs/2410.20142",
+    "paper_sha256": "11f415cbb80cf617e0a417368f411aee07e8f0ecb89ae44d819ead9a772acc87",
+    "repository": "not located as a standalone author attack repository",
+    "commit": null
+  },
+  "files": {
+    "query_generator.py": "a4636107c578717f616f1719b3782c89a5990e942a248ed167719a7e71462894",
+    "scorer.py": "3b5f961e3f2d62b87b1c477651e2b4289e50de8b7c5dfffae0524845a8e1695b",
+    "protocol_config.json": "501206145aafe372ae2288c61bba0454c355175b2e7dbb26bdc4855d1f20bc1a",
+    "PAPER_PROTOCOL_SPEC.json": "d116702112b93838be6d8a63a5deccf782beb500a18bbfbdd73411f06d27a114",
+    "PAPER_PROTOCOL_SPEC.md": "b6c552b14fe0ed53ca28773e248649f226acb26b737e70690078900bb99aff0e",
+    "tests/test_protocol.py": "ec2e7aedf3abf850363f370dbdbf3525b32e233e9d7197d2363e9b8a38e06979"
+  },
+  "prompt_sha256": "a4636107c578717f616f1719b3782c89a5990e942a248ed167719a7e71462894",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {
+    "proxy_lm": "openai-community/gpt2-xl@15ea56dee5df4983c59b2538573817e1667135e2",
+    "spelling_correction": "oliverguhr/spelling-correction-english-base@0e3958355a09d2816ed2701fdc2f4471d46c320e"
+  }
+}

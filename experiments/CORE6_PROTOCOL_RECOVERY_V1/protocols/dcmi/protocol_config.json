@@ -1,0 +1,17 @@
+{
+  "attack": "DCMI",
+  "query_count": 2,
+  "query_generation_model": "paper says a third-party LLM but does not identify/freeze it; official repo uses gpt-4o",
+  "decoding": "not specified for perturbation LLM",
+  "score_formula": "f_rag(q)-f_rag(q'), with Yes=1 and No=0",
+  "score_polarity": "see scorer.py",
+  "metrics": [
+    "ROC-AUC",
+    "accuracy",
+    "precision",
+    "recall",
+    "F1"
+  ],
+  "model_revisions": {},
+  "status": "DCMI_SPEC_UNDERDETERMINED"
+}

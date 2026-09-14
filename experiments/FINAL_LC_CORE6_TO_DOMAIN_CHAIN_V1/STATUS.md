@@ -1,0 +1,8 @@
+# FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1
+
+- Current stage: `GOLD_QA_UTILITY_FAILED`
+- Updated UTC: `2026-09-13T04:15:06.794987+00:00`
+- gold_f1: `0.1779442924752994`
+- f1_drop: `0.031000644615926554`
+- new_refusal: `0.058`
+- next_stage: `STOP_NO_DOMAIN`

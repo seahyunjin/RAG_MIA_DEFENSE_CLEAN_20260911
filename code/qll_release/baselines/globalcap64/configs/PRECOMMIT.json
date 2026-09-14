@@ -1,0 +1,45 @@
+{
+  "experiment": "Exp156",
+  "name": "Frozen GlobalCap64 clean 1000/1000/1000 confirmation",
+  "created_utc": "2026-08-25T19:08:00+00:00",
+  "written_before_exp156_metrics": true,
+  "candidate": "GLOBAL_CAP64",
+  "candidate_source": "Exp155 development candidate; no Exp156 tuning",
+  "cohorts": {"member_attack": 1000, "nonmember_attack": 1000, "normal_user": 1000},
+  "development_overlap": {"query_hash": 0, "session_id": 0, "domain_target_document": 0},
+  "runtime": {
+    "detector": false,
+    "lora": false,
+    "classifier": false,
+    "nli": false,
+    "normal_calibration_rows": 0,
+    "attack_calibration_rows": 0,
+    "domain_or_family_input": false,
+    "request_rejection": false,
+    "additional_retrieval": false,
+    "generator_calls": 1
+  },
+  "policy": {
+    "rank1_token_cap": 64,
+    "total_document_tokens": 2048,
+    "remaining_budget": "deterministically split over retrieval ranks 2-4",
+    "full_document_deletion": false
+  },
+  "canonical_mirabel": {
+    "rho": 0.05,
+    "decision": "full-corpus top1 cosine > per-query analytical Gumbel threshold",
+    "action": "hide rank-1 only on alarm, otherwise pass",
+    "strict_greater_than": true
+  },
+  "primary_scope": "Q1 clean confirmation: RAG-MIA, S2-MIA, MBA, MEntA; DCMI-Q2 and IA-Q15 are unsupported here",
+  "bootstrap": {"unit": "session", "resamples": 5000, "seed": 20260826},
+  "confirmation_gate": {
+    "mean_effective_auc": "GLOBAL_CAP64 <= canonical Mirabel",
+    "worst_effective_auc_noninferiority_margin": 0.02,
+    "ordinary_response_preservation_min": 0.90,
+    "hard_response_preservation_min": 0.60,
+    "request_rejection_rate": 0.0
+  },
+  "if_pass": "freeze policy then native DCMI-Q2/MEntA-Q5/IA-Q15 and Qwen/Llama, GTE/MPNet transfer",
+  "if_fail": "do not tune on Exp156; report failure"
+}

@@ -1,0 +1,932 @@
+현재 Final LC 결과에서 이어서 진행한다.
+
+이제부터 Final LC의 구조를 더 이상 개발하지 않는다.
+이번 campaign은 frozen Final LC의 공격 breadth와 generalization을
+연쇄적으로 검증하는 최종 확장 실험이다.
+
+Campaign:
+FINAL_LC_STEALTH_DOMAIN_TRANSFER_CHAIN_V1
+
+실행 순서:
+
+A. IA-Std-Q15 API 기반 stealth confirmation
+B. A PASS → untouched-domain privacy generalization
+C. B PASS → retriever transfer
+D. C PASS → generator transfer
+
+각 단계가 FAIL하면 이후 단계는 자동 실행하지 않는다.
+
+==================================================
+0. FINAL LC 완전 FREEZE
+==================================================
+
+다음은 전체 campaign 동안 변경 금지:
+
+- Final LC formula
+- MIRABEL raw exposure statistic
+- semantic-local benign calibration
+- k
+- outer benign calibration procedure
+- benign FPR policy
+- MIRABEL locator
+- Simple Hide
+- context builder
+- base prompt
+- attack scorers / metric definitions
+
+현재 확정 결과도 수정하지 않는다:
+
+- Core5 same-FPR detection PASS
+- Core5 matched-budget E2E PASS
+- Gold benign-only recalibration PASS
+- semantic-neighbor ablation PASS
+- CHURN_EXPOSURE_DISAPPEARS
+- closed-book FP fallback FAIL
+
+Final LC hash를 기록:
+
+FINAL_LC_FROZEN_MANIFEST.json
+SHA256 출력.
+
+==================================================
+1. CLAIM BOUNDARY
+==================================================
+
+현재 main evidence:
+
+Paper-faithful:
+- MEntA
+- MBA
+- RAG-MIA
+- S²-MIA
+
+Standardized:
+- DCMI-Std-Q2
+
+IA는 아직 성능 결과가 없음.
+
+이번 IA 결과를 보고 Final LC를 수정하면
+unseen stealth-confirmation claim은 폐기된다.
+
+==================================================
+==================================================
+PHASE A — IA STEALTH CONFIRMATION
+==================================================
+==================================================
+
+2. IA 역할
+==================================================
+
+IA는 indirect/natural multi-query stealth probing을 대표하는
+hard confirmation attack으로 사용한다.
+
+목표:
+
+"Final LC가 공격별 학습/routing 없이
+간접적인 stealth probing에도 전이되는가?"
+
+==================================================
+3. 기존 Qwen IA attempts
+==================================================
+
+IA v1~v6의 실패 판정은 모두 유지.
+
+실패 원인은 attack performance가 아니라:
+
+- parser instability
+- JSON/schema failure
+- duplicate collapse
+- termination failure
+
+였다.
+
+이 결과를 삭제하거나 재해석하지 않는다.
+
+더 이상 local Qwen으로 IA query generator를 수정하지 않는다.
+
+==================================================
+4. IA API variant
+==================================================
+
+새 이름:
+
+IA-Std-Q15-API1
+
+절대:
+Original IA
+Paper-exact IA
+
+라고 부르지 않는다.
+
+Paper의 공격 원리를 최대한 보존한
+standardized stealth variant로 명시.
+
+==================================================
+5. API cost cap
+==================================================
+
+외부 API 호출 총비용 hard cap:
+
+USD 8.00
+
+예상 비용이 cap을 초과하기 전에 중단.
+
+API key:
+- log에 출력 금지
+- git/artifact 저장 금지
+- 결과 JSON 저장 금지
+
+==================================================
+6. IA question generation
+==================================================
+
+가능하면 paper에서 사용한 query-generation model family:
+
+GPT-4o
+
+사용.
+
+target당:
+
+Q15 indirect/natural questions
+
+생성.
+
+Native structured-output / JSON-schema 기능 사용.
+
+Schema:
+
+{
+  "questions": [
+    {"id": 1, "question": "..."},
+    ...
+    {"id": 15, "question": "..."}
+  ]
+}
+
+필수:
+
+- exactly 15
+- IDs 1~15 exact
+- non-empty
+- normalized exact duplicate 0
+- additional prose 0
+
+질문의 공격 강도를 보고 재생성 금지.
+
+==================================================
+7. IA GT
+==================================================
+
+Q15 freeze 후:
+
+가능하면 GPT-4o-mini를 사용해
+Yes / No / Unknown GT 생성.
+
+GT도 structured output 사용.
+
+lambda = 5 UNK penalty 유지.
+
+GT를 Final LC 결과에 맞춰 수정 금지.
+
+==================================================
+8. bounded retry
+==================================================
+
+API schema validation failure에 대해서만:
+
+동일 prompt/config로 최대 1회 retry.
+
+금지:
+
+- semantic quality 보고 retry
+- Final LC detection score 보고 retry
+- 질문이 약해 보여 retry
+- 좋은 attack score가 나올 때까지 반복
+
+==================================================
+9. IA 100-session preflight
+==================================================
+
+deterministic:
+
+member = 50
+nonmember = 50
+
+성능 계산 금지.
+
+오직 validity:
+
+- valid >=98/100
+- member/nonmember validity gap <=2pp
+- exact Q15 100%
+- GT15 100%
+- duplicate 0
+- inferred field 0
+
+PASS:
+IA_API1_PROTOCOL_READY
+
+FAIL:
+IA_API1_PROTOCOL_FAILED
+
+FAIL이면 전체 campaign 종료.
+Final LC failure로 해석하지 않는다.
+
+==================================================
+10. IA full scale
+==================================================
+
+PASS 시:
+
+member = 1000
+nonmember = 1000
+
+총 2000 sessions
+총 30,000 IA queries.
+
+동일 frozen API protocol 사용.
+
+full validity:
+
+>=95%
+member/nonmember validity gap <=2pp
+
+PASS해야 성능 평가.
+
+==================================================
+11. IA SAME-FPR DETECTION
+==================================================
+
+동일 frozen benign evaluation set에서:
+
+MIRABEL
+vs
+Final LC
+
+Primary:
+actual benign FPR = 2.5%
+
+Secondary:
+1%, 3%, 5%
+
+IA primary:
+query-level TPR
+
+추가:
+- alarmed queries / 15
+- any-alarm session
+- all-15 alarm session
+- first alarm index
+
+Bootstrap:
+target/session unit
+2,000 iterations.
+
+==================================================
+12. IA DETECTION PASS
+==================================================
+
+이번 chain에서는 IA도
+MIRABEL보다 나은 stealth detection을 요구한다.
+
+Primary:
+
+Delta TPR@2.5%
+=
+TPR_FinalLC - TPR_MIRABEL
+
+PASS:
+
+Delta TPR > 0
+
+AND
+
+cluster-bootstrap 95% CI lower bound > 0
+
+Preferred:
+Delta >= +3pp
+
+FAIL:
+IA_STEALTH_DETECTION_NOT_SUPPORTED
+
+→ campaign 종료.
+
+Final LC 수정 금지.
+
+==================================================
+13. IA MATCHED-BUDGET E2E
+==================================================
+
+Detection PASS 시:
+
+A. No Defense
+B. MIRABEL @ same benign budget 2.5%
+C. Final LC @ same benign budget 2.5%
+
+같은:
+- target substrate
+- retriever
+- locator
+- target RAG generator
+- decoding
+- IA queries
+
+사용.
+
+A0 / A_hide cache 가능하면 재사용.
+
+==================================================
+14. IA privacy gate
+==================================================
+
+IA standardized native scorer primary.
+
+추가:
+Raw AUC / E-AUC는 지원되는 경우 secondary.
+
+PASS:
+
+A. Final LC가 No Defense보다 명확히 privacy 개선
+
+B. Final LC privacy metric < MIRABEL metric
+   또는 통계적으로 non-inferior이면서 point estimate도 <= MIRABEL
+
+이번 chain의 강한 목표:
+Final LC가 MIRABEL보다 IA에서도 더 좋을 것.
+
+Preferred:
+attack metric <=0.60
+
+Strong:
+<=0.55
+
+PASS:
+IA_STEALTH_CONFIRMATION_PASS
+
+FAIL:
+IA_STEALTH_E2E_FAILED
+
+→ campaign 종료.
+
+==================================================
+15. Core6-eval 명칭
+==================================================
+
+IA PASS 시:
+
+Core6-Eval:
+
+Paper-faithful:
+- MEntA
+- MBA
+- RAG-MIA
+- S²-MIA
+
+Standardized hard attacks:
+- DCMI-Std-Q2
+- IA-Std-Q15-API1
+
+표현:
+
+"4 paper-faithful + 2 standardized hard attack settings"
+
+사용.
+
+"6 paper-exact attacks" 금지.
+
+==================================================
+==================================================
+PHASE B — UNTOUCHED DOMAIN PRIVACY
+==================================================
+==================================================
+
+IA PASS한 경우에만 진행.
+
+16. 목적
+==================================================
+
+Final LC가 development domain에만 맞은 것이 아니라
+완전히 untouched domain에서도:
+
+- attack data 없이
+- model retraining 없이
+- benign-only recalibration만으로
+
+privacy와 utility를 유지하는지 평가.
+
+==================================================
+17. domain selection
+==================================================
+
+기존 development/evaluation에 사용하지 않은
+완전히 untouched domain을 선택.
+
+우선순위:
+
+1. Finance domain with clean corpus + QA
+2. 다른 untouched domain
+
+후보 선택은 성능을 보고 하지 않는다.
+
+선택 기준:
+
+- corpus 존재
+- gold/reference QA 존재
+- member/nonmember target 구성 가능
+- 기존 target/document overlap = 0
+- 공격 query 생성 가능
+- official evaluator 존재
+
+가능하면 TAT-QA / FinQA 계열 우선 감사.
+
+기존에 사용된 dataset이면 제외.
+
+==================================================
+18. domain precommit
+==================================================
+
+공격 결과를 보기 전에:
+
+- dataset
+- corpus
+- target sampling
+- member/nonmember assignment
+- benign calibration split
+- locked benign test
+- attack set
+- metric
+- thresholds procedure
+
+freeze.
+
+CROSS_DOMAIN_PRECOMMIT.json
+SHA256 출력.
+
+==================================================
+19. new-domain scale
+==================================================
+
+먼저 screen:
+
+member 100
+nonmember 100
+
+benign calibration >=500
+locked benign >=500
+
+대표 공격:
+
+- MEntA
+- RAG-MIA
+- DCMI-Std-Q2
+- IA-Std-Q15-API1
+
+가능하면 MBA/S²도 protocol-compatible이면 포함하되
+결과 보고 추가하지 않는다.
+
+==================================================
+20. transfer modes
+==================================================
+
+MODE A:
+STRICT TRANSFER
+
+기존 calibration/reference를 그대로 적용.
+
+MODE B:
+BENIGN-ONLY RECALIBRATION
+
+허용:
+- benign reference bank refresh
+- MIRABEL benign margin refresh
+- outer threshold refresh
+
+금지:
+- attack data
+- attack labels
+- model fine-tuning
+- LC formula 변경
+- k 변경
+- locator 변경
+- protection 변경
+
+Training steps = 0
+Trainable parameters updated = 0.
+
+==================================================
+21. new-domain detection
+==================================================
+
+Primary:
+benign FPR = 2.5%
+
+비교:
+
+MIRABEL
+vs
+Final LC benign-recalibrated
+
+공격별:
+TPR
+Delta
+bootstrap CI.
+
+==================================================
+22. new-domain E2E privacy
+==================================================
+
+조건:
+
+No Defense
+MIRABEL same-budget
+Final LC same-budget
+
+각 attack의 frozen scorer 사용.
+
+PASS:
+
+- 모든 evaluated attacks에서 No Defense 대비 privacy 개선
+- 최소 75% attacks에서 Final LC <= MIRABEL
+- 나머지도 MIRABEL +0.03 이내
+- catastrophic failure 없음
+
+==================================================
+23. new-domain utility
+==================================================
+
+official Gold QA metric 사용.
+
+Final LC benign-recalibrated:
+
+actual FPR <=5%
+preferred 2~4%
+
+Gold metric degradation:
+<=2pp
+
+preferred <=1pp
+
+new refusal:
+<=1pp preferred
+
+==================================================
+24. domain PASS
+==================================================
+
+PASS:
+
+CROSS_DOMAIN_PRIVACY_PASS
+
+의미:
+
+same frozen method
++
+benign-only recalibration
++
+no attack training
+
+으로 untouched domain privacy/utility transfer.
+
+FAIL:
+
+CROSS_DOMAIN_PRIVACY_FAILED
+
+→ campaign 종료.
+Retriever/generator transfer 실행 금지.
+
+==================================================
+25. screen → large
+==================================================
+
+100/100 PASS 시:
+
+동일 frozen setup으로:
+
+member 1000
+nonmember 1000
+
+확대.
+
+small 결과를 보고
+method/threshold procedure 수정 금지.
+
+large에서도 PASS해야:
+
+CROSS_DOMAIN_LARGE_PASS
+
+==================================================
+==================================================
+PHASE C — RETRIEVER TRANSFER
+==================================================
+==================================================
+
+Cross-domain large PASS 시에만 실행.
+
+26. 목적
+==================================================
+
+Final LC가 BGE-M3에만 특화된 방법인지 검증.
+
+==================================================
+27. retrievers
+==================================================
+
+현재 BGE-M3 baseline 외:
+
+1. MPNet-base
+2. GTE-base
+
+가능하면 둘 다.
+
+동일:
+- corpus
+- targets
+- attack queries
+- generator
+- defense logic
+
+사용.
+
+==================================================
+28. retriever-specific allowed refresh
+==================================================
+
+각 retriever에서:
+
+- retrieval index 새 구축
+- MIRABEL statistic 새 계산
+- benign semantic-neighbor bank 새 계산
+- benign-only calibration refresh
+
+허용.
+
+금지:
+
+- attack fitting
+- classifier training
+- k 변경
+- formula 변경
+- retriever fine-tuning
+- locator logic 변경
+
+즉 동일 알고리즘을
+새 retriever의 score space에 적용.
+
+==================================================
+29. retriever transfer scale
+==================================================
+
+먼저 Core6-Eval에서
+100/100 screen.
+
+PASS하면 1000/1000 확대.
+
+==================================================
+30. retriever PASS
+==================================================
+
+각 retriever:
+
+A. benign FPR <=5%
+
+B. Final LC TPR mean
+   >= MIRABEL TPR mean
+
+C. 최소 5/6 attack settings에서
+   Final LC non-degrading / better
+
+D. E2E privacy:
+   Final LC <= MIRABEL +0.03
+   all evaluated attacks
+
+E. No Defense 대비 모두 privacy 개선
+
+PASS:
+
+RETRIEVER_TRANSFER_PASS
+
+==================================================
+==================================================
+PHASE D — GENERATOR TRANSFER
+==================================================
+==================================================
+
+Retriever transfer PASS 시에만 실행.
+
+31. 목적
+==================================================
+
+Final LC privacy effect가
+Qwen2.5-3B generation behavior에만 의존하는지 검증.
+
+Detector/retriever는 우선
+현재 strongest validated configuration 사용.
+
+==================================================
+32. generator candidate
+==================================================
+
+먼저 local available model inventory 확인.
+
+Preferred:
+
+Llama-family instruct model
+(e.g. Llama-3.1-8B-Instruct)
+
+exact local checkpoint가 있으면 사용.
+
+없으면 임의 여러 모델을 search하지 않는다.
+
+GENERATOR_TRANSFER_MODEL_UNAVAILABLE
+
+로 종료.
+
+API generator는 이번 chain에서 자동 사용하지 않는다.
+
+==================================================
+33. generator freeze
+==================================================
+
+결과 보기 전에:
+
+- model/checkpoint
+- tokenizer
+- context format
+- max_new_tokens
+- decoding
+- seed
+
+freeze.
+
+Final LC detector는 변경 없음.
+
+==================================================
+34. generator transfer experiment
+==================================================
+
+동일:
+
+- queries
+- retrieval
+- alarm masks
+- locator
+- Simple Hide
+
+사용.
+
+새 generator로:
+
+No Defense
+MIRABEL same-budget
+Final LC same-budget
+
+답변 생성.
+
+==================================================
+35. generator PASS
+==================================================
+
+각 attack native scorer 사용.
+
+PASS:
+
+- all evaluated attacks No Defense 대비 privacy 개선
+- 최소 5/6에서 Final LC <= MIRABEL
+- 나머지도 <= MIRABEL +0.03
+- Gold QA degradation <=2pp
+- refusal catastrophic increase 없음
+
+PASS:
+
+GENERATOR_TRANSFER_PASS
+
+FAIL:
+
+GENERATOR_TRANSFER_FAILED
+
+==================================================
+==================================================
+PHASE E — FINAL GENERALITY VERDICT
+==================================================
+==================================================
+
+36. 최종 PASS
+==================================================
+
+아래 모두 성공하면:
+
+- IA stealth confirmation
+- untouched-domain large privacy
+- retriever transfer
+- generator transfer
+
+최종 scientific label:
+
+FINAL_LC_BROAD_GENERALIZATION_PASS
+
+이 경우 가능한 주장:
+
+"Final LC provides attack-agnostic, retraining-free
+membership-exposure defense across multiple attack families,
+domains, retrievers, and generators, requiring only benign
+recalibration in a new retrieval environment."
+
+단:
+universal against all attacks
+라고 주장 금지.
+
+==================================================
+37. 실패 시
+==================================================
+
+어느 단계든 실패하면:
+
+그 failure를 limitation으로 freeze.
+
+결과 보고:
+
+- method 수정 금지
+- threshold 변경 금지
+- attack별 routing 금지
+- 다음 transfer stage 자동 실행 금지
+
+==================================================
+38. efficiency / cache
+==================================================
+
+모든 단계:
+
+- existing embeddings
+- retrieval cache
+- A0
+- A_hide
+- attack query artifacts
+
+최대한 재사용.
+
+동일 hash key answer 재생성 금지.
+
+==================================================
+39. PRECOMMIT
+==================================================
+
+각 phase 전 별도:
+
+IA_API_PRECOMMIT.json
+CROSS_DOMAIN_PRECOMMIT.json
+RETRIEVER_TRANSFER_PRECOMMIT.json
+GENERATOR_TRANSFER_PRECOMMIT.json
+
+결과 보기 전 SHA256 freeze.
+
+==================================================
+40. FINAL REPORT
+==================================================
+
+[IA STEALTH]
+
+[CORE6-EVAL]
+
+[UNTOUCHED DOMAIN]
+
+[STRICT VS BENIGN RECALIBRATION]
+
+[DOMAIN PRIVACY]
+
+[DOMAIN GOLD QA]
+
+[MPNET TRANSFER]
+
+[GTE TRANSFER]
+
+[GENERATOR TRANSFER]
+
+[COST / LATENCY]
+
+[FINAL CLAIM BOUNDARY]
+
+마지막 15줄 이내:
+
+1. IA TPR MIRABEL / Final LC
+2. IA E2E MIRABEL / Final LC
+3. untouched domain name
+4. strict-transfer FPR
+5. benign-refresh FPR
+6. domain privacy result
+7. Gold QA loss
+8. MPNet result
+9. GTE result
+10. generator result
+11. training steps
+12. attack data used for calibration
+13. strongest generalization claim
+14. remaining limitation
+15. final verdict
+
+지금 IA API 100-session validity preflight부터 시작한다.
+
+IA PASS 시에만 untouched domain,
+domain PASS 시에만 retriever transfer,
+retriever PASS 시에만 generator transfer로
+자동 연쇄 실행하라.

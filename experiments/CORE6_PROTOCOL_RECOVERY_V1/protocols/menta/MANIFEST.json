@@ -1,0 +1,25 @@
+{
+  "attack": "MEntA",
+  "status": "MENTA_PROTOCOL_READY",
+  "implementation_label": "PRESERVED_REPRODUCTION_ADAPTER",
+  "source": {
+    "paper": "https://arxiv.org/abs/2605.24312",
+    "paper_sha256": "047d52b3abb9dbc5b224305bce316f194b6ad0e933fd9122108c50601ef39728",
+    "repository": "preserved MEntA reproduction package (local copy; Git commit metadata absent)",
+    "commit": null
+  },
+  "files": {
+    "query_generator.py": "0b1be1157b50a3d0cc6149633854b4f016a8bff9daaec198e10c992404ab688a",
+    "scorer.py": "c6c6ddb5ca163cc53fa993958cc132fa045f1a4428700567cc213c5ecc3ce444",
+    "protocol_config.json": "385833c7a7bae3bb148cb3a2a72c9cec18a93c099f7a275c6c0f1ae83824c860",
+    "PAPER_PROTOCOL_SPEC.json": "09bc995b3c1801d24af4d77560e2f3cd1dba72e9cc9cedacf8b263694e4ac90b",
+    "PAPER_PROTOCOL_SPEC.md": "cd4a13dc94a586a5aa32e1335c4ac758669e4a25a29915baba4d53f5120e71a3",
+    "tests/test_protocol.py": "acc69210e5427cadedf8cf588a0dfc397ba67f90d2717738446bc95ee3c55fb3"
+  },
+  "prompt_sha256": "0b1be1157b50a3d0cc6149633854b4f016a8bff9daaec198e10c992404ab688a",
+  "prompt_hash_scope": "the complete prompt/query construction implementation in query_generator.py",
+  "models": {
+    "nli": "tasksource/deberta-base-long-nli@04dcf11f844b07bc57015169fca2b7d6df8299d5",
+    "claim_extractor": "Babelscape/t5-base-summarization-claim-extractor@94775fb1c8dc2c3ef1bfec413f9f961e6ba5a1c8"
+  }
+}

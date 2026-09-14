@@ -1,0 +1,58 @@
+{
+  "experiment": "Exp187",
+  "title": "Frozen DC-MCEL transfer to RAGLeak and BudgetLeak-Z",
+  "written_before_exp187_metrics": true,
+  "status": "EXPLORATORY_EXTERNAL_ATTACK_TRANSFER",
+  "frozen_candidate": "DC_MCEL_T128_D16",
+  "candidate_source": "Exp186",
+  "input_policy": {
+    "name": "MINIMAX_INVERSE_QLL",
+    "retrieval_sources": 4,
+    "total_source_token_budget": 2048,
+    "allocation": "B_i = 2048 * softmax(-mean_query_log_probability_i)",
+    "normal_calibration": false,
+    "classifier_or_lora": false,
+    "mirabel": false
+  },
+  "output_policy": {
+    "name": "DC-MCEL",
+    "total_information_budget_nats": 128,
+    "decision_influence_budget_nats": 16,
+    "total_cost": "claim_tokens * max(0, mean_logP_full - mean_logP_without_source)",
+    "decision_cost": "max(0, mean_logP_full - mean_logP_without_source)",
+    "accounting": "per canonical source within an attack session",
+    "exact_duplicate_claims": "not charged twice for the same source",
+    "blocked_claim_action": "deterministic suppression",
+    "attack_label_or_member_at_runtime": false,
+    "target_rank_at_runtime": false,
+    "threshold_search": false,
+    "second_generation": false
+  },
+  "cohort": {
+    "selection": "Exact frozen Exp179-B sample IDs; no reselection",
+    "RAGLeak": {"targets": 100, "member": 50, "nonmember": 50, "output_budgets": [128]},
+    "BudgetLeak-Z": {"targets": 100, "member": 50, "nonmember": 50, "output_budgets": [10, 30, 50, 70, 90, 110, 130, 150, 170, 190, 210, 230, 250, 270]}
+  },
+  "conditions": [
+    "NO_DEFENSE",
+    "ORIGINAL_MIRABEL",
+    "GLOBAL_CAP64",
+    "MINIMAX_INVERSE_QLL",
+    "DC_MCEL_SESSION_T128_D16",
+    "DC_MCEL_RESET_T128_D16"
+  ],
+  "primary_condition": "DC_MCEL_SESSION_T128_D16",
+  "diagnostic_condition": "DC_MCEL_RESET_T128_D16",
+  "scoring": {
+    "RAGLeak": "reference-response MPNet cosine",
+    "BudgetLeak-Z": "frozen 14-budget semantic+ROUGE trajectory scorer",
+    "privacy_metric": "effective AUC; 0.5 is ideal",
+    "bootstrap_resamples": 5000,
+    "bootstrap_unit": "target document"
+  },
+  "exploratory_gate": {
+    "each_attack_effective_auc": "<=0.65",
+    "each_attack_vs_original_mirabel": "<=Original Mirabel+0.03"
+  },
+  "claim_boundary": "RAGLeak and BudgetLeak-Z are disclosed external adaptations, not official reproductions or fresh-blind confirmation. The 100+100 frozen subset is a transfer screen, not the full 900+900 cohort."
+}

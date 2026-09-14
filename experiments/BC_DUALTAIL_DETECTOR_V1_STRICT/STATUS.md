@@ -1,0 +1,6 @@
+# BC DualTail Detector V1 Strict
+
+- 상태: `BC_DUALTAIL_V1_NO_TPR_GAIN`
+- PRECOMMIT SHA-256: `a9fe49e945128efb196e6e5bb337bc836db812dec3337b0b4144fad8a294b2ff`
+- Phase 2 허용: `False`
+- 다음 단계: `STOP_RETRIEVER_SCORE_HANDCRAFTED_FUSION`

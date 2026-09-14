@@ -1,0 +1,14 @@
+{
+  "amendment": "Python import path repair only",
+  "written_after_rre_generation_but_before_any_rre_score_or_metric": true,
+  "failure": "ModuleNotFoundError: No module named 'protocols' while importing the frozen RAG-MIA scorer",
+  "scientific_definition_changed": false,
+  "answers_changed": false,
+  "detector_or_threshold_changed": false,
+  "reference_or_replacement_changed": false,
+  "scorer_formula_changed": false,
+  "repair": "Insert the frozen CORE6_PROTOCOL_RECOVERY_V1 directory into sys.path before importing its unchanged scorer modules.",
+  "original_precommit_sha256": "5d216ebb844679a1007cfb853ad9082560b48833b12fddc1598a8c806172187d",
+  "evaluation_code_sha256_before": "8fdd5a6c727de5f997603e129b49fc9d2f7757d107435e8f4b1f90cd1af5b6d2",
+  "evaluation_code_sha256_after": "cca1ea31f889564a6ccc9052998877edc6af6aba25b3ccc0d7fdb7d67633e025"
+}

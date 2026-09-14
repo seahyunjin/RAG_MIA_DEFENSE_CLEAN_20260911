@@ -1,0 +1,13 @@
+{
+  "core5": [
+    "MEntA",
+    "MBA",
+    "RAG-MIA",
+    "S²-MIA",
+    "DCMI-Std-Q2"
+  ],
+  "ia_performance_used": false,
+  "ia_regenerated": false,
+  "precommit_sha256": "48b0159b2a8d89fc277dfd35a244fee7b0830f405609d9bc1d2c7c8ad5357dcc",
+  "reason": "IA deterministic parser-v2 failed its precommitted validity gates"
+}

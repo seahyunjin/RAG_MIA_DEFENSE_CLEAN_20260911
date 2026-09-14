@@ -1,0 +1,33 @@
+{
+  "attack": "IA-Std-Q15-ST1",
+  "automatic_full_scale": true,
+  "campaign": "IA_STEALTH_CONFIRMATION_V1",
+  "checks": {
+    "exact_duplicate_zero_among_valid": true,
+    "gt15_exact_among_valid": true,
+    "inferred_fields_zero": true,
+    "q15_exact_among_valid": true,
+    "valid_at_least_98": true,
+    "validity_gap_at_most_2pp": true
+  },
+  "completed_utc": "2026-09-13T10:30:33.070061+00:00",
+  "coverage": 1.0,
+  "failure_reasons": {},
+  "frozen_artifact": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/IA_STEALTH_CONFIRMATION_V1/outputs/IA_ST1_PREFLIGHT_FROZEN.jsonl",
+    "sessions": 100,
+    "sha256": "e294106bc13a337eae3c2f7dea207430d0da58099010061db082af0076c77f94"
+  },
+  "long_verbatim_12gram_slots_diagnostic": 4,
+  "member_valid": 50,
+  "member_valid_rate": 1.0,
+  "near_duplicate_pairs_diagnostic": 11,
+  "nonmember_valid": 50,
+  "nonmember_valid_rate": 1.0,
+  "performance_metrics_computed": false,
+  "sessions": 100,
+  "trivial_full_copy_slots_diagnostic": 0,
+  "valid": 100,
+  "validity_gap": 0.0,
+  "verdict": "IA_STD_Q15_ST1_PREFLIGHT_PASS"
+}

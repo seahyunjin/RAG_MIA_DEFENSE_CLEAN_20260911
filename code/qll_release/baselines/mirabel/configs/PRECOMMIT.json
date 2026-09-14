@@ -1,0 +1,21 @@
+{
+  "experiment": "Exp154-R",
+  "name": "Canonical conditional Mirabel baseline repair",
+  "created_utc": "2026-08-25T18:54:00+00:00",
+  "written_before_exp154r_metrics": true,
+  "reason": "Exp154 inherited a historical baseline named ORIGINAL_MIRABEL that hid rank-1 on every row. The official Mirabel implementation hides rank-1 only when the strict canonical Gumbel decision fires. Exp154 remains immutable history; Exp154-R repairs only this baseline semantics.",
+  "official_rule": "if canonical_gumbel_margin > 0: hide rank-1 and backfill; else: use the unmodified retrieval result",
+  "conditions": {
+    "NO_DEFENSE": "unmodified RAG",
+    "ORIGINAL_MIRABEL": "official conditional detect-and-hide",
+    "ALWAYS_HIDE_RANK1_ORACLE": "diagnostic privacy upper bound; never label as Original Mirabel",
+    "EXP154_CANDIDATES": "the exact 18 frozen Selective-Action policies from Exp154"
+  },
+  "candidate_changed": false,
+  "candidate_grid_changed": false,
+  "selection_gate_changed": false,
+  "runtime_learned_components": 0,
+  "paid_api_calls": 0,
+  "fresh_blind": false,
+  "claim_limit": "632-row Qwen/MPNet development repair only"
+}

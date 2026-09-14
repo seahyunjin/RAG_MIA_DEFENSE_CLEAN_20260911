@@ -1,0 +1,7 @@
+# IA_STD_Q15_V4_TWO_STAGE
+
+- Current stage: `IA_STD_Q15_V4_FORMAT_PREFLIGHT_FAILED`
+- Updated UTC: `2026-09-13T08:22:43.596154+00:00`
+- valid: `58`
+- validity_gap: `0.039999999999999925`
+- next_stage: `STOP_IA_RECOVERY`

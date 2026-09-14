@@ -1,0 +1,109 @@
+{
+  "attack_samples": 0,
+  "budgets": [
+    0.01,
+    0.025,
+    0.03,
+    0.05
+  ],
+  "calibration": {
+    "n": 500,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/inputs/TOPIOCQA_BENIGN_RECALIBRATION_500.jsonl",
+    "sha256": "eb10d63f9d5b3c7d5498ab8ab77e0ae6aeab0330df83d82bf31d44506d9853ae"
+  },
+  "calibration_local_rule": "leave-self-out 200 nearest calibration-query embeddings; add-one empirical upper tail",
+  "campaign": "FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1",
+  "code_sha256": {
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/common.py": "9026d0ced6717cb660e257effd254d3b9ba4bfd076be4dca1975232fac481a0c",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/prepare_gold_recalibration.py": "976949f8ae274ff78f863eed156e0acdfae5ead3892b43ac0f9a80638ae9d4e1",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/code/run_gold_recalibration.py": "67c127b0ab5df3417ab6915a5fe682be85b478d70e92cc838312c6ff6a0acb33"
+  },
+  "corpus": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_CORPUS.jsonl",
+    "sha256": "4fa9fc359d953064c9fd58d631cf3ebec6e8b988f397943fa3ec3394b83be2a9"
+  },
+  "created_utc": "2026-09-13T05:58:56.073726+00:00",
+  "final_lc_frozen_manifest": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/configs/FINAL_LC_FROZEN_MANIFEST.json",
+    "sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9"
+  },
+  "final_lc_frozen_sha256": "3d5de8cf247f4f8b79891ef70d6e180763c9b109ba39441950dcf616152c3af9",
+  "frozen": [
+    "LC formula",
+    "k",
+    "BGE-M3",
+    "locator",
+    "Simple Hide",
+    "Qwen",
+    "context builder",
+    "prompt",
+    "decoding"
+  ],
+  "gates": {
+    "gold_f1_drop": "<=0.02 absolute",
+    "intervention": "<=0.05",
+    "new_refusal": "<=0.01 preferred and verdict requirement"
+  },
+  "generator": {
+    "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json",
+    "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+  },
+  "gradient_steps": 0,
+  "k_local": 200,
+  "locked_test": {
+    "n": 1000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_EVAL_1000.jsonl",
+    "sha256": "3074be3e2cebae22fced3af26df1b126e02c163199dbfc71a60c606d92aa637a"
+  },
+  "old_factuality": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/tables/GOLD_FACTUALITY_SENTENCES.csv",
+    "sha256": "4a6422a58e91e8e0cb7d1ed336ced53be79ed6e10902a0c11fb240a4638b0328"
+  },
+  "old_test_answers": {
+    "n": 4000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/runtime/GOLD_QA_DETAIL.jsonl",
+    "sha256": "df4df5bb9968966005daea283c7806cdc2893e4666ad12622d87c2402a280d75"
+  },
+  "old_test_retrieval": {
+    "n": 1000,
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/GOLD_RETRIEVAL_AND_DETECTION.jsonl",
+    "sha256": "30369f4df8bead8ab675524188a8e51dc8edf12bc7a73399f95f8853f433106c"
+  },
+  "performance_results_opened": false,
+  "phase": "B_GOLD_BENIGN_ONLY_RECALIBRATION",
+  "primary_budget": 0.025,
+  "refresh": [
+    "benign reference bank",
+    "MIRABEL-margin distribution",
+    "local LC neighborhood cache",
+    "outer thresholds"
+  ],
+  "request": {
+    "path": "/home/cau_lab/.codex/attachments/2e9f1731-d8ad-4e92-af46-5e28b3af042f/pasted-text.txt",
+    "sha256": "4157a65a2071388b4a27036c1ddab9c8e31d72a63804fc56e6a104a605868a9a"
+  },
+  "retriever": {
+    "path": "/home/traffic_3/workspace/.cache/huggingface/hub/models--BAAI--bge-m3/snapshots/5617a9f61b028005a4858fdac845db406aefb181/config.json",
+    "sha256": "26159e7ad065073448460117eb24b7a4572f6f4e78eadff65dc0a11c052449fa"
+  },
+  "source_of_truth": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/configs/FINAL_DEFENSE_MANIFEST.json",
+    "sha256": "ccdb92db49364a9a9f390864272f97f55456f5949a9af01f9c527990043d57b9"
+  },
+  "split_audit_sha256": "21938834fa57d04f5d7130018c9fa09034fe50eab95aaf583e98bd36265430da",
+  "strict_transfer_frozen": {
+    "f1_delta": -0.031000644615926554,
+    "final_lc_f1": 0.1779442924752994,
+    "intervention": 0.692,
+    "new_refusal": 0.058,
+    "no_defense_f1": 0.20894493709122594,
+    "verdict": "STRICT_TRANSFER_FAILED"
+  },
+  "strict_transfer_result": {
+    "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/PHASE_C_RESULT.json",
+    "sha256": "c15537051916c2cd3d170a37dafc3b2613960074ceadf4cdd952c280a120c265"
+  },
+  "test_local_rule": "200 nearest calibration-query embeddings; add-one empirical upper tail",
+  "threshold_rule": "most permissive calibration-observed threshold satisfying strict > and floor(alpha*N) alarms",
+  "training_steps": 0
+}

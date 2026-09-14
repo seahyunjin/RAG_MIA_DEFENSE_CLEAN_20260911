@@ -1,0 +1,64 @@
+{
+  "alpha_selection": false,
+  "created_utc": "2026-08-29T08:26:23.368175+00:00",
+  "critical_requirement": "exact C1(c,s*) available for BudgetLeak rank1-4",
+  "dominant_source_rule": "argmax frozen QLL; tie lower retrieval index then source ID",
+  "exp191_qll_hash_verified_against_exp190_provenance": true,
+  "exp191_qll_sha256": "eec6b3c7b0ee3ff9625244efa5a76deed4ec5b35475404e13c58bb7fcbdb11d2",
+  "experiment": "Exp192",
+  "forbidden_imputation": [
+    "zero",
+    "max C1",
+    "embedding",
+    "retrieval score",
+    "QLL as C1 proxy"
+  ],
+  "frozen_C": "C1=final_cumulative_l1",
+  "frozen_I": "I4=qll_margin",
+  "inputs": {
+    "exp179_cross_qll": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp179_cross_family_qwen_source_influence_20260828/private/EXP179_QUERY_SOURCE_QLL.private.csv.gz",
+      "sha256": "fc5ea11ecdefaab406a957b90d4f0b7ce7275d144683fb69fb1c07ab40406f21"
+    },
+    "exp179_qll_summary": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp179_cross_family_qwen_source_influence_20260828/tables/TABLE_179_02_QUERY_SUMMARY.csv",
+      "sha256": "eec6b3c7b0ee3ff9625244efa5a76deed4ec5b35475404e13c58bb7fcbdb11d2"
+    },
+    "exp181_native_qll": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp181_native_session_continuous_qll_20260828/private/EXP181_SOURCE_QLL.private.csv.gz",
+      "sha256": "c2a64de230aa96d9a84e43c05699b3a16258cfc95d49b2f843de01912948df6f"
+    },
+    "exp189_cases": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CASES.private.pkl.gz",
+      "sha256": "9fb69adee11cd6bf8337effc76bf3d632c1ebf126463b00b80dd33bbb97e979d"
+    },
+    "exp189_claim_costs": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_CLAIM_COSTS.private.pkl.gz",
+      "sha256": "58166d710424d9ac51d8275b34e0aadfd58862055ed7c4fc878172c16de5c94f"
+    },
+    "exp189_ledger": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp189_simple_global_disclosure_ledger_20260829/private/ATTACK_LEDGER.private.csv.gz",
+      "sha256": "57def2922c26d540befe5528a4a54d767ac7202b0079a2e6ca9a1f9923bbb495"
+    },
+    "exp190_features": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/private/EXP190_SESSION_FEATURES.private.csv.gz",
+      "sha256": "1a3b0db194e724d69a558af17b82d21c5c42dffbfe2a884bfbea581265494e94"
+    },
+    "exp190_provenance": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp190_leakage_channel_decomposition_audit_20260829/provenance/FROZEN_INPUTS.csv",
+      "sha256": "e1a037e156235b24e23e7a807d14e9a1481e1abaf39c8db7550b1598b2e37357"
+    },
+    "exp191_final": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/FINAL_RESULT.json",
+      "sha256": "c48be9544a79e433fbb4511e7ebc10bc9c3daa282d995d90c317919be9247d95"
+    },
+    "exp191_rank": {
+      "path": "/home/traffic_3/workspace/workspace/SH/LoRA-mirabel-Decter/exp191_two_channel_signal_compression_audit_20260829/tables/TABLE_191_11_BUDGETLEAK_BY_RANK.csv",
+      "sha256": "c0eff86338f371217ed9f7a797310ab85927fc227d2116147a01aa019aee1e00"
+    }
+  },
+  "new_defense": false,
+  "new_generation": false,
+  "purpose": "QLL_ANCHORED_CUMULATIVE_INPUT_GATE",
+  "threshold_selection": false
+}

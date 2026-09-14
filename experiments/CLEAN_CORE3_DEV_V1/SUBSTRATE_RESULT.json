@@ -1,0 +1,36 @@
+{
+  "verdict": "CORE3_MEMBERSHIP_AUDIT_PASS",
+  "common_eligible_total": 137057,
+  "common_eligible_by_domain": {
+    "nfcorpus": 3426,
+    "scidocs": 21773,
+    "trec-covid": 111858
+  },
+  "targets": {
+    "member": 20,
+    "nonmember": 20,
+    "domain_counts": {
+      "nfcorpus": 14,
+      "scidocs": 14,
+      "trec-covid": 12
+    }
+  },
+  "benign": {
+    "calibration": 500,
+    "holdout": 500,
+    "per_split_domain_counts": {
+      "nfcorpus": 250,
+      "scidocs": 225,
+      "trec-covid": 25
+    }
+  },
+  "database": {
+    "documents": 3000,
+    "domain_counts": {
+      "nfcorpus": 1000,
+      "scidocs": 1000,
+      "trec-covid": 1000
+    },
+    "sha256": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c"
+  }
+}

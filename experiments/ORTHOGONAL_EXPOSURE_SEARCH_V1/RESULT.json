@@ -1,0 +1,127 @@
+{
+  "campaign": "ORTHOGONAL_EXPOSURE_SEARCH_V1",
+  "e2e_completed": false,
+  "final_verdict": "TRAINING_FREE_HANDCRAFTED_DETECTOR_SEARCH_CLOSED",
+  "fresh_confirmation_completed": false,
+  "phase_a": {
+    "answers": {
+      "Q1_existing_5pp_complement": false,
+      "Q2_strict_blackbox_runtime_eligible": false,
+      "Q3_generator_side_evidence_required_for_headroom": false
+    },
+    "completed_utc": "2026-09-12T08:11:19.123168+00:00",
+    "conclusions": {
+      "DualTail": {
+        "eligibility": "STRICT_BLACKBOX",
+        "meaningful_5pp_net_recovery": false,
+        "menta_net_recovery_rate": -0.012,
+        "menta_unique_recovery_rate": 0.022
+      },
+      "QLL": {
+        "eligibility": "ANALYSIS_ONLY_NON_BLACKBOX",
+        "meaningful_5pp_net_recovery": false,
+        "menta_net_recovery_rate": -0.884,
+        "menta_unique_recovery_rate": 0.0
+      }
+    },
+    "development_notice": "THIS_COHORT_IS_NOW_DEVELOPMENT_DATA",
+    "frozen_v2_verdict_preserved": "DUALTAIL_MEMBER_EXPOSURE_NOT_REPLICATED",
+    "phase_b_required": true,
+    "precommit_sha256": "9ea31a1a6f07bcd9893d46443adc047ac35a8983ddcbf0b860a18785350d015d",
+    "runtime_seconds": 1141.6239049062133,
+    "signal_availability": {
+      "Answer-LOO": "SIGNAL_UNAVAILABLE",
+      "DualTail": "STRICT_BLACKBOX",
+      "MIRABEL": "STRICT_BLACKBOX",
+      "QLL": "ANALYSIS_ONLY_NON_BLACKBOX"
+    },
+    "verdict": "A_NO_MEANINGFUL_COMPLEMENT"
+  },
+  "phase_b": {
+    "binary_threshold_diagnostic": {
+      "M": {
+        "benign_alarms": 30,
+        "threshold": 0.09021577842786499
+      },
+      "S_sparse": {
+        "benign_alarms": 29,
+        "threshold": 3.6566181299900995
+      }
+    },
+    "bootstrap": [
+      {
+        "attack": "MEntA",
+        "bootstrap_mean_delta": -0.013196125000000019,
+        "ci95_high": -0.00275000000000003,
+        "ci95_low": -0.025249999999999995,
+        "iterations": 2000,
+        "point_delta": -0.013249999999999984,
+        "unit": "target/session"
+      },
+      {
+        "attack": "MBA",
+        "bootstrap_mean_delta": -0.007516250000000026,
+        "ci95_high": 0.003750000000000031,
+        "ci95_low": -0.026249999999999996,
+        "iterations": 2000,
+        "point_delta": -0.007500000000000062,
+        "unit": "target/session"
+      },
+      {
+        "attack": "RAG-MIA",
+        "bootstrap_mean_delta": -0.042603125000000006,
+        "ci95_high": -0.007500000000000062,
+        "ci95_low": -0.08625000000000005,
+        "iterations": 2000,
+        "point_delta": -0.04249999999999998,
+        "unit": "target/session"
+      }
+    ],
+    "checks": {
+      "core3_macro_member_tpr_improved": false,
+      "mba_noninferior_within_5pp": true,
+      "menta_cluster_bootstrap_ci_low_above_zero": false,
+      "menta_delta_at_least_5pp": false,
+      "rag_mia_noninferior_within_5pp": true
+    },
+    "completed_utc": "2026-09-12T08:11:32.819505+00:00",
+    "confirmation_required": false,
+    "development_notice": "THIS_COHORT_IS_NOW_DEVELOPMENT_DATA",
+    "e2e_allowed": false,
+    "failure_closure": "No further handcrafted detector search; no generation.",
+    "final_verdict_if_stopped_now": "TRAINING_FREE_HANDCRAFTED_DETECTOR_SEARCH_CLOSED",
+    "gain_concentration": {
+      "largest_target_fraction": 0,
+      "top2_target_fraction": 0,
+      "total_unique_recovered_queries": 0,
+      "warning": null
+    },
+    "macro": {
+      "MIRABEL": 0.9460000000000001,
+      "SPARSE": 0.9249166666666667,
+      "delta": -0.021083333333333343
+    },
+    "matched_member_tpr_at_3pct": {
+      "MBA": {
+        "M": 0.99,
+        "S_sparse": 0.9824999999999999,
+        "delta": -0.007500000000000062
+      },
+      "MEntA": {
+        "M": 0.908,
+        "S_sparse": 0.89475,
+        "delta": -0.013249999999999984
+      },
+      "RAG-MIA": {
+        "M": 0.94,
+        "S_sparse": 0.8975,
+        "delta": -0.04249999999999998
+      }
+    },
+    "precommit_sha256": "745377ef4729152fc55839a0da700446602314cef3e934f59164c5034dedc1f5",
+    "runtime_seconds": 11.933983370661736,
+    "screen_passed": false,
+    "verdict": "SPARSE_EXPOSURE_SCREEN_FAILED",
+    "worst_domain_fpr_at_3pct": 0.03111111111111111
+  }
+}

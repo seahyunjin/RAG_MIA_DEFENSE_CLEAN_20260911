@@ -1,0 +1,37 @@
+{
+  "attack_samples_used": 0,
+  "calibration_alarms": 7,
+  "calibration_n": 500,
+  "campaign": "FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1",
+  "checks": {
+    "gold_f1_drop_at_most_2pp": true,
+    "locked_intervention_at_most_5pct": true,
+    "new_refusal_at_most_1pp": true
+  },
+  "completed_utc": "2026-09-13T06:07:47.334840+00:00",
+  "factuality": "existing frozen NLI artifacts retained; refreshed-answer factuality requires origin-matched aggregation",
+  "fp_subset_gold_f1_after": 0.2184014214368331,
+  "fp_subset_gold_f1_before": 0.25723860957443784,
+  "fp_subset_n": 27,
+  "gold_f1_delta": -0.0010486040797153262,
+  "gradient_steps": 0,
+  "locked_intervention": 0.027,
+  "locked_test_n": 1000,
+  "new_refusal": 0.001,
+  "next_stage": "CROSS_DOMAIN_GENERALIZATION_READY",
+  "no_defense_gold_f1": 0.20894493709122594,
+  "primary_budget": 0.025,
+  "refreshed_gold_em": 0.03,
+  "refreshed_gold_f1": 0.20789633301151061,
+  "strict_transfer": {
+    "f1_delta": -0.031000644615926554,
+    "final_lc_f1": 0.1779442924752994,
+    "intervention": 0.692,
+    "new_refusal": 0.058,
+    "no_defense_f1": 0.20894493709122594,
+    "verdict": "STRICT_TRANSFER_FAILED"
+  },
+  "threshold": 3.917010546939185,
+  "training_steps": 0,
+  "verdict": "BENIGN_RECALIBRATION_PASS"
+}
