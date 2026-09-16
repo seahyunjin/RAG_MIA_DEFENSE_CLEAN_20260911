@@ -1,0 +1,4 @@
+Method,Intervention_pct,Gold_F1,Gold_F1_retention_pct,Answer_preservation_F1,New_refusal_pct,Contradiction_introduced_pct
+No Defense,0.0,0.208945,100.0,1.0,0.0,0.0
+MIRABEL,5.1,0.206115,98.65,0.981391,0.3,0.2
+Final V2,3.9,0.203186,97.24,0.980548,0.7,0.4

@@ -1,5 +1,7 @@
 # Final V2 검증 릴리스 (2026-09-17)
 
+> 발표용 최신 확정 표·PNG/PDF는 [presentation_ready/](presentation_ready/README_KO.md)에 정리했다. 이 폴더는 계보 불일치 진단을 제외하고, Gold-F1 보존율과 answer-preservation을 구분해 표기한다.
+
 이 폴더는 RAG 멤버십 추론 방어의 동결 후보인 **Top-4 Local Retrieval Concentration Defense**(내부명 Final V2/G4/LRC-4)의 재현 코드, 핵심 수치, 그림과 해석을 모은 발표·논문용 릴리스다.
 
 ## 방법

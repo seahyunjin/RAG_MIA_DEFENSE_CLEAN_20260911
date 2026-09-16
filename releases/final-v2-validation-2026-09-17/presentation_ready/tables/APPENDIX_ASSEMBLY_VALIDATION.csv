@@ -1,0 +1,6 @@
+Metric,Evaluated_n,Result
+V2 alarm total,8015,8015
+Selected source != rank-1,8015,0
+Multi-detector same hidden source,7645,100%
+"Same hidden source, answer-hash mismatch",7645,0
+Missing near threshold,10,10

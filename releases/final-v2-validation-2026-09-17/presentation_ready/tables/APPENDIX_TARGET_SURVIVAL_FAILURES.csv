@@ -1,0 +1,6 @@
+Attack,Member_queries,Alarm_rank2to4_target_survives_n,Miss_rank1_target_survives_n,Miss_rank1_pct
+MEntA,5000,1,244,4.88
+MBA,1000,0,1,0.1
+RAG-MIA,1000,0,13,1.3
+S2-MIA,799,0,1,0.13
+DCMI-Q2,2000,0,236,11.8

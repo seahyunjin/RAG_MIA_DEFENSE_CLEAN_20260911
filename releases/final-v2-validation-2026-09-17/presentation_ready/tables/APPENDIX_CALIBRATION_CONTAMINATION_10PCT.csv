@@ -1,0 +1,5 @@
+Domain,Detector,Clean_TPR_pct,Percentile_10pct_TPR_pct,MAD_10pct_TPR_pct,Percentile_locked_FPR_pct,MAD_locked_FPR_pct
+Core,V2,94.6,44.34,93.21,0.0,1.9
+Core,MIRABEL,85.3,49.12,81.24,0.1,1.8
+FinQA,V2,54.5,28.07,51.51,0.5,2.0
+FinQA,MIRABEL,51.33,28.52,42.23,0.1,1.0

@@ -1,0 +1,4 @@
+Retriever,MIRABEL_Core5_macro_TPR_pct,V2_Core5_macro_TPR_pct,V2_min_attack_TPR_pct,V2_max_attack_TPR_pct
+bge-m3,89.28,96.06,86.95,99.9
+gte-base,81.21,87.98,78.7,99.0
+mpnet-base,26.72,50.16,23.3,65.8

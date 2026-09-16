@@ -1,0 +1,4 @@
+Candidate,Uniformly_better,Verdict
+z-sum,False,FUSION_NOT_UNIFORMLY_BETTER
+alpha=0.25/0.5/0.75,False,FUSION_NOT_UNIFORMLY_BETTER
+2D AND,False,FUSION_NOT_UNIFORMLY_BETTER
