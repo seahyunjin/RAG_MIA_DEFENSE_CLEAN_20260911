@@ -1,4 +1,6 @@
-# Constructed Hard-Benign V1 최종 보고
+# Constructed FinQA D-hard V1 최종 보고
+
+> 계보 정정: 이 2,113개는 FinQA DB에서 검색한 `D-hard(E)`이며 BEIR Core hard-benign이 아니다.
 
 이 평가는 외부 표준 benchmark가 아니라, detector score를 보기 전에 FinQA 정상 질의/문서로 만든 독립 constructed benchmark다.
 
@@ -24,8 +26,8 @@
 | MCQ | FINAL_V2 | 138 | 2 | 0.0145 | [0.0040, 0.0513] |
 | Discrete Macro | MIRABEL | 430 | 7 | 0.0163 | [0.0079, 0.0332] |
 | Discrete Macro | FINAL_V2 | 430 | 14 | 0.0326 | [0.0195, 0.0539] |
-| Hard-Benign Macro | MIRABEL | 2113 | 52 | 0.0246 | [0.0188, 0.0321] |
-| Hard-Benign Macro | FINAL_V2 | 2113 | 72 | 0.0341 | [0.0271, 0.0427] |
+| FinQA D-hard Macro | MIRABEL | 2113 | 52 | 0.0246 | [0.0188, 0.0321] |
+| FinQA D-hard Macro | FINAL_V2 | 2113 | 72 | 0.0341 | [0.0271, 0.0427] |
 
 ## Answer utility
 
@@ -58,9 +60,9 @@
 | Discrete Macro | NO_DEFENSE | 430 | 1.0000 | 0.0000 | 0 |  |
 | Discrete Macro | MIRABEL | 430 | 0.9902 | 0.0070 | 0 |  |
 | Discrete Macro | FINAL_V2 | 430 | 0.9741 | 0.0233 | 0 |  |
-| Hard-Benign Macro | NO_DEFENSE | 2113 | 1.0000 | 0.0000 | 499 | 0.0071 |
-| Hard-Benign Macro | MIRABEL | 2113 | 0.9848 | 0.0118 | 499 | 0.0070 |
-| Hard-Benign Macro | FINAL_V2 | 2113 | 0.9741 | 0.0222 | 499 | 0.0066 |
+| FinQA D-hard Macro | NO_DEFENSE | 2113 | 1.0000 | 0.0000 | 499 | 0.0071 |
+| FinQA D-hard Macro | MIRABEL | 2113 | 0.9848 | 0.0118 | 499 | 0.0070 |
+| FinQA D-hard Macro | FINAL_V2 | 2113 | 0.9741 | 0.0222 | 499 | 0.0066 |
 
 ## Factuality boundary
 

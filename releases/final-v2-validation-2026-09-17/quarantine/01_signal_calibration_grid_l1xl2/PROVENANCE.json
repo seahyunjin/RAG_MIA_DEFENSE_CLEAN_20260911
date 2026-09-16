@@ -1,0 +1,11 @@
+{
+  "files": [
+    {
+      "file": "TABLE_SIGNAL_CALIBRATION_GRID.csv",
+      "sha256": "73158093d1adf3862e5dba72a3a4da53e4ebe302c60614bbdb046886f31c5751",
+      "source": "experiments/H1_H2_SIGNAL_CALIBRATION_DIAG_CPU_V1/tables/TABLE_SIGNAL_CALIBRATION_GRID.csv"
+    }
+  ],
+  "reason": "Core member(L1) 점수와 TopiOCQA DB(L2) 점수를 조인함",
+  "verdict": "INVALID_L1xL2_MIX"
+}

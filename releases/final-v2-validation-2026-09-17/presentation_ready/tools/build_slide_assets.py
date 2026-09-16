@@ -64,11 +64,11 @@ TABLE_DATA: dict[str, list[dict[str, object]]] = {
         {"Detector": "V2 (G4)", "Member_TPR_pct": 94.60, "Nonmember_intervention_pct": 2.92, "Intervention_precision_pct": 96.75},
         {"Detector": "MIRABEL", "Member_TPR_pct": 85.30, "Nonmember_intervention_pct": 1.56, "Intervention_precision_pct": 97.91},
     ],
-    "SLIDE13_HARD_BENIGN_RECALIBRATION.csv": [
+    "APPENDIX_FINQA_HARD_TO_CORE_CROSS_CORPUS.csv": [
         {"Detector": "V2 (G4)", "Hard_locked_FPR_pct": 1.89, "Core5_member_TPR_pct": 95.53, "Core5_nonmember_intervention_pct": 3.64, "Intervention_precision_pct": 96.12},
         {"Detector": "MIRABEL", "Hard_locked_FPR_pct": 2.34, "Core5_member_TPR_pct": 81.99, "Core5_nonmember_intervention_pct": 1.13, "Intervention_precision_pct": 98.32},
     ],
-    "SLIDE13_HARD_BENIGN_TYPE_FPR.csv": [
+    "SLIDE15_FINQA_HARD_TYPE_FPR.csv": [
         {"Type": "Yes/No", "V2_FPR_pct": 2.67, "MIRABEL_FPR_pct": 4.00},
         {"Type": "Exact-Fact", "V2_FPR_pct": 1.96, "MIRABEL_FPR_pct": 0.65},
         {"Type": "Deep-study", "V2_FPR_pct": 3.80, "MIRABEL_FPR_pct": 2.53},
@@ -274,22 +274,22 @@ def plot_k_ablation() -> None:
 
 
 def plot_hard_benign() -> None:
-    rows = TABLE_DATA["SLIDE13_HARD_BENIGN_RECALIBRATION.csv"]
+    rows = TABLE_DATA["APPENDIX_FINQA_HARD_TO_CORE_CROSS_CORPUS.csv"]
     labels = [str(r["Detector"]) for r in rows]
     x = np.arange(len(labels))
     width = 0.24
     fig, ax = plt.subplots(figsize=(8.2, 4.7))
-    ax.bar(x - width, [float(r["Hard_locked_FPR_pct"]) for r in rows], width, label="Hard-benign FPR")
-    ax.bar(x, [float(r["Core5_nonmember_intervention_pct"]) for r in rows], width, label="Nonmember intervention")
-    ax.bar(x + width, [float(r["Core5_member_TPR_pct"]) for r in rows], width, label="Member TPR")
+    ax.bar(x - width, [float(r["Hard_locked_FPR_pct"]) for r in rows], width, label="D-hard(E) locked FPR")
+    ax.bar(x, [float(r["Core5_nonmember_intervention_pct"]) for r in rows], width, label="Core5 nonmember (cross-corpus)")
+    ax.bar(x + width, [float(r["Core5_member_TPR_pct"]) for r in rows], width, label="Core5 member TPR (cross-corpus)")
     ax.set_xticks(x, labels)
     ax.set_ylabel("Rate (%)")
     ax.set_ylim(0, 105)
     ax.grid(axis="y", alpha=0.25)
     ax.legend(ncol=3, fontsize=8, loc="upper center")
     fig.tight_layout()
-    fig.savefig(PLOTS_PNG / "FIG_HARD_BENIGN_RECALIBRATION.png", dpi=300, bbox_inches="tight")
-    fig.savefig(PLOTS_PDF / "FIG_HARD_BENIGN_RECALIBRATION.pdf", bbox_inches="tight")
+    fig.savefig(PLOTS_PNG / "FIG_FINQA_HARD_BENIGN_RECALIBRATION.png", dpi=300, bbox_inches="tight")
+    fig.savefig(PLOTS_PDF / "FIG_FINQA_HARD_BENIGN_RECALIBRATION.pdf", bbox_inches="tight")
     plt.close(fig)
 
 

@@ -1,0 +1,44 @@
+{
+  "D": {
+    "benign_sets": [
+      "D-cal",
+      "D-lock"
+    ],
+    "description": "FinQA attack/benign DB",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "retrieval_db_path": "experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/inputs/FINQA_PROTECTED_DB.jsonl"
+  },
+  "D-hard(E)": {
+    "benign_sets": [
+      "E-cal",
+      "E-lock",
+      "E-full"
+    ],
+    "description": "FinQA hard-benign bank; not Core",
+    "hard_retrieval_hash": "024ecdbb4592ed511817d381bf00548bc9863dc5bcad72973cf8ba306e7ad661",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "retrieval_db_path": "experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/inputs/FINQA_PROTECTED_DB.jsonl",
+    "split_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376"
+  },
+  "L1": {
+    "benign_sets": [
+      "A",
+      "B",
+      "C",
+      "C-Sci"
+    ],
+    "description": "BEIR Core DB 3,000",
+    "document_embedding_hash": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "retrieval_db_path": "experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl"
+  },
+  "L2": {
+    "benign_sets": [
+      "TopiOCQA Gold utility"
+    ],
+    "description": "TopiOCQA utility DB only",
+    "retrieval_artifact_hash": "30369f4df8bead8ab675524188a8e51dc8edf12bc7a73399f95f8853f433106c",
+    "retrieval_db_hash": "4fa9fc359d953064c9fd58d631cf3ebec6e8b988f397943fa3ec3394b83be2a9",
+    "retrieval_db_path": "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_CORPUS.jsonl"
+  }
+}

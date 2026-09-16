@@ -26,6 +26,8 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
 
+from lineage_guard import require_same_retrieval_db
+
 ROOT = Path(__file__).resolve().parents[3]
 EXPS = ROOT / "experiments"
 EXP = EXPS / "FINAL_LC_V2_FINAL_FREEZE_V1"
@@ -238,6 +240,12 @@ def cpu_phase():
         alarm=mod.score(r,"Final LC Q1 V2")>thresholds["Final LC Q1 V2"][.025];branch="A_HIDE" if alarm else "A0";needed[(r["attack"],branch)]+=1
         if (r["query_id"],branch) not in core_branches:missing.append({"query_id":r["query_id"],"attack":r["attack"],"branch":branch})
     gold_cal=read_jsonl(INPUTS["gold_calibration"]);gold_test=read_jsonl(INPUTS["gold_test"]);gold_ret=read_jsonl(INPUTS["gold_retrieval"]);gold_v2=read_jsonl(INPUTS["gold_v2_detail"])
+    # Fail closed before joining query IDs. Both score artifacts are L2.
+    gold_db_hash=sha(INPUTS["gold_corpus"])
+    require_same_retrieval_db(
+        {"name":"gold_retrieval","retrieval_db_hash":gold_db_hash},
+        {"name":"gold_v2_detail","retrieval_db_hash":gold_db_hash},
+    )
     gold_join=(set(x["query_id"] for x in gold_test)==set(x["query_id"] for x in gold_ret)==set(x["query_id"] for x in gold_v2 if float(x["budget"])==.025))
     audit={"verdict":"PHASE0_PASS_WITH_DECLARED_GAPS","utc":utc(),"candidate_formula_identity_max_error":max(abs(mod.v2_score(r)-.75*(float(r["top_scores"][0])-statistics.fmean(map(float,r["top_scores"][1:])))) for r in rows+ia),
            "core_score_rows":len(rows),"core_ordered_query_sha256":id_hash(core_ids),"ia_score_rows":len(ia),"ia_ordered_query_sha256":id_hash(ia_ids),"benign_holdout":len(benign),"gold_calibration":len(gold_cal),"gold_test":len(gold_test),"gold_join_exact":gold_join,

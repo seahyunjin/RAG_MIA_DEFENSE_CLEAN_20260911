@@ -1,0 +1,17 @@
+{
+  "cpu_only": true,
+  "expected_order": "first 500=A, last 1000=B",
+  "formula": {
+    "G4": "s1-mean(s1..s4)",
+    "M": "canonical_official_v2"
+  },
+  "inputs": {
+    "experiments/CLEAN_CORE3_DEV_V1/cache/CORPUS_EMBEDDINGS.float16.npy": "dd1c220459f467e7e1bc42c20e173cc147e9b261531562d512e99ed5eb87af0e",
+    "experiments/CLEAN_CORE3_DEV_V1/inputs/CLEAN_CORE3_PROTECTED_DB.jsonl": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_EVAL_1000.jsonl": "3074be3e2cebae22fced3af26df1b126e02c163199dbfc71a60c606d92aa637a",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/cache/GOLD_RECALIBRATION_QUERY_EMBEDDINGS.float16.npy": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/inputs/TOPIOCQA_BENIGN_RECALIBRATION_500.jsonl": "eb10d63f9d5b3c7d5498ab8ab77e0ae6aeab0330df83d82bf31d44506d9853ae"
+  },
+  "new_embedding_inference": 0,
+  "status": "PRECOMMITTED_BEFORE_SCORE_SAVE"
+}

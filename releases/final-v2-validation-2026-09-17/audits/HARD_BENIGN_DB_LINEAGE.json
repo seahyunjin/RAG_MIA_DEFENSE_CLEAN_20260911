@@ -1,0 +1,12 @@
+{
+  "finqa_prefix": 8452,
+  "hard_benign_retrieval_sha256": "024ecdbb4592ed511817d381bf00548bc9863dc5bcad72973cf8ba306e7ad661",
+  "in_L1": 0,
+  "note": "D-hard uses the FinQA protected DB; it is not Core/L1.",
+  "previous_verdict": "HARD_BENIGN_DB_LINEAGE_MISMATCH_STOP",
+  "query_count": 2113,
+  "retrieval_db": "D-hard(E)",
+  "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+  "top_document_id_occurrences": 8452,
+  "verdict": "RECLASSIFIED_D_HARD_FINQA"
+}

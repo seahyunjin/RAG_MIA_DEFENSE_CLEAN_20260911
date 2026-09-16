@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "file": "TABLE_LINEAGE_RECONCILIATION.csv",
+      "sha256": "92161af4463f24f349acec7185d87d5592b4f05071b1e4a20aeb42302d6f7a87",
+      "source": "experiments/FINAL_V2_LINEAGE_FINQA_AUC_AUDIT_CPU_V1/tables/TABLE_LINEAGE_RECONCILIATION.csv"
+    },
+    {
+      "file": "TABLE_FINQA_THRESHOLD_TRANSFER.csv",
+      "sha256": "f2c5d2ae51ff737dab92737e718c95557aabd051f0c2b3caa84155914914fddd",
+      "source": "experiments/FINAL_V2_LINEAGE_FINQA_AUC_AUDIT_CPU_V1/tables/TABLE_FINQA_THRESHOLD_TRANSFER.csv"
+    }
+  ],
+  "reason": "Core member(L1) 점수와 TopiOCQA DB(L2) 점수를 조인함",
+  "verdict": "INVALID_L1xL2_MIX"
+}

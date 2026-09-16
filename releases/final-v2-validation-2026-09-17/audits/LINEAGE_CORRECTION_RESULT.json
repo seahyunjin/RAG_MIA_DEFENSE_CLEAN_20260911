@@ -1,0 +1,40 @@
+{
+  "B_on_L1_s1_median": 0.435949370265007,
+  "frozen_threshold_B_on_L1": [
+    {
+      "actual_fpr": 0.0,
+      "alarm_n": 0,
+      "benign_n": 1000,
+      "benign_set": "B",
+      "comparator": ">",
+      "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+      "retrieval_db": "L1",
+      "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+      "score": "G4",
+      "threshold": 0.0901547372341156
+    },
+    {
+      "actual_fpr": 0.0,
+      "alarm_n": 0,
+      "benign_n": 1000,
+      "benign_set": "B",
+      "comparator": ">",
+      "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+      "retrieval_db": "L1",
+      "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+      "score": "M",
+      "threshold": 0.09579957418751517
+    }
+  ],
+  "outputs": [
+    "AUC_CORE_VS_TOPI_L1.csv",
+    "CROSS_CORPUS_THRESHOLD_TRANSFER.csv",
+    "CROSS_CORPUS_THRESHOLD_TRANSFER_BY_HARD_TYPE.csv",
+    "FINQA_HARD_BENIGN_MATCHED.csv",
+    "FROZEN_THRESHOLD_ON_TOPI_L1.csv",
+    "LINEAGE_CORRECTED_CALIBRATION_SUMMARY.csv",
+    "SIGNAL_CALIBRATION_GRID_L1.csv"
+  ],
+  "quarantine_groups": 4,
+  "verdict": "LINEAGE_CORRECTION_PASS"
+}

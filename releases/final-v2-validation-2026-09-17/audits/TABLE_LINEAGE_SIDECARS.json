@@ -1,0 +1,434 @@
+{
+  "audits/TOPI_AB_ON_L1_SCORES.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "fda984cb4323a4a44325ee34b882f1d671de2225e65354cfcc3d285a6caa6daf"
+  },
+  "presentation_ready/SOURCE_MANIFEST_SHA256.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "1b71aa2bc3a1f759aa58450294c870e7e2313a33dbc600693662a10224b47310"
+  },
+  "presentation_ready/source_tables/calibration_contamination.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "6f22d7ccb7850b55fc2782d6a821368a8ef462c7e8cce6ea210c11d0cdd3655a"
+  },
+  "presentation_ready/source_tables/core_member_nonmember_matched_fpr.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "3eac2aa82de7ed06e039359cb8b9e79854beef8518bb2924db8d7cf57e585060"
+  },
+  "presentation_ready/source_tables/detector_latency.csv": {
+    "benign_set": "NOT_APPLICABLE",
+    "benign_set_hash": "NOT_APPLICABLE",
+    "embedding_hash": "NOT_APPLICABLE",
+    "retrieval_db": "SCORE_NEUTRAL",
+    "retrieval_db_hash": "NOT_APPLICABLE",
+    "table_sha256": "a9e2621785b5c5f8badcca8d3a291cecdf53fbd166286ea0d17b0cf15a71991b"
+  },
+  "presentation_ready/source_tables/finqa_core5_e2e.csv": {
+    "benign_set": "D-cal/D-lock",
+    "benign_set_hash": "c2784f4f04d081426014f9bf5cc680f9f3bf1d1564dc7a9e20a58d9bccf02749",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "1a101cae7107fed56a76ee259902e6ccfab9b07e9b88fac612036cd4586ccf49"
+  },
+  "presentation_ready/source_tables/finqa_hard_benign_thresholds_locked_fpr.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "38a062f5902ce406a52b587aa390af2356c841748e97b53c4afd75cf8a99d743"
+  },
+  "presentation_ready/source_tables/finqa_hard_benign_type_fpr.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "05802f0ec8424131fbefae81fa22962912d50812690a7e1f99d0b2acc2f5d9d7"
+  },
+  "presentation_ready/source_tables/finqa_hard_benign_vs_title475.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "ef9480fc918a92a59cd313a129c3db62ce9d80739df831fc4ffdcbc351095bcf"
+  },
+  "presentation_ready/source_tables/finqa_hard_threshold_to_core5_cross_corpus.csv": {
+    "benign_set": "E-cal/E-lock",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_CROSS_CORPUS_MULTIPLE",
+    "retrieval_db": "L1+D-hard(E)",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c+0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "074c6e9147e281cc8606178c6ec2ee90f24662d8fe1a8b94af9caf0a007e9a7a"
+  },
+  "presentation_ready/source_tables/k_ablation_matched_fpr_2p5.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "346033cd21b0a3df1cbe9267065a09bb1fd9f8b5152bec21c268ce7d116dedfd"
+  },
+  "presentation_ready/source_tables/member_target_rank_distribution.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "7f4bded2063ffaf0ec5a9448fcdfbd96c24596d30c52a93e0475110051e64521"
+  },
+  "presentation_ready/source_tables/mirabel_latency_extrapolation.csv": {
+    "benign_set": "NOT_APPLICABLE",
+    "benign_set_hash": "NOT_APPLICABLE",
+    "embedding_hash": "NOT_APPLICABLE",
+    "retrieval_db": "SCORE_NEUTRAL",
+    "retrieval_db_hash": "NOT_APPLICABLE",
+    "table_sha256": "f5d703146d9e1121185604f2897fd075f5540bdb4243ccd446fc1374b4e64660"
+  },
+  "presentation_ready/source_tables/six_attack_g4_histogram_bins.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "72841aa3f0b7a9daf87f8dad9b25af3d77e08eeb2338db557b71bcad3176e88f"
+  },
+  "presentation_ready/source_tables/v2_alarm_target_rank_crosstab.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "6a21675b924545bca9bc4dec986c7e0db83faa5a1b516bc4004fff2b7db79519"
+  },
+  "presentation_ready/tables/APPENDIX_ASSEMBLY_VALIDATION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "106f5b37681f13908fa562092e482e0b7044b5b85181b0547e04322ed2de8d5e"
+  },
+  "presentation_ready/tables/APPENDIX_CALIBRATION_CONTAMINATION_10PCT.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "e1daa0b5216d212605578b0cc0f788298c775df943c22ebb299aaf149f504c77"
+  },
+  "presentation_ready/tables/APPENDIX_FINQA_HARD_TO_CORE_CROSS_CORPUS.csv": {
+    "benign_set": "E-cal/E-lock",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_CROSS_CORPUS_MULTIPLE",
+    "retrieval_db": "L1+D-hard(E)",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c+0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "9b5c194a43da27c9abc9d3b9c3bbc1b38203400c946288ef6ae7380c6e5eda84"
+  },
+  "presentation_ready/tables/APPENDIX_FINQA_THRESHOLD_TRANSFER.csv": {
+    "benign_set": "D-cal/D-lock",
+    "benign_set_hash": "c2784f4f04d081426014f9bf5cc680f9f3bf1d1564dc7a9e20a58d9bccf02749",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "d9e0424d107ad009528adcbda427f652d15e7dfa6e4456dddd0a99b62284b498"
+  },
+  "presentation_ready/tables/APPENDIX_FUSION_DIAGNOSTIC.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "951e4be93832dc9bf7bfb2a4fdbac13abc04e45ed274d773b3371a4791810db2"
+  },
+  "presentation_ready/tables/APPENDIX_IDK_SIDECHANNEL.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "b70ba10ac611b059a31518cc2325fc45accb3acd05ca0531a854643461bfea12"
+  },
+  "presentation_ready/tables/APPENDIX_LATENCY.csv": {
+    "benign_set": "NOT_APPLICABLE",
+    "benign_set_hash": "NOT_APPLICABLE",
+    "embedding_hash": "NOT_APPLICABLE",
+    "retrieval_db": "SCORE_NEUTRAL",
+    "retrieval_db_hash": "NOT_APPLICABLE",
+    "table_sha256": "d070c536defab840d1ca85cba7178b0f36dbb3115f1c449c37bec9fc99accc99"
+  },
+  "presentation_ready/tables/APPENDIX_LLAMA_TRANSFER.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "81f4712629a96f126b71ad4f8b7896d92d04ec0f0f84c97358de41667859a897"
+  },
+  "presentation_ready/tables/APPENDIX_RETRIEVER_TRANSFER.csv": {
+    "benign_set": "C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "MULTI",
+    "retrieval_db": "MULTI",
+    "retrieval_db_hash": "MULTI",
+    "table_sha256": "3e4caf3f216cb59150a45c17dfed723363697f3b6b287a2c59b5ec72606eb950"
+  },
+  "presentation_ready/tables/APPENDIX_TARGET_SURVIVAL_FAILURES.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "836fea3caf34879a82d9b0ab2d8f31257710835a8115434b23ad632b6130acc9"
+  },
+  "presentation_ready/tables/PRESENTATION_QUERY_ANSWER_EXAMPLES.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "b31807609f2be0cc5065b57a82c38dc0a08841c1d8a2fcbdd791c3000c28e725"
+  },
+  "presentation_ready/tables/SLIDE08_RUNTIME_COST.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "d070c536defab840d1ca85cba7178b0f36dbb3115f1c449c37bec9fc99accc99"
+  },
+  "presentation_ready/tables/SLIDE09_CORE5_MATCHED_FPR_DETECTION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "1e1d927a3dfff03fa82ec27a39f1e19f1b59af0edcbb2be83642616cbdb2bb80"
+  },
+  "presentation_ready/tables/SLIDE10_CORE5_QWEN_E2E_PRIVACY.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "92b9eaaae20d9156a2fcbcdc23fbbdfc56a32586cb81b018525c8c293ff52410"
+  },
+  "presentation_ready/tables/SLIDE11_GOLD_QA_UTILITY.csv": {
+    "benign_set": "TopiOCQA Gold utility",
+    "benign_set_hash": "30369f4df8bead8ab675524188a8e51dc8edf12bc7a73399f95f8853f433106c",
+    "embedding_hash": "MISSING",
+    "retrieval_db": "L2",
+    "retrieval_db_hash": "4fa9fc359d953064c9fd58d631cf3ebec6e8b988f397943fa3ec3394b83be2a9",
+    "table_sha256": "f7700b4c7ec92186d83a696dbdb9b87da9d169f6e3b05f62de811a73c269117e"
+  },
+  "presentation_ready/tables/SLIDE12_K_ABLATION_MATCHED_FPR.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "34fb45041393ea52677e79bbb35cf21ae9927dcd4b1126c11ebc6d8ee6eb7ff0"
+  },
+  "presentation_ready/tables/SLIDE13_MEMBER_NONMEMBER_INTERVENTION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "13c940d087b0b1974941a26639e14009832d9014a0f0fe5698f86a6bc62474c0"
+  },
+  "presentation_ready/tables/SLIDE14_FINQA_E2E_PRIVACY.csv": {
+    "benign_set": "D-cal/D-lock",
+    "benign_set_hash": "c2784f4f04d081426014f9bf5cc680f9f3bf1d1564dc7a9e20a58d9bccf02749",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "93b1a2596477acc157dac67a8164bbc0386449c867ba1604756b69b036dcad0b"
+  },
+  "presentation_ready/tables/SLIDE15_FINQA_HARD_TYPE_FPR.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "ff9e436687832f2e9b76edacf7f2d1972aad69fcab8b7f18ba0388ca27ba6b72"
+  },
+  "presentation_ready/tables/SLIDE15_IA_LIMITATION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "fcd58585d5b4d6dddf88e05caeea9ecf35d9fbce307b851f3eeec974441f092a"
+  },
+  "results/core/TABLE1_CORE5_MATCHED_FPR_DETECTION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "d71910dd5cc81ed2481e1d38527e58d738944134b764b5663cf1e27bc7ee9046"
+  },
+  "results/core/TABLE2_CORE5_QWEN_E2E_PRIVACY.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "57dcd508e305a33d17641774e4030db82cb4b9c50af2090e5842b5ea5c1c1a11"
+  },
+  "results/core/TABLE3_LLAMA_GENERATOR_TRANSFER.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "13cdaefca165e9931acdf9299f1cc4ac28c2349a62dcc2b37f14707d4649f0f8"
+  },
+  "results/core/TABLE4_RETRIEVER_TRANSFER.csv": {
+    "benign_set": "C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "MULTI",
+    "retrieval_db": "MULTI",
+    "retrieval_db_hash": "MULTI",
+    "table_sha256": "60435a8157d9d6b9cf8a092b83d01ea209539fcb49a0c997760363368bc4bcbe"
+  },
+  "results/core/TABLE5_FINQA_UNTOUCHED_DOMAIN_E2E.csv": {
+    "benign_set": "D-cal/D-lock",
+    "benign_set_hash": "c2784f4f04d081426014f9bf5cc680f9f3bf1d1564dc7a9e20a58d9bccf02749",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "af9417e1c4e60672d24d3e4f1f58cb42eff8875b19e011ed516efe30a9403b68"
+  },
+  "results/core/TABLE6_BENIGN_UTILITY_FACTUALITY.csv": {
+    "benign_set": "TopiOCQA Gold utility",
+    "benign_set_hash": "30369f4df8bead8ab675524188a8e51dc8edf12bc7a73399f95f8853f433106c",
+    "embedding_hash": "MISSING",
+    "retrieval_db": "L2",
+    "retrieval_db_hash": "4fa9fc359d953064c9fd58d631cf3ebec6e8b988f397943fa3ec3394b83be2a9",
+    "table_sha256": "dd1b2294f49ed486a21f992f1f23f7baabdcbd3b7f4b72d64da98d752a79fff8"
+  },
+  "results/core/TABLE9_FINAL_ABLATION.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "bcbcfecb10b5ea293b31cc245b913cd3a479d4fbbae3da98b322f3530af204d2"
+  },
+  "results/finqa-hard-benign/HARD_BENIGN_MANUAL_AUDIT_TEMPLATE_50.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "fed0ad1f24ed32e8e1e4d852d3ce79b474a0dadbdf9d446502ee71d5fe477d4b"
+  },
+  "results/finqa-hard-benign/TABLE_HARD_BENIGN_FACTUALITY.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "443b3eb56946074cca65cebed03deaf10cb5818b2f296559f51d504a6126b2ea"
+  },
+  "results/finqa-hard-benign/TABLE_HARD_BENIGN_FPR.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "20d6829de2330d3bacdfb9dc958867fc3e4e1ad542de2897ba31b2a1b04c17c0"
+  },
+  "results/finqa-hard-benign/TABLE_HARD_BENIGN_HIR.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "f0597f3548f3249322687a836178979ebcfc0aa6000ba2a7ae6916532ae27f6a"
+  },
+  "results/finqa-hard-benign/TABLE_HARD_BENIGN_UTILITY.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "7fb0d40ca18ba46e5bdd996328b4d69727d5355c11c5be232f030f87246fe095"
+  },
+  "tables/AUC_CORE_VS_TOPI_L1.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "0f1831f0315c964b65377bab694a033fad34c903d2cf52e37c2562d9af86290c"
+  },
+  "tables/CROSS_CORPUS_THRESHOLD_TRANSFER.csv": {
+    "benign_set": "E-cal/E-lock",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_CROSS_CORPUS_MULTIPLE",
+    "retrieval_db": "L1+D-hard(E)",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c+0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "162f3839f520c4c875ba05e57857ffd66b3d7892f87dd342d3d696b174dccb5f"
+  },
+  "tables/CROSS_CORPUS_THRESHOLD_TRANSFER_BY_HARD_TYPE.csv": {
+    "benign_set": "E-cal/E-lock",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_CROSS_CORPUS_MULTIPLE",
+    "retrieval_db": "L1+D-hard(E)",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c+0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "5648a7ab315d858129e87a4df129c88ba0f40695d8cd49c179bb5eb561488b51"
+  },
+  "tables/FINQA_HARD_BENIGN_MATCHED.csv": {
+    "benign_set": "E-cal/E-lock/E-full",
+    "benign_set_hash": "064ad62818dc55bb01b10f93dd39c35eac6729dff05ef9afa85ef5707dc19376",
+    "embedding_hash": "MISSING_SAVED_EMBEDDING_CACHE",
+    "retrieval_db": "D-hard(E)",
+    "retrieval_db_hash": "0a3883915a6923f2ec252a592184e7944f8ea159a81cc8191e9598fd8cb15975",
+    "table_sha256": "db9901222b1994fc744d131753c2657651035e01ac36fbba00cbff6b49e45baf"
+  },
+  "tables/FROZEN_THRESHOLD_ON_TOPI_L1.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "1bed13c0c87158fe992f2bbd9ddbcefd711f2e8a651e367da5cbae933204d320"
+  },
+  "tables/LINEAGE_CORRECTED_CALIBRATION_SUMMARY.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "dfd00885b87901786a4b514fa50dfac99c5978ffc0230e4209576d22a16c4a48"
+  },
+  "tables/SIGNAL_CALIBRATION_GRID_L1.csv": {
+    "benign_set": "A/B/C",
+    "benign_set_hash": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "embedding_hash": "1cba98605a9e1e1bb0d10f92bf791675a301a9352b0160d6cde5465efe281d2f",
+    "retrieval_db": "L1",
+    "retrieval_db_hash": "7e68ce0d29fb6be76160461725fa89573313173280bfd0b04b4b95d4891f4d4c",
+    "table_sha256": "dfd00885b87901786a4b514fa50dfac99c5978ffc0230e4209576d22a16c4a48"
+  }
+}

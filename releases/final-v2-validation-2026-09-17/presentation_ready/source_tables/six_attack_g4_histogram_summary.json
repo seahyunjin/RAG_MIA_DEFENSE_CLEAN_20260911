@@ -1,0 +1,35 @@
+{
+  "benign_n": 1000,
+  "threshold": 0.0901547372341156,
+  "families": {
+    "MEntA": {
+      "n": 5000,
+      "tpr": 0.9492
+    },
+    "MBA": {
+      "n": 1000,
+      "tpr": 0.999
+    },
+    "RAG-MIA": {
+      "n": 1000,
+      "tpr": 0.987
+    },
+    "S²-MIA": {
+      "n": 799,
+      "tpr": 0.9987484355444305
+    },
+    "DCMI-Q2": {
+      "n": 2000,
+      "tpr": 0.87
+    },
+    "IA-Q1": {
+      "n": 976,
+      "tpr": 0.45389344262295084
+    }
+  },
+  "inputs": {
+    "experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+    "experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/cache/CORE5_DCMI_RETRIEVAL_AND_DETECTION.jsonl": "3f7679410d0857763ee040e5066d4a357e50f2a8d189cd5e2eaf4ccd7cb84a1b",
+    "experiments/FINAL_LC_IA_RESOLUTION_V1/fpr3_sensitivity/runtime/IA_V2_FPR3_DETECTION.jsonl": "d8d9b9433a5408c5e72c6211b569e02c06d33cd07f0bb44605fa7a14a4ca07f9"
+  }
+}

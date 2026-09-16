@@ -1,0 +1,11 @@
+{
+  "files": [
+    {
+      "file": "DISTRIBUTION_SUMMARY.csv",
+      "sha256": "f3b53b9126015e44d3ab513cb8e25dd4c3e650865faa187d92ec36ffe0d543e3",
+      "source": "experiments/FINQA_CORE_GEOMETRY_DIAG_CPU_V1/tables/DISTRIBUTION_SUMMARY.csv"
+    }
+  ],
+  "reason": "Core member(L1) 점수와 TopiOCQA DB(L2) 점수를 조인함",
+  "verdict": "INVALID_L1xL2_MIX"
+}

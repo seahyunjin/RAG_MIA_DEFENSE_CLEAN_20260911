@@ -1,0 +1,7 @@
+score,comparison,positive_n,negative_n,auc
+s1,FinQA_member_vs_hard_benign_full,9995,2113,0.9366634808175502
+s1,Core_member_vs_Topi_benign_locked,9799,1000,0.893980508215124
+G4,FinQA_member_vs_hard_benign_full,9995,2113,0.8697774822101064
+G4,Core_member_vs_Topi_benign_locked,9799,1000,0.9653852433921829
+M,FinQA_member_vs_hard_benign_full,9995,2113,0.8999181559544561
+M,Core_member_vs_Topi_benign_locked,9799,1000,0.6795134197367079

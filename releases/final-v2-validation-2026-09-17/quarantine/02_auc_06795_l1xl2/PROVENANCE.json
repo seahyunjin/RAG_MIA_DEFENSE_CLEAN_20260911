@@ -1,0 +1,11 @@
+{
+  "files": [
+    {
+      "file": "TABLE_THRESHOLD_FREE_AUC.csv",
+      "sha256": "ccc42f7100495edb002f551f6d0bd4436152e7af4ccab3422f4188b1154ed129",
+      "source": "experiments/FINAL_V2_LINEAGE_FINQA_AUC_AUDIT_CPU_V1/tables/TABLE_THRESHOLD_FREE_AUC.csv"
+    }
+  ],
+  "reason": "Core member(L1) 점수와 TopiOCQA DB(L2) 점수를 조인함",
+  "verdict": "INVALID_L1xL2_MIX"
+}
