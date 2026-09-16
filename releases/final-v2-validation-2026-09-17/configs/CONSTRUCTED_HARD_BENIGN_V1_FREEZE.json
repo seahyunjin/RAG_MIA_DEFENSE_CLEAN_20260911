@@ -1,0 +1,31 @@
+{
+  "bank_rows": 2113,
+  "bank_sha256": "02089ca716b127de31c10e300be3efc9666fec1af3c595c8fc26127debde17f6",
+  "duplicate_padding": false,
+  "frozen_utc": "2026-09-16T13:56:17.736947+00:00",
+  "invalid_or_duplicate_n": 37,
+  "ordered_query_id_sha256": "84196097eb4156ff7ee11caaa89ee30a281135245282c7000deb0f19835ec070",
+  "pre_dedup_counts": {
+    "Adaptive clarification": 300,
+    "Deep-study": 300,
+    "Exact-Fact": 300,
+    "MCQ": 150,
+    "Natural": 500,
+    "Reask / paraphrase": 300,
+    "True/False": 150,
+    "Yes/No": 150
+  },
+  "precommit_sha256": "3bdc3eb0532e7a47adf0f44dc17ebb3c453e824785a8dd1a99d014f02b3b5193",
+  "scores_seen_before_freeze": false,
+  "subgroup_counts": {
+    "Adaptive clarification": 300,
+    "Deep-study": 300,
+    "Exact-Fact": 291,
+    "MCQ": 138,
+    "Natural": 499,
+    "Reask / paraphrase": 293,
+    "True/False": 149,
+    "Yes/No": 143
+  },
+  "verdict": "CONSTRUCTED_HARD_BENIGN_V1_BANK_FROZEN"
+}

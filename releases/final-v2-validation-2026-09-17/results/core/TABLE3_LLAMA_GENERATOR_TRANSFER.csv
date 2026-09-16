@@ -1,0 +1,21 @@
+generator,attack,condition,privacy_e_auc,native_metric
+Qwen,MEntA,No Defense,0.978261,paper-faithful MEntA native ROC-AUC
+Qwen,MEntA,Final V2,0.5419425000000001,paper-faithful MEntA native ROC-AUC
+Qwen,MBA,No Defense,0.909827,paper-faithful reconstruction ROC-AUC; missing=incorrect
+Qwen,MBA,Final V2,0.5045855000000001,paper-faithful reconstruction ROC-AUC; missing=incorrect
+Qwen,RAG-MIA,No Defense,0.9810000000000004,paper-faithful Yes/No ROC-AUC
+Qwen,RAG-MIA,Final V2,0.5069999999999999,paper-faithful Yes/No ROC-AUC
+Qwen,S²-MIA,No Defense,0.685857321652065,S2-MIA-T balanced accuracy
+Qwen,S²-MIA,Final V2,0.5037546933667084,S2-MIA-T balanced accuracy
+Qwen,DCMI-Std-Q2,No Defense,0.9795125000000005,standardized DCMI differential ROC-AUC
+Qwen,DCMI-Std-Q2,Final V2,0.5019800000000001,standardized DCMI differential ROC-AUC
+Llama,MEntA,No Defense,0.97554,paper-faithful MEntA native ROC-AUC
+Llama,MEntA,Final V2,0.5348365,paper-faithful MEntA native ROC-AUC
+Llama,MBA,No Defense,0.894423,paper-faithful reconstruction ROC-AUC; missing=incorrect
+Llama,MBA,Final V2,0.5004280000000001,paper-faithful reconstruction ROC-AUC; missing=incorrect
+Llama,RAG-MIA,No Defense,0.9235,paper-faithful Yes/No ROC-AUC
+Llama,RAG-MIA,Final V2,0.5065,paper-faithful Yes/No ROC-AUC
+Llama,S²-MIA,No Defense,0.7015018773466832,S2-MIA-T balanced accuracy
+Llama,S²-MIA,Final V2,0.5075093867334168,S2-MIA-T balanced accuracy
+Llama,DCMI-Std-Q2,No Defense,0.955731,standardized DCMI differential ROC-AUC
+Llama,DCMI-Std-Q2,Final V2,0.500994,standardized DCMI differential ROC-AUC

@@ -1,0 +1,9 @@
+{
+  "bank_rows": 2113,
+  "bank_sha256": "02089ca716b127de31c10e300be3efc9666fec1af3c595c8fc26127debde17f6",
+  "completed_utc": "2026-09-16T14:44:33.940783+00:00",
+  "external_standard_benchmark": false,
+  "manual_audit": "REQUIRES_HUMAN_REVIEW",
+  "method_modified": false,
+  "verdict": "HARD_BENIGN_EVALUATION_COMPLETE"
+}

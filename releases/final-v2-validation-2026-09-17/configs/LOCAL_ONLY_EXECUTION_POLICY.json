@@ -1,0 +1,12 @@
+{
+  "api_calls_allowed": false,
+  "approved_by_user": true,
+  "approved_utc": "2026-09-16T13:20:00Z",
+  "models": [
+    "Qwen2.5-3B-Instruct local snapshot",
+    "BAAI/bge-m3 local snapshot",
+    "tasksource/deberta-base-long-nli local snapshot"
+  ],
+  "network_downloads_allowed": false,
+  "paid_models_allowed": false
+}

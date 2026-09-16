@@ -1,0 +1,40 @@
+{
+  "action": "on alarm hide current-turn rank-1 source, deterministic context backfill, generate once",
+  "anchor_hashes": {
+    "bge_weights": "b5e0ce3470abf5ef3831aa1bd5553b486803e83251590ab7ff35a117cf6aad38",
+    "core_scorer": "562565c6d1aa0b7087ae6ccbd4a0b5a27bc0336d0af8ec9224e878feb68b3351",
+    "dcmi_scorer": "bc242d7f1c283eb79b74ef1f86c4d7857d29f903045d218d0de254051cb3d00a",
+    "ia_parser": "037ea8f5d8399e43c0b475d7d828c3408a27e63f72a31df3776b51b0e976a1a6",
+    "qwen_tokenizer": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "v2_code": "25f8bb00c5903e91404c7baead89a80c390e7454f1f41368c7514413f6b41abe",
+    "v2_precommit": "f227e04069bf05b33c9290eb5560d2e25ffd8b32f4bc5c13d50ae7ca5f73f5cc"
+  },
+  "campaign": "FINAL_V2_REMAINING_VALIDATION_AND_PAPER_FREEZE_V1",
+  "core_numeric_threshold": 0.0901547372341156,
+  "domain_transfer_protocol": "same formula/action; benign-only target-domain recalibration allowed and reported separately from numeric zero-shot",
+  "forbidden": [
+    "formula changes",
+    "new detector search",
+    "s1 fusion",
+    "k changes",
+    "attack-specific routing",
+    "family-specific threshold",
+    "post-result threshold retuning",
+    "failed-candidate resurrection"
+  ],
+  "frozen_utc": "2026-09-16T13:01:22.455095+00:00",
+  "method_aliases": [
+    "Final V2",
+    "G4",
+    "LRC-4"
+  ],
+  "model_identifiers": {
+    "generator_primary": "Qwen/Qwen2.5-3B-Instruct@aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "generator_transfer": "unsloth/Llama-3.2-3B-Instruct (frozen artifact)",
+    "retriever_primary": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181"
+  },
+  "operating_protocol": "benign-only strict empirical 97.5th percentile; target FPR 2.5%; no attack samples",
+  "operator": ">",
+  "score": "G4(q)=s1-mean(s1,s2,s3,s4)",
+  "top_k": 4
+}

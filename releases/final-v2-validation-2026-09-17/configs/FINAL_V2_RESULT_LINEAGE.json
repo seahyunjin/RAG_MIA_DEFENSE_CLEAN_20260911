@@ -1,0 +1,229 @@
+{
+  "artifacts": {
+    "benign_calibration": {
+      "file_sha256": "eb10d63f9d5b3c7d5498ab8ab77e0ae6aeab0330df83d82bf31d44506d9853ae",
+      "ordered_id_sha256": "974858370b3222a2725bfcb299c2811190945e10896d86e9d737f5879e106d20",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RECOVERY_AND_RECALIBRATION_V1/inputs/TOPIOCQA_BENIGN_RECALIBRATION_500.jsonl",
+      "rows": 500,
+      "unique_ids": 500
+    },
+    "benign_locked_test": {
+      "file_sha256": "3074be3e2cebae22fced3af26df1b126e02c163199dbfc71a60c606d92aa637a",
+      "ordered_id_sha256": "b7f611421e29f07bfd3655634f8349a5a8ecc140bfffe69bb397412cc4166af8",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_CORE6_TO_DOMAIN_CHAIN_V1/inputs/TOPIOCQA_GOLD_EVAL_1000.jsonl",
+      "rows": 1000,
+      "unique_ids": 1000
+    },
+    "core_answers": {
+      "file_sha256": "e15a84dd03c16eb5bea19c310071c25667f798d7cc8ffc16427628a9f685b7fe",
+      "ordered_id_sha256": "63ba6aa5d4997431de94a3d3e94cbed85ead53e68aeab4dab6a030619c6cd1ee",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/runtime/FINAL_GENERATED_ANSWERS.jsonl",
+      "rows": 68000,
+      "unique_ids": 17000
+    },
+    "core_detection": {
+      "file_sha256": "68579418d8e992eb0a0448ae189516203473ad7f905b94a0327353b5cfde8209",
+      "ordered_id_sha256": "f91b80bf613ee36b867bf7570bd5285692193034c2829c215fbd5f8892a0e232",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_8ATTACK_E2E_FRAMEWORK_V1/cache/FINAL_RETRIEVAL_AND_DETECTION.jsonl",
+      "rows": 17000,
+      "unique_ids": 17000
+    },
+    "finqa_answers": {
+      "file_sha256": "81e29ab209f4d2105fb067b62edcddc3c08764e1d208eebb52133163a87bdeb5",
+      "ordered_id_sha256": "bec36e66ec7afa7d8964fba42066584066ec69b8c866eac5e28c7c0c1005b034",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/runtime/FINQA_QWEN_BRANCH_ANSWERS.jsonl",
+      "rows": 28996,
+      "unique_ids": 20990
+    },
+    "finqa_attacks": {
+      "file_sha256": "c54000cbe5edfba7b4dd04d55554f90d7877ed63cdfe7078c02893b1a3f70dda",
+      "ordered_id_sha256": "2748a45ed08058211ff78ef0caa885a42f4fffc218b885cbf22b4b14ec1d0826",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/inputs/FINQA_ATTACK_QUERIES.jsonl",
+      "rows": 19990,
+      "unique_ids": 19990
+    },
+    "finqa_calibration": {
+      "file_sha256": "a1e253176f1c4eefb7cb0c1dabd11433d375fef87ddafa5a1dd1b2a7d33025ad",
+      "ordered_id_sha256": "c61eba854049d64bc6817c2e347399e8db88dbb2b8d7dfebde0eb25d56d97f8d",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/inputs/FINQA_BENIGN_CALIBRATION_1000.jsonl",
+      "rows": 1000,
+      "unique_ids": 1000
+    },
+    "finqa_locked_test": {
+      "file_sha256": "76aac996a33b3645f93fb99f2962638910a40f556525a52f781588a0aa257248",
+      "ordered_id_sha256": "3260588823409dd52ff881806b62eda9e59e5389f427e036a18f65d1cdd54812",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_ABLATION_ADAPTIVE_V1/inputs/FINQA_BENIGN_LOCKED_TEST_1000.jsonl",
+      "rows": 1000,
+      "unique_ids": 1000
+    },
+    "finqa_menta_evidence": {
+      "file_sha256": "8d17f567d492cef8d59537cdf5d5e547d934f03f0788665254ec80c6929ba580",
+      "ordered_id_sha256": "bf7c4d8c67ffff6fe5f47407e91035d0190fcb9935e2d7dc0586c4c659a4b551",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_MENTA_RESUME_V1/runtime/MENTA_EVIDENCE_COMPLETE.jsonl",
+      "rows": 11931,
+      "unique_ids": 9990
+    },
+    "ia_detection": {
+      "file_sha256": "d8d9b9433a5408c5e72c6211b569e02c06d33cd07f0bb44605fa7a14a4ca07f9",
+      "ordered_id_sha256": "ebe1933cd609f47f1740a41455743ed965456b3b1d2449bc31c12bf380c75e27",
+      "path": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_LC_IA_RESOLUTION_V1/fpr3_sensitivity/runtime/IA_V2_FPR3_DETECTION.jsonl",
+      "rows": 29115,
+      "unique_ids": 29115
+    }
+  },
+  "created_utc": "2026-09-16T13:01:26.390794+00:00",
+  "finqa_numeric_audit": {
+    "detail": [
+      {
+        "abs_error": 1.1102230246251565e-16,
+        "actual": 0.5574420000000001,
+        "attack": "DCMI-Std-Q2",
+        "condition": "NO_DEFENSE",
+        "expected": 0.557442,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.524001,
+        "attack": "DCMI-Std-Q2",
+        "condition": "MIRABEL",
+        "expected": 0.524001,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.529501,
+        "attack": "DCMI-Std-Q2",
+        "condition": "FINAL_V2",
+        "expected": 0.529501,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.632368,
+        "attack": "MBA",
+        "condition": "NO_DEFENSE",
+        "expected": 0.632368,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.5417125,
+        "attack": "MBA",
+        "condition": "MIRABEL",
+        "expected": 0.5417125,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.541803,
+        "attack": "MBA",
+        "condition": "FINAL_V2",
+        "expected": 0.541803,
+        "match": true
+      },
+      {
+        "abs_error": 1.4665046954576155e-11,
+        "actual": 0.763613964314665,
+        "attack": "MEntA",
+        "condition": "NO_DEFENSE",
+        "expected": 0.7636139643,
+        "match": true
+      },
+      {
+        "abs_error": 2.6833313349072796e-11,
+        "actual": 0.6926861796731667,
+        "attack": "MEntA",
+        "condition": "MIRABEL",
+        "expected": 0.6926861797,
+        "match": true
+      },
+      {
+        "abs_error": 1.7140289187977942e-11,
+        "actual": 0.6477708940171403,
+        "attack": "MEntA",
+        "condition": "FINAL_V2",
+        "expected": 0.647770894,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.5745,
+        "attack": "RAG-MIA",
+        "condition": "NO_DEFENSE",
+        "expected": 0.5745,
+        "match": true
+      },
+      {
+        "abs_error": 1.1102230246251565e-16,
+        "actual": 0.5305000000000001,
+        "attack": "RAG-MIA",
+        "condition": "MIRABEL",
+        "expected": 0.5305,
+        "match": true
+      },
+      {
+        "abs_error": 1.1102230246251565e-16,
+        "actual": 0.5385000000000001,
+        "attack": "RAG-MIA",
+        "condition": "FINAL_V2",
+        "expected": 0.5385,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.54,
+        "attack": "S2-MIA",
+        "condition": "NO_DEFENSE",
+        "expected": 0.54,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.52375,
+        "attack": "S2-MIA",
+        "condition": "MIRABEL",
+        "expected": 0.52375,
+        "match": true
+      },
+      {
+        "abs_error": 0.0,
+        "actual": 0.5025,
+        "attack": "S2-MIA",
+        "condition": "FINAL_V2",
+        "expected": 0.5025,
+        "match": true
+      }
+    ],
+    "source": "/home/traffic_3/workspace/workspace/SH/RAG_MIA_DEFENSE_CLEAN_20260911/experiments/FINAL_V2_FINQA_VALIDATION_ADDENDUM_20260916/tables/TABLE_FINQA_CORE5_E2E.csv",
+    "verdict": "PASS"
+  },
+  "frozen_results": {
+    "core": {
+      "benign_fpr": 0.025,
+      "member_tpr": 0.946,
+      "nonmember_intervention": 0.0292
+    },
+    "finqa": {
+      "benign_fpr": 0.028,
+      "mean_e_auc": {
+        "FINAL_V2": 0.552,
+        "MIRABEL": 0.5625,
+        "NO_DEFENSE": 0.6136
+      },
+      "member_tpr": 0.545,
+      "nonmember_intervention": 0.112,
+      "worst_e_auc": {
+        "FINAL_V2": 0.6478,
+        "MIRABEL": 0.6927,
+        "NO_DEFENSE": 0.7636
+      }
+    },
+    "member_g4": {
+      "Core": 0.1731,
+      "FinQA": 0.0907
+    }
+  },
+  "method_freeze_sha256": "932a60b2ef58dc51aa6b6fbcf9ab07db0ab59d6012ea9763674f523698554f83",
+  "upstream_hash_audit": "PASS"
+}
