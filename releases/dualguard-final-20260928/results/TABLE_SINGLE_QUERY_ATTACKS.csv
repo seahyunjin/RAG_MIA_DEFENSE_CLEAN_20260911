@@ -1,0 +1,17 @@
+threat_scope,attack,method,cohort,N,N_member,N_nonmember,metric,AUROC_or_leakage,paired_reduction_NoDefense_minus_method,paired_reduction_CI_low,paired_reduction_CI_high,Dual_minus_CLD,Dual_minus_CLD_CI_low,Dual_minus_CLD_CI_high,lineage
+single-query,MBA,NO_DEFENSE,prospective balanced DEV,100,50,50,ROC-AUC,0.8676,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,RAG-MIA,NO_DEFENSE,prospective balanced DEV,100,50,50,ROC-AUC,0.96,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,S²-MIA,NO_DEFENSE,prospective balanced DEV,100,50,50,balanced accuracy,0.6799999999999999,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,DCMI-Std-Q2,NO_DEFENSE,prospective balanced DEV,100,50,50,differential ROC-AUC,0.97,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,MBA,CLD_ONLY,prospective balanced DEV,100,50,50,ROC-AUC,0.5304,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,RAG-MIA,CLD_ONLY,prospective balanced DEV,100,50,50,ROC-AUC,0.5,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,S²-MIA,CLD_ONLY,prospective balanced DEV,100,50,50,balanced accuracy,0.5700000000000001,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,DCMI-Std-Q2,CLD_ONLY,prospective balanced DEV,100,50,50,differential ROC-AUC,0.51,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,MBA,CFCLIP_ONLY,prospective balanced DEV,100,50,50,ROC-AUC,0.8706,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,RAG-MIA,CFCLIP_ONLY,prospective balanced DEV,100,50,50,ROC-AUC,0.72,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,S²-MIA,CFCLIP_ONLY,prospective balanced DEV,100,50,50,balanced accuracy,0.69,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,DCMI-Std-Q2,CFCLIP_ONLY,prospective balanced DEV,100,50,50,differential ROC-AUC,0.93,,,,,,,FOUR_ARM_PROSPECTIVE
+single-query,MBA,CLD_CFCLIP,prospective balanced DEV,100,50,50,ROC-AUC,0.5204,0.34720000000000006,0.25359500000000007,0.4164,-0.010000000000000009,-0.030000000000000027,0.010000000000000009,FOUR_ARM_PROSPECTIVE
+single-query,RAG-MIA,CLD_CFCLIP,prospective balanced DEV,100,50,50,ROC-AUC,0.5,0.45999999999999996,0.42000000000000004,0.49,0.0,0.0,0.0,FOUR_ARM_PROSPECTIVE
+single-query,S²-MIA,CLD_CFCLIP,prospective balanced DEV,100,50,50,balanced accuracy,0.56,0.11999999999999988,-0.030000000000000138,0.22999999999999998,-0.010000000000000009,-0.09999999999999998,0.07000000000000006,FOUR_ARM_PROSPECTIVE
+single-query,DCMI-Std-Q2,CLD_CFCLIP,prospective balanced DEV,100,50,50,differential ROC-AUC,0.5,0.47,0.43000000000000005,0.5,-0.010000000000000009,-0.030000000000000027,0.0,FOUR_ARM_PROSPECTIVE

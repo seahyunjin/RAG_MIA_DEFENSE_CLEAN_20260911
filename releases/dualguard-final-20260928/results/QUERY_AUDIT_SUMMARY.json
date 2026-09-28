@@ -1,0 +1,22 @@
+{
+  "blocking_issue_count": 0,
+  "checks": [
+    "empty",
+    "duplicate",
+    "near-duplicate",
+    "malformed/template",
+    "label leakage",
+    "benign metadata leakage",
+    "history",
+    "provenance",
+    "turn order"
+  ],
+  "diagnostics": {
+    "exact_duplicate_rows": 1232,
+    "expected_world_mirror_duplicates": 460,
+    "near_duplicate_pairs_jaccard_ge_0_90": 57
+  },
+  "issue_count": 0,
+  "rows": 2324,
+  "status": "QUERY_AUDIT_PASS"
+}

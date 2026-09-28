@@ -1,0 +1,10 @@
+{
+  "domain_transfer_run": false,
+  "gamma": 9.5659109592,
+  "gold_engine": "SERIAL_KVCACHE",
+  "method_modified": false,
+  "method_status": "METHOD_FROZEN_CLD_OLD_CFCLIP",
+  "recommendation": "package ready",
+  "tau": 0.0901547372341156,
+  "verdict": "FINAL_FROZEN_MODEL_PACKAGE_READY"
+}
