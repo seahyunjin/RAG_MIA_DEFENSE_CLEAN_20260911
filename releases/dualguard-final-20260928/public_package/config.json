@@ -1,0 +1,16 @@
+{
+  "attack_routing": false,
+  "cfclip": {
+    "formula": "z_F(v)-[max_i([log p_F(v)-log p_-i(v)]_+)-gamma]_+",
+    "gamma": 9.5659109592
+  },
+  "cld": {
+    "comparator": ">",
+    "k": 4,
+    "tau": 0.0901547372341156
+  },
+  "fast_engine_production_ready": false,
+  "gold_engine": "SERIAL_KVCACHE",
+  "method_status": "METHOD_FROZEN_CLD_OLD_CFCLIP",
+  "training": false
+}

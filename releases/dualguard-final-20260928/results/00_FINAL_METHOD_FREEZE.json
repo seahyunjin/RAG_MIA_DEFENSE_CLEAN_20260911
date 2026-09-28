@@ -1,0 +1,17 @@
+{
+  "forbidden_current_run": [
+    "retriever transfer",
+    "generator transfer",
+    "adaptive attack",
+    "strong baseline rerun",
+    "domain transfer",
+    "new defense",
+    "threshold change",
+    "new Fast approximation"
+  ],
+  "gamma": 9.5659109592,
+  "gold_engine": "SERIAL_KVCACHE",
+  "immutable": true,
+  "status": "METHOD_FROZEN_CLD_OLD_CFCLIP",
+  "tau": 0.0901547372341156
+}

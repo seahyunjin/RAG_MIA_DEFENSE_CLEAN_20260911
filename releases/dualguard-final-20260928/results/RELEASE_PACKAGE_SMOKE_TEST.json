@@ -1,0 +1,90 @@
+{
+  "anonymous": {
+    "path": "release_submission_anonymous",
+    "tree_sha256": "fbae402bb233a368722f33d38e97f0c02c32f5f536b3e734bb1404a70736e120"
+  },
+  "built": true,
+  "commands": [
+    {
+      "clean_dir": "/tmp/release_github_dualguard_axntu8s_",
+      "command": "-m tests.smoke_test",
+      "package": "release_github_dualguard",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"SMOKE_PASS\", \"g4\": 0.15750000000000008, \"alarm\": true}"
+    },
+    {
+      "clean_dir": "/tmp/release_github_dualguard_axntu8s_",
+      "command": "inference.py --toy",
+      "package": "release_github_dualguard",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"g4\": 0.15750000000000008,\n  \"alarm\": true,\n  \"documents\": [\n    \"d2\",\n    \"d3\",\n    \"d4\"\n  ],\n  \"removed\": \"d1\"\n}"
+    },
+    {
+      "clean_dir": "/tmp/release_github_dualguard_axntu8s_",
+      "command": "evaluate.py --dry-run",
+      "package": "release_github_dualguard",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"DRY_RUN_PASS\", \"expected_columns\": [\"attack\", \"method\", \"AUROC_or_leakage\"]}"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "-m tests.smoke_test",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"SMOKE_PASS\", \"g4\": 0.15750000000000008, \"alarm\": true}"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "inference.py --toy",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"g4\": 0.15750000000000008,\n  \"alarm\": true,\n  \"documents\": [\n    \"d2\",\n    \"d3\",\n    \"d4\"\n  ],\n  \"removed\": \"d1\"\n}"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "evaluate.py --dry-run",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\"status\": \"DRY_RUN_PASS\", \"expected_columns\": [\"attack\", \"method\", \"AUROC_or_leakage\"]}"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "reproduce_table.py --dry-run",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "DRY_RUN_PASS"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "reproduce_ia_figures.py --dry-run",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "DRY_RUN_PASS"
+    },
+    {
+      "clean_dir": "/tmp/release_submission_anonymous_hsxab4xp",
+      "command": "reproduce_benign_table.py --dry-run",
+      "package": "release_submission_anonymous",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "DRY_RUN_PASS"
+    }
+  ],
+  "credential_path_scan": {
+    "release_github_dualguard": [],
+    "release_submission_anonymous": []
+  },
+  "github": {
+    "path": "release_github_dualguard",
+    "tree_sha256": "65ce9c1eaded76cc8d4d033ab70ecf995a2655f29515508e579c03d58979348d"
+  },
+  "status": "RELEASE_PACKAGE_SMOKE_PASS"
+}

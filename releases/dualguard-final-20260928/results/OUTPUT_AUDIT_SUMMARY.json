@@ -1,0 +1,11 @@
+{
+  "answers": 6972,
+  "blocking_issue_count": 0,
+  "diagnostic_breakdown": {
+    "EXTREMELY_SHORT": 602,
+    "KNOWN_MAX_TOKEN_CAP": 39,
+    "REFUSAL": 4033
+  },
+  "diagnostic_count": 4674,
+  "status": "OUTPUT_AUDIT_PASS"
+}
