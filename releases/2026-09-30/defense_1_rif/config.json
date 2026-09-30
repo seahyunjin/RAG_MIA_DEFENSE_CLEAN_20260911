@@ -1,0 +1,19 @@
+{
+  "attack_routing": false,
+  "cfclip": {
+    "formula": "z_F(v)-[max_i([log p_F(v)-log p_-i(v)]_+)-gamma]_+",
+    "gamma": 9.565910959243753
+  },
+  "cld": {
+    "comparator": ">",
+    "formula": "s1-mean(s1,s2,s3,s4)",
+    "k": 4,
+    "rank1_removal": "no_refill",
+    "tau": 0.0901547372341156
+  },
+  "gold_engine": "SERIAL_KVCACHE",
+  "method": "RIF",
+  "method_status": "FROZEN",
+  "training": false
+}
+

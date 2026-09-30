@@ -1,0 +1,8 @@
+method,engine,queries,sec_per_query,sec_per_token,tokens_per_sec,peak_VRAM_GiB,scope,qualification
+No Defense,standard frozen generation,920,0.11145337372208419,0.03394144449662941,29.462505642601805,6.056637763977051,920-query exact IA runtime cohort,
+CLD,standard frozen generation,920,0.11011394932056251,0.033302049104180644,30.028182256042104,6.056637763977051,920-query exact IA runtime cohort,
+RIF,SERIAL_KVCACHE,920,0.4400921539848913,0.1199658612344,8.335704755589681,6.156522750854492,920-query exact IA runtime cohort,gold/main
+Fast RIF (rejected for main),FAST_B8_NON_MAIN,920,0.345264423120281,0.09411652422834325,10.625126758546926,6.156522750854492,920-query exact IA runtime cohort,not main: MEntA exactness gate failed
+CF-Clip only,SERIAL_KVCACHE,N/A,N/A,N/A,N/A,N/A,same-lineage standalone timing absent,not estimated from RIF
+RIF + Fixed Horizon B=2,EXACT_SERIAL_KVCACHE + deterministic abstention,30,0.029339476932326088,N/A,N/A,6.156522750854492,IA Q30,only 2 evidence-bearing model calls; excludes retrieval/network
+RIF + Fixed Horizon B=2,EXACT_SERIAL_KVCACHE + deterministic abstention,5,0.17603686159395654,N/A,N/A,6.156522750854492,MEntA Q5,only 2 evidence-bearing model calls; excludes retrieval/network

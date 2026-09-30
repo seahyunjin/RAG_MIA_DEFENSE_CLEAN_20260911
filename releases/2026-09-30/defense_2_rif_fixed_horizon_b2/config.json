@@ -1,0 +1,13 @@
+{
+  "abstention": "I don't know.",
+  "account_bound": true,
+  "attack_classifier": false,
+  "defense_called_for_allowed_requests": "frozen RIF",
+  "horizon": 2,
+  "membership_classifier": false,
+  "method": "RIF_PLUS_FIXED_EVIDENCE_HORIZON_B2",
+  "paper_role": "OPTIONAL_COMPOSITION_SAFEGUARD",
+  "persistent_ledger": true,
+  "training": false
+}
+

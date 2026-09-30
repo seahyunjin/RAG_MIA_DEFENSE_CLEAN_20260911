@@ -1,0 +1,30 @@
+paper_section,corpus,attack,cohort,method,metric,value,NoDefense_minus_method,paired_CI95_low,paired_CI95_high,lineage,qualification
+main single-query,BEIR/NFCorpus,MBA,prospective balanced DEV,No Defense,ROC-AUC,0.8676,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,RAG-MIA,prospective balanced DEV,No Defense,ROC-AUC,0.96,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,S²-MIA,prospective balanced DEV,No Defense,balanced accuracy,0.6799999999999999,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,DCMI-Std-Q2,prospective balanced DEV,No Defense,differential ROC-AUC,0.97,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,MBA,prospective balanced DEV,CLD,ROC-AUC,0.5304,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,RAG-MIA,prospective balanced DEV,CLD,ROC-AUC,0.5,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,S²-MIA,prospective balanced DEV,CLD,balanced accuracy,0.5700000000000001,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,DCMI-Std-Q2,prospective balanced DEV,CLD,differential ROC-AUC,0.51,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,MBA,prospective balanced DEV,CF-Clip only,ROC-AUC,0.8706,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,RAG-MIA,prospective balanced DEV,CF-Clip only,ROC-AUC,0.72,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,S²-MIA,prospective balanced DEV,CF-Clip only,balanced accuracy,0.69,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,DCMI-Std-Q2,prospective balanced DEV,CF-Clip only,differential ROC-AUC,0.93,,,,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,MBA,prospective balanced DEV,RIF,ROC-AUC,0.5204,0.34720000000000006,0.25359500000000007,0.4164,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,RAG-MIA,prospective balanced DEV,RIF,ROC-AUC,0.5,0.45999999999999996,0.42000000000000004,0.49,FOUR_ARM_PROSPECTIVE,
+main single-query,BEIR/NFCorpus,S²-MIA,prospective balanced DEV,RIF,balanced accuracy,0.56,0.11999999999999988,-0.030000000000000138,0.22999999999999998,FOUR_ARM_PROSPECTIVE,S2 reduction CI includes zero
+main single-query,BEIR/NFCorpus,DCMI-Std-Q2,prospective balanced DEV,RIF,differential ROC-AUC,0.5,0.47,0.43000000000000005,0.5,FOUR_ARM_PROSPECTIVE,
+supplementary IA Q5 arm,ConvFinQA,IA Q1-Q5 local protocol,92 paired target sessions,CF-Clip only,ROC-AUC at Q5,0.7146739130434783,,,,SUPPLEMENTARY_BATCHED_FOUR_ARM,CF-only is supplementary batched lineage
+main IA Q5 ablation,ConvFinQA,IA Q1-Q5 local protocol,92 paired target sessions,CLD,ROC-AUC at Q5,0.8458175803402647,,,,SERIAL_KVCACHE_EXACT,paper-exact IA not claimed
+main IA Q5 ablation,ConvFinQA,IA Q1-Q5 local protocol,92 paired target sessions,RIF,ROC-AUC at Q5,0.709711720226843,,,,SERIAL_KVCACHE_EXACT,paper-exact IA not claimed
+main IA Q5 ablation,ConvFinQA,IA Q1-Q5 local protocol,92 paired target sessions,No Defense,ROC-AUC at Q5,0.8647211720226843,,,,SERIAL_KVCACHE_EXACT,paper-exact IA not claimed
+main MEntA Q5,FinQA,MEntA Q1-Q5,fresh 100 member + 100 nonmember,CLD,ROC-AUC at Q5,0.7049,,,,FRESH_ZERO_OVERLAP_PRIMARY,
+main MEntA Q5,FinQA,MEntA Q1-Q5,fresh 100 member + 100 nonmember,No Defense,ROC-AUC at Q5,0.7844500000000001,,,,FRESH_ZERO_OVERLAP_PRIMARY,
+main MEntA Q5,FinQA,MEntA Q1-Q5,fresh 100 member + 100 nonmember,RIF,ROC-AUC at Q5,0.71555,,,,FRESH_ZERO_OVERLAP_PRIMARY,RIF is 0.01065 worse than CLD at Q5
+optional long-horizon stress test,BEIR/NFCorpus,IA Q30 local surrogate,fresh 50 member + 50 nonmember; local Q30 surrogate,No Defense,ROC-AUC,0.9746,,,,FRESH_B2_CONFIRMATORY,local Q30 surrogate; not paper-exact IA
+optional long-horizon stress test,BEIR/NFCorpus,IA Q30 local surrogate,fresh 50 member + 50 nonmember; local Q30 surrogate,RIF,ROC-AUC,0.8899999999999999,,,,FRESH_B2_CONFIRMATORY,local Q30 surrogate; not paper-exact IA
+optional long-horizon stress test,BEIR/NFCorpus,IA Q30 local surrogate,fresh 50 member + 50 nonmember; local Q30 surrogate,RIF + Fixed Horizon B=2,ROC-AUC,0.683,0.29159999999999997,0.1874,0.39839999999999987,FRESH_B2_CONFIRMATORY,local Q30 surrogate; not paper-exact IA
+optional long-horizon stress test,BEIR/NFCorpus,MEntA Q5,fresh 50 member + 50 nonmember,No Defense,ROC-AUC,0.962,,,,FRESH_B2_CONFIRMATORY,separate cohort; do not merge with primary FinQA MEntA
+optional long-horizon stress test,BEIR/NFCorpus,MEntA Q5,fresh 50 member + 50 nonmember,RIF,ROC-AUC,0.5978,,,,FRESH_B2_CONFIRMATORY,separate cohort; do not merge with primary FinQA MEntA
+optional long-horizon stress test,BEIR/NFCorpus,MEntA Q5,fresh 50 member + 50 nonmember,RIF + Fixed Horizon B=2,ROC-AUC,0.5529999999999999,0.40900000000000003,0.3108000000000001,0.5088,FRESH_B2_CONFIRMATORY,separate cohort; do not merge with primary FinQA MEntA
